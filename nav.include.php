@@ -6,12 +6,6 @@ include_once(__DIR__ . "/bootstrap.include.php");
 //PHP_SELF returns the path, basename shortens it to the filename
 $page = basename($_SERVER['PHP_SELF']);
 
-//Get the amount of unread messages
-if (!empty($_SESSION['user'])) {
-    $user = new classes\User($_SESSION['user']);
-    $unread_messages = $user->checkUnreadMessages();
-    $unread_amount = count($unread_messages);
-}
 
 ?>
 
@@ -57,6 +51,16 @@ if (!empty($_SESSION['user'])) {
                         <a class="nav-link <?php if ($page == "register.php") : echo "active";
                                             endif; ?>" href="register.php">
                             <i class="fas fa-user-plus"></i> Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if ($page == "register-seller.php") : echo "active";
+                                            endif; ?>" href="register-seller.php">
+                            <i class="fas fa-user-plus"></i> Sign up as seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if ($page == "register-buyer.php") : echo "active";
+                                            endif; ?>" href="register-buyer.php">
+                            <i class="fas fa-user-plus"></i> Sign up as buyer</a>
                     </li>
                 </ul>
             <?php endif; ?>

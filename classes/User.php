@@ -230,18 +230,20 @@ class User
     }
 
     //Function that inserts users into the database
-    public function save()
+    public function save_buyer()
     {
         //Database connection
         $conn = Db::getConnection();
 
         //Prepare the INSERT query
-        $statement = $conn->prepare("INSERT INTO users (active, fullname, email, password) VALUES (0, :fullname, :email, :password)");
+        $statement = $conn->prepare("INSERT INTO users (fullname, email, password, status) VALUES (:fullname, :email, :password, :status)");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":fullname", $this->getFullname());
         $statement->bindValue(":email", $this->getEmail());
         $statement->bindValue(":password", $this->getPassword());
+        $statement->bindValue(":status", "buyer");
+
 
         //Execute query
         $result = $statement->execute();
@@ -249,6 +251,29 @@ class User
         //Return the results from the query
         return $result;
     }
+
+    public function save_seller()
+    {
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("INSERT INTO users (fullname, email, password, status) VALUES (:fullname, :email, :password, :status)");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":fullname", $this->getFullname());
+        $statement->bindValue(":email", $this->getEmail());
+        $statement->bindValue(":password", $this->getPassword());
+        $statement->bindValue(":status", "seller");
+
+
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
+
 
     //Magic function __construct that gets called every time a new User() is made
     //Takes one argument: $email which is used to determine what user is taken from the database

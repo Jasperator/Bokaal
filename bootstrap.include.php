@@ -11,7 +11,7 @@ session_start();
 $page = basename($_SERVER['PHP_SELF']);
 
 //If there's no active session, redirect to login.php
-if($page == "login.php" || $page == "register.php"){
+if($page == "login.php" || $page == "register.php" || $page == "register-buyer.php" || $page == "register-seller.php"){
     if (!empty($_SESSION['user'])) {
         header("Location: index.php");
     }
