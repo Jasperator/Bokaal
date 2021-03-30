@@ -28,6 +28,13 @@ $page = basename($_SERVER['PHP_SELF']);
                                         endif; ?>">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
+                    <?php 
+                           if($_SESSION['user_status'] == "seller") : ?> 
+                     <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Sell your stuf</a>
+                    </li>
+                     <?php
+                        endif;?>
 
                 </ul>
                 <ul class="navbar-nav">
@@ -37,7 +44,10 @@ $page = basename($_SERVER['PHP_SELF']);
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Log out</a>
                     </li>
+  
                 </ul>
+
+
             <?php else : ?>
 
                 <!-- If there's an active session, make a new user and show the site navigation -->

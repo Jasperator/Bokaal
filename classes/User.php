@@ -368,13 +368,25 @@ class User
         //Check if the password is correct
         if (isset($result['password'])) {
             if (password_verify($password, $result['password'])) {
-                return true;
+                return true; 
             } else {
                 return false;
             }
         } else {
             return false;
         }
+    }
+
+    public function retrieveStatus()
+    {
+        //Prepared \PDO statement that fetches the password corresponding to the inputted email
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT status FROM users WHERE email = :email");
+        $statement->bindValue(':email', $this->getEmail());
+        $statement->execute();
+        $result = $statement->fetch(\PDO::FETCH_ASSOC);
+        return $result['status'];
+        
     }
 
     //Function that fetches all users from the database except for the active user

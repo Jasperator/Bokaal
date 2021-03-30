@@ -15,8 +15,6 @@ include_once(__DIR__ . "/bootstrap.include.php");
 </head>
 <body>
 <?php include_once("nav.include.php");
-echo $_SESSION['user'];
-echo $_SESSION['user-status']
 ?>
 
 
