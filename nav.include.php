@@ -31,7 +31,7 @@ $page = basename($_SERVER['PHP_SELF']);
                     <?php 
                            if($_SESSION['user_status'] == "seller") : ?> 
                      <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Sell your stuf</a>
+                        <a class="nav-link" href="sell.php">Sell your stuf</a>
                     </li>
                      <?php
                         endif;?>
