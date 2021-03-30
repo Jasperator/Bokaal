@@ -34,7 +34,7 @@ if (!empty($_POST['register'])) {
 		
             session_start();
             $_SESSION['user'] = $email;
-            $_SESSION['user-status'] = "buyer";
+            $_SESSION['user_status'] = "buyer";
             header("Location: index.php");
         
     }

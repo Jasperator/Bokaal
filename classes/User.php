@@ -13,6 +13,10 @@ class User
     private $bio;
     private $location;
     private $status;
+    private $btw;
+    private $company;
+    private $telephone;
+
 
 
 
@@ -212,6 +216,65 @@ class User
         return $this;
     }
 
+    /**
+     * Get the value of btw
+     */ 
+    public function getBtw()
+    {
+        return $this->btw;
+    }
+
+    /**
+     * Set the value of btw
+     *
+     * @return  self
+     */ 
+    public function setBtw($btw)
+    {
+        $this->btw = $btw;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of company
+     */ 
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * Set the value of company
+     *
+     * @return  self
+     */ 
+    public function setCompany($company)
+    {
+        $this->company = $company;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of telephone
+     */ 
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * Set the value of telephone
+     *
+     * @return  self
+     */ 
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
 
     public static function getAll()
     {
@@ -258,13 +321,17 @@ class User
         $conn = Db::getConnection();
 
         //Prepare the INSERT query
-        $statement = $conn->prepare("INSERT INTO users (fullname, email, password, status) VALUES (:fullname, :email, :password, :status)");
+        $statement = $conn->prepare("INSERT INTO users (fullname, email, password, status, btw, company, telephone) VALUES (:fullname, :email, :password, :status, :btw, :company, :telephone)");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":fullname", $this->getFullname());
         $statement->bindValue(":email", $this->getEmail());
         $statement->bindValue(":password", $this->getPassword());
         $statement->bindValue(":status", "seller");
+        $statement->bindValue(":btw", $this->getBtw());
+        $statement->bindValue(":company", $this->getCompany());
+        $statement->bindValue(":telephone", $this->getTelephone());
+
 
 
         //Execute query
@@ -442,4 +509,6 @@ class User
     }
 
 
+
+    
 }

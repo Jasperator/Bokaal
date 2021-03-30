@@ -9,6 +9,10 @@ if (!empty($_POST['register'])) {
     //Convert the email string to lowercase, case sensitivity does not matter here
     $fullname = $_POST['fullname'];
     $password = $_POST['password'];
+	$btw = $_POST['btw'];
+    $company = $_POST['company'];
+    $telephone = $_POST['telephone'];
+
     $email = strtolower($_POST['email']);
     $user = new classes\User($email);
 
@@ -17,6 +21,10 @@ if (!empty($_POST['register'])) {
     $valid_email = $user->setEmail($email);
     $user->setFullname($fullname);
     $user->setPassword($password);
+	$user->setBtw($btw);
+    $user->setCompany($company);
+    $user->setTelephone($telephone);
+
 
 	
     //If setEmail returns a string, show the error message
@@ -34,7 +42,7 @@ if (!empty($_POST['register'])) {
 		
             session_start();
             $_SESSION['user'] = $email;
-            $_SESSION['user-status'] = "seller";
+            $_SESSION['user_status'] = "seller";
             header("Location: index.php");
         
     }
@@ -85,6 +93,23 @@ if (!empty($_POST['register'])) {
 					<input type="password" name="password" id="password" class="form-control" placeholder="Your Password" required>
 					<i class="fas fa-lock"></i>
 				</div>
+				<div class="form-group">
+					<label for="btw">Btw nummer</label>
+					<input type="text" name="btw" id="btw" class="form-control" placeholder="Btw number" required>
+					<i class="fas fa-user"></i>
+				</div>
+				<div class="form-group">
+					<label for="company">Company name</label>
+					<input type="text" name="company" id="company" class="form-control" placeholder="Company Name" required>
+					<i class="fas fa-user"></i>
+				</div>
+				<div class="form-group">
+					<label for="telephone">Telephone  nummer</label>
+					<input type="number" name="telephone" id="telephone" class="form-control" placeholder="Your Telephone Number" required>
+					<i class="fas fa-user"></i>
+				</div>
+
+
 				<div class="form-group">
 					<input type="submit" class="register" value="Register" name="register">
 				</div>
