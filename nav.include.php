@@ -30,7 +30,8 @@ $page = basename($_SERVER['PHP_SELF']);
                     </li>
                     <?php 
                            if($_SESSION['user_status'] == "seller") : ?> 
-                     <li class="nav-item">
+                     <li class="nav-item <?php if ($page == "sell.php") : echo "active";
+                                        endif; ?>">
                         <a class="nav-link" href="sell.php">Sell your stuf</a>
                     </li>
                      <?php

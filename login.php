@@ -73,7 +73,7 @@ if (!empty($_POST)) {
                 <form action="" method="post">
                   <div class="form-label-group">
                     <input type="text" name="email" id="email" class="form-control" autofocus>
-                    <label for="inputEmail">Thomas More Email</label>
+                    <label for="inputEmail">Email</label>
                   </div>
 
                   <div class="form-label-group">
