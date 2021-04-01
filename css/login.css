@@ -1,0 +1,21 @@
+
+
+@media only screen and (max-width: 700px) {
+
+ body {
+    background-image: url("../images/background/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 700px;
+
+}
+
+h3 {
+    font-family: "Josefin Sans";
+    font-size: 2.3em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px; 
+}
+
+}
