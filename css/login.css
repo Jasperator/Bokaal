@@ -1,11 +1,12 @@
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
 
  body {
-    background-image: url("../images/background/background.jpg");
+    background-image: url("../images/background/potato-op50.jpg");
     background-repeat: no-repeat;
-    background-size: 700px;
+    background-size: cover;
+    background-color: cornsilk;
 
 }
 
@@ -16,6 +17,37 @@ h3 {
     font-variant: normal;
     font-weight: 700;
     line-height: 15.4px; 
+
+    padding-left: 30px;
 }
+
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #151E3D;
+}
+
+#email, #password{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #151E3D;
+    border-radius: 0px;
+}
+
+#loginBTN{
+    background-color: orangered;
+    border: none;
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+.logo {
+    height: 20%;
+    margin-bottom: 20px;
+    padding-left: 30%;
+    padding-right: 40%;
+
+}
+
 
 }

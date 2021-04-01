@@ -62,6 +62,8 @@ if (!empty($_POST)) {
           <div class="container">
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
+
+                <img class="logo" src="images/logo/LogoBlack.svg" alt="login logo Bokaal">
                 <h3 class="login-heading mb-4">Welcome back!</h3>
 
 
@@ -73,13 +75,15 @@ if (!empty($_POST)) {
 
                 <form action="" method="post">
                   <div class="form-label-group">
-                    <input type="text" name="email" id="email" class="form-control" autofocus>
-                    <label for="inputEmail">Email</label>
+                    <input type="text" name="email" id="email" class="form-control" autofocus placeholder="Email">
+                   <!-- <label for="inputEmail">Email</label>-->
+                   <br>
                   </div>
 
                   <div class="form-label-group">
-                    <input type="password" name="password" id="password" class="form-control">
-                    <label for="inputPassword">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="password">
+                    <!-- <label for="inputPassword">Password</label> -->
+                    <br>
                   </div>
 
 
@@ -87,7 +91,7 @@ if (!empty($_POST)) {
                     <input type="text" size="6" maxlength="5" name="captcha" value=""></p>
                   <p><small>Copy the digits from the image into the box</small></p>
 
-                  <input type="submit" value="LOGIN" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">
+                  <input id="loginBTN" type="submit" value="LOGIN" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">
 
                   <div class="text-center">
                 </form>
