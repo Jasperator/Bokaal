@@ -16,15 +16,15 @@ if (!empty($_POST)) {
     if (classes\User::checkPassword($email, $password)) {
       $user = new classes\User($email);
 
-      if ($_POST['captcha'] == $_SESSION['digit']) {
+      // if ($_POST['captcha'] == $_SESSION['digit']) {
        $_SESSION['user'] = $email;
        $_SESSION['user_status'] = $user -> retrieveStatus();
 
           header("Location: index.php");
        
-      } else {
-        $error = "Wrong Captcha";
-      }
+      // } else {
+      //   $error = "Wrong Captcha";
+      // }
     } else {
       $error = "Sorry, we couldn't log you in.";
     }
