@@ -91,7 +91,7 @@ if (!empty($_POST['register'])) {
 					<input id="register" type="submit" class="register" value="Registreer" name="register">
 				</div>
 				<div id="result"> </div>
-				<p>Heb je al een account? <a href="register.php">Log</a> dan hier in</p>
+				<p>Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
 			</form>
 
 		</div>

@@ -41,7 +41,7 @@ if (!empty($_POST['buyer'])) {
 				<div class="form-group">
 					<input type="submit" class="seller" value="Verkoper" name="Verkoper">
 				</div>
-
+				<p>Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
 			</form>
 
 		</div>
