@@ -3,12 +3,12 @@
 include_once(__DIR__ . "/bootstrap.include.php");
 
 //Check if values have been sent
-if (!empty($_POST['buyer'])) {
+if (!empty($_POST['Koper'])) {
             header("Location: register-buyer.php");
         
     }
 
-	if (!empty($_POST['seller'])) {
+	if (!empty($_POST['Verkoper'])) {
 		header("Location: register-seller.php");
 	
 }
