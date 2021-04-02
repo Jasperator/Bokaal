@@ -50,16 +50,18 @@ if (!empty($_POST['register'])) {
 	<title>Register</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/register-seller.css">
 	
 </head>
 
 <body>
 
-	<?php include_once("nav.include.php") ?>
+	<?php // include_once("nav.include.php") ?>
 
 	<div class="d-flex justify-content-center">
 			<form class="registerForm" action="" method="post">
-				<h2>Register Buyer Account</h2>
+			<img class="logo" src="images/logo/LogoBlack.svg" alt="login logo Bokaal">
+				<h2>Registreer kopers <br> <br> account</h2>
 				<?php if (!empty($error)) : ?>
 					<div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
 						<p><?= $error ?></p>
@@ -71,25 +73,25 @@ if (!empty($_POST['register'])) {
 				<br>
 				<div class="form-group">
 					<label for="fullname">Full Name</label>
-					<input type="text" name="fullname" id="fullname" class="form-control" placeholder="Your Name" required>
+					<input type="text" name="fullname" id="fullname" class="form-control" placeholder="Volledige naam" required>
 					<i class="fas fa-user"></i>
 				</div>
 				<div class="form-group">
 					<label for="email">Your Email</label>
-					<input type="email" name="email" class="form-control email" placeholder="Your Email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
+					<input type="email" name="email" class="form-control email" placeholder="Email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
 					<span id="availability"></span>
 					<i class="fas fa-envelope"></i>
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input type="password" name="password" id="password" class="form-control" placeholder="Your Password" required>
+					<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord" required>
 					<i class="fas fa-lock"></i>
 				</div>
 				<div class="form-group">
-					<input type="submit" class="register" value="Register" name="register">
+					<input id="register" type="submit" class="register" value="Registreer" name="register">
 				</div>
 				<div id="result"> </div>
-
+				<p>Heb je al een account? <a href="register.php">Log</a> dan hier in</p>
 			</form>
 
 		</div>

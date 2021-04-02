@@ -23,22 +23,23 @@ if (!empty($_POST['buyer'])) {
 	<title>Register</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/register.css">
 	
 </head>
 
 <body>
 
-	<?php include_once("nav.include.php") ?>
+	<?php //include_once("nav.include.php") ?>
 
 	<div class="d-flex justify-content-center">
 			<form  action="" method="post">
-				<h2>I am a</h2>
+				<h2>Ik ben een</h2>
 
 				<div class="form-group">
-					<input type="submit" class="buyer" value="Buyer" name="buyer">
+					<input type="submit" class="buyer" value="Koper" name="Koper">
 				</div>
 				<div class="form-group">
-					<input type="submit" class="seller" value="Seller" name="seller">
+					<input type="submit" class="seller" value="Verkoper" name="Verkoper">
 				</div>
 
 			</form>

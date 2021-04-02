@@ -53,7 +53,7 @@ if (!empty($_POST)) {
 
 <body>
 
-  <?php include_once("nav.include.php"); ?>
+  <?php // include_once("nav.include.php"); ?>
 
   <div class="container-fluid">
     <div class="row no-gutter">
@@ -81,7 +81,7 @@ if (!empty($_POST)) {
                   </div>
 
                   <div class="form-label-group">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="password">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord">
                     <!-- <label for="inputPassword">Password</label> -->
                     <br>
                   </div>
@@ -95,6 +95,7 @@ if (!empty($_POST)) {
 
                   <div class="text-center">
                 </form>
+                <p>Nog geen account? <a href="register.php">Registreer</a> dan hier</p>
               </div>
             </div>
           </div>
