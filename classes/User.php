@@ -364,6 +364,9 @@ class User
             $this->profile_img = $user->profile_img;
             $this->bio = $user->bio;
             $this->location = $user->location;
+            $this->btw = $user->btw;
+            $this->company = $user->company;
+            $this->telephone = $user->telephone;
             $this->status = $user->status;
 
         }
@@ -414,6 +417,30 @@ class User
         $statement->bindValue(":bio", $this->getBio());
         $statement->bindValue(":location", $this->getLocation());
         $statement->bindValue(":email", $_SESSION['user']);
+
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
+    public function completeProfileSeller()
+    {
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("UPDATE users SET bio = :bio, location  = :location, btw = :btw, company = :company, telephone = :telephone WHERE email = :email");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":bio", $this->getBio());
+        $statement->bindValue(":location", $this->getLocation());
+        $statement->bindValue(":btw", $this->getBtw());
+        $statement->bindValue(":company", $this->getCompany());
+        $statement->bindValue(":telephone", $this->getTelephone());
+        $statement->bindValue(":email", $_SESSION['user']);
+
+
 
         //Execute query
         $result = $statement->execute();
