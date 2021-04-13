@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 31 mrt 2021 om 17:26
+-- Gegenereerd op: 13 apr 2021 om 09:51
 -- Serverversie: 10.4.14-MariaDB
 -- PHP-versie: 7.4.11
 
@@ -36,15 +36,19 @@ CREATE TABLE `items` (
   `unit` varchar(300) NOT NULL,
   `price` int(11) NOT NULL,
   `currency` varchar(300) NOT NULL,
-  `item_image` varchar(300) NOT NULL
+  `item_image` varchar(300) NOT NULL,
+  `status` varchar(300) NOT NULL,
+  `buyer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `items`
 --
 
-INSERT INTO `items` (`id`, `seller_id`, `title`, `description`, `quantity`, `unit`, `price`, `currency`, `item_image`) VALUES
-(4, 8, 'Test', 'descr', 1, 'kg', 1, 'euro', 'lelijke-tomaten.jpg');
+INSERT INTO `items` (`id`, `seller_id`, `title`, `description`, `quantity`, `unit`, `price`, `currency`, `item_image`, `status`, `buyer_id`) VALUES
+(4, 8, 'Test', 'descr', 1, 'kg', 1, 'euro', 'lelijke-tomaten.jpg', '', 0),
+(5, 9, 'title', 'test', 5, 'kg', 10, 'euro', 'lelijke-tomaten.jpg', '', 0),
+(6, 8, 'test', 'des', 15, 'kg', 30, 'euro', 'lelijke-tomaten.jpg', '', 0);
 
 -- --------------------------------------------------------
 
@@ -64,7 +68,7 @@ CREATE TABLE `users` (
   `status` varchar(300) NOT NULL,
   `btw` varchar(300) NOT NULL,
   `company` varchar(300) NOT NULL,
-  `telephone` int(15) NOT NULL
+  `telephone` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -72,9 +76,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `active`, `fullname`, `email`, `password`, `profile_img`, `bio`, `location`, `status`, `btw`, `company`, `telephone`) VALUES
-(7, '', 'Jasper Peeters', 'peeters.jasper98@gmail.com', '$2y$10$8VsPW1sCW.QnmRiDHc2e3OnXOp4H8MxivldHv3iam0C1ZALXJZIze', '', '', '', 'buyer', '', '', 0),
-(8, '', 'Jasper Peeters', 'r0695883@student.thomasmore.be', '$2y$10$GKL2Hj3Xf3An5.HOaO8aT..yBzgURqZ.8YVylZgObgdjmVXw1bmti', '', '', '', 'seller', 'BE9874226584', 'Thomas More', 468230089),
-(9, '', 'Jasper Peeters', 'peeters.jasper@gmail.com', '$2y$10$z8PWAcpR5vkd1DHGo7sg5e9K2G5Z.k5Wuapre0r5yR6ReBbx/qXVa', '', '', '', 'seller', 'BE98512218', 'Thomas More', 468230089);
+(7, '', 'Jasper Peeters', 'peeters.jasper98@gmail.com', '$2y$10$8VsPW1sCW.QnmRiDHc2e3OnXOp4H8MxivldHv3iam0C1ZALXJZIze', '1615808064011.jpg', 'Ik ben een koper', 'Oost-Vlaanderen', 'buyer', '', '', '0'),
+(8, '', 'Jasper Peeters', 'r0695883@student.thomasmore.be', '$2y$10$GKL2Hj3Xf3An5.HOaO8aT..yBzgURqZ.8YVylZgObgdjmVXw1bmti', '1615808064011.jpg', 'dit is mijn bio', 'Antwerpen', 'seller', ' BE9885556', 'Thomas More', '0468230089'),
+(9, '', 'Jasper Peeters', 'peeters.jasper@gmail.com', '$2y$10$z8PWAcpR5vkd1DHGo7sg5e9K2G5Z.k5Wuapre0r5yR6ReBbx/qXVa', '', '', '', 'seller', 'BE98512218', 'Thomas More', '468230089'),
+(10, '', 'Jasper Peeters', 'jasper@student.thomasmore.be', '$2y$10$cGhS8urqAu0yJi3vfC35HOdXxxQRe2LY/O4pJ.X/YhKEEZVRQGllm', '', '', '', 'buyer', '', '', '0');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -100,13 +105,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

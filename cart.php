@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
 
-    <title>Home</title>
+    <title>Winkelmandje</title>
 </head>
 <body>
 <?php include_once("nav.include.php");
 ?>
     <div class="container">
         <div class="jumbotron">
-            <h1>Home</h1>
-            <p>Home Page</p>
+            <h1>Winkemlandje</h1>
+            <p>Dit is je winkelmandje</p>
         </div>
 
 
