@@ -2,51 +2,56 @@
 
 include_once(__DIR__ . "/bootstrap.include.php");
 
+
+
 //Put the pagename in a variable
 //PHP_SELF returns the path, basename shortens it to the filename
 $page = basename($_SERVER['PHP_SELF']);
 
 
 ?>
+<style>
+<?php include 'css/navbar.css'; ?>
+</style>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.php">Bokaal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<nav >
+    <div id="container" class="container">
+        <a class="home-logo" href="index.php">Bokaal</a>
+        <button type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span ></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
+        <div  id="navbarText">
 
             <!-- If there's no active session, show the login/signup links -->
             <?php if (!empty($_SESSION['user'])) :
                 $user = new classes\User($_SESSION['user']);
             ?>
-                <ul class="navbar-nav mr-auto">
+                <ul >
 
                     <!-- Mark a link as "active" according to the current page -->
-                    <li class="nav-item <?php if ($page == "search.php") : echo "active";
-                                        endif; ?>">
-                        <a class="nav-link" href="search.php">Zoek</a>
+                    <li  <?php if ($page == "search.php") : echo "active";
+                                        endif; ?>>
+                        <a  href="search.php"> <img src="images/icon/zoek.png" alt="zoek icon"> <p>Zoek</p> </a>
                     </li>
-                    <li class="nav-item <?php if ($page == "index.php") : echo "active";
-                                        endif; ?>">
-                        <a class="nav-link" href="index.php">Home</a>
+                    <li <?php if ($page == "index.php") : echo "active";
+                                        endif; ?>>
+                        <a href="index.php"> <img src="images/icon/home.png" alt="zoek icon"> <p>Home</p> </a>
                     </li>
                     <?php 
                            if($_SESSION['user_status'] == "seller") : ?> 
-                     <li class="nav-item <?php if ($page == "sell.php") : echo "active";
-                                        endif; ?>">
-                        <a class="nav-link" href="sell.php">Sell your stuf</a>
+                     <li <?php if ($page == "sell.php") : echo "active";
+                                        endif; ?>>
+                        <a href="sell.php"> <img src="images/icon/add.png" alt="zoek icon"> <p> Sell your stuff</p></a>
                     </li>
                      <?php
                         endif;?>
 
-                    <li class="nav-item <?php if ($page == "cart.php") : echo "active";
-                                        endif; ?>">
-                        <a class="nav-link" href="cart.php">cart</a>
+                    <li <?php if ($page == "cart.php") : echo "active";
+                                        endif; ?>>
+                        <a href="cart.php"> <img src="images/icon/cart.png" alt="zoek icon"> <p>cart</p> </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.php"><i class="fas fa-user"></i>Profile</a>
+                    <li>
+                        <a href="profile.php"><i class="fas fa-user"></i> <img src="images/icon/user.png" alt="zoek icon"> <p>Profile</p> </a>
                     </li>
 
             <?php endif; ?>

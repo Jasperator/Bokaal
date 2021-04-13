@@ -1,0 +1,59 @@
+@media only screen and (max-width: 900px) {
+
+    nav{
+        width:90%;
+        height:65px;
+        position:fixed;
+
+        background-color: #D5D962;
+        top: 650px;
+        margin: auto;
+        margin-left: 5%;
+        border-radius:5px;
+        }
+
+
+    img{
+        width: 40px;
+    }
+
+    
+    ul{
+        width: 100%;
+
+        text-align: center;
+
+        padding: 0px;
+
+        margin-left: -5%;
+        margin-top: 12px;
+
+
+        /*padding: 0px;
+        padding-left: 10px;*/
+    }
+
+    li{
+        background-color: #D5D962;
+
+        display: inline-block;
+
+        padding-left: 6%;
+
+       /* padding-right: 23px;
+        padding-top: 11.5px;*/
+
+    }
+
+    p{
+        display: none;
+    }
+
+    button{
+        display: none;
+    }
+
+    .home-logo{
+        display: none;
+    }
+}
