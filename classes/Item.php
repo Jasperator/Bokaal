@@ -13,6 +13,9 @@ class Item
     private $price;
     private $currency;
     private $item_image;
+    private $status;
+    private $buyer_id;
+
 
     /**
      * Get the value of id
@@ -251,8 +254,10 @@ class Item
         $conn = Db::getConnection();
 
         //<> is the same as !=
-        $statement = $conn->prepare("SELECT * FROM items WHERE seller_id <> :seller_id");
+        $statement = $conn->prepare("SELECT * FROM items WHERE seller_id <> :seller_id AND status = :status");
         $statement->bindValue(':seller_id', $user->getId());
+        $statement->bindValue(':status', "");
+
         $statement->execute();
         $items = $statement->fetchAll(\PDO::FETCH_OBJ);
 
@@ -262,11 +267,28 @@ class Item
     public function getAllItems()
     {
         $conn = Db::getConnection();
-        $statement = $conn->prepare("SELECT * FROM items");
+        $statement = $conn->prepare("SELECT * FROM items WHERE status = :status");
+        $statement->bindValue(':status', "");
+
         $statement->execute();
         $items = $statement->fetchAll(\PDO::FETCH_OBJ);
 
         return $items;
+    }
+
+    
+    public function buyItem($user, $id)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("UPDATE items SET status = :status, buyer_id = :buyer_id WHERE id = :id");
+        $statement->bindValue(':status', "pending");
+        $statement->bindValue(':buyer_id', $user->getId());
+        $statement->bindValue(':id', $id);
+        $result = $statement->execute();
+
+        return $result;
+
     }
 
 }

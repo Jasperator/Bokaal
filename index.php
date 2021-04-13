@@ -11,6 +11,11 @@ $items = $item->getAllItemsExceptSeller($user);
     $items = $item->getAllItems();
 }
 
+if (!empty($_POST['buy-item'])) {
+$id = $_POST['buy-item'];
+
+$item->buyItem($user,$id);
+}
 
 ?>
 
@@ -39,6 +44,7 @@ $items = $item->getAllItemsExceptSeller($user);
                     <div class="col-md-12">
                         <div class="d-flex flex-row">
                             <div class="p-0 w-25">
+                            <form  action="" method="post">
                                 <img src="./uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
                             </div>
                             <div class="pl-3 pt-2 pr-2 pb-2 w-75">
@@ -46,9 +52,15 @@ $items = $item->getAllItemsExceptSeller($user);
                                 <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($item->quantity); ?> :  <?= htmlspecialchars($item->unit); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($item->price); ?> :  <?= htmlspecialchars($item->currency); ?></p>
+                                
+			<form  action="" method="post">
 
-                            </div>
-                        </div>
+				<div class="form-group">
+					<button type="submit" name="buy-item" class="buy" value="<?= htmlspecialchars($item->id); ?>" name="buy" placeholder="Koop">Koop</button>
+				</div>
+			</form>
+
+                    </div>
                     <?php endforeach ?>
                     </div>
                 </li>

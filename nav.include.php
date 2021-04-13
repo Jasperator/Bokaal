@@ -24,6 +24,10 @@ $page = basename($_SERVER['PHP_SELF']);
                 <ul class="navbar-nav mr-auto">
 
                     <!-- Mark a link as "active" according to the current page -->
+                    <li class="nav-item <?php if ($page == "search.php") : echo "active";
+                                        endif; ?>">
+                        <a class="nav-link" href="search.php">Zoek</a>
+                    </li>
                     <li class="nav-item <?php if ($page == "index.php") : echo "active";
                                         endif; ?>">
                         <a class="nav-link" href="index.php">Home</a>
@@ -37,43 +41,14 @@ $page = basename($_SERVER['PHP_SELF']);
                      <?php
                         endif;?>
 
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.php"><i class="fas fa-user"></i>&nbsp&nbsp<?php echo htmlspecialchars($user->getFullname()); ?></a>
+                    <li class="nav-item <?php if ($page == "cart.php") : echo "active";
+                                        endif; ?>">
+                        <a class="nav-link" href="cart.php">cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Log out</a>
+                        <a class="nav-link" href="profile.php"><i class="fas fa-user"></i>Profile</a>
                     </li>
-  
-                </ul>
 
-
-            <?php else : ?>
-
-                <!-- If there's an active session, make a new user and show the site navigation -->
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($page == "login.php") : echo "active";
-                                            endif; ?>" href="login.php">
-                            <i class="fas fa-user"></i> Log in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($page == "register.php") : echo "active";
-                                            endif; ?>" href="register.php">
-                            <i class="fas fa-user-plus"></i> Sign up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($page == "register-seller.php") : echo "active";
-                                            endif; ?>" href="register-seller.php">
-                            <i class="fas fa-user-plus"></i> Sign up as seller</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($page == "register-buyer.php") : echo "active";
-                                            endif; ?>" href="register-buyer.php">
-                            <i class="fas fa-user-plus"></i> Sign up as buyer</a>
-                    </li>
-                </ul>
             <?php endif; ?>
         </div>
     </div>
