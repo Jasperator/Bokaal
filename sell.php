@@ -96,7 +96,7 @@ if (!empty($_POST['upload'])) {
           <div><?php echo $error; ?></div>
         <?php endif; ?>
                 <div class="form-group">
-            <input type="file" id="item_image" name="item_image" capture="camera"/>
+            <input class="button" type="file" id="item_image" name="item_image" capture="camera"/>
           </div>
 				<div  class="form-group">
 					<input id="button_or" type="submit" class="register" value="Upload" name="upload">

@@ -11,6 +11,10 @@
     line-height: 26.4px;
  }
 
+ button{
+     color: orangered;
+ }
+
  #item_image{
     text-align: center;
 
