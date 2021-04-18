@@ -1,0 +1,44 @@
+@media only screen and (max-width: 900px) {
+
+ h2{
+    text-align: center;  
+    margin-top: 10%;
+
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+ }
+
+ #item_image{
+    text-align: center;
+
+    color: #000000;
+ }
+
+ #button_or{
+    text-align: center;
+
+    margin-left: 30%;
+    margin-right: 30%;
+
+    background-color: orangered;
+    color: #ffffff;
+
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+
+    border: none;
+    border-radius: 5px;
+
+    padding-left:15px;
+    padding-right:15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+ }
+
+}

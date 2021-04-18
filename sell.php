@@ -3,6 +3,9 @@
 include_once(__DIR__ . "/bootstrap.include.php");
 
 
+
+
+
 if (!empty($_POST['upload'])) {
 
     $user = new classes\User($_SESSION['user']);
@@ -49,50 +52,54 @@ if (!empty($_POST['upload'])) {
 <body>
 <?php include_once("nav.include.php") ?>
 
+<style>
+<?php include 'css/sell.css'; ?>
+</style>
+
 
 <div class="d-flex justify-content-center">
 			<form class="registerForm" enctype="multipart/form-data" action="" method="post">
 				<h2>Sell</h2>
 				<div class="form-group">
-					<label for="title">Title</label>
+					<!--<label for="title">Title</label>-->
 					<input type="text" name="title" id="title" class="form-control" placeholder="Title" required>
 					<i class="fas fa-user"></i>
 				</div>
 				<div class="form-group">
-					<label for="description">Description</label>
+					<!--<label for="description">Description</label>-->
 					<input type="text" name="description" id="description" class="form-control" placeholder="description" required>
 					<i class="fas fa-user"></i>
 				</div>
 				<div class="form-group">
-					<label for="quantity">Quantity</label>
+					<!--<label for="quantity">Quantity</label>-->
 					<input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantity" required>
 					<i class="fas fa-user"></i>
 				</div>
 				<div class="form-group">
-					<label for="unit">Unit</label>
+					<!--<label for="unit">Unit</label>-->
 					<input type="text" name="unit" id="unit" class="form-control" placeholder="Unit" required>
 					<i class="fas fa-user"></i>
 				</div>
 
 				<div class="form-group">
-					<label for="price">Price</label>
+					<!--<label for="price">Price</label>-->
 					<input type="number" name="price" id="price" class="form-control" placeholder="Price" required>
 					<i class="fas fa-user"></i>
 				</div>
                 <div class="form-group">
-					<label for="currency">Currency</label>
+					<!--<label for="currency">Currency</label>-->
 					<input type="text" name="currency" id="currency" class="form-control" placeholder="Currency" required>
 					<i class="fas fa-user"></i>
 				</div>
 
         <?php if (isset($error)) : ?>
-          <div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px; margin-top:10px;"><?php echo $error; ?></div>
+          <div><?php echo $error; ?></div>
         <?php endif; ?>
                 <div class="form-group">
-            <input style="color:gray; border:none;" type="file" id="item_image" name="item_image" capture="camera"/>
+            <input type="file" id="item_image" name="item_image" capture="camera"/>
           </div>
-				<div class="form-group">
-					<input type="submit" class="register" value="Upload" name="upload">
+				<div  class="form-group">
+					<input id="button_or" type="submit" class="register" value="Upload" name="upload">
 				</div>
 				<div id="result"> </div>
 
@@ -100,7 +107,10 @@ if (!empty($_POST['upload'])) {
 
 		</div>
 
+		<!-- <div>style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px; margin-top:10px;"</div> -->
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
+
