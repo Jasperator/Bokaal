@@ -88,10 +88,10 @@ if (!empty($_POST['upload'])) {
 						<input type="text" name="unit" id="unit" class="form-control" placeholder="Unit" required  > -->
 						
 						<select type="text" name="unit" id="unit" class="form-control" placeholder="Unit" required >
-							<option value="0">Maak je keuze</option>
-							<option value="1">Gram</option>
-							<option value="2">Kg</option>
-							<option value="3">Stuks</option>							
+							<option value="Maak je keuze">Maak je keuze</option>
+							<option value="Gram">Gram</option>
+							<option value="Kg">Kg</option>
+							<option value="Stuks">Stuks</option>							
 						</select>
 
 						<i class="fas fa-user">  </i>

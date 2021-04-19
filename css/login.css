@@ -1,68 +1,60 @@
-
-
 @media only screen and (max-width: 900px) {
-
- body {
+  body {
     background-image: url("../images/background/potato-op40.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: cornsilk;
+  }
 
-}
-
-h3 {
+  h3 {
     font-family: "Josefin Sans";
     font-size: 2.3em;
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
-    line-height: 15.4px; 
+    line-height: 15.4px;
 
     padding-left: 30px;
-}
+  }
 
-input{
+  input {
     background: transparent;
     border: none;
-    border-bottom: 2px solid #151E3D;
-}
+    border-bottom: 2px solid #151e3d;
+  }
 
-a{
+  a {
     color: orangered;
     text-decoration: none;
-}
+  }
 
-p{
-        font-family: "Josefin Sans";
+  p {
+    font-family: "Josefin Sans";
+  }
 
-    }
-
-label{
+  label {
     opacity: 0;
-}
+  }
 
-
-#email, #password{
+  #email,
+  #password {
     background: transparent;
     border: none;
-    border-bottom: 2px solid #151E3D;
+    border-bottom: 2px solid #151e3d;
     border-radius: 0px;
-}
+  }
 
-#loginBTN{
+  #loginBTN {
     background-color: orangered;
     border: none;
     width: 75%;
     margin-left: 12.5%;
-}
+  }
 
-.logo {
+  .logo {
     height: 20%;
     margin-bottom: 20px;
     padding-left: 30%;
     padding-right: 40%;
-
-}
-
-
+  }
 }
