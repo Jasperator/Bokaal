@@ -1,48 +1,130 @@
 @media only screen and (max-width: 900px) {
 
- h2{
-    text-align: center;  
-    margin-top: 10%;
+   h2 {
+      text-align: center;
 
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    line-height: 26.4px;
- }
+      color: orangered;
 
- button{
-     color: orangered;
- }
+      margin-top: 10%;
 
- #item_image{
-    text-align: center;
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-size: 2.5em;
+      font-variant: normal;
+      font-weight: 700;
+   }
 
-    color: #000000;
- }
+   button {
+      color: orangered;
+   }
 
- #button_or{
-    text-align: center;
-
-    margin-left: 30%;
-    margin-right: 30%;
-
-    background-color: orangered;
-    color: #ffffff;
-
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-
-    border: none;
-    border-radius: 5px;
-
-    padding-left:15px;
-    padding-right:15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+   
 
 
- }
+   #top {
+      margin-top: 15%;
+   }
+
+   #title{
+
+      -webkit-box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5); 
+      box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5);
+      
+   }
+
+   #description{
+
+      -webkit-box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5); 
+      box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5);
+      
+   }
+
+
+   #quantity {
+      margin-left: 8%;
+      width: 120%;
+
+      -webkit-box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5); 
+      box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5);
+
+   }
+
+   #unit {
+      width: 80%;
+      margin-left: 45%;
+
+      -webkit-box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5); 
+      box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5);
+   }
+
+   #price {
+      margin-left: 8%;
+      margin-top: -10px;
+
+      -webkit-box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5); 
+      box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5);
+
+      width: 120%;
+
+   }
+
+   #currency {      
+      width: 58%;
+
+      margin-left: 34%;
+      margin-top: -10px;
+
+      -webkit-box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5); 
+      box-shadow: 1px 0px 25px 0px rgba(145,145,145,0.5);
+      
+   }
+
+
+   #button_or {
+      text-align: center;
+
+      margin-left: 30%;
+      margin-right: 30%;
+
+      background-color: orangered;
+      color: #ffffff;
+
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-variant: normal;
+      font-size: 1.5em;
+
+      border: none;
+      border-radius: 5px;
+
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+   }
+
+ 
+
+   #item_image {
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-variant: normal;
+
+      text-align: center;
+
+      background-color: #d5d962;
+      color: #ffffff;
+
+      margin-bottom: 35px;
+      margin-left: 31%;
+
+      width: 27%;
+
+   }
+
+
+
+
 
 }
