@@ -1,0 +1,83 @@
+
+
+@media only screen and (max-width: 900px) {
+
+    body {
+       background-image: url("../images/background/potato-op40.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-color: cornsilk;
+   
+   }
+   
+   h3 {
+       font-family: "Josefin Sans";
+       font-size: 2.3em;
+       font-style: normal;
+       font-variant: normal;
+       font-weight: 700;
+
+       line-height: 15.4px; 
+   
+       padding-left: 30px;
+   }
+
+   h2{
+    font-family: "Josefin Sans";
+    font-size: 2.3em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+
+    line-height: 15.4px; 
+
+    text-align: center;
+
+    padding-top: 175px;
+    padding-bottom: 25px;
+
+}
+   
+    input{
+        background-color: orangered;
+
+        font-family: "Josefin Sans";
+        font-size: 1.5em;
+ 
+        color: white;
+ 
+        border: none;
+        border-radius: 5px;
+ 
+        width:50%;
+ 
+        padding: 10px, 10px, 10px, 10px ;
+ 
+        margin-top: 15%;
+        margin-left: 25%;
+   }
+   
+  
+
+   .logo {
+       height: 20%;
+       margin-bottom: 20px;
+       padding-left: 30%;
+       padding-right: 40%;
+   
+   }
+
+   p{
+    font-family: "Josefin Sans";
+    
+    text-align: center;
+
+}
+
+a{
+    color: orangered;
+    text-decoration: none;
+}
+   
+   
+   }

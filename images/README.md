@@ -1,0 +1,1 @@
+hier komen de foto's die wij gebruiken in de applicatie, bv backgrounds 
