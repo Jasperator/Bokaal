@@ -17,7 +17,7 @@
   naast dese profiel foto moet ook de naam van de gebruiker komen -->
   </div>
 
-  <div>
+  <div class="icon_full" >
     <a href="favor.php"><img class="icons" src="images/icon/star.png" alt=""></a>
     <a href="message.php"><img class="icons" src="images/icon/messenger.png" alt=""></a>
     <a href="bought.php"><img class="icons" src="images/icon/dollar.png" alt=""></a>
