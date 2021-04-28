@@ -20,13 +20,14 @@
 
 
 
-
    #top {
       margin-top: 15%;
    }
 
    #title {
       height: 50px;
+
+      border: none;
 
       -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
       box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -37,6 +38,8 @@
 
       height: 100px;
 
+      border: none;
+
       -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
       box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
@@ -45,6 +48,8 @@
 
    #quantity {
       margin-left: 8%;
+
+      border: none;
 
       height: 50px;
       width: 120%;
@@ -58,6 +63,8 @@
       width: 80%;
       height: 50px;
 
+      border: none;
+
       margin-left: 45%;
 
       -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -67,6 +74,8 @@
    #price {
       margin-left: 8%;
       margin-top: -10px;
+
+      border: none;
 
       -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
       box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -79,6 +88,8 @@
    #currency {
       width: 58%;
       height: 50px;
+
+      border: none;
 
       margin-left: 34%;
       margin-top: -10px;
@@ -93,9 +104,11 @@
       font-style: normal;
       font-variant: normal;
 
+      border: none;
+
       text-align: center;
 ;
-      color: #d5d962;
+      color: #000000;
 
    }
 
@@ -104,31 +117,30 @@
       background-color: #d5d962;
       color: #ffffff;
 
+      border: none;
+      
+
    }
 
 
    #button_or {
-      text-align: center;
-
-      margin-left: 25%;
-      margin-right: 30%;
-
-      background-color: orangered;
-      color: #ffffff;
-
       font-family: "Josefin Sans";
-      font-style: normal;
-      font-variant: normal;
-      font-size: 1.5em;
+        font-style: normal;
+        font-variant: normal;
 
-      border: none;
-      border-radius: 2px;
+        border: none;
+        border-radius: 5px;
 
-      padding-left: 10%;
-      padding-right: 10%;
-      padding-top: 5px;
-      padding-bottom: 5px;
+        background-color: orangered;
+        color: #ffffff;
 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        margin-left: 36%;
+        margin-bottom: 20px;
    }
 
 

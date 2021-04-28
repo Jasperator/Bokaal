@@ -24,6 +24,7 @@ if (!empty($_POST['Koper'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/register.css">
+	<link rel="icon" type="image/svg" href=images/Logo/LogoWhite.svg>
 	
 </head>
 

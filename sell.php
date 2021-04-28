@@ -49,6 +49,8 @@ if (!empty($_POST['upload'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<title>Sell your stuf</title>
+
+	<link rel="icon" type="image/svg" href=images/Logo/LogoWhite.svg>
 </head>
 
 <body>
