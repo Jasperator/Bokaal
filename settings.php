@@ -86,133 +86,157 @@ if (!empty($_POST['updateProfile'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Sell your stuf</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+  <link rel="stylesheet" href="css/settings.css">
+  <title>Profiel instellingen</title>
+
+  <link rel="icon" type="image/svg" href=images/Logo/LogoWhite.svg>
+
 </head>
+
 <body>
-<?php include_once("nav.include.php") ?>
+  <?php include_once("nav.include.php") ?>
 
-<div class="container">
-    <div class="jumbotron" style=" height:500px; margin:20px;">
-      <div class="float-left" style=" margin-left:50px;">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="float-left">
 
-        <img src="./uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" width="250px;" height="250px;" style="border-radius: 10px"/>
-        <?php if (isset($error)) : ?>
-          <div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px; margin-top:10px;"><?php echo $error; ?></div>
-        <?php endif; ?>
-        <form enctype="multipart/form-data" action="" method="POST" style="margin-top:20px; border:none;">
+        <div id="wrapper">
+          <div id="splash-info">
+            <img class="profile_image" src="./uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" />
+            <?php if (isset($error)) : ?>
+            <div><?php echo $error; ?></div>
+            <?php endif; ?>
+          </div>
+        </div>
+
+
+        <form enctype="multipart/form-data" action="" method="POST">
           <div class="form-group">
-            <input style="color:gray; border:none;" type="file" id="profile_img" name="profile_img" capture="camera" required />
+            <input class="file-button" type="file" id="profile_img" name="profile_img" capture="camera" required />
           </div>
           <div class="form-group">
-            <input type="submit" value="Upload" name="uploadPicture" />
+            <input class="button" type="submit" value="Upload" name="uploadPicture" />
           </div>
         </form>
       </div>
     </div>
-</div>
+  </div>
 
-      <div class="container">
-    <div class="jumbotron float-left" style="width:50%; height:500px; margin:20px;">
+  <div class="container">
+    <div class="jumbotron float-left">
 
       <form action="" method="POST">
 
         <!-- Fill in the input fields with the data from the database -->
         <br>
         <div class="form-group">
-          <label for="bio">Biography</label>
-          <textarea name="bio" id="bio" class="form-control" rows="3" cols="50"><?= htmlspecialchars($user->getBio()) ?></textarea>
+          <!-- <label for="bio">Biography</label>-->
+          <textarea placeholder="Biografie" name="bio" id="bio" class="form-control" rows="3"
+            cols="50"><?= htmlspecialchars($user->getBio()) ?></textarea>
         </div>
+
         <div class="form-group">
-          <label for="location">Location</label>
-          <select type="text" id="location" name="location" class="form-control">
+          <!--<label for="location">Location</label>-->
+          <select placeholder="Lokatie" type="text" id="location" name="location" class="form-control">
             <?php foreach ($locationArray as $location) : ?>
-              <option <?php if ($location == $user->getLocation()) {
+            <option <?php if ($location == $user->getLocation()) {
                         echo "selected";
                       } ?>><?php echo htmlspecialchars($location) ?></option>
             <?php endforeach; ?>
           </select>
         </div>
 
-        <?php if($_SESSION['user_status'] == "seller") : ?> 
-            <div class="form-group">
-          <label for="btw">Btw number</label>
-          <textarea name="btw" id="btw" class="form-control" rows="1" cols="50"><?= htmlspecialchars($user->getBtw()) ?></textarea>
-        </div>
+        <?php if($_SESSION['user_status'] == "seller") : ?>
+
         <div class="form-group">
-          <label for="company">Company name</label>
-          <textarea name="company" id="company" class="form-control" rows="1" cols="50"><?= htmlspecialchars($user->getCompany()) ?></textarea>
+          <!--<label for="btw">Btw number</label>-->
+          <textarea placeholder="BTW nummer" name="btw" id="btw" class="form-control" rows="1"
+            cols="50"><?= htmlspecialchars($user->getBtw()) ?></textarea>
         </div>
 
         <div class="form-group">
-          <label for="number">Telephone number</label>
-          <textarea name="number" id="number" class="form-control" rows="1" cols="50"><?= htmlspecialchars($user->getTelephone()) ?></textarea>
+          <!--<label for="company">Company name</label>-->
+          <textarea placeholder="Bedrijfs naam" name="company" id="company" class="form-control" rows="1"
+            cols="50"><?= htmlspecialchars($user->getCompany()) ?></textarea>
         </div>
+
+        <div class="form-group">
+          <!--<label for="number">Telephone number</label>-->
+          <textarea placeholder="Telefoon nummer" name="number" id="number" class="form-control" rows="1"
+            cols="50"><?= htmlspecialchars($user->getTelephone()) ?></textarea>
+        </div>
+
         <?php
                         endif;?>
 
         <div class="form-group">
-          <input type="submit" value="Save" name="updateProfile">
+          <input class="button" type="submit" value="Save" name="updateProfile">
         </div>
       </form>
     </div>
-      </div>
+  </div>
 
-      <div class="container">
-    <div class="jumbotron float-right" style="width:40%; height:600px; margin:20px;">
+  <div class="container">
+    <div class="jumbotron float-right">
       <form method="POST" action="">
         <p style="color:red">
           <?php if (!empty($error_mail)) : ?>
-            <div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
-              <p><?= $error_mail ?></p>
-            </div>
+          <div>
+            <p><?= $error_mail ?></p>
+          </div>
           <?php endif; ?>
           <?php if (isset($succesfull_mail)) : ?>
-            <div style="font-size: 15px; background-color:#90EE90; padding:10px; border-radius:10px;"><?php echo $succesfull_mail; ?></div>
+          <div><?php echo $succesfull_mail; ?></div>
           <?php endif; ?>
 
         </p>
         <div class="form-group">
-          <label for="emailpassword">Current password</label>
-          <input type="password" name="emailpassword" id="emailpassword" class="form-control">
+          <!--<label for="emailpassword">Current password</label>-->
+          <input placeholder="email" type="password" name="emailpassword" id="emailpassword" class="form-control">
         </div>
+
         <div class="form-group">
-          <label for="new_email">New email</label>
-          <input type="email" name="new_email" id="new_email" class="form-control">
+          <!--<label for="new_email">New email</label>-->
+          <input placeholder="Nieuw email adres" type="email" name="new_email" id="new_email" class="form-control">
         </div>
-        <input type="submit" value="Save" name="changeEmail" style="margin-bottom:20px;">
+        <input class="button" type="submit" value="Verander Email" name="changeEmail">
 
         <form method="POST" action="">
           <div class="form-group">
             <p style="color:red">
               <?php if (!empty($error_password)) : ?>
-                <div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;"><?php echo $error_password; ?></div>
+              <div><?php echo $error_password; ?></div>
               <?php endif; ?>
               <?php if (isset($succesfull_password)) : ?>
-                <div style="font-size: 15px; background-color:#90EE90; padding:10px; border-radius:10px;"><?php echo $succesfull_password; ?></div>
+              <div><?php echo $succesfull_password; ?></div>
               <?php endif; ?>
             </p>
-            <label for="old_password">Current password</label>
-            <input type="password" name="old_password" id="old_password" class="form-control">
+
+            <!--<label for="old_password">Current password</label>-->
+            <input placeholder="Oud wachtwoord" type="password" name="old_password" id="old_password" class="form-control">
           </div>
           <div class="form-group">
-            <label for="new_password">New password</label>
-            <input type="password" name="new_password" id="new_password" class="form-control">
+            <!--<label for="new_password">New password</label>-->
+            <input placeholder="Nieuw wachtwoord" type="password" name="new_password" id="new_password" class="form-control">
           </div>
-          <input type="submit" value="Save" name="changePassword">
+          <input class="button" type="submit" value="Verander Wachtwoord" name="changePassword">
         </form>
       </form>
+      <div class="spacing-bottom"></div>
     </div>
   </div>
 
 
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
 </body>
+
 </html>
