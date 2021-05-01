@@ -60,8 +60,6 @@ function getDistance($addressFrom, $addressTo, $unit = ''){
 $addressFrom = 'Adolf Mortelmansstraat 74';
 $addressTo   = 'Dascoottelei 890';
 
-print_r($user->getAddress());
-print_r($user->getLocation());
 
 
 // Get distance in km
