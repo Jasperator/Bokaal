@@ -12,6 +12,7 @@ class User
     private $profile_img;
     private $bio;
     private $location;
+    private $address;
     private $status;
     private $btw;
     private $company;
