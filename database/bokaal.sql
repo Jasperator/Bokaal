@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 13 apr 2021 om 09:51
+-- Gegenereerd op: 01 mei 2021 om 15:20
 -- Serverversie: 10.4.14-MariaDB
 -- PHP-versie: 7.4.11
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `bokaal`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `favorites`
+--
+
+CREATE TABLE `favorites` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `favorite_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `favorites`
+--
+
+INSERT INTO `favorites` (`id`, `user_id`, `favorite_id`) VALUES
+(1, 9, 8);
 
 -- --------------------------------------------------------
 
@@ -41,15 +60,6 @@ CREATE TABLE `items` (
   `buyer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Gegevens worden geëxporteerd voor tabel `items`
---
-
-INSERT INTO `items` (`id`, `seller_id`, `title`, `description`, `quantity`, `unit`, `price`, `currency`, `item_image`, `status`, `buyer_id`) VALUES
-(4, 8, 'Test', 'descr', 1, 'kg', 1, 'euro', 'lelijke-tomaten.jpg', '', 0),
-(5, 9, 'title', 'test', 5, 'kg', 10, 'euro', 'lelijke-tomaten.jpg', '', 0),
-(6, 8, 'test', 'des', 15, 'kg', 30, 'euro', 'lelijke-tomaten.jpg', '', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -65,6 +75,7 @@ CREATE TABLE `users` (
   `profile_img` varchar(300) NOT NULL,
   `bio` varchar(300) NOT NULL,
   `location` varchar(300) NOT NULL,
+  `address` varchar(300) NOT NULL,
   `status` varchar(300) NOT NULL,
   `btw` varchar(300) NOT NULL,
   `company` varchar(300) NOT NULL,
@@ -75,15 +86,21 @@ CREATE TABLE `users` (
 -- Gegevens worden geëxporteerd voor tabel `users`
 --
 
-INSERT INTO `users` (`id`, `active`, `fullname`, `email`, `password`, `profile_img`, `bio`, `location`, `status`, `btw`, `company`, `telephone`) VALUES
-(7, '', 'Jasper Peeters', 'peeters.jasper98@gmail.com', '$2y$10$8VsPW1sCW.QnmRiDHc2e3OnXOp4H8MxivldHv3iam0C1ZALXJZIze', '1615808064011.jpg', 'Ik ben een koper', 'Oost-Vlaanderen', 'buyer', '', '', '0'),
-(8, '', 'Jasper Peeters', 'r0695883@student.thomasmore.be', '$2y$10$GKL2Hj3Xf3An5.HOaO8aT..yBzgURqZ.8YVylZgObgdjmVXw1bmti', '1615808064011.jpg', 'dit is mijn bio', 'Antwerpen', 'seller', ' BE9885556', 'Thomas More', '0468230089'),
-(9, '', 'Jasper Peeters', 'peeters.jasper@gmail.com', '$2y$10$z8PWAcpR5vkd1DHGo7sg5e9K2G5Z.k5Wuapre0r5yR6ReBbx/qXVa', '', '', '', 'seller', 'BE98512218', 'Thomas More', '468230089'),
-(10, '', 'Jasper Peeters', 'jasper@student.thomasmore.be', '$2y$10$cGhS8urqAu0yJi3vfC35HOdXxxQRe2LY/O4pJ.X/YhKEEZVRQGllm', '', '', '', 'buyer', '', '', '0');
+INSERT INTO `users` (`id`, `active`, `fullname`, `email`, `password`, `profile_img`, `bio`, `location`, `address`, `status`, `btw`, `company`, `telephone`) VALUES
+(7, '', 'Jasper Peeters', 'peeters.jasper98@gmail.com', '$2y$10$8VsPW1sCW.QnmRiDHc2e3OnXOp4H8MxivldHv3iam0C1ZALXJZIze', '1615808064011.jpg', 'Ik ben een koper', 'Wommelgem', 'Adolf Mortelmansstraat 74', 'buyer', '', '', '0'),
+(8, '', 'Jasper Peeters', 'r0695883@student.thomasmore.be', '$2y$10$GKL2Hj3Xf3An5.HOaO8aT..yBzgURqZ.8YVylZgObgdjmVXw1bmti', '1615808064011.jpg', 'dit is mijn bio', 'Lier', 'Boomlaarstraat 118', 'seller', ' BE9885556', 'Thomas More', '0468230089'),
+(9, '', 'Jasper Peeters', 'peeters.jasper@gmail.com', '$2y$10$z8PWAcpR5vkd1DHGo7sg5e9K2G5Z.k5Wuapre0r5yR6ReBbx/qXVa', '', '', 'Mechelen', 'Zandpoortvest 18', 'seller', 'BE98512218', 'Thomas More', '468230089'),
+(10, '', 'Jasper Peeters', 'jasper@student.thomasmore.be', '$2y$10$cGhS8urqAu0yJi3vfC35HOdXxxQRe2LY/O4pJ.X/YhKEEZVRQGllm', '', '', 'Antwerpen', 'Lange Elzenstraat 465', 'buyer', '', '', '0');
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
+
+--
+-- Indexen voor tabel `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexen voor tabel `items`
@@ -102,10 +119,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT voor een tabel `favorites`
+--
+ALTER TABLE `favorites`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT voor een tabel `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT voor een tabel `users`
