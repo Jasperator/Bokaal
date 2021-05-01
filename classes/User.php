@@ -196,6 +196,26 @@ class User
 
         return $this;
     }
+    
+    /**
+     * Get the value of address
+     */ 
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Set the value of address
+     *
+     * @return  self
+     */ 
+    public function setAddress($address)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
 
         /**
      * Get the value of status
@@ -365,6 +385,7 @@ class User
             $this->profile_img = $user->profile_img;
             $this->bio = $user->bio;
             $this->location = $user->location;
+            $this->address = $user->address;
             $this->btw = $user->btw;
             $this->company = $user->company;
             $this->telephone = $user->telephone;
@@ -498,6 +519,18 @@ class User
         return $users;
     }
 
+    public function getSellersExceptUser()
+    {
+        $conn = Db::getConnection();
+
+        //<> is the same as !=
+        $statement = $conn->prepare("SELECT * FROM users WHERE email <> :email AND status = 'seller'");
+        $statement->bindValue(':email', $this->getEmail());
+        $statement->execute();
+        $users = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        return $users;
+    }
    
 
     public function saveProfile_img()
@@ -539,4 +572,6 @@ class User
 
 
     
+
+
 }

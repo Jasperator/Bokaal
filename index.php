@@ -8,16 +8,8 @@ $favorite = new classes\Favorite($_SESSION['user']);
 
 
 $favorites = $favorite->getAllFavorites($user);
+$sellers = $user->getSellersExceptUser();
 
-// $address ='Antwerpen'; // Google HQ
-// $prepAddr = str_replace(' ','+',$address);
-// $geocode=file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
-// $output= json_decode($geocode);
-// $latitude = $output->results[0]->geometry->location->lat;
-// $longitude = $output->results[0]->geometry->location->lng;
-  
-// echo "latitude - ".$latitude;
-// echo "longitude - ".$longitude;
 
 function getDistance($addressFrom, $addressTo, $unit = ''){
     // Google API key
@@ -68,9 +60,13 @@ function getDistance($addressFrom, $addressTo, $unit = ''){
 $addressFrom = 'Adolf Mortelmansstraat 74';
 $addressTo   = 'Dascoottelei 890';
 
+print_r($user->getAddress());
+print_r($user->getLocation());
+
+
 // Get distance in km
 $distance = getDistance($addressFrom, $addressTo, "K");
-echo($distance);
+// echo($distance);
 ?>
 
 <!DOCTYPE html>
@@ -95,6 +91,7 @@ echo($distance);
         </div>
 
         <ul>
+            <h3>Favorieten</h3>
             <?php foreach ($favorites as $fav) : ?>
                 <li class="list-group-item">
                     <div class="col-md-12">
@@ -108,6 +105,32 @@ echo($distance);
                                 <p class="text-primary"><?= htmlspecialchars($fav->email); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>
+                                <p class="text-primary"> Afstand: <?= getDistance($user->getAddress(), htmlspecialchars($fav->address), "K");  ?></p>
+
+
+                    </div>
+                    <?php endforeach ?>
+                    </div>
+                </li>
+        </ul>
+
+        <ul>
+            <h3>Verkopers</h3>
+            <?php foreach ($sellers as $seller) : ?>
+                <li class="list-group-item">
+                    <div class="col-md-12">
+                        <div class="d-flex flex-row">
+                            <div class="p-0 w-25">
+                            <form  action="" method="post">
+                                <img src="./uploads/<?= htmlspecialchars($seller->profile_img); ?>" class="img-thumbnail border-0" />
+                            </div>
+                            <div class="pl-3 pt-2 pr-2 pb-2 w-75">
+                                <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
+                                <p class="text-primary"><?= htmlspecialchars($seller->email); ?></p>
+                                <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
+                                <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
+                                <p class="text-primary"> Afstand: <?= getDistance($user->getAddress(), htmlspecialchars($seller->address), "K");  ?></p>
+
                             
 
                     </div>
@@ -115,6 +138,8 @@ echo($distance);
                     </div>
                 </li>
         </ul>
+
+
     </div>
 
     
