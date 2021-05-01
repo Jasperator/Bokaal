@@ -6,8 +6,10 @@
     background-color: #d5d962;
     top: 650px;
     margin: auto;
-    margin-left: 5%;
+    margin-left: 3%;
     border-radius: 5px;
+
+    z-index: 100;
   }
 
   img {
@@ -29,19 +31,22 @@
   }
 
   li {
-    background-color: #d5d962;
-
     display: inline-block;
     opacity: 50%;
 
-    padding-left: 6%;
+    padding-left: 0%;
 
     /* padding-right: 23px;
         padding-top: 11.5px;*/
   }
 
+  #listItem{
+    padding-left: 6%;
+  }
+
   .active {
     opacity: 100%;
+    background-color: #d5d962;
   }
 
   p {

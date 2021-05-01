@@ -15,7 +15,7 @@
 ?>
     <div class="container">
         <div class="jumbotron">
-            <h1>Winkemlandje</h1>
+            <h1>Winkelmandje</h1>
             <p>Dit is je winkelmandje</p>
         </div>
 

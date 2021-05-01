@@ -141,6 +141,46 @@ if (!empty($_POST['updateProfile'])) {
             cols="50"><?= htmlspecialchars($user->getBio()) ?></textarea>
         </div>
 
+        
+        <div>
+				<div class="row">
+
+        <div class="form-group">
+						<!--<label for="price">Price</label>-->
+						<input type="text" name="Stad" class="form-control" placeholder="Stad" required>			
+					</div>
+          <div>
+						<!--<label for="currency">Currency</label>-->
+						
+						<input type="number" name="Postcode"  class="form-control" placeholder="Postcode "
+							required>						
+		
+					</div>
+
+					<div class="form-group">
+						<!--<label for="price">Price</label>-->
+						<input type="text" name="Straat" class="form-control" placeholder="Straat" required>
+			
+					</div>
+					<div>
+						<!--<label for="currency">Currency</label>-->
+						
+						<input type="number" name="Nr"  class="form-control" placeholder="Nr"
+							required>						
+		
+					</div>
+          <div>
+						<!--<label for="currency">Currency</label>-->
+						
+						<input type="number" name="Bus"  class="form-control" placeholder="Bus "
+							required>						
+		
+					</div>
+				</div>
+			</div>
+
+        
+
         <div class="form-group">
           <!--<label for="location">Location</label>-->
           <select placeholder="Lokatie" type="text" id="location" name="location" class="form-control">

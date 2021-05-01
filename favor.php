@@ -21,6 +21,7 @@ $favorites = $favorite->getAllFavorites($user);
     <title>Favorieten</title>
 </head>
 <body>
+<?php include_once("nav.include.php") ?>
     
 <?php include_once("nav.include.php");
 ?>
