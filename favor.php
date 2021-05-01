@@ -8,6 +8,7 @@
     <title>Favorieten</title>
 </head>
 <body>
+<?php include_once("nav.include.php") ?>
     
 </body>
 </html>
