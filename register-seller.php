@@ -59,7 +59,6 @@ if (!empty($_POST['register'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/register-seller.css">
-	<link rel="icon" type="image/svg" href=images/Logo/LogoWhite.svg>
 	
 </head>
 
@@ -108,7 +107,7 @@ if (!empty($_POST['register'])) {
 				</div>
 				<div class="form-group">
 					<!--<label for="telephone">Telephone  nummer</label>-->
-					<input type="number" name="telephone" id="telephone" class="form-control" placeholder="Telefoon nummer" required>
+					<input type="tel" name="telephone" id="telephone" class="form-control" placeholder="Telefoon nummer" required>
 					<i class="fas fa-user"></i>
 				</div>
 
