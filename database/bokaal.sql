@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 01 mei 2021 om 15:20
+-- Gegenereerd op: 02 mei 2021 om 11:42
 -- Serverversie: 10.4.14-MariaDB
 -- PHP-versie: 7.4.11
 
@@ -38,7 +38,8 @@ CREATE TABLE `favorites` (
 --
 
 INSERT INTO `favorites` (`id`, `user_id`, `favorite_id`) VALUES
-(1, 9, 8);
+(1, 9, 8),
+(2, 10, 8);
 
 -- --------------------------------------------------------
 
@@ -59,6 +60,15 @@ CREATE TABLE `items` (
   `status` varchar(300) NOT NULL,
   `buyer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `items`
+--
+
+INSERT INTO `items` (`id`, `seller_id`, `title`, `description`, `quantity`, `unit`, `price`, `currency`, `item_image`, `status`, `buyer_id`) VALUES
+(14, 8, 'Mijn lelijke tomaten', 'Koop mijn lelijke tomaten', 10, 'Kg', 4, 'euro', 'lelijke-tomaten.jpg', 'pending', 10),
+(15, 8, 'lelijke wortelen', 'koop mijn lelijke wortelen', 10, 'Kg', 15, 'euro', 'lelijke-wortelen.jpg', '', 0),
+(16, 8, 'lelijke komkommer', 'koop mijn komkommer', 20, 'Stuks', 10, 'euro', 'lelijke-komkommer.jpg', '', 0);
 
 -- --------------------------------------------------------
 
@@ -88,9 +98,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `active`, `fullname`, `email`, `password`, `profile_img`, `bio`, `location`, `address`, `status`, `btw`, `company`, `telephone`) VALUES
 (7, '', 'Jasper Peeters', 'peeters.jasper98@gmail.com', '$2y$10$8VsPW1sCW.QnmRiDHc2e3OnXOp4H8MxivldHv3iam0C1ZALXJZIze', '1615808064011.jpg', 'Ik ben een koper', 'Wommelgem', 'Adolf Mortelmansstraat 74', 'buyer', '', '', '0'),
-(8, '', 'Jasper Peeters', 'r0695883@student.thomasmore.be', '$2y$10$GKL2Hj3Xf3An5.HOaO8aT..yBzgURqZ.8YVylZgObgdjmVXw1bmti', '1615808064011.jpg', 'dit is mijn bio', 'Lier', 'Boomlaarstraat 118', 'seller', ' BE9885556', 'Thomas More', '0468230089'),
-(9, '', 'Jasper Peeters', 'peeters.jasper@gmail.com', '$2y$10$z8PWAcpR5vkd1DHGo7sg5e9K2G5Z.k5Wuapre0r5yR6ReBbx/qXVa', '', '', 'Mechelen', 'Zandpoortvest 18', 'seller', 'BE98512218', 'Thomas More', '468230089'),
-(10, '', 'Jasper Peeters', 'jasper@student.thomasmore.be', '$2y$10$cGhS8urqAu0yJi3vfC35HOdXxxQRe2LY/O4pJ.X/YhKEEZVRQGllm', '', '', 'Antwerpen', 'Lange Elzenstraat 465', 'buyer', '', '', '0');
+(8, '', 'Jasper Peeters', 'r0695883@student.thomasmore.be', '$2y$10$GKL2Hj3Xf3An5.HOaO8aT..yBzgURqZ.8YVylZgObgdjmVXw1bmti', 'boer.jpg', 'dit is mijn bio', 'Lier', 'Boomlaarstraat 118', 'seller', ' BE9885556', 'Thomas More', '0468230089'),
+(9, '', 'Jasper Peeters', 'peeters.jasper@gmail.com', '$2y$10$z8PWAcpR5vkd1DHGo7sg5e9K2G5Z.k5Wuapre0r5yR6ReBbx/qXVa', 'boer2.jpg', '', 'Mechelen', 'Zandpoortvest 18', 'seller', 'BE98512218', 'Thomas More', '468230089'),
+(10, '', 'Jasper Peeters', 'jasper@student.thomasmore.be', '$2y$10$cGhS8urqAu0yJi3vfC35HOdXxxQRe2LY/O4pJ.X/YhKEEZVRQGllm', 'profile.jpg', '', 'Antwerpen', 'Lange Elzenstraat 465', 'buyer', '', '', '0');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -122,13 +132,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT voor een tabel `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT voor een tabel `users`
