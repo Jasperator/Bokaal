@@ -57,14 +57,20 @@ function getDistance($addressFrom, $addressTo, $unit = ''){
     }
 }
 
-$addressFrom = 'Adolf Mortelmansstraat 74';
-$addressTo   = 'Dascoottelei 890';
+// $addressFrom = 'Adolf Mortelmansstraat 74';
+// $addressTo   = 'Dascoottelei 890';
 
 
 
-// Get distance in km
-$distance = getDistance($addressFrom, $addressTo, "K");
-// echo($distance);
+// // Get distance in km
+// $distance = getDistance($addressFrom, $addressTo, "K");
+
+
+if (!empty($_POST['favorite-person'])) {
+    $favorite_id = $_POST['favorite-person'];
+    
+    $favorite->insertFavorite($user,$favorite_id);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -128,7 +134,13 @@ $distance = getDistance($addressFrom, $addressTo, "K");
                                 <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
                                 <p class="text-primary"> Afstand: <?= getDistance($user->getAddress(), htmlspecialchars($seller->address), "K");  ?></p>
+                                
+                                <form  action="" method="post">
 
+                                    <div class="form-group">
+                                       <button type="submit" name="favorite-person" class="fav" value="<?= htmlspecialchars($seller->id); ?>" name="fav" placeholder="Favoriet">Favoriet</button>
+                                    </div>
+                                </form>
                             
 
                     </div>
