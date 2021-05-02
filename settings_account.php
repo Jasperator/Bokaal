@@ -146,37 +146,29 @@ if (!empty($_POST['updateProfile'])) {
         <div>
 				<div class="row">
 
-        <div class="form-group">
-						<!--<label for="price">Price</label>-->
-						<input type="text" name="Stad" class="form-control" placeholder="Stad" required>			
-					</div>
+       
           <div>
 						<!--<label for="currency">Currency</label>-->
 						
-						<input type="number" name="Postcode"  class="form-control" placeholder="Postcode "
+						<input type="number" name="Postcode"  class="form-control" placeholder="Postcode"
+							required>						
+		
+					</div>
+
+          <div>
+						<!--<label for="currency">Currency</label>-->
+						
+						<input type="text" name="Postcode"  class="form-control" placeholder="Stad"
 							required>						
 		
 					</div>
 
 					<div class="form-group">
 						<!--<label for="price">Price</label>-->
-						<input type="text" name="Straat" class="form-control" placeholder="Straat" required>
+						<input type="text" name="Straat" class="form-control" placeholder="Straat, nr en bus" required>
 			
 					</div>
-					<div>
-						<!--<label for="currency">Currency</label>-->
-						
-						<input type="number" name="Nr"  class="form-control" placeholder="Nr"
-							required>						
-		
-					</div>
-          <div>
-						<!--<label for="currency">Currency</label>-->
-						
-						<input type="number" name="Bus"  class="form-control" placeholder="Bus "
-							required>						
-		
-					</div>
+				
 				</div>
 			</div>
 

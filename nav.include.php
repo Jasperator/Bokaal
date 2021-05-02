@@ -26,33 +26,33 @@ $page = basename($_SERVER['PHP_SELF']);
             <?php if (!empty($_SESSION['user'])) :
                 $user = new classes\User($_SESSION['user']);
             ?>
-                <ul >
+                <ul class="alles" >
 
                     <!-- Mark a link as "active" according to the current page -->
-                    <li id="listItem" <?php if ($page == "search.php") : echo "active"; ?> class="active"<?php
+                    <li class="listItem" <?php if ($page == "search.php") : echo "active"; ?> class="active"<?php
                                         endif; ?>>
-                        <a  href="search.php"> <img src="images/icon/zoek.png" alt="zoek icon"> <p>Zoek</p> </a>
+                        <a  href="search.php"> <img src="images/icon/zoek.png" alt="zoek icon"> </a>
                     </li>
-                    <li id="listItem"  <?php if ($page == "index.php") : echo "active";?> class="active"<?php
+                    <li class="listItem" <?php if ($page == "index.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="index.php"> <img src="images/icon/home.png" alt="zoek icon"> <p>Home</p> </a>
+                        <a href="index.php"> <img src="images/icon/home.png" alt="zoek icon"></a>
                     </li>
                     <?php 
                            if($_SESSION['user_status'] == "seller") : ?> 
-                     <li id="listItem"  <?php if ($page == "sell.php") : echo "active";?> class="active"<?php
+                     <li class="listItem" <?php if ($page == "sell.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="sell.php"> <img src="images/icon/add.png" alt="zoek icon"> <p> Sell your stuff</p></a>
+                        <a href="sell.php"> <img src="images/icon/add.png" alt="zoek icon"></a>
                     </li>
                      <?php
                         endif;?>
 
-                    <li id="listItem"  <?php if ($page == "cart.php") : echo "active";?> class="active"<?php
+                    <li class="listItem" <?php if ($page == "cart.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="cart.php"> <img src="images/icon/cart.png" alt="zoek icon"> <p>cart</p> </a>
+                        <a  href="cart.php"> <img src="images/icon/cart.png" alt="zoek icon"></a>
                     </li>
-                    <li id="listItem"  <?php if ($page == "profile.php") : echo "active";?> class="active"<?php
+                    <li class="listItem" <?php if ($page == "profile.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="profile.php"><i class="fas fa-user"></i> <img src="images/icon/user.png" alt="zoek icon"> <p>Profile</p> </a>
+                        <a href="profile.php"><i class="fas fa-user"></i> <img src="images/icon/user.png" alt="zoek icon"> </a>
                     </li>
 
             <?php endif; ?>

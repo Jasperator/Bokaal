@@ -59,7 +59,7 @@ if (!empty($_POST['register'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/register-seller.css">
-	
+
 </head>
 
 <body>
@@ -67,59 +67,84 @@ if (!empty($_POST['register'])) {
 	<?php // include_once("nav.include.php") ?>
 
 	<div class="d-flex justify-content-center">
-			<form class="registerForm" action="" method="post">
+		<form class="registerForm" action="" method="post">
 			<img class="logo" src="images/logo/LogoBlack.svg" alt="login logo Bokaal">
-				<h2>Registreer verkopers <br> <br> account</h2>
-				<?php if (!empty($error)) : ?>
-					<div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
-						<p><?= $error ?></p>
-					</div>
-				<?php endif; ?>
-				<?php if (isset($succesfull)) : ?>
-          <div style="font-size: 15px; background-color:#90EE90; padding:10px; border-radius:10px;"><?php echo $succesfull; ?></div>
-        <?php endif; ?>
-				<br>
-				<div class="form-group">
-					<!--<label for="fullname">Full Name</label>-->
-					<input type="text" name="fullname" id="fullname" class="form-control" placeholder="Volledige naam" required>
-					<i class="fas fa-user"></i>
-				</div>
-				<div class="form-group">
-					<!--<label for="email">Your Email</label>-->
-					<input type="email" name="email" class="form-control email" placeholder="Email adres" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
-					<span id="availability"></span>
-					<i class="fas fa-envelope"></i>
-				</div>
-				<div class="form-group">
-					<!--<label for="password">Password</label>-->
-					<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord" required>
-					<i class="fas fa-lock"></i>
-				</div>
-				<div class="form-group">
-					<!--<label for="btw">Btw nummer</label>-->
-					<input type="text" name="btw" id="btw" class="form-control" placeholder="Btw nummer" required>
-					<i class="fas fa-user"></i>
-				</div>
-				<div class="form-group">
-					<!--<label for="company">Company name</label>-->
-					<input type="text" name="company" id="company" class="form-control" placeholder="Naam bedrijf" required>
-					<i class="fas fa-user"></i>
-				</div>
-				<div class="form-group">
-					<!--<label for="telephone">Telephone  nummer</label>-->
-					<input type="tel" name="telephone" id="telephone" class="form-control" placeholder="Telefoon nummer" required>
-					<i class="fas fa-user"></i>
-				</div>
+			<h2>Registreer verkopers <br> <br> account</h2>
+			<?php if (!empty($error)) : ?>
+			<div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
+				<p><?= $error ?></p>
+			</div>
+			<?php endif; ?>
+			<?php if (isset($succesfull)) : ?>
+			<div style="font-size: 15px; background-color:#90EE90; padding:10px; border-radius:10px;">
+				<?php echo $succesfull; ?></div>
+			<?php endif; ?>
+			<br>
+			<div class="form-group">
+				<!--<label for="fullname">Full Name</label>-->
+				<input type="text" name="fullname" id="fullname" class="form-control" placeholder="Volledige naam"
+					required>
+				<i class="fas fa-user"></i>
+			</div>
+			<div>
+				<!--<label for="currency">Currency</label>-->
+
+				<input type="number" name="Postcode" class="form-control" placeholder="Postcode"
+					required>
+
+			</div>
+			<div>
+				<!--<label for="currency">Currency</label>-->
+
+				<input type="text" name="Postcode" class="form-control" placeholder="Stad "
+					required>
+
+			</div>
+
+			<div class="form-group">
+				<!--<label for="price">Price</label>-->
+				<input type="text" name="Straat" class="form-control" placeholder="Straat, nr en bus" required>
+
+			</div>
+			<div class="form-group">
+				<!--<label for="email">Your Email</label>-->
+				<input type="email" name="email" class="form-control email" placeholder="Email adres"
+					pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
+				<span id="availability"></span>
+				<i class="fas fa-envelope"></i>
+			</div>
+			<div class="form-group">
+				<!--<label for="password">Password</label>-->
+				<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord"
+					required>
+				<i class="fas fa-lock"></i>
+			</div>
+			<div class="form-group">
+				<!--<label for="btw">Btw nummer</label>-->
+				<input type="text" name="btw" id="btw" class="form-control" placeholder="Btw nummer" required>
+				<i class="fas fa-user"></i>
+			</div>
+			<div class="form-group">
+				<!--<label for="company">Company name</label>-->
+				<input type="text" name="company" id="company" class="form-control" placeholder="Naam bedrijf" required>
+				<i class="fas fa-user"></i>
+			</div>
+			<div class="form-group">
+				<!--<label for="telephone">Telephone  nummer</label>-->
+				<input type="tel" name="telephone" id="telephone" class="form-control" placeholder="Telefoon nummer"
+					required>
+				<i class="fas fa-user"></i>
+			</div>
 
 
-				<div class="form-group">
-					<input id="register" type="submit" class="register" value="Register" name="register">
-				</div>
-				<div id="result"> </div>
-				<p>Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
-			</form>
+			<div class="form-group">
+				<input id="register" type="submit" class="register" value="Register" name="register">
+			</div>
+			<div id="result"> </div>
+			<p>Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
+		</form>
 
-		</div>
+	</div>
 	</div>
 
 	<script src="js/jquery.min.js"></script>

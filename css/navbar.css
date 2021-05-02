@@ -16,8 +16,10 @@
     width: 40px;
   }
 
-  ul {
+  .alles {
     width: 100%;
+
+    display:inline-block;
 
     text-align: center;
 
@@ -30,28 +32,21 @@
         padding-left: 10px;*/
   }
 
-  li {
+ .listItem {
     display: inline-block;
     opacity: 50%;
 
-    padding-left: 0%;
-
-    /* padding-right: 23px;
-        padding-top: 11.5px;*/
+    padding-left: 7px;
+    padding-right: 7px;
   }
 
-  #listItem{
-    padding-left: 6%;
-  }
-
+ 
   .active {
     opacity: 100%;
     background-color: #d5d962;
   }
 
-  p {
-    display: none;
-  }
+ 
 
   button {
     display: none;
