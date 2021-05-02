@@ -276,6 +276,22 @@ class Item
         return $items;
     }
 
+    public function getAllItemsCart($user){
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT * FROM items WHERE buyer_id = :buyer_id AND status = 'pending'");
+        $statement->bindValue('buyer_id', $user->getId());
+        $statement->execute();
+
+        $cart = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        return $cart;
+
+
+
+
+    }
+
+
     
     public function buyItem($user, $id)
     {

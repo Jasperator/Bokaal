@@ -1,100 +1,172 @@
+@media only screen and (min-width: 900px) {
+  body {
+    background-image: url("../images/background/OGbackground.png");
+    background-size: 50% 1080px;
+    background-repeat: no-repeat;
+    background-color: cornsilk;
+  }
+
+  .logo {
+    width: 30%;
+    position: relative;
+    margin-top: -70%;
+  }
+
+  .login {
+    position: relative;
+    width: 100%;
+    margin-left: 100%;
+  }
+
+  h2 {
+    font-family: "Josefin Sans";
+    font-size: 2.3em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    line-height: 15.4px;
+  }
+
+  .form-control {
+    background: transparent;
+
+    border: none;
+    border-bottom: 2px solid #151e3d;
+    border-radius: 0px;
+
+    width: 75%;
+
+    margin-left: 12.5%;
+  }
+
+  #register {
+    background-color: orangered;
+
+    font-family: "Josefin Sans";
+    font-size: 1.5em;
+
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    width: 80%;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    margin-top: 5%;
+  }
+
+  #register:hover {
+    background-color: rgb(255, 82, 20);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  a {
+    color: orangered;
+    text-decoration: none;
+  }
+
+  p {
+    padding-top: 2%;
+    font-family: "Josefin Sans";
+  }
+
+  .d-flex {
+    margin-left: 50%;
+    margin-top: 10%;
+    margin-top: 15%;
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 900px) {
+  body {
+    background-image: url("../images/background/potato-op40.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: cornsilk;
+  }
 
-    body {
-        background-image: url("../images/background/potato-op40.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: cornsilk;
+  h3 {
+    font-family: "Josefin Sans";
+    font-size: 2.3em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
 
-    }
+    line-height: 15.4px;
 
-    h3 {
-        font-family: "Josefin Sans";
-        font-size: 2.3em;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
+    padding-left: 30px;
+  }
 
-        line-height: 15.4px;
+  h2 {
+    font-family: "Josefin Sans";
+    font-size: 2.3em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
 
-        padding-left: 30px;
-    }
+    line-height: 15.4px;
 
-    h2 {
-        font-family: "Josefin Sans";
-        font-size: 2.3em;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
+    text-align: center;
 
-        line-height: 15.4px;
+    padding-top: 25px;
+    padding-bottom: 5px;
+  }
 
-        text-align: center;
+  label {
+    opacity: 0;
+  }
 
-        padding-top: 25px;
-        padding-bottom: 5px;
+  p {
+    font-family: "Josefin Sans";
 
-    }
+    text-align: center;
+  }
 
-    label{
-        opacity: 0;
-    }
-    
-    p{
-        font-family: "Josefin Sans";
-        
-        text-align: center;
+  a {
+    color: orangered;
+    text-decoration: none;
+  }
 
-    }
+  .logo {
+    height: 15%;
+    padding-left: 30%;
+    padding-right: 40%;
+  }
 
-    a{
-        color: orangered;
-        text-decoration: none;
-    }
+  .form-control {
+    background: transparent;
 
+    border: none;
+    border-bottom: 2px solid #151e3d;
+    border-radius: 0px;
 
-    .logo {
-        height: 15%;
-        padding-left: 30%;
-        padding-right: 40%;
+    width: 75%;
 
-    }
+    margin-left: 12.5%;
+  }
 
-    .form-control {
-        background: transparent;
+  #register {
+    background-color: orangered;
 
-        border: none;
-        border-bottom: 2px solid #151E3D;
-        border-radius: 0px;
+    font-family: "Josefin Sans";
+    font-size: 1.5em;
 
-        width: 75%;
+    color: white;
 
-        margin-left: 12.5%;
+    border: none;
+    border-radius: 5px;
 
-    }
+    width: 50%;
 
-    #register{
-        background-color: orangered;
+    padding: 10px, 10px, 10px, 10px;
 
-       font-family: "Josefin Sans";
-       font-size: 1.5em;
-
-       color: white;
-
-       border: none;
-       border-radius: 5px;
-
-       width:50%;
-
-       padding: 10px, 10px, 10px, 10px ;
-
-       margin-top: 15%;
-       margin-left: 25%;
-
-
-    }
-
-
-
-
+    margin-top: 15%;
+    margin-left: 25%;
+  }
 }

@@ -51,7 +51,6 @@ if (!empty($_POST['register'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/register-seller.css">
-	<link rel="icon" type="image/svg" href=images/Logo/LogoWhite.svg>
 	
 </head>
 
@@ -73,18 +72,15 @@ if (!empty($_POST['register'])) {
         <?php endif; ?>
 				<br>
 				<div class="form-group">
-					<label for="fullname">Full Name</label>
 					<input type="text" name="fullname" id="fullname" class="form-control" placeholder="Volledige naam" required>
 					<i class="fas fa-user"></i>
 				</div>
 				<div class="form-group">
-					<label for="email">Your Email</label>
 					<input type="email" name="email" class="form-control email" placeholder="Email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
 					<span id="availability"></span>
 					<i class="fas fa-envelope"></i>
 				</div>
 				<div class="form-group">
-					<label for="password">Password</label>
 					<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord" required>
 					<i class="fas fa-lock"></i>
 				</div>

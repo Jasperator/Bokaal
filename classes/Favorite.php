@@ -88,7 +88,7 @@ class Favorite
     }
 
 
-public function insertFavorite($user){
+public function insertFavorite($user, $favorite_id){
             //Database connection
             $conn = Db::getConnection();
 
@@ -97,7 +97,7 @@ public function insertFavorite($user){
     
             //Bind values to parameters from prepared query
             $statement->bindValue(":user_id", $user->getId());
-            $statement->bindValue(":favorite_id", $this->getFavorite_id());
+            $statement->bindValue(":favorite_id", $favorite_id);
  
     
             //Execute query
