@@ -11,7 +11,7 @@ $favorites = $favorite->getAllFavorites($user);
 $sellers = $user->getSellersExceptUser();
 
 
-function getDistance($addressFrom, $addressTo, $unit = ''){
+function getDistance($addressFrom, $postalcodeoFrom, $addressTo, $postalcodeoTo, $unit = ''){
     // Google API key
     $apiKey = 'AIzaSyAZvw5R_4B6VsHG9MTrobGTrWFAL3gosNk';
     
@@ -20,14 +20,14 @@ function getDistance($addressFrom, $addressTo, $unit = ''){
     $formattedAddrTo     = str_replace(' ', '+', $addressTo);
     
     // Geocoding API request with start address
-    $geocodeFrom = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrFrom.'&sensor=false&key='.$apiKey);
+    $geocodeFrom = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrFrom.'+'. $postalcodeoFrom .'&sensor=false&key='.$apiKey);
     $outputFrom = json_decode($geocodeFrom);
     if(!empty($outputFrom->error_message)){
         return $outputFrom->error_message;
     }
-    
+
     // Geocoding API request with end address
-    $geocodeTo = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrTo.'&sensor=false&key='.$apiKey);
+    $geocodeTo = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrTo .'+'. $postalcodeoTo .'&sensor=false&key='.$apiKey);
     $outputTo = json_decode($geocodeTo);
     if(!empty($outputTo->error_message)){
         return $outputTo->error_message;
@@ -109,7 +109,7 @@ if (!empty($_POST['favorite-person'])) {
                                 <p class="text-primary"><?= htmlspecialchars($fav->email); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>
-                                <p class="text-primary"> Afstand: <?= getDistance($user->getAddress(), htmlspecialchars($fav->address), "K");  ?></p>
+                                <p class="text-primary"> Afstand: <?= getDistance($user->getAddress(),$user->getPostal_code(), urlencode($fav->address), urlencode($fav->postal_code), "K");  ?></p>
 
 
                     </div>
@@ -133,7 +133,7 @@ if (!empty($_POST['favorite-person'])) {
                                 <p class="text-primary"><?= htmlspecialchars($seller->email); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
-                                <p class="text-primary"> Afstand: <?= getDistance($user->getAddress(), htmlspecialchars($seller->address), "K");  ?></p>
+                                <p class="text-primary"> Afstand: <?= getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?></p>
                                 
                                 <form  action="" method="post">
 

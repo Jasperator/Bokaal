@@ -12,6 +12,7 @@ class User
     private $profile_img;
     private $bio;
     private $location;
+    private $postal_code;
     private $address;
     private $status;
     private $btw;
@@ -193,6 +194,28 @@ class User
     public function setLocation($location)
     {
         $this->location = $location;
+
+        return $this;
+    }
+
+    
+
+    /**
+     * Get the value of postal_code
+     */ 
+    public function getPostal_code()
+    {
+        return $this->postal_code;
+    }
+
+    /**
+     * Set the value of postal_code
+     *
+     * @return  self
+     */ 
+    public function setPostal_code($postal_code)
+    {
+        $this->postal_code = $postal_code;
 
         return $this;
     }
@@ -385,6 +408,7 @@ class User
             $this->profile_img = $user->profile_img;
             $this->bio = $user->bio;
             $this->location = $user->location;
+            $this->postal_code = $user->postal_code;
             $this->address = $user->address;
             $this->btw = $user->btw;
             $this->company = $user->company;
