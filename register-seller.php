@@ -103,7 +103,7 @@ if (!empty($_POST['register'])) {
 
 			<div class="form-group">
 				<!--<label for="price">Price</label>-->
-				<input type="text" name="Straat" class="form-control" placeholder="Straat, nr en bus" required>
+				<input type="text + number" name="Straat" class="form-control" placeholder="Straat, nr en bus" required>
 
 			</div>
 			<div class="form-group">
