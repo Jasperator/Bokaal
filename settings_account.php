@@ -53,6 +53,8 @@ if (!empty($_POST['updateProfile'])) {
     if(($_SESSION['user_status'] == "seller")) {  
         //Fill in the user's properties
         $user->setBio($_POST['bio']);
+        $user->setAddress($_POST['address']);
+        $user->setPostal_code($_POST['postal_code']);
         $user->setLocation($_POST['location']);
         $user->setBtw($_POST['btw']);
         $user->setCompany($_POST['company']);
@@ -64,6 +66,8 @@ if (!empty($_POST['updateProfile'])) {
     else {
     //Fill in the user's properties
     $user->setBio($_POST['bio']);
+    $user->setAddress($_POST['address']);
+    $user->setPostal_code($_POST['postal_code']);
     $user->setLocation($_POST['location']);
   
     //Save those properties to the database
@@ -146,45 +150,31 @@ if (!empty($_POST['updateProfile'])) {
         <div>
 				<div class="row">
 
-       
-          <div>
+        <div>
 						<!--<label for="currency">Currency</label>-->
 						
-						<input type="number" name="Postcode"  class="form-control" placeholder="Postcode"
-							required>						
+						<textarea type="text" name="location"  class="form-control" placeholder="Location"
+							required><?= htmlspecialchars($user->getLocation()) ?></textarea>			
 		
 					</div>
-
           <div>
 						<!--<label for="currency">Currency</label>-->
 						
-						<input type="text" name="Postcode"  class="form-control" placeholder="Stad"
-							required>						
+						<textarea type="number" name="postal_code"  class="form-control" placeholder="Postcode"
+							required><?= htmlspecialchars($user->getPostal_code()) ?></textarea>			
 		
 					</div>
 
 					<div class="form-group">
 						<!--<label for="price">Price</label>-->
-						<input type="text + number" name="Straat" class="form-control" placeholder="Straat, nr en bus" required>
+						<textarea type="text + number" name="address" class="form-control" placeholder="Straat, nr en bus" required><?= htmlspecialchars($user->getAddress()) ?></textarea>
 			
 					</div>
 				
 				</div>
 			</div>
 
-        
-
-        <div class="form-group">
-          <!--<label for="location">Location</label>-->
-          <select placeholder="Lokatie" type="text" id="location" name="location" class="form-control">
-            <?php foreach ($locationArray as $location) : ?>
-            <option <?php if ($location == $user->getLocation()) {
-                        echo "selected";
-                      } ?>><?php echo htmlspecialchars($location) ?></option>
-            <?php endforeach; ?>
-          </select>
-        </div>
-
+      
         <?php if($_SESSION['user_status'] == "seller") : ?>
 
         <div class="form-group">

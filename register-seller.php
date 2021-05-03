@@ -8,6 +8,10 @@ if (!empty($_POST['register'])) {
     //Put $_POST variables into variables
     //Convert the email string to lowercase, case sensitivity does not matter here
     $fullname = $_POST['fullname'];
+	$postal_code = $_POST['postal_code'];
+    $address = $_POST['address'];
+    $location = $_POST['location'];
+
     $password = $_POST['password'];
 	$btw = $_POST['btw'];
     $company = $_POST['company'];
@@ -20,6 +24,9 @@ if (!empty($_POST['register'])) {
     //setEmail returns an error message if the email is not a valid email or if it's not unique
     $valid_email = $user->setEmail($email);
     $user->setFullname($fullname);
+	$user->setPostal_code($postal_code);
+    $user->setAddress($address);
+    $user->setLocation($location);
     $user->setPassword($password);
 	$user->setBtw($btw);
     $user->setCompany($company);
@@ -89,21 +96,21 @@ if (!empty($_POST['register'])) {
 			<div>
 				<!--<label for="currency">Currency</label>-->
 
-				<input type="number" name="Postcode" class="form-control" placeholder="Postcode"
+				<input type="number" name="postal_code" class="form-control" placeholder="Postcode"
 					required>
 
 			</div>
 			<div>
 				<!--<label for="currency">Currency</label>-->
 
-				<input type="text" name="Postcode" class="form-control" placeholder="Stad "
+				<input type="text" name="location" class="form-control" placeholder="Stad "
 					required>
 
 			</div>
 
 			<div class="form-group">
 				<!--<label for="price">Price</label>-->
-				<input type="text + number" name="Straat" class="form-control" placeholder="Straat, nr en bus" required>
+				<input type="text + number" name="address" class="form-control" placeholder="Straat, nr en bus" required>
 
 			</div>
 			<div class="form-group">

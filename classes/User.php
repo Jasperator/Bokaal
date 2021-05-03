@@ -343,10 +343,13 @@ class User
         $conn = Db::getConnection();
 
         //Prepare the INSERT query
-        $statement = $conn->prepare("INSERT INTO users (fullname, email, password, status) VALUES (:fullname, :email, :password, :status)");
+        $statement = $conn->prepare("INSERT INTO users (fullname,postal_code, location, address ,email, password, status) VALUES (:fullname,:postal_code, :location, :address, :email, :password, :status)");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":fullname", $this->getFullname());
+        $statement->bindValue(":postal_code", $this->getPostal_code());
+        $statement->bindValue(":address", $this->getAddress());
+        $statement->bindValue(":location", $this->getAddress());
         $statement->bindValue(":email", $this->getEmail());
         $statement->bindValue(":password", $this->getPassword());
         $statement->bindValue(":status", "buyer");
@@ -365,10 +368,13 @@ class User
         $conn = Db::getConnection();
 
         //Prepare the INSERT query
-        $statement = $conn->prepare("INSERT INTO users (fullname, email, password, status, btw, company, telephone) VALUES (:fullname, :email, :password, :status, :btw, :company, :telephone)");
+        $statement = $conn->prepare("INSERT INTO users (fullname, postal_code, location, address, email, password, status, btw, company, telephone) VALUES (:fullname,:postal_code, :location, :address, :email, :password, :status, :btw, :company, :telephone)");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":fullname", $this->getFullname());
+        $statement->bindValue(":postal_code", $this->getPostal_code());
+        $statement->bindValue(":address", $this->getAddress());
+        $statement->bindValue(":location", $this->getAddress());
         $statement->bindValue(":email", $this->getEmail());
         $statement->bindValue(":password", $this->getPassword());
         $statement->bindValue(":status", "seller");
@@ -457,10 +463,12 @@ class User
         $conn = Db::getConnection();
 
         //Prepare the INSERT query
-        $statement = $conn->prepare("UPDATE users SET bio = :bio, location = :location WHERE email = :email");
+        $statement = $conn->prepare("UPDATE users SET bio = :bio, postal_code = :postal_code, address = :address, location = :location WHERE email = :email");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":bio", $this->getBio());
+        $statement->bindValue(":postal_code", $this->getPostal_code());
+        $statement->bindValue(":address", $this->getAddress());
         $statement->bindValue(":location", $this->getLocation());
         $statement->bindValue(":email", $_SESSION['user']);
 
@@ -476,10 +484,12 @@ class User
         $conn = Db::getConnection();
 
         //Prepare the INSERT query
-        $statement = $conn->prepare("UPDATE users SET bio = :bio, location  = :location, btw = :btw, company = :company, telephone = :telephone WHERE email = :email");
+        $statement = $conn->prepare("UPDATE users SET bio = :bio, postal_code = :postal_code, address = :address, location  = :location, btw = :btw, company = :company, telephone = :telephone WHERE email = :email");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":bio", $this->getBio());
+        $statement->bindValue(":postal_code", $this->getPostal_code());
+        $statement->bindValue(":address", $this->getAddress());
         $statement->bindValue(":location", $this->getLocation());
         $statement->bindValue(":btw", $this->getBtw());
         $statement->bindValue(":company", $this->getCompany());
