@@ -29,7 +29,7 @@ $item->buyItem($user,$id);
     <link rel="icon" type="image/svg" href=images/Logo/LogoWhite.svg>
     <link rel="stylesheet" href="css/search.css">
 
-    <title>Home</title>
+    <title>Bokaal | Search</title>
 </head>
 <body>
 <?php include_once("nav.include.php");
