@@ -83,7 +83,7 @@ if (!empty($_POST['favorite-person'])) {
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/svg" href=images/Logo/LogoWhite.svg>
 
-    <title>Home</title>
+    <title>Bokaal | Home</title>
 </head>
 <body>
 <?php include_once("nav.include.php");
