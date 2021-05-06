@@ -57,7 +57,7 @@ if (!empty($_POST)) {
 
   <div class="container-fluid">
     <div class="row no-gutter">
-      <div class="col-md-8 col-lg-6">
+      <div id="frame" class="col-md-8 col-lg-6">
         <div class="login d-flex align-items-center py-5">
           <div class="container">
             <div class="row">
