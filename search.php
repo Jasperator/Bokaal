@@ -21,61 +21,68 @@ $item->buyItem($user,$id);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="icon" type="image/svg" href=images/Logo/favicon.png> <link rel="stylesheet" href="css/search.css">
 
     <title>Bokaal | Search</title>
 </head>
+
 <body>
-<?php include_once("nav.include.php");
+    <?php include_once("nav.include.php");
 ?>
     <div class="container">
         <div class="titel">
             <h2>Items</h2>
-            <p>Buy your items</p>
+            <h3>Buy your items</h3>
         </div>
 
         <ul id='all'>
             <?php foreach ($items as $item) : ?>
-                <li id="list" class="list-group-item">
-                    <div class="col-md-12">
-                        <div class="d-flex flex-row">
-                            <div id='' class="p-0 w-25">
-                                <div id="wrapper">
-                                    <div id="splash-info">
-                                        <form  action="" method="post">
-                                <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
-                                    </div>
+            <li id="list" class="list-group-item">
+                <div class="col-md-12">
+                    <div class="d-flex flex-row">
+                        <div id='foto' class="p-0 w-25">
+                            <div id="wrapper">
+                                <div id="splash-info">
+                                    <form action="" method="post">
+                                        <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?>"
+                                            class="img-thumbnail border-0" />
                                 </div>
-                            
                             </div>
-                            <div class="pl-3 pt-2 pr-2 pb-2 w-75">
-                                <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
-                                <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
-                                <p class="text-primary"><?= htmlspecialchars($item->quantity); ?> :  <?= htmlspecialchars($item->unit); ?></p>
-                                <p class="text-primary"><?= htmlspecialchars($item->price); ?> :  <?= htmlspecialchars($item->currency); ?></p>
-                                
-			<form  action="" method="post">
 
-				<div class="form-group">
-					<button type="submit" name="buy-item" class="buy" value="<?= htmlspecialchars($item->id); ?>" name="buy" placeholder="Koop">Koop</button>
-				</div>
-			</form>
+                        </div>
+                        <div class="pl-3 pt-2 pr-2 pb-2 w-75">
+                            <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
+                            <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
+                            <p class="text-primary"> <img class="zoekertje" src="images/icon/coin-green.svg" alt="">
+                                <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
+                            <p class="text-primary"> <img class="zoekertje" src="images/icon/kg-green.svg" alt="">
+                                <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
 
+                            <form action="" method="post">
+
+                                <div class="form-group">
+                                    <button type="submit" name="buy-item" class="buy"
+                                        value="<?= htmlspecialchars($item->id); ?>" name="buy"
+                                        placeholder="Koop">Koop</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <?php endforeach ?>
                     </div>
-                    <?php endforeach ?>
-                    </div>
-                </li>
+            </li>
         </ul>
     </div>
 
 
-  	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
+
 </html>
