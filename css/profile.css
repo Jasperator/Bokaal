@@ -1,3 +1,28 @@
+@media only screen and (min-width: 900px) {
+    .icon_full{
+        margin-left: 5%;
+        margin-right: 10%;
+        margin-top: 28%;
+        width: 80px;
+        height: 37%;
+        position: fixed;
+        background-color: #d5d962;
+        border-radius: 5px;
+
+    }
+    
+    .icons{
+        width: 50%;
+    
+        margin-right: 15px;
+        margin-left: 25%;
+        margin-top: 30%;
+        opacity: 50%;
+    }
+
+
+}
+
 @media only screen and (max-width: 900px) {
 
 .icon_full{

@@ -1,4 +1,39 @@
-@media only screen and (max-width: 900px) {
+
+
+@media only screen and (min-width: 900px) {
+
+.container{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+h2 {
+
+    color: orangered;
+
+
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-size: 2.5em;
+    font-variant: normal;
+    font-weight: 700;
+ }
+
+
+ p { 
+    font-family: "Josefin Sans";
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+
+    
+  }
+  @media only screen and (max-width: 900px) {
 
 
     
