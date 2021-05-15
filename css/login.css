@@ -1,7 +1,7 @@
 @media only screen and (min-width: 900px) {
   body {
     background-image: url("../images/background/OGbackground.png");
-    background-size: 50% 1080px;
+    background-size: 100vh;
     background-repeat: no-repeat;
     background-color: cornsilk;
   }
@@ -34,6 +34,10 @@
     border: none;
     border-bottom: 2px solid #151e3d;
     margin-top: 10%;
+  }
+
+  #frame{
+    height: 100%;
   }
 
   #loginBTN {

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-profile-green">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="profile-green" clip-path="url(#clip-profile-green)">
+    <rect width="100" height="100" fill="#fff"/>
+    <g id="Layer_2" data-name="Layer 2" transform="translate(7.175)">
+      <g id="Layer_1" data-name="Layer 1" transform="translate(0)">
+        <path id="Path_33" data-name="Path 33" d="M42.793,89.219h0c9.879,0,19.771.088,29.65,0,8.218-.1,13.252-5.336,13.189-13.541a88.433,88.433,0,0,0-.5-9.313,42.977,42.977,0,0,0-4.455-15.957c-2.781-5.16-6.821-8.507-12.9-8.809a3.02,3.02,0,0,0-1.623.4c-1.51.881-2.957,1.875-4.442,2.806-11.049,6.934-22.489,7.8-34.256,2.026-2.743-1.359-5.248-3.184-7.865-4.77a2.517,2.517,0,0,0-1.258-.5,14.246,14.246,0,0,0-9.879,4.09A22.652,22.652,0,0,0,3.478,53.6C.546,61.092-.159,69.007,0,77.024A11.628,11.628,0,0,0,5.919,87.28a15.945,15.945,0,0,0,8.419,1.938Z" transform="translate(0.018 10.742)" fill="#d5d962"/>
+        <ellipse id="Ellipse_7" data-name="Ellipse 7" cx="23.911" cy="23.911" rx="23.911" ry="23.911" transform="translate(18.937)" fill="#d5d962"/>
+      </g>
+    </g>
+  </g>
+</svg>
