@@ -15,8 +15,9 @@ $items = $item->getAllItemsCart($user);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
     <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
+    <link rel="stylesheet" href="css/search.css">
 
     <title>Bokaal | Winkelmandje</title>
 </head>
@@ -25,7 +26,7 @@ $items = $item->getAllItemsCart($user);
 ?>
     <div class="container">
         <div class="jumbotron">
-            <h1>Winkelmandje</h1>
+            <h2>Winkelmandje</h2>
             <p>Dit is je winkelmandje</p>
         </div>
 
