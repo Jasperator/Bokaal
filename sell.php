@@ -62,15 +62,15 @@ if (!empty($_POST['upload'])) {
 
 	<div class="d-flex justify-content-center">
 		<form class="registerForm" enctype="multipart/form-data" action="" method="post">
-			<h2>Sell</h2>
+			<h2>Verkoop</h2>
 			<div id="top" class="form-group">
 				<!--<label for="title">Title</label>-->
-				<input type="text" name="title" id="title" class="form-control" placeholder="Title" required>
+				<input type="text" name="title" id="title" class="form-control" placeholder="Titel" required>
 				<i class="fas fa-user"></i>
 			</div>
 			<div class="form-group">
 				<!--<label for="description">Description</label>-->
-				<input type="text" name="description" id="description" class="form-control" placeholder="description"
+				<input type="text" name="description" id="description" class="form-control" placeholder="Beschrijving"
 					required>
 				<i class="fas fa-user"></i>
 			</div>
@@ -79,7 +79,7 @@ if (!empty($_POST['upload'])) {
 				<div class="row">
 					<div class="form-group">
 						<!--<label for="quantity">Quantity</label>-->
-						<input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantity"
+						<input type="number" name="quantity" id="quantity" class="form-control" placeholder="Hoeveelheid"
 							required>
 						<i class="fas fa-user"></i>
 					</div>
@@ -104,13 +104,13 @@ if (!empty($_POST['upload'])) {
 				<div class="row">
 					<div class="form-group">
 						<!--<label for="price">Price</label>-->
-						<input type="number" name="price" id="price" class="form-control" placeholder="Price" required>
+						<input type="number" name="price" id="price" class="form-control" placeholder="Prijs" required>
 						<i class="fas fa-user"></i>
 					</div>
 					<div class="form-group">
 						<!--<label for="currency">Currency</label>-->
 						
-						<input type="text" name="currency" id="currency" class="form-control" placeholder="Currency"
+						<input type="text" name="currency" id="currency" class="form-control" placeholder="Munt"
 							required>
 						
 						<i class="fas fa-user"></i>
