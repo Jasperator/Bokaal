@@ -1,172 +1,143 @@
 @media only screen and (min-width: 900px) {
+  h2 {
+    color: orangered;
 
-   h2 {
+    margin-top: 10%;
 
-      color: orangered;
-
-      margin-top: 10%;
-
-      font-family: "Josefin Sans";
-      font-style: normal;
-      font-size: 2.5em;
-      font-variant: normal;
-      font-weight: 700;
-
-
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-size: 2.5em;
+    font-variant: normal;
+    font-weight: 700;
+  }
 }
 
 @media only screen and (max-width: 900px) {
+  h2 {
+    text-align: center;
 
-   h2 {
-      text-align: center;
+    color: orangered;
 
-      color: orangered;
+    margin-top: 10%;
 
-      margin-top: 10%;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-size: 2.5em;
+    font-variant: normal;
+    font-weight: 700;
+  }
 
-      font-family: "Josefin Sans";
-      font-style: normal;
-      font-size: 2.5em;
-      font-variant: normal;
-      font-weight: 700;
-   }
+  button {
+    color: orangered;
+  }
 
-   button {
-      color: orangered;
-   }
+  #top {
+    margin-top: 15%;
+  }
 
+  #title {
+    height: 50px;
 
+    border: none;
 
-   #top {
-      margin-top: 15%;
-   }
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+  }
 
-   #title {
-      height: 50px;
+  #description {
+    height: 100px;
 
-      border: none;
+    border: none;
 
-      -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+  }
 
-   }
+  #quantity {
+    margin-left: 8%;
 
-   #description {
+    border: none;
 
-      height: 100px;
+    height: 50px;
+    width: 120%;
 
-      border: none;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+  }
 
-      -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+  #unit {
+    width: 80%;
+    height: 50px;
 
-   }
+    border: none;
 
+    margin-left: 45%;
 
-   #quantity {
-      margin-left: 8%;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+  }
 
-      border: none;
+  #price {
+    margin-left: 8%;
+    margin-top: -10px;
 
-      height: 50px;
-      width: 120%;
+    border: none;
 
-      -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-   }
+    width: 120%;
+    height: 50px;
+  }
 
-   #unit {
-      width: 80%;
-      height: 50px;
+  #currency {
+    width: 58%;
+    height: 50px;
 
-      border: none;
+    border: none;
 
-      margin-left: 45%;
+    margin-left: 34%;
+    margin-top: -10px;
 
-      -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-   }
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+  }
 
-   #price {
-      margin-left: 8%;
-      margin-top: -10px;
+  #item_image.button {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
 
-      border: none;
+    border: none;
 
-      -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    text-align: center;
+    color: #000000;
+  }
 
-      width: 120%;
-      height: 50px;
+  .button + input {
+    background-color: #d5d962;
+    color: #ffffff;
 
-   }
+    border: none;
+  }
 
-   #currency {
-      width: 58%;
-      height: 50px;
+  #button_or {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
 
-      border: none;
+    border: none;
+    border-radius: 5px;
 
-      margin-left: 34%;
-      margin-top: -10px;
+    background-color: orangered;
+    color: #ffffff;
 
-      -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 
-   }
-
-   #item_image.button {
-      font-family: "Josefin Sans";
-      font-style: normal;
-      font-variant: normal;
-
-      border: none;
-
-      text-align: center;
-;
-      color: #000000;
-
-   }
-
-   .button + input {
-      
-      background-color: #d5d962;
-      color: #ffffff;
-
-      border: none;
-      
-
-   }
-
-
-   #button_or {
-      font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-
-        border: none;
-        border-radius: 5px;
-
-        background-color: orangered;
-        color: #ffffff;
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-
-        margin-left: 36%;
-        margin-bottom: 20px;
-   }
-
-
-
-
-
-
-
-
-
-} 
-}      
+    margin-left: 36%;
+    margin-bottom: 20px;
+  }
+}
