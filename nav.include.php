@@ -17,7 +17,6 @@ $page = basename($_SERVER['PHP_SELF']);
 <nav >
     <div id="container" class="container">
         <a class="home-logo" href="index.php">Bokaal</a>
-        <button type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span ></span>
         </button>
         <div  id="navbarText">
