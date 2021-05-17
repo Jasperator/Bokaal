@@ -43,7 +43,7 @@
     opacity: 100%;
   }
 
-  button {
+  #knopje {
     display: none;
   }
 
@@ -99,7 +99,7 @@
     background-color: #d5d962;
   }
 
-  button {
+  #knopje {
     display: none;
   }
 
