@@ -150,12 +150,12 @@ if (!empty($_POST['favorite-person'])) {
                                 <?= getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?>
                             </p>
 
-                            <form action="" method="post">
+                            <form  id="favor" action="" method="post">
 
-                                <div class="form-group">
+                                <div class="form-group">                                 
                                     <button type="submit" name="favorite-person" class="fav"
                                         value="<?= htmlspecialchars($seller->id); ?>" name="fav"
-                                        placeholder="Favoriet">Favoriet</button>
+                                        placeholder="Favoriet"> <img src="images\icon\star.png" alt=""> Favoriet</button>
                                 </div>
                             </form>
 

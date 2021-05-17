@@ -132,6 +132,10 @@
        width: 100%;
    }
 
+   #favor{
+       height: 10%;
+   }
+
    #space{
       height: 100vh;
    }
