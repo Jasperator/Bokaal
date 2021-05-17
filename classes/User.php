@@ -565,6 +565,18 @@ class User
 
         return $users;
     }
+
+        //Function that finds all conversations a user is a part of
+        public function getActiveConversations()
+        {
+            $conn = Db::getConnection();
+            $statement = $conn->prepare("SELECT * FROM conversations WHERE (user_1 = :user_id OR user_2 = :user_id) AND active = 1");
+            $statement->bindValue(":user_id", $this->getId());
+            $statement->execute();
+            $result = $statement->fetch(\PDO::FETCH_OBJ);
+    
+            return $result;
+        }
    
 
     public function saveProfile_img()

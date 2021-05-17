@@ -39,12 +39,9 @@
     margin-bottom: 65%;
   }
 
-
   .listItem:checked {
     opacity: 100%;
   }
-
-
 
   button {
     display: none;
@@ -53,11 +50,6 @@
   .home-logo {
     display: none;
   }
-
-
-
-
-    
 }
 
 @media only screen and (max-width: 900px) {
@@ -102,13 +94,10 @@
     padding-right: 10px;
   }
 
-
   .active {
     opacity: 100%;
     background-color: #d5d962;
   }
-
-
 
   button {
     display: none;
