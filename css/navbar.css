@@ -43,10 +43,6 @@
     opacity: 100%;
   }
 
-  #knopje {
-    display: none;
-  }
-
   .home-logo {
     display: none;
   }
@@ -97,10 +93,6 @@
   .active {
     opacity: 100%;
     background-color: #d5d962;
-  }
-
-  #knopje {
-    display: none;
   }
 
   .home-logo {
