@@ -14,7 +14,34 @@
 
 
 }
+#button_or {
+   background-color: orangered;
+   color: #ffffff;
+   border: none;
+   padding-right: 40px;
+   padding-left: 40px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   font-size: 1.5em;
+   font-family: "Josefin Sans";
 
+}
+
+form{
+
+   margin-left: -30%;
+   margin-top: 8%;
+   }
+
+body{
+   background-image: url("../images/background/OGbackground.png");
+   background-repeat: no-repeat;
+   background-size: 40%;
+   top: 0;
+   background-position: right ;
+}
+
+}
 @media only screen and (max-width: 900px) {
 
    h2 {

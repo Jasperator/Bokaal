@@ -1,3 +1,99 @@
+@media only screen and (min-width: 900px) {
+
+.container{
+
+margin-left: 10%;
+margin-top: 2%;
+}
+
+body{
+
+    background-image: url("../images/background/LongBackground.png");
+    background-repeat: no-repeat;
+    background-size: 40% 100%;
+    top: 0;
+    background-position: right ;
+    object-fit: cover;
+
+}
+img.profile_image {
+    width: 20%;
+    margin-left: 14%;
+    height: auto;
+}
+
+#splash-info {
+    z-index: 2;
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form-control {
+    height: 50px;
+    width: 40%;
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 2%;
+    padding-left: 10px;
+    padding-top: 10px;
+
+    border: none;
+
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    font-size: 1.2em;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+}
+
+.spacing-bottom {
+    height: 100px;
+}
+
+.button {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+
+    background-color: orangered;
+    color: #ffffff;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    width: 15%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+
+.file-button {
+    color: #000000;
+
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    text-align: center;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+}
+
 @media only screen and (max-width: 900px) {
 
     #wrapper {
