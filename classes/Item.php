@@ -197,6 +197,47 @@ class Item
         return $this;
     }
 
+    
+    /**
+     * Get the value of status
+     */ 
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set the value of status
+     *
+     * @return  self
+     */ 
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of buyer_id
+     */ 
+    public function getBuyer_id()
+    {
+        return $this->buyer_id;
+    }
+
+    /**
+     * Set the value of buyer_id
+     *
+     * @return  self
+     */ 
+    public function setBuyer_id($buyer_id)
+    {
+        $this->buyer_id = $buyer_id;
+
+        return $this;
+    }
+
     public function save_item()
     {
         //Database connection
@@ -291,6 +332,21 @@ class Item
 
     }
 
+    public function getAllItemsBought($user){
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT * FROM items WHERE buyer_id = :buyer_id AND status = 'bought'");
+        $statement->bindValue('buyer_id', $user->getId());
+        $statement->execute();
+
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        return $result;
+
+
+
+
+    }
+
 
     
     public function buyItem($user, $id)
@@ -306,5 +362,40 @@ class Item
         return $result;
 
     }
+
+    public function deleteItemCart($item_id){
+        //Database connection
+        $conn = Db::getConnection();
+    
+        //Prepare the INSERT query
+        $statement = $conn->prepare("UPDATE items SET status = :status, buyer_id = :buyer_id Where id = :id");
+    
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $item_id); 
+        $statement->bindValue(":status", "");
+        $statement->bindValue(":buyer_id", 0);    
+        //Execute query
+        $result = $statement->execute();
+    
+        //Return the results from the query
+        return $result;
+    }
+
+    public function buyAll($user){
+        //Database connection
+        $conn = Db::getConnection();
+    
+        //Prepare the INSERT query
+        $statement = $conn->prepare("UPDATE items SET status = 'bought' WHERE buyer_id = :buyer_id AND status = 'pending'");
+    
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":buyer_id", $user->getId()); 
+        //Execute query
+        $result = $statement->execute();
+    
+        //Return the results from the query
+        return $result;
+    }
+
 
 }

@@ -74,7 +74,7 @@ class Favorite
                     $conn = Db::getConnection();
 
                     //Prepare the SELECT query
-                    $statement = $conn->prepare("SELECT * FROM users WHERE id= (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
+                    $statement = $conn->prepare("SELECT * FROM users WHERE id IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
             
                     //Bind values to parameters from prepared query
                     $statement->bindValue(":user_id", $user->getId());
@@ -105,5 +105,24 @@ public function insertFavorite($user, $favorite_id){
     
             //Return the results from the query
             return $result;
+}
+
+public function deleteFavorite($user, $favorite_id){
+    //Database connection
+    $conn = Db::getConnection();
+
+    //Prepare the INSERT query
+    $statement = $conn->prepare("DELETE FROM favorites Where user_id = :user_id AND favorite_id = :favorite_id");
+
+    //Bind values to parameters from prepared query
+    $statement->bindValue(":user_id", $user->getId());
+    $statement->bindValue(":favorite_id", $favorite_id);
+
+
+    //Execute query
+    $result = $statement->execute();
+
+    //Return the results from the query
+    return $result;
 }
 }

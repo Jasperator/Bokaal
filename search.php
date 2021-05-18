@@ -15,6 +15,13 @@ if (!empty($_POST['buy-item'])) {
 $id = $_POST['buy-item'];
 
 $item->buyItem($user,$id);
+if($user->getStatus() == "seller"){
+    $items = $item->getAllItemsExceptSeller($user);
+    
+    } else{
+        $items = $item->getAllItems();
+    }
+    
 }
 
 ?>

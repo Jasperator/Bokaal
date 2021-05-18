@@ -70,6 +70,10 @@ if (!empty($_POST['favorite-person'])) {
     $favorite_id = $_POST['favorite-person'];
     
     $favorite->insertFavorite($user,$favorite_id);
+    
+$favorites = $favorite->getAllFavorites($user);
+$sellers = $user->getSellersExceptUser();
+
     }
 ?>
 
