@@ -199,7 +199,7 @@ if (!empty($_POST['updateProfile'])) {
                         endif;?>
 
         <div class="form-group">
-          <input class="button" type="submit" value="Save" name="updateProfile">
+          <input class="button" type="submit" value="Opslaan" name="updateProfile">
         </div>
       </form>
     </div>
@@ -221,7 +221,7 @@ if (!empty($_POST['updateProfile'])) {
         </p>
         <div class="form-group">
           <!--<label for="emailpassword">Current password</label>-->
-          <input placeholder="email" type="password" name="emailpassword" id="emailpassword" class="form-control">
+          <input placeholder="email" type="email" name="emailpassword" id="emailpassword" class="form-control">
         </div>
 
         <div class="form-group">
