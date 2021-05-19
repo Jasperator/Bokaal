@@ -2,41 +2,42 @@
 
     h2 {
         text-align: center;
-
+    
         color: orangered;
-
+    
         margin-top: 5%;
-
+    
         font-family: "Josefin Sans";
         font-style: normal;
         font-size: 3.5em;
         font-variant: normal;
         font-weight: 700;
     }
-
+    
     h3 {
         font-family: "Josefin Sans";
         font-size: 1.5em;
         font-style: normal;
         font-variant: normal;
         font-weight: 400;
-
+    
         line-height: 20px;
-
-        text-align: center;
+    
+        margin-left:40%;    
     }
-
+    
+    
     h5 {
         font-family: "Josefin Sans";
         font-size: 1.5em;
         font-style: normal;
         font-variant: normal;
         line-height: 5px;
-
+    
         margin-top: 15px;
         margin-bottom: 15px;
     }
-
+    
     p {
         font-family: "Josefin Sans";
         font-size: 1.3em;
@@ -44,91 +45,90 @@
         font-variant: normal;
         font-weight: 400;
         line-height: 20px;
-
+    
         margin: 12px;
-        margin-left: 25%;
     }
-
+    
     ul {
         text-decoration: none;
-
+    
     }
-
+    
     li {
         display: inline-block;
         text-decoration: none;
         list-style-type: none;
     }
-
+    
     .text-primary{
         margin-top: 15px;
     }
-
+    
     #box {
         display: inline-block;
     }
-
+    
     #all {
-
+    
         display: inline-block;
-
+    
         height: 110px;
         width: 90%;
-
+    
         margin-bottom: 15px;
-        margin-left: 22%;
-
+        margin-left: 10%;
+    
     }
-
+    
     #list {
-
+    
         width: 25%;
-        height: 140%;
-
+        height: 150%;
+    
         border-radius: 2.5px;
         border:  1px;
-
+    
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-
+    
         padding-left: 15px;
         padding-top: 15px;
         padding-bottom: 10px;
-
+    
         margin-bottom: 15px;
         margin-left: 2%;
-
+    
     }
-
-
-
-   #wrapper {
+    
+    
+    
+    #wrapper {
         width: 150px;
         height: 150px;
-
+    
         margin-top: -10px;
-
+    
         image-orientation: inherit;
-
+    
         float: left;
         overflow: hidden;
-
+    
         border-radius: 5%;
-
+    
         border: 5px solid white;
     }
-
+    
     #picture {
         background-size: cover;
         width: 150%;
         height: auto;
         float: left;
-
-
-
+    
+    
+    
         position: absolute;
     }
-
+    
     #splash-info {
         position: relative;
         z-index: 2;
@@ -136,11 +136,11 @@
         font-size: 15px;
         font-weight: bold;
     }
-
+    
     #foto{
         width: 100%;
     }
-
+    
     img.zoekertje {
         width: 20px;
         height: auto;
