@@ -37,13 +37,16 @@ if (!empty($_POST['delete-cart-item'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
     <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/index.css">
+    
 
     <title>Bokaal | Winkelmandje</title>
 </head>
 <body>
-<?php include_once("nav.include.php");
-?>
+<?php include_once("nav.include.php");?>
+
+
+
     <div class="container">
         <div class="jumbotron">
             <h2>Winkelmandje</h2>

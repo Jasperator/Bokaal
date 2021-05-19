@@ -55,6 +55,7 @@ if (isset($_POST['like'])) {
 
 <body onload="updateScroll()">
     <?php include_once("nav.include.php"); ?>
+    <?php include_once("profile.php");?>
 
     <form action="" method="POST" class="chat">
         <div class="chatbox">

@@ -90,8 +90,7 @@ $sellers = $user->getSellersExceptUser();
 </head>
 
 <body>
-    <?php include_once("nav.include.php");
-?>
+    <?php include_once("nav.include.php");?>
     <div class="container">
         <div class="jumbotron">
             <h2>Home</h2>
@@ -129,17 +128,11 @@ $sellers = $user->getSellersExceptUser();
         </ul>
 
         <ul id="all">
-            <h3>Verkopers</h3>
+            <h3 class="seller">Verkopers</h3>
             <?php foreach ($sellers as $seller) : ?>
             <li id="list" class="list-group-item">
                 <div class="col-md-12">
                     <div class="d-flex flex-row">
-
-
-                        
-
-
-
                         <div id='foto' class="p-0 w-25">
                             <div id="wrapper">
                                 <div id="splash-info">
@@ -151,25 +144,24 @@ $sellers = $user->getSellersExceptUser();
                         </div>
 
                         <div class="pl-3 pt-2 pr-2 pb-2 w-75">
-                            
-                            
+
                             <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
-                            <!-- <p class="text-primary"><?= htmlspecialchars($seller->email); ?></p> -->
+                            <p class="text-primary"><?= htmlspecialchars($seller->email); ?></p> 
                             <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
                             <p class="text-primary"> Afstand:
                                 <?= getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?>
                             </p>
-                            
+
 
                             <form id="favor" action="" method="post">
 
-                            <div class="fav-but" class="form-group">
-                                <button id="knop" type="submit" name="favorite-person" class="fav"
-                                    value="<?= htmlspecialchars($seller->id); ?>" name="fav"> <img class="favor-img"
-                                        src="images\icon\star.png" alt=""></button>
-                            </div>
-                        </form>
+                                <div class="fav-but" class="form-group">
+                                    <button id="knop" type="submit" name="favorite-person" class="fav"
+                                        value="<?= htmlspecialchars($seller->id); ?>" name="fav"> <img class="favor-img"
+                                            src="images\icon\star.png" alt=""></button>
+                                </div>
+                            </form>
 
 
                         </div>

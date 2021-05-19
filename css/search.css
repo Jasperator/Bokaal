@@ -5,7 +5,7 @@
     
         color: orangered;
     
-        margin-top: 5%;
+        margin-top: 3%;
     
         font-family: "Josefin Sans";
         font-style: normal;
@@ -23,7 +23,7 @@
     
         line-height: 20px;
     
-        margin-left:40%;    
+        margin-left:42%;    
     }
     
     
@@ -118,9 +118,9 @@
         border: 5px solid white;
     }
     
-    #picture {
+    #picture.img {
         background-size: cover;
-        width: 150%;
+        width: 150px;
         height: auto;
         float: left;
     
@@ -138,7 +138,8 @@
     }
     
     #foto{
-        width: 100%;
+        width: 150px;
+        height: auto;
     }
     
     img.zoekertje {

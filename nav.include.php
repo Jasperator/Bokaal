@@ -51,7 +51,7 @@ $page = basename($_SERVER['PHP_SELF']);
                     </li>
                     <li class="listItem" <?php if ($page == "profile.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="profile.php"><i class="fas fa-user"></i> <img class="nav-img" src="images/icon/user.png" alt="zoek icon"> </a>
+                        <a href="favor.php"><i class="fas fa-user"></i> <img class="nav-img" src="images/icon/user.png" alt="zoek icon"> </a>
                     </li>
 
             <?php endif; ?>

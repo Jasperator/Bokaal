@@ -2,13 +2,13 @@
 
 
   nav {
-    width: 35%;
+    width: 25%;
     height: 75px;
     position: fixed;
     background-color: #d5d962;
     top: 88%;
     margin: auto;
-    margin-left: 30%;
+    margin-left: 38%;
     border-radius: 5px;
 
     z-index: 100;

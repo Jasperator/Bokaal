@@ -21,6 +21,7 @@ $items = $item->getAllItemsbought($user);
 </head>
 <body>
 <?php include_once("nav.include.php") ?>
+<?php include_once("profile.php");?>
 
 <ul id='all'>
             <?php foreach ($items as $item) : ?>
