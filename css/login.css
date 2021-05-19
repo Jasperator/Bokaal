@@ -1,7 +1,7 @@
 @media only screen and (min-width: 900px) {
   body {
     background-image: url("../images/background/OGbackground.png");
-    background-size: 100%;
+    background-size: 50% 1080px;
     background-repeat: no-repeat;
     background-color: cornsilk;
   }
