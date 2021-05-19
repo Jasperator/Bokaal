@@ -1,37 +1,151 @@
-
-
 @media only screen and (min-width: 900px) {
 
-.container{
-    margin-left: 10%;
-    margin-top: 5%;
-}
+    h2 {
+        text-align: center;
 
-h2 {
+        color: orangered;
 
-    color: orangered;
+        margin-top: 5%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-size: 3.5em;
+        font-variant: normal;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-family: "Josefin Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        line-height: 20px;
+
+        text-align: center;
+    }
+
+    h5 {
+        font-family: "Josefin Sans";
+        font-size: 2.2em;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 5px;
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-family: "Josefin Sans";
+        font-size: 1.8em;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
+
+        margin: 12px;
+        margin-left: 25%;
+    }
+
+    ul {
+        text-decoration: none;
+
+    }
+
+    li {
+        display: inline-block;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .text-primary{
+        margin-top: 45px;
+    }
+
+    #box {
+        display: inline-block;
+    }
+
+    #all {
+
+        display: inline-block;
+
+        height: 110px;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: 22%;
+
+    }
+
+    #list {
+
+        width: 25%;
+        height: 300px;
+
+        border-radius: 2.5px;
+        border:  1px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+
+        margin-bottom: 15px;
+        margin-left: 2%;
+
+    }
 
 
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-size: 2.5em;
-    font-variant: normal;
-    font-weight: 700;
- }
+
+   #wrapper {
+        width: 250px;
+        height: 250px;
+
+        margin-top: -10px;
+
+        image-orientation: inherit;
+
+        float: left;
+        overflow: hidden;
+
+        border-radius: 5%;
+
+        border: 5px solid white;
+    }
+
+    #picture {
+        background-size: cover;
+        width: 150%;
+        height: auto;
+        float: left;
 
 
- p { 
-    font-family: "Josefin Sans";
-    font-size: 1.5em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    line-height: 20px;
-}
 
+        position: absolute;
+    }
 
+    #splash-info {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: bold;
+    }
 
-    
+    #foto{
+        width: 100%;
+    }
+
+    img.zoekertje {
+        width: 20px;
+        height: auto;
+    }
+
   }
   
   @media only screen and (max-width: 900px) {
