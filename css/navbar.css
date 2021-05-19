@@ -1,51 +1,5 @@
 @media only screen and (min-width: 900px) {
-  /*nav {
-    width: 80px;
-    height: 95%;
-    position: fixed;
-    background-color: #d5d962;
-    top: 2.5%;
-    margin: auto;
-    margin-bottom: 3%;
-    border-radius: 5px;
 
-    z-index: 100;
-  }
-
-  img {
-    width: 40px;
-  }
-
-  .alles {
-    width: 100%;
-
-    display: inline-block;
-
-    text-align: center;
-
-    padding-left: 20%;
-
-    margin-left: -25%;
-    margin-top: 20%;
-
-    /*padding: 0px;
-        padding-left: 10px;*/
-  }
-
-  /*.listItem {
-    display: inline-block;
-    opacity: 50%;
-    margin-top: 65%;
-    margin-bottom: 65%;
-  }
-
-  .listItem:checked {
-    opacity: 100%;
-  }
-
-  .home-logo {
-    display: none;
-  }*/
 
   nav {
     width: 35%;
@@ -96,7 +50,7 @@
   .home-logo {
     display: none;
   }
-
+}
 
   
 
