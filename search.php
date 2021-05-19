@@ -45,7 +45,6 @@ if($user->getStatus() == "seller"){
     <div class="container">
         <div class="titel">
             <h2>Items</h2>
-            <h3>Buy your items</h3>
         </div>
 
         <ul id='all'>
