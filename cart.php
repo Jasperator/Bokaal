@@ -1,8 +1,11 @@
 <?php
 
 include_once(__DIR__ . "/bootstrap.include.php");
+require_once(__DIR__ . "/classes/Db.php");
+require_once(__DIR__ . "/classes/Item.php");
+require_once(__DIR__ . "/classes/User.php");
 $user = new classes\User($_SESSION['user']);
-$item = new classes\Item($_SESSION['user']);
+$item = new classes\Item();
 
 
 $items = $item->getAllItemsCart($user);
@@ -87,14 +90,16 @@ if (!empty($_POST['delete-cart-item'])) {
                     </div>
                 </li>
         </ul>
-        <form  id="delete-cart" action="" method="post">
+
+        <?php if(!empty($items)) { ?>
+        <form  id="buy-cart" action="" method="post">
 
 <div class="form-group">                                 
     <button type="submit" name="buy-all-items"
         value="buy_all" >Koop alles</button>
 </div>
 </form>
-
+<?php } ?>
 
 
 

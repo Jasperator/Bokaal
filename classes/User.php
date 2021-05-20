@@ -574,10 +574,23 @@ class User
             $conn = Db::getConnection();
             $statement = $conn->prepare("SELECT * FROM conversations WHERE (user_1 = :user_id OR user_2 = :user_id) AND active = 1");
             $statement->bindValue(":user_id", $this->getId());
+
             $statement->execute();
-            $result = $statement->fetch(\PDO::FETCH_OBJ);
+            $users = $statement->fetch(\PDO::FETCH_OBJ);
+            return $users;
+        }
+        public function getConversations()
+        {
+            $conn = Db::getConnection();
     
-            return $result;
+            //<> is the same as !=
+            $statement = $conn->prepare("SELECT * FROM conversations WHERE (user_1 = :user_id OR user_2 = :user_id) AND active = 1");
+            $statement->bindValue(':user_id', $this->getId());
+    
+            $statement->execute();
+            $users = $statement->fetchAll(\PDO::FETCH_OBJ);
+    
+            return $users;
         }
    
 

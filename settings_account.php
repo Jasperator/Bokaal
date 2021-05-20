@@ -1,7 +1,8 @@
 <?php
 
 include_once(__DIR__ . "/bootstrap.include.php");
-
+require_once(__DIR__ . "/classes/Db.php");
+require_once(__DIR__ . "/classes/User.php");
 //Create a new user based on the active user's email
 $user = new classes\User($_SESSION['user']);
 
@@ -99,7 +100,7 @@ if (!empty($_POST['updateProfile'])) {
   <link rel="stylesheet" href="css/settings_account.css">
   <title>Profiel instellingen</title>
 
-  <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
+  <link rel="icon" type="image/svg" href=images/logo/favicon.png>
 
 </head>
 

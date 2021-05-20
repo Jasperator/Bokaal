@@ -1,7 +1,9 @@
 <?php
 
 include_once(__DIR__ . "/bootstrap.include.php");
-
+require_once(__DIR__ . "/classes/Db.php");
+require_once(__DIR__ . "/classes/Item.php");
+require_once(__DIR__ . "/classes/User.php");
 
 
 
@@ -9,7 +11,7 @@ include_once(__DIR__ . "/bootstrap.include.php");
 if (!empty($_POST['upload'])) {
 
     $user = new classes\User($_SESSION['user']);
-    $item = new classes\Item($_SESSION['user']);
+    $item = new classes\Item();
 
     //Put $_POST variables into variables
     //Convert the email string to lowercase, case sensitivity does not matter here
@@ -52,7 +54,7 @@ if (!empty($_POST['upload'])) {
 	
 	<title>Bokaal | Sell</title>
 
-	<link rel="icon" type="image/svg" href=images/Logo/favicon.png>
+	<link rel="icon" type="image/svg" href=images/logo/favicon.png>
 </head>
 
 <body>

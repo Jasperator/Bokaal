@@ -1,8 +1,11 @@
 <?php
 
 include_once(__DIR__ . "/bootstrap.include.php");
+require_once(__DIR__ . "/classes/Db.php");
+require_once(__DIR__ . "/classes/Item.php");
+require_once(__DIR__ . "/classes/User.php");
 $user = new classes\User($_SESSION['user']);
-$item = new classes\Item($_SESSION['user']);
+$item = new classes\Item();
 
 
 $items = $item->getAllItemsbought($user);

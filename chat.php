@@ -4,38 +4,43 @@ include_once(__DIR__ . "/bootstrap.include.php");
 
 $user = new classes\User($_SESSION['user']);
 
-$active_conversation = $user->getActiveConversations();
-print_r( $user->getActiveConversations());
-if ($active_conversation) {
-    $conversation = new classes\Conversation();
-    $conversation->setId($active_conversation->id);
-    $conversation->readMessages($user->getId());
-    $messages = $conversation->getMessages();
-    $chat_partner = $conversation->getPartner($user->getId());
-}
+$active_conversations = $user->getConversations();
+foreach($active_conversations as $active_conversation){
+print_r( $active_conversation);
 
-if (!empty($_POST['content'])) {
-    $time = date('Y-m-d H:i:s');
 
-    $active_conversation = $user->getActiveConversations();
 
-    $message = new classes\Message();
-    $message->setConversation_id($active_conversation->id);
-    $message->setSender_id($user->getId());
-    $message->setReceiver_id($chat_partner->id);
-    $message->setContent($_POST['content']);
-    $message->setTimestamp($time);
-    $message->saveMessage();
-}
+// if ($active_conversation) {
+//     $conversation = new classes\Conversation();
+//     $conversation->setId($active_conversation->id);
+//     $conversation->readMessages($user->getId());
+//     $messages = $conversation->getMessages();
+//     $chat_partner = $conversation->getPartner($user->getId());
+// }
 
-if (isset($_POST['like'])) {
-    if ($_POST['like'] == 1) {
-        classes\Message::reaction();
-    }
+// if (!empty($_POST['content'])) {
+//     $time = date('Y-m-d H:i:s');
 
-    if ($_POST['like'] == 0) {
-        classes\Message::undoReaction();
-    }
+//     $active_conversation = $user->getConversations();
+
+//     $message = new classes\Message();
+//     $message->setConversation_id($active_conversation->id);
+//     $message->setSender_id($user->getId());
+//     $message->setReceiver_id($chat_partner->id);
+//     $message->setContent($_POST['content']);
+//     $message->setTimestamp($time);
+//     $message->saveMessage();
+// }
+
+// if (isset($_POST['like'])) {
+//     if ($_POST['like'] == 1) {
+//         classes\Message::reaction();
+//     }
+
+//     if ($_POST['like'] == 0) {
+//         classes\Message::undoReaction();
+//     }
+// }
 }
 
 ?>
@@ -132,7 +137,7 @@ if (isset($_POST['like'])) {
                 <textarea id="messageText" cols="30" rows="1" class="messageText float-left" style="margin-right:30px; padding-bottom:10px;"></textarea>
                 <button class="sendMessage btn btn-dark">Send</button>
             <?php else : ?>
-                <h2 class="d-inline-block">You have no buddy to chat with!</h2>
+                <h2 class="d-inline-block">You have no body to chat with!</h2>
                 <h6>Send a request to someone or wait for someone else to ask you.</h6>
             <?php endif; ?>
         </div>
