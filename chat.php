@@ -4,9 +4,10 @@ include_once(__DIR__ . "/bootstrap.include.php");
 
 $user = new classes\User($_SESSION['user']);
 
-$active_conversations = $user->getActiveConversations();
-foreach($active_conversation as $active_conversations){
-print_r( $user->getActiveConversations());
+$active_conversations = $user->getConversations();
+foreach($active_conversations as $active_conversation){
+print_r( $active_conversation);
+
 if ($active_conversation) {
     $conversation = new classes\Conversation();
     $conversation->setId($active_conversation->id);
@@ -18,7 +19,7 @@ if ($active_conversation) {
 if (!empty($_POST['content'])) {
     $time = date('Y-m-d H:i:s');
 
-    $active_conversation = $user->getActiveConversations();
+    $active_conversation = $user->getConversations();
 
     $message = new classes\Message();
     $message->setConversation_id($active_conversation->id);
@@ -134,7 +135,7 @@ if (isset($_POST['like'])) {
                 <textarea id="messageText" cols="30" rows="1" class="messageText float-left" style="margin-right:30px; padding-bottom:10px;"></textarea>
                 <button class="sendMessage btn btn-dark">Send</button>
             <?php else : ?>
-                <h2 class="d-inline-block">You have no buddy to chat with!</h2>
+                <h2 class="d-inline-block">You have no body to chat with!</h2>
                 <h6>Send a request to someone or wait for someone else to ask you.</h6>
             <?php endif; ?>
         </div>
