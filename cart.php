@@ -83,14 +83,16 @@ if (!empty($_POST['delete-cart-item'])) {
                     </div>
                 </li>
         </ul>
-        <form  id="delete-cart" action="" method="post">
+
+        <?php if(!empty($items)) { ?>
+        <form  id="buy-cart" action="" method="post">
 
 <div class="form-group">                                 
     <button type="submit" name="buy-all-items"
         value="buy_all" >Koop alles</button>
 </div>
 </form>
-
+<?php } ?>
 
 
 

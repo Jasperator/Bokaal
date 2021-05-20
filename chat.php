@@ -4,7 +4,8 @@ include_once(__DIR__ . "/bootstrap.include.php");
 
 $user = new classes\User($_SESSION['user']);
 
-$active_conversation = $user->getActiveConversations();
+$active_conversations = $user->getActiveConversations();
+foreach($active_conversation as $active_conversations){
 print_r( $user->getActiveConversations());
 if ($active_conversation) {
     $conversation = new classes\Conversation();
@@ -36,6 +37,7 @@ if (isset($_POST['like'])) {
     if ($_POST['like'] == 0) {
         classes\Message::undoReaction();
     }
+}
 }
 
 ?>
