@@ -86,7 +86,7 @@
 
         display: inline-block;
 
-        height: 110px;
+        height: auto;
         width: 90%;
 
         margin-bottom: 15px;
@@ -98,7 +98,7 @@
 
         display: inline-block;
 
-        height: auto;
+        height: 110px;
         width: 90%;
 
         margin-bottom: 15px;
