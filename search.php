@@ -34,7 +34,8 @@ if($user->getStatus() == "seller"){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <link rel="icon" type="image/svg" href=images/Logo/favicon.png> <link rel="stylesheet" href="css/search.css">
+    <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
+    <link rel="stylesheet" href="css/index.css">
 
     <title>Bokaal | Search</title>
 </head>
@@ -46,6 +47,7 @@ if($user->getStatus() == "seller"){
     <div class="container">
         <div class="titel">
             <h2>Items</h2>
+            <div class="line-under" ></div>
         </div>
 
         <ul id='all'>

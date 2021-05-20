@@ -85,35 +85,36 @@ $sellers = $user->getSellersExceptUser();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg" href=images/Logo/favicon.png> <title>Bokaal | Home</title>
 </head>
 
-<body>
+<body id="index-body">
     <?php include_once("nav.include.php");?>
-    <div class="container">
-        <div class="jumbotron">
-            <h2>Home</h2>
-            <div class="line-under" ></div>
+    <div>
+
+    
+        <div >
+            <h2 class="hoofdtitel">Home</h2>
+            <!-- <div class="line-under" ></div> -->
         </div>
 
         <ul id="all">
-            <h3>Favorieten</h3>
+            <h3 class="titel-index">Favorieten</h3>
             <?php foreach ($favorites as $fav) : ?>
-            <li id=list>
-                <div>
+            <li id="list">
+                <div class="container">
                     <div>
                         <div id="foto">
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
-                                        <img src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>"
-                                            />
+                                        <img id="picture" src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>" />
                                 </div>
                             </div>
                         </div>
 
-                        <div>
+                        <div id="info">
                             <h5 class="text-primary"><?= htmlspecialchars($fav->fullname); ?></h5>
                             <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>
@@ -121,21 +122,23 @@ $sellers = $user->getSellersExceptUser();
                                 <?= getDistance($user->getAddress(),$user->getPostal_code(), urlencode($fav->address), urlencode($fav->postal_code), "K");  ?>
                             </p>
 
+                            
 
+                            
                         </div>
                         <?php endforeach ?>
                     </div>
             </li>
         </ul>
-
+        <div class="space-favor"></div>
         <ul id="all-buurt">
             <div id="pauze"></div>
-            <h3 >Verkopers</h3>
+            <h3 class="titel-index"> Verkopers</h3>
             <?php foreach ($sellers as $seller) : ?>
             <li id="list">
-                <div>
+                <div class="container">
                     <div>
-                        <div id='foto'>
+                        <div id="foto">
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
@@ -146,7 +149,6 @@ $sellers = $user->getSellersExceptUser();
                         </div>
 
                         <div id="info">
-
                             <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
                             <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
