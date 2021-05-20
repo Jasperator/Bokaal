@@ -8,37 +8,39 @@ $active_conversations = $user->getConversations();
 foreach($active_conversations as $active_conversation){
 print_r( $active_conversation);
 
-if ($active_conversation) {
-    $conversation = new classes\Conversation();
-    $conversation->setId($active_conversation->id);
-    $conversation->readMessages($user->getId());
-    $messages = $conversation->getMessages();
-    $chat_partner = $conversation->getPartner($user->getId());
-}
 
-if (!empty($_POST['content'])) {
-    $time = date('Y-m-d H:i:s');
 
-    $active_conversation = $user->getConversations();
+// if ($active_conversation) {
+//     $conversation = new classes\Conversation();
+//     $conversation->setId($active_conversation->id);
+//     $conversation->readMessages($user->getId());
+//     $messages = $conversation->getMessages();
+//     $chat_partner = $conversation->getPartner($user->getId());
+// }
 
-    $message = new classes\Message();
-    $message->setConversation_id($active_conversation->id);
-    $message->setSender_id($user->getId());
-    $message->setReceiver_id($chat_partner->id);
-    $message->setContent($_POST['content']);
-    $message->setTimestamp($time);
-    $message->saveMessage();
-}
+// if (!empty($_POST['content'])) {
+//     $time = date('Y-m-d H:i:s');
 
-if (isset($_POST['like'])) {
-    if ($_POST['like'] == 1) {
-        classes\Message::reaction();
-    }
+//     $active_conversation = $user->getConversations();
 
-    if ($_POST['like'] == 0) {
-        classes\Message::undoReaction();
-    }
-}
+//     $message = new classes\Message();
+//     $message->setConversation_id($active_conversation->id);
+//     $message->setSender_id($user->getId());
+//     $message->setReceiver_id($chat_partner->id);
+//     $message->setContent($_POST['content']);
+//     $message->setTimestamp($time);
+//     $message->saveMessage();
+// }
+
+// if (isset($_POST['like'])) {
+//     if ($_POST['like'] == 1) {
+//         classes\Message::reaction();
+//     }
+
+//     if ($_POST['like'] == 0) {
+//         classes\Message::undoReaction();
+//     }
+// }
 }
 
 ?>

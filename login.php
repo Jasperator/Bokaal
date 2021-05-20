@@ -1,12 +1,15 @@
 <?php
 
 include_once(__DIR__ . "/bootstrap.include.php");
+require_once(__DIR__ . "/classes/Db.php");
+
+
+print_r(classes\Db::getConnection());
 
 //Detect submit
 if (!empty($_POST)) {
 
   //Put fields in variables
-  $email = $_POST['email'];
   $password = $_POST['password'];
 
 
@@ -47,7 +50,7 @@ if (!empty($_POST)) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/login.css">
-  <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
+  <link rel="icon" type="image/svg" href=images/logo/favicon.png>
 
   <title>Bokaal | login</title>
 </head>

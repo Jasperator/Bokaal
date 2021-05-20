@@ -1,6 +1,9 @@
 <?php
 
 include_once(__DIR__ . "/bootstrap.include.php");
+require_once(__DIR__ . "/classes/Db.php");
+require_once(__DIR__ . "/classes/Favorite.php");
+require_once(__DIR__ . "/classes/User.php");
 
 //Check if values have been sent
 if (!empty($_POST['register'])) {
@@ -66,7 +69,7 @@ if (!empty($_POST['register'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/register-seller.css">
-    <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
+    <link rel="icon" type="image/svg" href=images/logo/favicon.png>
 
 </head>
 

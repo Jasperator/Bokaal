@@ -1,8 +1,11 @@
 <?php
 
 include_once(__DIR__ . "/bootstrap.include.php");
+require_once(__DIR__ . "/classes/Db.php");
+require_once(__DIR__ . "/classes/Item.php");
+require_once(__DIR__ . "/classes/User.php");
 $user = new classes\User($_SESSION['user']);
-$item = new classes\Item($_SESSION['user']);
+$item = new classes\Item();
 
 if($user->getStatus() == "seller"){
 $items = $item->getAllItemsExceptSeller($user);
@@ -34,7 +37,7 @@ if($user->getStatus() == "seller"){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <link rel="icon" type="image/svg" href=images/Logo/favicon.png> <link rel="stylesheet" href="css/search.css">
+    <link rel="icon" type="image/svg" href=images/logo/favicon.png> <link rel="stylesheet" href="css/search.css">
 
     <title>Bokaal | Search</title>
 </head>
