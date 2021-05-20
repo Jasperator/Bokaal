@@ -2,6 +2,7 @@
 
     h2 {
         text-align: center;
+        margin-left: 5%;
     
         color: orangered;
     
@@ -12,6 +13,18 @@
         font-size: 3.5em;
         font-variant: normal;
         font-weight: 700;
+    }
+
+    .line-under{
+        width: 90%;
+        height: 5px;
+
+        margin-left: 5%;
+
+        border-radius: 5px;
+
+        
+        background-color: #d5d962;;
     }
     
     h3 {
@@ -100,6 +113,9 @@
     
     }
     
+    .seller{
+        margin-top: 5%;
+    }
     
     
     #wrapper {
@@ -284,6 +300,10 @@
     img.zoekertje {
         width: 20px;
         height: auto;
+    }
+
+    #space{
+        height: 100px;
     }
 
 }

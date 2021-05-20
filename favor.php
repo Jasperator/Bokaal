@@ -27,7 +27,7 @@ if (!empty($_POST['delete-favorite-person'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" href=images/Logo/favicon.png> 
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <title>Favorieten</title>
 </head>
@@ -40,26 +40,26 @@ if (!empty($_POST['delete-favorite-person'])) {
     <div class="container">
         <div class="jumbotron">
             <h2>Favorieten</h2>
+            <div class="line-under" ></div>
         </div>
 
         <ul>
             <?php foreach ($favorites as $fav) : ?>
-            <li class="list-group-item">
-                <div class="col-md-12">
-                    <div class="d-flex flex-row">
-                        <div id="foto" class="p-0 w-25">
+            <li id="list">
+                <div>
+                    <div >
+                        <div id="foto">
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
-                                        <img src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>"
-                                            class="img-thumbnail border-0" />
+                                        <img src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>"/>
+                                            
                                 </div>
                             </div>
                         </div>
                         
                         <div class="pl-3 pt-2 pr-2 pb-2 w-75">
                             <h5 class="text-primary"><?= htmlspecialchars($fav->fullname); ?></h5>
-                            <p class="text-primary"><?= htmlspecialchars($fav->email); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>
 
@@ -80,11 +80,10 @@ if (!empty($_POST['delete-favorite-person'])) {
         </ul>
     </div>
 
-
+<div id="space" ></div>
 
 
     <script src="js/jquery.min.js"></script>
-    <!--<script src="js/bootstrap.js"></script>-->
 </body>
 
 </html>

@@ -1,11 +1,8 @@
 @media only screen and (min-width: 900px) {
-
-    body{
-        background-color: #f8f8f8;
-    }
     
     h2 {
-        text-align: center;
+        text-align: left;
+        margin-left: 5%;
 
         color: orangered;
 
@@ -16,6 +13,18 @@
         font-size: 3.5em;
         font-variant: normal;
         font-weight: 700;
+    }
+
+    .line-under{
+        width: 90%;
+        height: 5px;
+
+        margin-left: 5%;
+
+        border-radius: 5px;
+
+        
+        background-color: #d5d962;;
     }
 
     h3 {
@@ -51,6 +60,7 @@
         line-height: 20px;
 
         margin: 12px;
+        padding-top:15px;
     }
 
     ul {
@@ -124,7 +134,7 @@
         border: 5px solid white;
     }
 
-    #picture {
+    #picture.img {
         background-size: cover;
         width: 150px;
         height: auto;
@@ -167,8 +177,6 @@
         outline: none;
 
         margin-left: 375px;
-        
-
 
     }
 

@@ -48,9 +48,10 @@ if (!empty($_POST['delete-cart-item'])) {
 
 
     <div class="container">
-        <div class="jumbotron">
+        <div>
             <h2>Winkelmandje</h2>
-            <p>Dit is je winkelmandje</p>
+            <div class="line-under" ></div>
+            
         </div>
 
         <ul id='all'>

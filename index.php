@@ -146,7 +146,6 @@ $sellers = $user->getSellersExceptUser();
                         <div class="pl-3 pt-2 pr-2 pb-2 w-75">
 
                             <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
-                            <p class="text-primary"><?= htmlspecialchars($seller->email); ?></p> 
                             <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
                             <p class="text-primary"> Afstand:
