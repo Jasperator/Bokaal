@@ -58,7 +58,7 @@ if (!empty($_POST['delete-favorite-person'])) {
                             </div>
                         </div>
                         
-                        <div class="pl-3 pt-2 pr-2 pb-2 w-75">
+                        <div>
                             <h5 class="text-primary"><?= htmlspecialchars($fav->fullname); ?></h5>
                             <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>

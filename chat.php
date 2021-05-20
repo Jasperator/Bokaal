@@ -49,7 +49,6 @@ if (isset($_POST['like'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/reaction.css" />
 
@@ -64,6 +63,7 @@ if (isset($_POST['like'])) {
         <div class="chatbox">
             <?php if (!empty($active_conversation)) : ?>
                 <h2 class="d-inline-block">Chat</h2>
+                <div class="line-under" ></div>
                 <h4 class="float-right d-inline-block"><?php echo htmlspecialchars($chat_partner->fullname); ?></h4>
                 <div class="messagebox" style="min-height: 400px; padding-right:10px;">
                     <?php

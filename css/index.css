@@ -94,6 +94,18 @@
 
     }
 
+    #all-buurt {
+
+        display: inline-block;
+
+        height: 110px;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: 10%;
+
+    }
+
     #list {
 
         width: 25%;
@@ -114,9 +126,7 @@
 
     }
 
-    .seller{
-        margin-top: 5%;
-    }
+   
 
     #wrapper {
         width: 150px;
@@ -134,13 +144,11 @@
         border: 5px solid white;
     }
 
-    #picture.img {
+    #picture{
         background-size: cover;
         width: 150px;
         height: auto;
         float: left;
-
-
 
         position: absolute;
     }
@@ -257,10 +265,19 @@
     li {
         text-decoration: none;
         list-style-type: none;
+        display: inline-block;
     }
 
     #box {
         display: inline-block;
+    }
+
+    #pauze{
+        height: 25px;
+    }
+
+    .text-primary {
+        margin-top: 15px;
     }
 
     #all {
@@ -269,6 +286,18 @@
 
         margin-bottom: 15px;
         margin-left: -5%;
+
+
+    }
+
+
+    #all-buurt {
+        height: 110px;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: -5%;
+        margin-top: 50px;
 
 
     }
@@ -310,7 +339,8 @@
     }
 
     #picture {
-        width: 150%;
+        background-size: cover;
+        width: 120px;
         height: auto;
         float: left;
 
@@ -326,7 +356,7 @@
     }
 
     #foto {
-        width: 100%;
+        width: 120px;
     }
 
     #favor {
@@ -335,11 +365,14 @@
 
     #space {
         height: 100vh;
+
+        z-index: -100;
     }
 
     img.zoekertje {
         width: 20px;
         height: auto;
     }
+
 
 }
