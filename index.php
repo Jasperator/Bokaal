@@ -94,25 +94,26 @@ $sellers = $user->getSellersExceptUser();
     <div class="container">
         <div class="jumbotron">
             <h2>Home</h2>
+            <div class="line-under" ></div>
         </div>
 
         <ul id="all">
             <h3>Favorieten</h3>
             <?php foreach ($favorites as $fav) : ?>
-            <li id=list class="list-group-item">
-                <div class="col-md-12">
-                    <div class="d-flex flex-row">
-                        <div id="foto" class="p-0 w-25">
+            <li id=list>
+                <div>
+                    <div>
+                        <div id="foto">
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
                                         <img src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>"
-                                            class="img-thumbnail border-0" />
+                                            />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="pl-3 pt-2 pr-2 pb-2 w-75">
+                        <div>
                             <h5 class="text-primary"><?= htmlspecialchars($fav->fullname); ?></h5>
                             <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>
@@ -127,13 +128,14 @@ $sellers = $user->getSellersExceptUser();
             </li>
         </ul>
 
-        <ul id="all">
-            <h3 class="seller">Verkopers</h3>
+        <ul id="all-buurt">
+            <div id="pauze"></div>
+            <h3 >Verkopers</h3>
             <?php foreach ($sellers as $seller) : ?>
-            <li id="list" class="list-group-item">
-                <div class="col-md-12">
-                    <div class="d-flex flex-row">
-                        <div id='foto' class="p-0 w-25">
+            <li id="list">
+                <div>
+                    <div>
+                        <div id='foto'>
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
@@ -143,7 +145,7 @@ $sellers = $user->getSellersExceptUser();
                             </div>
                         </div>
 
-                        <div class="pl-3 pt-2 pr-2 pb-2 w-75">
+                        <div id="info">
 
                             <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
                             <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>

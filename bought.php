@@ -16,12 +16,19 @@ $items = $item->getAllItemsbought($user);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
+    <link rel="stylesheet" href="css/index.css">
 
     <title>Aankopen</title>
 </head>
 <body>
 <?php include_once("nav.include.php") ?>
 <?php include_once("profile.php");?>
+
+<div>
+        <div>
+            <h2>Bestellingen</h2>
+            <div class="line-under" ></div>
+        </div>
 
 <ul id='all'>
             <?php foreach ($items as $item) : ?>
