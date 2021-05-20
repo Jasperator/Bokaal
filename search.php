@@ -50,15 +50,15 @@ if($user->getStatus() == "seller"){
 
         <ul id='all'>
             <?php foreach ($items as $item) : ?>
-            <li id="list" class="list-group-item">
-                <div class="col-md-12">
-                    <div class="d-flex flex-row">
-                        <div id='foto' class="p-0 w-25">
+            <li id="list">
+                <div>
+                    <div>
+                        <div id='foto'>
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
-                                        <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?>"
-                                            class="img-thumbnail border-0" />
+                                        <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?>"/>
+                                            
                                 </div>
                             </div>
 
