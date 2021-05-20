@@ -1,11 +1,15 @@
 @media only screen and (min-width: 900px) {
 
+    body{
+        background-color: #f8f8f8;
+    }
+    
     h2 {
         text-align: center;
 
         color: orangered;
 
-        margin-top: 5%;
+        margin-top: 3%;
 
         font-family: "Josefin Sans";
         font-style: normal;
@@ -23,7 +27,7 @@
 
         line-height: 20px;
 
-        margin-left:40% ;
+        margin-left: 40%;
 
     }
 
@@ -60,7 +64,7 @@
         list-style-type: none;
     }
 
-    .text-primary{
+    .text-primary {
         margin-top: 15px;
     }
 
@@ -86,7 +90,7 @@
         height: 150%;
 
         border-radius: 2.5px;
-        border:  1px;
+        border: 1px;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -100,9 +104,11 @@
 
     }
 
+    .seller{
+        margin-top: 5%;
+    }
 
-
-   #wrapper {
+    #wrapper {
         width: 150px;
         height: 150px;
 
@@ -120,7 +126,7 @@
 
     #picture {
         background-size: cover;
-        width: 150%;
+        width: 150px;
         height: auto;
         float: left;
 
@@ -137,8 +143,33 @@
         font-weight: bold;
     }
 
-    #foto{
-        width: 100%;
+    #foto {
+        width: 150px;
+    }
+
+    .favor-img {
+        width: 25px;
+    }
+
+    .fav-but{
+        width: 20px;
+    }
+
+    #favor{
+        display: inline-block;
+    }
+
+    button {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        outline: none;
+
+        margin-left: 375px;
+        
+
+
     }
 
     img.zoekertje {
@@ -146,153 +177,161 @@
         height: auto;
     }
 
-  }
+}
 
 @media only screen and (max-width: 900px) {
 
 
+    .favor-img {
+        width: 25px;
+    }
 
-   h2 {
-       text-align: center;
-
-       color: orangered;
-
-       margin-top: 10%;
-
-       font-family: "Josefin Sans";
-       font-style: normal;
-       font-size: 2.5em;
-       font-variant: normal;
-       font-weight: 700;
-   }
-
-   h3 {
-       font-family: "Josefin Sans";
-       font-size: 24px;
-       font-style: normal;
-       font-variant: normal;
-       font-weight: 400;
-
-       line-height: 20px;
-
-       text-align: center;
-
-       margin-left: 0;
-   }
-
-   h5 {
-       font-family: "Josefin Sans";
-       font-size: 18px;
-       font-style: normal;
-       font-variant: normal;
-       line-height: 5px;
-
-       margin-top: 15px;
-       margin-bottom: 15px;
-   }
-
-   p {
-       font-family: "Josefin Sans";
-       font-size: 16px;
-       font-style: normal;
-       font-variant: normal;
-       font-weight: 400;
-       line-height: 20px;
-
-       margin: 12px;
-   }
-
-   ul {
-       text-decoration: none;
-
-   }
-
-   li {
-       text-decoration: none;
-       list-style-type: none;
-   }
-
-   #box {
-       display: inline-block;
-   }
-
-   #all {
-       height: 110px;
-       width: 90%;
-
-       margin-bottom: 15px;
-       margin-left: -5%;
-   
-
-   }
-
-   #list {
-
-       width: 95%;
-
-       border-radius: 2.5px;
-       border:  1px;
-
-       -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-       box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-
-       padding-left: 15px;
-       padding-top: 15px;
-       padding-bottom: 10px;
-
-       margin-bottom: 15px;
-
-   }
+    .fav-but{
+        width: 20px;
+    }
 
 
+    h2 {
+        text-align: center;
 
-  #wrapper {
-       width: 120px;
-       height: 120px;
+        color: orangered;
 
-       margin-top: -15px;
+        margin-top: 10%;
 
-       image-orientation: inherit;
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-size: 2.5em;
+        font-variant: normal;
+        font-weight: 700;
+    }
 
-       float: left;
-       overflow: hidden;
+    h3 {
+        font-family: "Josefin Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
 
-       border-radius: 5%;
+        line-height: 20px;
 
-       border: 5px solid white;
-   }
+        text-align: center;
 
-   #picture {
-       width: 150%;
-       height: auto;
-       float: left;
+        margin-left: 0;
+    }
 
-       position: absolute;
-   }
+    h5 {
+        font-family: "Josefin Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 5px;
 
-   #splash-info {
-       position: relative;
-       z-index: 2;
-       margin-bottom: 5px;
-       font-size: 15px;
-       font-weight: bold;
-   }
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 
-   #foto{
-       width: 100%;
-   }
+    p {
+        font-family: "Josefin Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
 
-   #favor{
-       height: 10%;
-   }
+        margin: 12px;
+    }
 
-   #space{
-      height: 100vh;
-   }
+    ul {
+        text-decoration: none;
 
-   img.zoekertje {
-       width: 20px;
-       height: auto;
-   }
+    }
+
+    li {
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    #box {
+        display: inline-block;
+    }
+
+    #all {
+        height: 110px;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: -5%;
+
+
+    }
+
+    #list {
+
+        width: 95%;
+
+        border-radius: 2.5px;
+        border: 1px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+
+    #wrapper {
+        width: 120px;
+        height: 120px;
+
+        margin-top: -15px;
+
+        image-orientation: inherit;
+
+        float: left;
+        overflow: hidden;
+
+        border-radius: 5%;
+
+        border: 5px solid white;
+    }
+
+    #picture {
+        width: 150%;
+        height: auto;
+        float: left;
+
+        position: absolute;
+    }
+
+    #splash-info {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #foto {
+        width: 100%;
+    }
+
+    #favor {
+        height: 10%;
+    }
+
+    #space {
+        height: 100vh;
+    }
+
+    img.zoekertje {
+        width: 20px;
+        height: auto;
+    }
 
 }

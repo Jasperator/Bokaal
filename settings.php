@@ -11,8 +11,10 @@
 </head>
 
 <body>
-
+<?php include_once("profile.php");?>
 <?php include_once("nav.include.php");?>
+
+
 <!-- Hier moet de profile.php nav komen -->
 
     <div class="all_item">

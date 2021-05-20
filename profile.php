@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="css/profile.css">
 <body>
   <?php include_once("nav.include.php") ?>
+  <?php include_once("profile.php");?>
 
   <div>
     <!-- hier moet de code komen waar op de profiel foto te voorschijn komt
