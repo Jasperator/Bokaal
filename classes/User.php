@@ -506,7 +506,7 @@ class User
     }
 
 
-    public static function checkPassword($email, $password)
+    public static function checkPassword($email, $password): bool
     {
         //Prepared \PDO statement that fetches the password corresponding to the inputted email
         $conn = Db::getConnection();

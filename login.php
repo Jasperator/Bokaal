@@ -2,18 +2,20 @@
 
 include_once(__DIR__ . "/bootstrap.include.php");
 require_once(__DIR__ . "/classes/Db.php");
+require_once(__DIR__ . "/classes/User.php");
 
 
-print_r(classes\Db::getConnection());
 
 //Detect submit
 if (!empty($_POST)) {
 
   //Put fields in variables
   $password = $_POST['password'];
+    $email = $_POST['email'];
 
 
-  if (!empty($email) && !empty($password)) {
+
+    if (!empty($email) && !empty($password)) {
     //If both fields are filled in, check if the login is correct
 
     if (classes\User::checkPassword($email, $password)) {

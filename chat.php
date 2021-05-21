@@ -1,6 +1,13 @@
 <?php
 
 include_once(__DIR__ . "/bootstrap.include.php");
+include_once(__DIR__ . "/classes/Conversation.php");
+include_once(__DIR__ . "/classes/User.php");
+require_once(__DIR__ . "/classes/Db.php");
+require_once(__DIR__ . "/classes/Message.php");
+
+
+
 
 $user = new classes\User($_SESSION['user']);
 
