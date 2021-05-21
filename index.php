@@ -99,7 +99,6 @@ $sellers = $user->getSellersExceptUser();
     
         <div >
             <h2 class="hoofdtitel">Home</h2>
-            <!-- <div class="line-under" ></div> -->
         </div>
 
         <ul id="all">
@@ -171,6 +170,9 @@ $sellers = $user->getSellersExceptUser();
 
 
                         </div>
+
+                        
+
                         <?php endforeach ?>
                     </div>
             </li>

@@ -50,59 +50,86 @@ if (!empty($_POST['upload'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/sell.css">
-	
+	<link rel="stylesheet" href="css/style.css">
+
 	<title>Bokaal | Sell</title>
 
-	<link rel="icon" type="image/svg" href=images/logo/favicon.png>
-</head>
-
-<body>
+	<link rel="icon" type="image/svg" href=images/logo/favicon.png> </head> 
+	
+<body id="sell-body">
 	<?php include_once("nav.include.php") ?>
 
 
 
-	<div class="d-flex justify-content-center">
+	<div>
 		<form class="registerForm" enctype="multipart/form-data" action="" method="post">
-			<h2>Verkoop</h2>
-			<div id="top" class="form-group">
-				<!--<label for="title">Title</label>-->
+			<h2 class="hoofdtitel" >Verkoop</h2>
+
+			<div id="categorie" class="form-sell" >
+				<select type="text" name="title" id="categorie" class="form-control" placeholder="Geef de categorie in" required>
+						<option value="" selected disabled hidden>categorie</option>
+						<optgroup label="Groenten">
+
+						<option value="Bladgroenten">Bladgroenten</option>
+						<option value="Kiengroenten">Kiengroenten</option>
+						<option value="Koolsoorten">Koolsoorten</option>
+						<option value="Stengelgewassen">Stengelgewassen</option>
+						<option value="Uien">Uien</option>
+						<option value="Vruchtgroenten">Vruchtgroenten</option>
+						<option value="Wortel- knolgewassen">Wortel- knolgewassen</option>
+						<option value="Overige groenten">Overige groenten</option>
+						
+						<optgroup label="Fruit">
+
+						<option value="Citrusfruit">Vruchtgroenten</option>
+						<option value="Pitfruit">Pitfruit</option>
+						<option value="Steenvruchten">Steenvruchten</option>
+						<option value="Zacht fruit">Zacht fruit</option>
+						<option value="Exotisch fruit">Exotisch fruit</option>
+						<option value="overig fruit">overig frui</option>
+						
+							
+				</select>
+					
+			</div>
+
+
+			<div id="top" class="form-sell">
 				<input type="text" name="title" id="title" class="form-control" placeholder="Titel" required>
 				<i class="fas fa-user"></i>
 			</div>
-			<div class="form-group">
-				<!--<label for="description">Description</label>-->
+
+			<div class="form-sell">
 				<input type="text" name="description" id="description" class="form-control" placeholder="Beschrijving"
 					required>
 				<i class="fas fa-user"></i>
 			</div>
 
-			<div class="form-group name2 col-xs-6">
+			<div class="form-sell">
 				<div class="row">
 					<div class="form-group">
-						<!--<label for="quantity">Quantity</label>-->
-						<input type="number" name="quantity" id="quantity" class="form-control" placeholder="Hoeveelheid"
-							required>
+						<input type="number" name="quantity" id="quantity" class="form-control"
+							placeholder="Hoeveelheid" required>
 						<i class="fas fa-user"></i>
 					</div>
-					<div class="form-group">
-						<!--<label for="unit">Unit</label>
-						<input type="text" name="unit" id="unit" class="form-control" placeholder="Unit" required  > -->
-						
-						<select type="text" name="unit" id="unit" class="form-control" required >
-						<option value="" selected disabled hidden>Maak je keuze</option>
+
+
+					<div class="form-sell">
+
+						<select type="text" name="unit" id="unit" class="form-control" required>
+							<option value="" selected disabled hidden>Maak je keuze</option>
 							<option value="Gram">Gram</option>
 							<option value="Kg">Kg</option>
-							<option value="Stuks">Stuks</option>							
+							<option value="Stuks">Stuks</option>
 						</select>
 
-						<i class="fas fa-user">  </i>
+						<i class="fas fa-user"> </i>
 					</div>
 				</div>
 			</div>
 
 
-			<div class="form-group name2 col-xs-6">
+			<div class="form-sell">
 				<div class="row">
 					<div class="form-group">
 						<!--<label for="price">Price</label>-->
@@ -111,10 +138,10 @@ if (!empty($_POST['upload'])) {
 					</div>
 					<div class="form-group">
 						<!--<label for="currency">Currency</label>-->
-						
+
 						<input type="text" name="currency" id="currency" class="form-control" placeholder="Munt"
 							required>
-						
+
 						<i class="fas fa-user"></i>
 					</div>
 				</div>
@@ -139,13 +166,13 @@ if (!empty($_POST['upload'])) {
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-</body>
+	</body>
 
 </html>
 
 
 
-					<!--	<select>
+<!--	<select>
 							<option value="0">Maak je keuze</option>
 							<option value="1">Gram</option>
 							<option value="2">Kg</option>
