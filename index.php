@@ -133,6 +133,7 @@ $sellers = $user->getSellersExceptUser();
             </li>
         </ul>
         <div class="space-favor"></div>
+        
         <ul id="all-buurt">
             <div id="pauze"></div>
             <h3 class="titel-index"> Verkopers</h3>

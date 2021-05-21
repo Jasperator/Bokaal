@@ -6,6 +6,8 @@
 
     body{
         height: 100vh;
+
+    
     }
    
 /*-----NAVIGATIE BAR----- */   
@@ -23,17 +25,29 @@
 
     #navbar-full {
        float: right;
-       margin-right: 5%;
+       margin-right: 0%;
         margin-top: 3%;
 
         z-index: 100;
 
-        padding-right: 2.5%;
+        padding-right: 15px;
     }
 
 
     .home-logo {
         display: none;
+    }
+    .alles {
+        width:40vw;
+
+        display: inline-block;
+
+        text-align: left;
+        margin-top: 12px;
+
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
     }
 
     .nav-link{
@@ -137,7 +151,7 @@
     #list {
 
         width: 255px;
-        height: 150%;
+        height: auto;
 
         border-radius: 2.5px;
         border: 1px;
@@ -263,17 +277,23 @@
 
 
     #search-body{
-        background-image: url("images/background/field-dark.png");
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
-        background-size: 100% 22%;
+        background-size: 100vw 22%;
         top: 0;
         background-position: top ;
     }
 
+    .zoekertje {
+        width: 20px;
+        height: auto;
+    }
+
+
     /*-----sell menu-----*/
 
     #sell-body{
-        background-image: url("images/background/field-dark.png");
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
