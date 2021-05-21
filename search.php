@@ -37,38 +37,36 @@ if($user->getStatus() == "seller"){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/svg" href=images/Logo/favicon.png> <link rel="stylesheet" href="css/style.css">
 
     <title>Bokaal | Search</title>
 </head>
 
-<body>
+<body id="search-body">
     <?php include_once("nav.include.php");?>
 
 
-    <div class="container">
+    <div>
         <div class="titel">
-            <h2>Items</h2>
-            <div class="line-under" ></div>
+            <h2 class="hoofdtitel">Items</h2>
         </div>
 
         <ul id='all'>
             <?php foreach ($items as $item) : ?>
             <li id="list">
-                <div>
+                <div class="container">
                     <div>
                         <div id='foto'>
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
-                                        <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?>"/>
-                                            
+                                        <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?>" />
+
                                 </div>
                             </div>
-
                         </div>
-                        <div class="pl-3 pt-2 pr-2 pb-2 w-75">
+
+                        <div id="info">
                             <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
                             <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
                             <p class="text-primary"> <img class="zoekertje" src="images/icon/coin-green.svg" alt="">
