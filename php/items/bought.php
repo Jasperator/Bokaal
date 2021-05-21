@@ -1,6 +1,6 @@
 <?php
 
-include_once(__DIR__ . "/../includes/bootstrap.include.php");
+include_once(__DIR__ . "../includes/bootstrap.include.php");
 require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/Item.php");
 require_once(__DIR__ . "/../../classes/User.php");
@@ -20,6 +20,7 @@ $items = $item->getAllItemsbought($user);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>Aankopen</title>
 </head>

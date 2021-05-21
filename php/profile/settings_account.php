@@ -101,6 +101,8 @@ if (!empty($_POST['updateProfile'])) {
   <title>Profiel instellingen</title>
 
   <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
+    <link rel="stylesheet" href="/css/style.css">
+
 
 </head>
 

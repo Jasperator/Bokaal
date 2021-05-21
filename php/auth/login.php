@@ -25,7 +25,7 @@ if (!empty($_POST)) {
        $_SESSION['user'] = $email;
        $_SESSION['user_status'] = $user -> retrieveStatus();
 
-          header("Location: index.php");
+          header("Location: ../index.php");
        
       // } else {
       //   $error = "Wrong Captcha";

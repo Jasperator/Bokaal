@@ -43,7 +43,7 @@ if (!empty($_POST['register'])) {
             session_start();
             $_SESSION['user'] = $email;
             $_SESSION['user_status'] = "buyer";
-            header("Location: index.php");
+            header("Location: ../index.php");
         
     }
 }

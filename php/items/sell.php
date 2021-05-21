@@ -1,9 +1,9 @@
 <?php
 
-include_once(__DIR__ . "/bootstrap.include.php");
-require_once(__DIR__ . "/classes/Db.php");
-require_once(__DIR__ . "/classes/Item.php");
-require_once(__DIR__ . "/classes/User.php");
+include_once(__DIR__ . "/../includes/bootstrap.include.php");
+require_once(__DIR__ . "/../../classes/Db.php");
+require_once(__DIR__ . "/../../classes/Item.php");
+require_once(__DIR__ . "/../../classes/User.php");
 
 
 
@@ -49,15 +49,15 @@ if (!empty($_POST['upload'])) {
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 	<title>Bokaal | Sell</title>
 
-	<link rel="icon" type="image/svg" href=images/logo/favicon.png> </head> 
+	<link rel="icon" type="image/svg" href=../../images/logo/favicon.png> </head>
 	
 <body id="sell-body">
-	<?php include_once("nav.include.php") ?>
+	<?php include_once("../includes/nav.include.php") ?>
 
 
 
@@ -164,8 +164,8 @@ if (!empty($_POST['upload'])) {
 
 	<!-- <div>style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px; margin-top:10px;"</div> -->
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
 	</body>
 
 </html>

@@ -41,7 +41,8 @@ if (!empty($_POST['delete-cart-item'])) {
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
     <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
     <link rel="stylesheet" href="../../css/index.css">
-    
+    <link rel="stylesheet" href="/css/style.css">
+
 
     <title>Bokaal | Winkelmandje</title>
 </head>

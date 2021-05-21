@@ -60,6 +60,8 @@ print_r( $active_conversation);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/chat.css">
     <link rel="stylesheet" href="../../css/reaction.css" />
+    <link rel="stylesheet" href="/css/style.css">
+
 
     <title>Chat</title>
 </head>

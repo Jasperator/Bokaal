@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
     <link rel="stylesheet" href="../../css/settings.css">
+    <link rel="stylesheet" href="/css/style.css">
+
     <title>settings option</title>
 </head>
 

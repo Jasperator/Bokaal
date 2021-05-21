@@ -88,7 +88,7 @@
     }
 
     #index-body{
-        background-image: url("images/background/field-dark.png");
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
