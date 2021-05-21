@@ -1,10 +1,10 @@
 <?php
 
 
-include_once(__DIR__ . "/bootstrap.include.php");
-require_once(__DIR__ . "/classes/Db.php");
-require_once(__DIR__ . "/classes/Favorite.php");
-require_once(__DIR__ . "/classes/User.php");
+include_once(__DIR__ . "/../includes/bootstrap.include.php");
+require_once(__DIR__ . "/../../classes/Db.php");
+require_once(__DIR__ . "/../../classes/Favorite.php");
+require_once(__DIR__ . "/../../classes/User.php");
 $user = new classes\User($_SESSION['user']);
 $favorite = new classes\Favorite();
 
@@ -29,14 +29,14 @@ if (!empty($_POST['delete-favorite-person'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg" href=images/Logo/favicon.png> 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
+    <link rel="stylesheet" href="../../css/index.css">
 
     <title>Favorieten</title>
 </head>
 
 <body>
-    <?php include_once("nav.include.php") ?>
+    <?php include_once("../includes/nav.include.php") ?>
     <?php include_once("profile.php");?>
 
 
@@ -86,7 +86,7 @@ if (!empty($_POST['delete-favorite-person'])) {
 <div id="space" ></div>
 
 
-    <script src="js/jquery.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
 </body>
 
 </html>

@@ -17,6 +17,6 @@ if($page == "login.php" || $page == "register.php" || $page == "register-buyer.p
     }
 } else {
     if (empty($_SESSION['user'])) {
-        header("Location: login.php");
+        header("Location: php/auth/login.php");
     }
 }

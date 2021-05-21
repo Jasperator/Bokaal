@@ -1,10 +1,10 @@
 <?php
 
-include_once(__DIR__ . "/bootstrap.include.php");
-include_once(__DIR__ . "/classes/Conversation.php");
-include_once(__DIR__ . "/classes/User.php");
-require_once(__DIR__ . "/classes/Db.php");
-require_once(__DIR__ . "/classes/Message.php");
+include_once(__DIR__ . "/../includes/bootstrap.include.php");
+include_once(__DIR__ . "/../../classes/Conversation.php");
+include_once(__DIR__ . "/../../classes/User.php");
+require_once(__DIR__ . "/../../classes/Db.php");
+require_once(__DIR__ . "/../../classes/Message.php");
 
 
 
@@ -58,14 +58,14 @@ print_r( $active_conversation);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/chat.css">
-    <link rel="stylesheet" href="css/reaction.css" />
+    <link rel="stylesheet" href="../../css/chat.css">
+    <link rel="stylesheet" href="../../css/reaction.css" />
 
     <title>Chat</title>
 </head>
 
 <body onload="updateScroll()">
-    <?php include_once("nav.include.php"); ?>
+    <?php include_once("../includes/nav.include.php"); ?>
     <?php include_once("profile.php");?>
 
     <form action="" method="POST" class="chat">
@@ -150,9 +150,9 @@ print_r( $active_conversation);
         </div>
     </form>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/chat.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/chat.js"></script>
+    <script src="../../js/bootstrap.js"></script>
 </body>
 
 </html>
