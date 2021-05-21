@@ -63,12 +63,13 @@ if (!empty($_POST['upload'])) {
 
 	<div>
 		<form class="registerForm" enctype="multipart/form-data" action="" method="post">
-			<h2 class="hoofdtitel" >Verkoop</h2>
 
-			<div id="categorie" class="form-sell" >
-				<select type="text" name="title" id="categorie" class="form-control" placeholder="Geef de categorie in" required>
-						<option value="" selected disabled hidden>categorie</option>
-						<optgroup label="Groenten">
+
+			<div id="categorie" class="form-sell">
+				<select type="text" name="title" id="categorie" class="form-control" placeholder="Geef de categorie in"
+					required>
+					<option value="" selected disabled hidden>categorie</option>
+					<optgroup label="Groenten">
 
 						<option value="Bladgroenten">Bladgroenten</option>
 						<option value="Kiengroenten">Kiengroenten</option>
@@ -78,8 +79,8 @@ if (!empty($_POST['upload'])) {
 						<option value="Vruchtgroenten">Vruchtgroenten</option>
 						<option value="Wortel- knolgewassen">Wortel- knolgewassen</option>
 						<option value="Overige groenten">Overige groenten</option>
-						
-						<optgroup label="Fruit">
+
+					<optgroup label="Fruit">
 
 						<option value="Citrusfruit">Vruchtgroenten</option>
 						<option value="Pitfruit">Pitfruit</option>
@@ -87,78 +88,85 @@ if (!empty($_POST['upload'])) {
 						<option value="Zacht fruit">Zacht fruit</option>
 						<option value="Exotisch fruit">Exotisch fruit</option>
 						<option value="overig fruit">overig frui</option>
-						
-							
+
+
 				</select>
-					
+
 			</div>
 
 
 			<div id="top" class="form-sell">
 				<input type="text" name="title" id="title" class="form-control" placeholder="Titel" required>
-				<i class="fas fa-user"></i>
+
 			</div>
 
 			<div class="form-sell">
 				<input type="text" name="description" id="description" class="form-control" placeholder="Beschrijving"
 					required>
-				<i class="fas fa-user"></i>
+
 			</div>
 
 			<div class="form-sell">
-				<div class="row">
-					<div class="form-group">
+				<div id="hoeveelheid">
+					<div>
 						<input type="number" name="quantity" id="quantity" class="form-control"
 							placeholder="Hoeveelheid" required>
-						<i class="fas fa-user"></i>
+
 					</div>
 
+					<div id="unit" class="form-sell">
 
-					<div class="form-sell">
+						<select type="text" name="title" id="categorie" class="form-control"
+							placeholder="Kies soort hoeveelheid" required>
+							<option value="" selected disabled hidden>Kies soort hoeveelheid</option>
 
-						<select type="text" name="unit" id="unit" class="form-control" required>
-							<option value="" selected disabled hidden>Maak je keuze</option>
-							<option value="Gram">Gram</option>
-							<option value="Kg">Kg</option>
-							<option value="Stuks">Stuks</option>
+							<optgroup label="Hoeveelheid">
+
+								<option value="Gram">Gram</option>
+								<option value="Kg">Kg</option>
+								<option value="Stuks">Stuks</option>
+
 						</select>
 
-						<i class="fas fa-user"> </i>
 					</div>
+
+
 				</div>
+
+
 			</div>
+	</div>
 
 
-			<div class="form-sell">
-				<div class="row">
-					<div class="form-group">
-						<!--<label for="price">Price</label>-->
-						<input type="number" name="price" id="price" class="form-control" placeholder="Prijs" required>
-						<i class="fas fa-user"></i>
-					</div>
-					<div class="form-group">
-						<!--<label for="currency">Currency</label>-->
+	<div  class="form-sell">
+		<div id="bedrag">
+			<div>
+				<!--<label for="price">Price</label>-->
+				<input type="number" name="price" id="price" class="form-control" placeholder="Prijs" required>
 
-						<input type="text" name="currency" id="currency" class="form-control" placeholder="Munt"
-							required>
-
-						<i class="fas fa-user"></i>
-					</div>
-				</div>
 			</div>
+			<div>
+				<!--<label for="currency">Currency</label>-->
 
-			<?php if (isset($error)) : ?>
-			<div><?php echo $error; ?></div>
-			<?php endif; ?>
-			<div class="form-group">
-				<input class="button" type="file" id="item_image" name="item_image" capture="camera" />
-			</div>
-			<div class="form-group">
-				<input id="button_or" type="submit" class="register" value="Upload" name="upload">
-			</div>
-			<div id="result"> </div>
+				<input type="text" name="currency" id="currency" class="form-control" Value="Euro" required>
 
-		</form>
+
+			</div>
+		</div>
+	</div>
+
+	<?php if (isset($error)) : ?>
+	<div><?php echo $error; ?></div>
+	<?php endif; ?>
+	<div class="form-group">
+		<input class="button" type="file" id="item_image" name="item_image" capture="camera" />
+	</div>
+	<div class="form-group">
+		<input id="button_or" type="submit" class="register" value="Upload" name="upload">
+	</div>
+	<div id="result"> </div>
+
+	</form>
 
 	</div>
 
