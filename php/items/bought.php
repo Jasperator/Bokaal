@@ -1,6 +1,6 @@
 <?php
 
-include_once(__DIR__ . "../includes/bootstrap.include.php");
+include_once(__DIR__ . "/../includes/bootstrap.include.php");
 require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/Item.php");
 require_once(__DIR__ . "/../../classes/User.php");

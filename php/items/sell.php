@@ -116,7 +116,7 @@ if (!empty($_POST['upload'])) {
 
 					<div id="unit" class="form-sell">
 
-						<select type="text" name="title" id="categorie" class="form-control"
+						<select type="text" name="unit" id="categorie" class="form-control"
 							placeholder="Kies soort hoeveelheid" required>
 							<option value="" selected disabled hidden>Kies soort hoeveelheid</option>
 

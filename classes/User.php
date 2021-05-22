@@ -592,7 +592,20 @@ class User
     
             return $users;
         }
-   
+
+
+    public function getPartnerConversations()
+    {
+        $conn = Db::getConnection();
+
+        //<> is the same as !=
+        $statement = $conn->prepare("SELECT id,  CASE WHEN user_1 <> :user_id THEN user_1 ELSE user_2 END FROM conversations WHERE (user_1 = :user_id OR user_2 = :user_id) AND active = 1");
+        $statement->bindValue(':user_id', $this->getId());
+
+        $statement->execute();
+        $result = $statement->fetchAll(\PDO::FETCH_COLUMN);
+        return $result;
+    }
 
     public function saveProfile_img()
     {
