@@ -116,7 +116,7 @@ if (!empty($_POST['updateProfile'])) {
 
         <div id="wrapper">
           <div id="splash-info">
-            <img class="profile_image" src="./uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" />
+            <img class="profile_image" src="/uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" />
             <?php if (isset($error)) : ?>
             <div><?php echo $error; ?></div>
             <?php endif; ?>

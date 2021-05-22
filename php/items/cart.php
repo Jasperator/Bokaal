@@ -64,7 +64,7 @@ if (!empty($_POST['delete-cart-item'])) {
                                 <div id="wrapper">
                                     <div id="splash-info">
                                         <form  action="" method="post">
-                                <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
+                                <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
                                     </div>
                                 </div>
                             

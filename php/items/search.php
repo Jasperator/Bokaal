@@ -61,7 +61,7 @@ if($user->getStatus() == "seller"){
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
-                                        <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?> "/>
+                                        <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "/>
                                             
                                 </div>
                             </div>
