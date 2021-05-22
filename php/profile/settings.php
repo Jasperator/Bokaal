@@ -1,3 +1,10 @@
+<?php
+include_once(__DIR__ . "/../includes/bootstrap.include.php");
+require_once(__DIR__ . "/../../classes/Db.php");
+require_once(__DIR__ . "/../../classes/User.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
