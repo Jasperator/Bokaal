@@ -381,21 +381,60 @@ class Item
         return $result;
     }
 
+
+    public function getAllSellersCart($user){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("SELECT * FROM users WHERE id IN (SELECT seller_id FROM `items` WHERE status = 'pending' AND  buyer_id = :buyer_id)");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":buyer_id", $user->getId());
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        //Return the results from the query
+        return $result;
+    }
+
+    public function statConversationSellers($user, $seller_id){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+            $statement = $conn->prepare("INSERT INTO conversations (user_1, user_2, active) VALUES (:buyer_id, :seller_id, 1)");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":buyer_id", $user->getId());
+        $statement->bindValue(":seller_id", $seller_id);
+
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
     public function buyAll($user){
         //Database connection
         $conn = Db::getConnection();
     
         //Prepare the INSERT query
         $statement = $conn->prepare("UPDATE items SET status = 'bought' WHERE buyer_id = :buyer_id AND status = 'pending'");
-    
+
         //Bind values to parameters from prepared query
-        $statement->bindValue(":buyer_id", $user->getId()); 
+        $statement->bindValue(":buyer_id", $user->getId());
+
         //Execute query
         $result = $statement->execute();
     
         //Return the results from the query
         return $result;
     }
+
 
 
 }

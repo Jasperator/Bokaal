@@ -607,6 +607,19 @@ class User
         return $result;
     }
 
+    public function getUserById($user_id)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("SELECT * FROM users WHERE id = :user_id");
+        $statement->bindValue(':user_id', $user_id);
+
+        $statement->execute();
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        return $result;
+    }
+
     public function saveProfile_img()
     {
         //Put all $_FILES array values in seperate variables

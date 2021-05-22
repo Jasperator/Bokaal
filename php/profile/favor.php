@@ -55,7 +55,7 @@ if (!empty($_POST['delete-favorite-person'])) {
                             <div id="wrapper">
                                 <div id="splash-info">
                                     <form action="" method="post">
-                                        <img id="picture" src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>"/>
+                                        <img id="picture" src="/uploads/<?= htmlspecialchars($fav->profile_img); ?>"/>
                                             
                                 </div>
                             </div>

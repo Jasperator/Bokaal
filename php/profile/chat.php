@@ -10,6 +10,7 @@ require_once(__DIR__ . "/../../classes/Message.php");
 
 
 $user = new classes\User($_SESSION['user']);
+$conversation = new classes\Conversation();
 
 $active_conversations = $user->getConversations();
 $getPartnerConversations = $user->getPartnerConversations();
@@ -43,9 +44,14 @@ if (!empty($_POST['chat_id'])) {
     <form action="" method="POST" class="chat">
         <?php
         foreach($getPartnerConversations as $getPartnerConversation){
+            $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
 
             ?>
-            <input type="submit" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation); ?>" />
+                <div id="startChat">
+            <input type="submit" name="chat_name" value="<?= htmlspecialchars($getPartnerName->fullname); ?>" placeholder="<?= htmlspecialchars($getPartnerConversation);?>" />
+            <input type="submit" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation); ?>" placeholder="naam" />
+                </div>
+
             <?php
 
         }

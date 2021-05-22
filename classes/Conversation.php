@@ -152,4 +152,17 @@ class Conversation
 
         return $result;
     }
+
+    public function getUserByConversationId($user_id, $convo_id)
+    {
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT * FROM users WHERE id in (SELECT CASE WHEN user_1 <> :user_id THEN user_1 ELSE user_2 END FROM conversations WHERE (user_1 = :user_id OR user_2 = :user_id) AND active = 1 AND id = :convo_id)");
+        $statement->bindValue(":user_id", $user_id);
+        $statement->bindValue(":convo_id", $convo_id);
+
+        $statement->execute();
+        $result = $statement->fetch(\PDO::FETCH_OBJ);
+
+        return $result;
+    }
 }
