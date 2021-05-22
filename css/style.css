@@ -2,33 +2,35 @@
 
 @media only screen and (min-width: 900px) {
 
-/*----- algemeen -----*/
+    /*----- algemeen -----*/
 
-    body{
+    body {
         height: 100vh;
+
+
     }
-   
-/*-----NAVIGATIE BAR----- */   
+
+    /*-----NAVIGATIE BAR----- */
 
     .nav-img {
         display: none;
 
     }
 
-    .listItem{
+    .listItem {
         text-decoration: none;
         list-style-type: none;
         display: inline-block;
     }
 
     #navbar-full {
-       float: right;
-       margin-right: 5%;
+        float: right;
+        margin-right: 0%;
         margin-top: 3%;
 
         z-index: 100;
 
-        padding-right: 2.5%;
+        padding-right: 15px;
     }
 
 
@@ -36,9 +38,21 @@
         display: none;
     }
 
-    .nav-link{
+    .alles {
+        width: 40vw;
+
+        display: inline-block;
+
+        text-align: left;
+
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .nav-link {
         text-decoration: none;
-        
+
         font-family: "Josefin Sans";
         font-size: 20px;
         font-style: normal;
@@ -47,21 +61,27 @@
         line-height: 20px;
     }
 
-    .nav-link:hover{
+    .nav-link:hover {
         color: orangered;
     }
 
     .nav-bar_name {
         text-decoration: none;
 
-        padding-left:5px;
+        padding-left: 5px;
 
-        color:#ffffff;
+        color: #ffffff;
+    }
+
+    /*------navbar profiel-----*/
+
+    .icon_full{
+        margin-top: 150px;
     }
 
     /*-----Fonts-----*/
 
-    .hoofdtitel{
+    .hoofdtitel {
         text-align: left;
 
         margin-left: 10%;
@@ -81,27 +101,27 @@
     /* -----INDEX----- */
 
 
-      #list {
+    #list {
         display: inline-block;
         text-decoration: none;
         list-style-type: none;
     }
 
-    #index-body{
+    #index-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
-        background-position: top ;
+        background-position: top;
     }
 
-   
+
 
     #box {
         display: inline-block;
     }
 
-    #all{
+    #all {
 
         display: inline-block;
 
@@ -127,7 +147,7 @@
     }
 
 
-    .container{
+    .container {
         display: inline-flex;
 
         margin-top: 5%;
@@ -137,7 +157,7 @@
     #list {
 
         width: 255px;
-        height: 150%;
+        height: auto;
 
         border-radius: 2.5px;
         border: 1px;
@@ -145,7 +165,7 @@
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-       
+
         padding-top: 15px;
         padding-bottom: 10px;
 
@@ -154,7 +174,7 @@
 
     }
 
-   
+
 
     #wrapper {
         width: 200px;
@@ -167,12 +187,12 @@
         float: left;
         overflow: hidden;
 
-        border-radius:2.5%;
+        border-radius: 2.5%;
     }
 
-    #picture{
+    #picture {
         background-size: cover;
-        width:100%;
+        width: 100%;
         height: 200px;
         float: left;
 
@@ -196,7 +216,7 @@
     }
 
 
-    #favor{
+    #favor {
         display: inline-block;
     }
 
@@ -208,17 +228,17 @@
         outline: none;
 
     }
-    
+
     .favor-img {
         width: 25px;
     }
 
-    .fav-but{
+    .fav-but {
         width: 25px;
     }
 
-    
-    
+
+
     .text-primary {
         font-family: "Josefin Sans";
         font-size: 16px;
@@ -231,7 +251,7 @@
         padding-top: 5px;
     }
 
-    .titel-index{
+    .titel-index {
         font-family: "Josefin Sans";
         font-size: 26px;
         font-style: normal;
@@ -262,135 +282,260 @@
     /*-----search / items pagina-----*/
 
 
-    #search-body{
-        background-image: url("images/background/field-dark.png");
+    #search-body {
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
-        background-size: 100% 22%;
+        background-size: 100vw 22%;
         top: 0;
-        background-position: top ;
+        background-position: top;
+    }
+
+    .zoekertje {
+        width: 20px;
+        height: auto;
+    }
+
+
+    .button {
+        margin-left: 10%;
+        margin-top: 1%;
     }
 
     /*-----sell menu-----*/
 
-    #sell-body{
-        background-image: url("images/background/field-dark.png");
+    #sell-body {
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
-        background-position: top ;
+        background-position: top;
     }
 
-    .registerForm{
+    #categorie {
+        width: width;
+    }
+
+
+    .registerForm {
         padding-top: 5%;
     }
 
-    .form-sell{
+    .form-sell {
         width: 50%;
         margin-left: 10%;
         margin-top: 15px;
         margin-bottom: 15px;
     }
 
+    .form-control {
+        width: 100%;
+        height: 50px;
+
+        border: none;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
     #top {
         margin-top: 0px;
-      }
-    
-      #title {
+    }
+
+    #title {
         height: 50px;
-    
+
         border: none;
-    
+
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      }
-    
-      #description {
+    }
+
+    #description {
         height: 100px;
-    
+
         border: none;
-    
+
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      }
-    
-      #quantity {
-       
-    
+    }
+
+
+    #quantity {
+
+
         border: none;
-    
-        
+
+
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      }
-    
-      
-      #price {
-        
-    
+    }
+
+
+    #price {
+
         border: none;
-    
+
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    
-      }
-    
-      #currency {
-        
-    
+
+    }
+
+    #currency {
+
+
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-      }
-    
-      #item_image.button {
+    }
+
+    #item_image.button {
         font-family: "Josefin Sans";
         font-style: normal;
         font-variant: normal;
-    
+
         border: none;
-    
+
         text-align: center;
         color: #000000;
-      }
-    
-      .button + input {
+    }
+
+    .button+input {
         background-color: #d5d962;
         color: #ffffff;
-    
-        border: none;
-      }
-    
-      #button_or {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-    
-        border: none;
-        border-radius: 5px;
-    
-        background-color: orangered;
-        color: #ffffff;
-    
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-    
-        margin-left: 36%;
-        margin-bottom: 20px;
-      }
 
-      #bedrag{
-          display: flex;
-          width: 50%;
-      }
+        border: none;
+    }
 
-      #hoeveelheid{
+
+    #bedrag {
         display: flex;
         width: 50%;
     }
 
+    #hoeveelheid {
+        display: flex;
+        width: 50%;
+    }
 
-   
+    #item_image.button {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+
+        border: none;
+
+        text-align: center;
+        color: #000000;
+    }
+
+
+    .button+input {
+        background-color: #d5d962;
+        color: #ffffff;
+
+        border: none;
+    }
+
+    #button_or {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
+
+        border: none;
+        border-radius: 1px;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        margin-left: 25%;
+        margin-top: 2%;
+    }
+
+/*-----cart/winkelkar-----*/
+
+#cart-body{
+    background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+}
+
+
+/*-----favor-----*/
+
+#favor-body{
+    background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+}
+
+/*-----bought-----*/
+
+#bought-body{
+    background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+}
+
+/*-----settings-----*/
+
+.instel{
+    text-decoration: none;
+
+    color: #000000;
+
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+
+
+
+}
+
+.all_item{
+    margin-top: 10%;
+    
+}
+
+.item{
+    width: 35%;
+
+    text-align: center;
+
+    border-radius: 5px;
+
+    background-color: #ffffff;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 32%;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
+
+
+
 }
 
 
@@ -399,7 +544,7 @@
 
 @media only screen and (max-width: 900px) {
 
-/*-----NAVIGATIE BAR----- */ 
+    /*-----NAVIGATIE BAR----- */
 
     #navbar-full {
         width: 90%;
@@ -472,10 +617,10 @@
         width: 25px;
     }
 
-    .fav-but{
+    .fav-but {
         width: 20px;
     }
-   
+
 
     ul {
         text-decoration: none;
@@ -492,7 +637,7 @@
         display: inline-block;
     }
 
-    #pauze{
+    #pauze {
         height: 25px;
     }
 
@@ -594,7 +739,7 @@
         height: auto;
     }
 
-    .titel-index{
+    .titel-index {
         font-family: "Josefin Sans";
         font-size: 20px;
         font-style: normal;
@@ -608,119 +753,119 @@
         margin-left: 0;
     }
 
-    .space-favor{
+    .space-favor {
         height: 20px;
     }
 
-   /*-----sell menu-----*/
+    /*-----sell menu-----*/
     #top {
-    margin-top: 15%;
-  }
+        margin-top: 15%;
+    }
 
-  #title {
-    height: 50px;
+    #title {
+        height: 50px;
 
-    border: none;
+        border: none;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-  }
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-  #description {
-    height: 100px;
+    #description {
+        height: 100px;
 
-    border: none;
+        border: none;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-  }
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-  #quantity {
-    margin-left: 8%;
+    #quantity {
+        margin-left: 8%;
 
-    border: none;
+        border: none;
 
-    height: 50px;
-    width: 120%;
+        height: 50px;
+        width: 120%;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-  }
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-  #unit {
-    width: 80%;
-    height: 50px;
+    #unit {
+        width: 80%;
+        height: 50px;
 
-    border: none;
+        border: none;
 
-    margin-left: 45%;
+        margin-left: 45%;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-  }
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-  #price {
-    margin-left: 8%;
-    margin-top: -10px;
+    #price {
+        margin-left: 8%;
+        margin-top: -10px;
 
-    border: none;
+        border: none;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-    width: 120%;
-    height: 50px;
-  }
+        width: 120%;
+        height: 50px;
+    }
 
-  #currency {
-    width: 58%;
-    height: 50px;
+    #currency {
+        width: 58%;
+        height: 50px;
 
-    border: none;
+        border: none;
 
-    margin-left: 34%;
-    margin-top: -10px;
+        margin-left: 34%;
+        margin-top: -10px;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-  }
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-  #item_image.button {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
+    #item_image.button {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
 
-    border: none;
+        border: none;
 
-    text-align: center;
-    color: #000000;
-  }
+        text-align: center;
+        color: #000000;
+    }
 
-  .button + input {
-    background-color: #d5d962;
-    color: #ffffff;
+    .button+input {
+        background-color: #d5d962;
+        color: #ffffff;
 
-    border: none;
-  }
+        border: none;
+    }
 
-  #button_or {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
+    #button_or {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
 
-    border: none;
-    border-radius: 5px;
+        border: none;
+        border-radius: 5px;
 
-    background-color: orangered;
-    color: #ffffff;
+        background-color: orangered;
+        color: #ffffff;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
 
-    margin-left: 36%;
-    margin-bottom: 20px;
-  }
-    
+        margin-left: 36%;
+        margin-bottom: 20px;
+    }
+
 }
