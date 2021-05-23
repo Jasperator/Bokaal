@@ -14,51 +14,6 @@ $favorites = $favorite->getAllFavorites($user);
 $sellers = $user->getSellersExceptUser();
 
 
-function getDistance($addressFrom, $postalcodeoFrom, $addressTo, $postalcodeoTo, $unit = ''){
-    // Google API key
-    $apiKey = 'AIzaSyAZvw5R_4B6VsHG9MTrobGTrWFAL3gosNk';
-    
-    // Change address format
-    $formattedAddrFrom    = str_replace(' ', '+', $addressFrom);
-    $formattedAddrTo     = str_replace(' ', '+', $addressTo);
-    
-    // Geocoding API request with start address
-    $geocodeFrom = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrFrom.'+'. $postalcodeoFrom .'&sensor=false&key='.$apiKey);
-    $outputFrom = json_decode($geocodeFrom);
-    if(!empty($outputFrom->error_message)){
-        return $outputFrom->error_message;
-    }
-
-    // Geocoding API request with end address
-    $geocodeTo = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrTo .'+'. $postalcodeoTo .'&sensor=false&key='.$apiKey);
-    $outputTo = json_decode($geocodeTo);
-    if(!empty($outputTo->error_message)){
-        return $outputTo->error_message;
-    }
-    
-    // Get latitude and longitude from the geodata
-    $latitudeFrom    = $outputFrom->results[0]->geometry->location->lat;
-    $longitudeFrom    = $outputFrom->results[0]->geometry->location->lng;
-    $latitudeTo        = $outputTo->results[0]->geometry->location->lat;
-    $longitudeTo    = $outputTo->results[0]->geometry->location->lng;
-    
-    // Calculate distance between latitude and longitude
-    $theta    = $longitudeFrom - $longitudeTo;
-    $dist    = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
-    $dist    = acos($dist);
-    $dist    = rad2deg($dist);
-    $miles    = $dist * 60 * 1.1515;
-    
-    // Convert unit and return distance
-    $unit = strtoupper($unit);
-    if($unit == "K"){
-        return round($miles * 1.609344, 2).' km';
-    }elseif($unit == "M"){
-        return round($miles * 1609.344, 2).' meters';
-    }else{
-        return round($miles, 2).' miles';
-    }
-}
 
 // $addressFrom = 'Adolf Mortelmansstraat 74';
 // $addressTo   = 'Dascoottelei 890';
@@ -121,7 +76,7 @@ $sellers = $user->getSellersExceptUser();
                             <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>
                             <p class="text-primary"> Afstand:
-                                <?= getDistance($user->getAddress(),$user->getPostal_code(), urlencode($fav->address), urlencode($fav->postal_code), "K");  ?>
+                                <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), urlencode($fav->address), urlencode($fav->postal_code), "K");  ?>
                             </p>
 
                             
@@ -139,7 +94,7 @@ $sellers = $user->getSellersExceptUser();
             <h3 class="titel-index"> Verkopers</h3>
             <?php foreach ($sellers as $seller) : ?>
             <li id="list">
-                <div class="container">
+                <div class="container users" data-id = "<?= htmlspecialchars($seller->id); ?>">
                     <div>
                         <div id="foto">
                             <div id="wrapper">
@@ -156,7 +111,7 @@ $sellers = $user->getSellersExceptUser();
                             <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
                             <p class="text-primary"> Afstand:
-                                <?= getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?>
+                                <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?>
                             </p>
 
 
@@ -184,7 +139,12 @@ $sellers = $user->getSellersExceptUser();
 
 
 
+    <script>
+        document.querySelectorAll('.users').forEach(item => { item.addEventListener('click', function () {
 
+            window.location.href = `detailsUser.php?data-id=${this.getAttribute('data-id')}`
+        })})
+    </script>
 
 
 

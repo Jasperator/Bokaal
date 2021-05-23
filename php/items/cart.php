@@ -24,7 +24,7 @@ if (!empty($_POST['delete-cart-item'])) {
         $sellers = $item->getAllSellersCart($user);
         foreach ($sellers as $seller){
 
-            $item->statConversationSellers($user,$seller->id);
+            $item->startConversationSellers($user,$seller->id);
         }
         $item->buyAll($user);
         $items = $item->getAllItemsCart($user);

@@ -55,7 +55,7 @@ if($user->getStatus() == "seller"){
         <ul id='all'>
             <?php foreach ($items as $item) : ?>
             <li id="list">
-                <div class="container">
+                <div class="container" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
                     <div>
                         <div id='foto'>
                             <div id="wrapper">
@@ -75,14 +75,6 @@ if($user->getStatus() == "seller"){
                             <p class="text-primary"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
                                 <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
 
-                            <form action="" method="post">
-
-                                <div class="form-group">
-                                    <button type="submit" name="buy-item" class="buy"
-                                        value="<?= htmlspecialchars($item->id); ?>" name="buy"
-                                        placeholder="Koop">Koop</button>
-                                </div>
-                            </form>
 
                         </div>
                         <?php endforeach ?>
@@ -90,7 +82,12 @@ if($user->getStatus() == "seller"){
             </li>
         </ul>
     </div>
+    <script>
+        document.querySelectorAll('.container').forEach(item => { item.addEventListener('click', function () {
 
+                window.location.href = `detailItem.php?data-id=${this.getAttribute('data-id')}`
+})})
+    </script>
 
     <script src="../../js/jquery.min.js"></script>
 </body>

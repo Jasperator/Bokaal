@@ -114,7 +114,7 @@ if (!empty($_POST['register'])) {
 
 			<div class="form-group">
 				<!--<label for="price">Price</label>-->
-				<input type="text + number" name="address" class="form-control" placeholder="Straat, nr en bus" required>
+				<input type="text" name="address" class="form-control" placeholder="Straat, nr en bus" required>
 
 			</div>
 			<div class="form-group">
