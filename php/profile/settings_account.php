@@ -130,7 +130,7 @@ if (!empty($_POST['updateProfile'])) {
             <input class="file-button" type="file" id="profile_img" name="profile_img" capture="camera" required />
           </div>
           <div>
-            <input class="button-profile" type="submit" value="Upload" name="uploadPicture" />
+            <input class="button-profile-img" type="submit" value="Upload" name="uploadPicture" />
           </div>
         </form>
       </div>

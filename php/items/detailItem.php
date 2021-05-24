@@ -49,12 +49,12 @@ if (!empty($_POST['buy-item'])) {
                     <div id="splash-info">
                         <form action="" method="post">
                             <img id="picture" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"
-                                 class="img-thumbnail border-0" />
+                                />
                     </div>
                 </div>
             </div>
 
-            <div id="info">
+            <div id="info-farmer">
                 <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
                 <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                 <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
@@ -65,7 +65,7 @@ if (!empty($_POST['buy-item'])) {
 
 
                 <div class="titel">
-        <h2>Item</h2>
+        <h2 class="subtitel" >Items</h2>
     </div>
 
     <ul id='all'>
@@ -105,7 +105,7 @@ if (!empty($_POST['buy-item'])) {
     </ul>
 </div>
             <div class="titel">
-                <h2>Other items</h2>
+                <h2 class="subtitel">Other items</h2>
             </div>
 
             <ul id='all'>
@@ -137,6 +137,8 @@ if (!empty($_POST['buy-item'])) {
                         </div>
                 </li>
             </ul>
+
+            <div id="space"></div>
 
             <script>
                 document.querySelectorAll('.others').forEach(item => { item.addEventListener('click', function () {
