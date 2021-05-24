@@ -157,22 +157,22 @@ if (!empty($_POST['updateProfile'])) {
         <div>
 						<!--<label for="currency">Currency</label>-->
 						
-						<input type="text" name="location"  class="form-control-settings" placeholder="Location"
-							required><?= htmlspecialchars($user->getLocation()) ?></input>			
+						<input type="text" name="location"  class="form-control-settings" placeholder="Location" value="<?= htmlspecialchars($user->getLocation()) ?>"
+							required>
 		
 					</div>
           <div>
 						<!--<label for="currency">Currency</label>-->
 						
-						<input type="number" name="postal_code"  class="form-control-settings" placeholder="Postcode"
-							required><?= htmlspecialchars($user->getPostal_code()) ?></input>			
+						<input type="number" name="postal_code"  class="form-control-settings" placeholder="Postcode" value="<?= htmlspecialchars($user->getPostal_code()) ?>"
+							required>
 		
 					</div>
 
 					<div class="form-group">
 						<!--<label for="price">Price</label>-->
-						<input type="text + number" name="address" class="form-control-settings" placeholder="Straat, nr en bus" required>
-            <?= htmlspecialchars($user->getAddress()) ?></input>
+						<input type="text" name="address" class="form-control-settings" placeholder="Straat, nr en bus" value="<?= htmlspecialchars($user->getAddress()) ?>" required>
+            </input>
 			
 					</div>
 				
@@ -184,19 +184,17 @@ if (!empty($_POST['updateProfile'])) {
 
         <div class="form-group">
           <!--<label for="btw">Btw number</label>-->
-          <input placeholder="BTW nummer" name="btw" id="btw" class="form-control-settings" rows="1"
-            cols="50"><?= htmlspecialchars($user->getBtw()) ?></input>
+          <input placeholder="BTW nummer" name="btw" id="btw" class="form-control-settings" value="<?= htmlspecialchars($user->getBtw()) ?>">
         </div>
 
         <div class="form-group">
           <!--<label for="company">Company name</label>-->
-          <input placeholder="Bedrijfs naam" name="company" id="company" class="form-control-settings" rows="1"
-            cols="50"><?= htmlspecialchars($user->getCompany()) ?></input>
+          <input placeholder="Bedrijfs naam" name="company" id="company" class="form-control-settings" value="<?= htmlspecialchars($user->getCompany()) ?>">
         </div>
 
         <div class="form-group">
           <!--<label for="number">Telephone number</label>-->
-          <input placeholder="Telefoon nummer" name="number" id="number" class="form-control-settings"><?= htmlspecialchars($user->getTelephone()) ?></input>
+          <input placeholder="Telefoon nummer" name="number" id="number" class="form-control-settings" value="<?= htmlspecialchars($user->getTelephone()) ?>">
         </div>
 
         <?php
