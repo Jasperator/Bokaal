@@ -25,12 +25,13 @@ $items = $item->getAllItemsbought($user);
 </head>
 <body id="bought-body">
 <?php include_once("../includes/nav.include.php") ?>
-<?php include_once("../profile/profile.php");?>
 
 <div>
         <div>
             <h2 class="hoofdtitel" >Bestellingen</h2>
         </div>
+        
+<?php include_once("../profile/profile.php");?>
 
 <ul id='all'>
             <?php foreach ($items as $item) : ?>

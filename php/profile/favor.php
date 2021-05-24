@@ -38,13 +38,13 @@ if (!empty($_POST['delete-favorite-person'])) {
 
 <body id="favor-body">
     <?php include_once("../includes/nav.include.php") ?>
-    <?php include_once("../profile/profile.php");?>
 
 
     <div>
         <div>
             <h2 class="hoofdtitel">Favorieten</h2>
         </div>
+    <?php include_once("../profile/profile.php");?>
 
         <ul id="all">
             <?php foreach ($favorites as $fav) : ?>

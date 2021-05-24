@@ -26,7 +26,6 @@
     #navbar-full {
         float: right;
         margin-right: 0%;
-        margin-top: 3%;
 
         z-index: 100;
 
@@ -73,11 +72,74 @@
         color: #ffffff;
     }
 
-    /*------navbar profiel-----*/
+    /*-----navbar - profiel-----*/
 
-    .icon_full{
-        margin-top: 150px;
+    .icon-full-nav-profile {
+
+        float: center;
+
+        margin-top: 15px;
+        margin-left: 42%;
+        margin-bottom: 5%;
+
+        z-index: 150;
     }
+
+    .icons {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 15px;
+        margin-left: 15px;
+
+
+    }
+
+    /*------settings - profiel-----*/
+
+    #settings-body {
+        background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+    }
+
+    .all-item_full {
+        height: 100vh;
+    }
+
+    .item_profile {
+        width: 35%;
+
+        text-align: center;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        margin-bottom: 15px;
+        margin-left: 32%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .instel {
+        text-decoration: none;
+
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+    }
+
 
     /*-----Fonts-----*/
 
@@ -88,7 +150,7 @@
 
         color: orangered;
 
-        margin-top: 7%;
+        margin-top: 5%;
 
         font-family: "Josefin Sans";
         font-style: normal;
@@ -96,6 +158,90 @@
         font-variant: normal;
         font-weight: 700;
 
+    }
+
+    /*-----profiel instellingen-----*/
+
+    #Profiel-instellingen-body {
+        background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+    }
+
+    .profile-settings-image{
+        margin-left: 20%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .form-control-settings{
+        width: 50%;
+        height: 50px;
+
+        margin-left: 15%;
+
+        border: none;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+    .new-profile-image {
+        width: 100%;
+        height: auto;       
+        
+        object-fit: cover;
+
+    }
+
+    .spacing-bottom {
+        height: 100px;
+    }
+
+    .button-profile {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        width: 25%;
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+
+    .file-button {
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        text-align: center;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        margin-left: 5%;
+        margin-bottom: 20px;
     }
 
     /* -----INDEX----- */
@@ -461,78 +607,81 @@
         margin-top: 2%;
     }
 
-/*-----cart/winkelkar-----*/
+    /*-----cart/winkelkar-----*/
 
-#cart-body{
-    background-image: url("/images/background/field-dark.png");
+    #cart-body {
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-}
+    }
 
 
-/*-----favor-----*/
+    /*-----favor-----*/
 
-#favor-body{
-    background-image: url("/images/background/field-dark.png");
+    #favor-body {
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-}
+    }
 
-/*-----bought-----*/
+    /*-----bought-----*/
 
-#bought-body{
-    background-image: url("/images/background/field-dark.png");
+    #bought-body {
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-}
+    }
 
-/*-----settings-----*/
+    /*-----settings-----*/
 
-.instel{
-    text-decoration: none;
+    .instel {
+        text-decoration: none;
 
-    color: #000000;
+        color: #000000;
 
-    font-family: "Josefin Sans";
-    font-size: 25px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
+        font-family: "Josefin Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
 
 
 
-}
+    }
 
-.all_item{
-    margin-top: 10%;
-    
-}
+    .all_item {
+        margin-top: 10%;
 
-.item{
-    width: 35%;
+    }
 
-    text-align: center;
+    .item {
+        width: 35%;
 
-    border-radius: 5px;
+        text-align: center;
 
-    background-color: #ffffff;
+        border-radius: 5px;
 
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 32%;
+        background-color: #ffffff;
 
-    padding-top: 15px;
-    padding-bottom: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 32%;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+
 
 
 
@@ -594,6 +743,63 @@
     .home-logo {
         display: none;
     }
+
+    /*-----navbar - profiel-----*/
+    .icon_full {
+        margin-left: 70%;
+        margin-top: 0%;
+    }
+
+    .icons {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 15px;
+        margin-left: 15px;
+
+
+    }
+
+    /*------settings - frofiel-----*/
+
+    .icon-full-nav-profile {
+        margin-top: 30%;
+
+    }
+
+    .item_profile {
+        width: 80%;
+
+        text-align: center;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 10%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .instel {
+        text-decoration: none;
+
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+    }
+
+
 
     /*-----FONTS-----*/
 
@@ -729,7 +935,7 @@
     }
 
     #space {
-        height: 100vh;
+        height: 10vh;
 
         z-index: -100;
     }

@@ -61,10 +61,10 @@ if (!empty($_POST['delete-cart-item'])) {
 
         <ul id='all'>
             <?php foreach ($items as $item) : ?>
-                <li id="list" class="list-group-item">
-                    <div class="col-md-12">
-                        <div class="d-flex flex-row">
-                            <div id='' class="p-0 w-25">
+                <li id="list">
+                    <div class="container">
+                        <div>
+                            <div id='foto'>
                                 <div id="wrapper">
                                     <div id="splash-info">
                                         <form  action="" method="post">

@@ -65,7 +65,7 @@ if (!empty($_POST['buy-item'])) {
 
 
                 <div class="titel">
-        <h2 class="hoofdtitel">Item</h2>
+        <h2>Item</h2>
     </div>
 
     <ul id='all'>
@@ -105,7 +105,7 @@ if (!empty($_POST['buy-item'])) {
     </ul>
 </div>
             <div class="titel">
-                <h2 class="hoofdtitel">Other items</h2>
+                <h2>Other items</h2>
             </div>
 
             <ul id='all'>
