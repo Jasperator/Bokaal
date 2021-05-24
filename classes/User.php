@@ -558,8 +558,10 @@ class User
         $conn = Db::getConnection();
 
         //<> is the same as !=
-        $statement = $conn->prepare("SELECT * FROM users WHERE email <> :email AND status = 'seller'");
+        $statement = $conn->prepare("SELECT * FROM users WHERE email <> :email AND status = 'seller' AND  id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
         $statement->bindValue(':email', $this->getEmail());
+        $statement->bindValue(':user_id', $this->getId());
+
         $statement->execute();
         $users = $statement->fetchAll(\PDO::FETCH_OBJ);
 

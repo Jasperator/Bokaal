@@ -7,6 +7,26 @@ $item = new classes\Item($_SESSION['user']);
 
 $items = $item->getAllItemsCart($user);
 
+if (!empty($_POST['delete-cart-item'])) {
+    $item_id = $_POST['delete-cart-item'];
+    
+    $item->deleteItemCart($item_id);
+    $items = $item->getAllItemsCart($user);
+
+    }
+
+
+
+    if (!empty($_POST['buy-all-items'])) {
+        
+        $item->buyAll($user);
+        $items = $item->getAllItemsCart($user);
+
+    
+        }
+
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -50,12 +70,27 @@ $items = $item->getAllItemsCart($user);
                                 <p class="text-primary"><?= htmlspecialchars($item->quantity); ?> :  <?= htmlspecialchars($item->unit); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($item->price); ?> :  <?= htmlspecialchars($item->currency); ?></p>
                             
+                                <form  id="delete-cart" action="" method="post">
+
+<div class="form-group">                                 
+    <button type="submit" name="delete-cart-item"
+        value="<?= htmlspecialchars($item->id); ?>" >Verwijder item</button>
+</div>
+</form>
 
                     </div>
                     <?php endforeach ?>
                     </div>
                 </li>
         </ul>
+        <form  id="delete-cart" action="" method="post">
+
+<div class="form-group">                                 
+    <button type="submit" name="buy-all-items"
+        value="buy_all" >Koop alles</button>
+</div>
+</form>
+
 
 
 

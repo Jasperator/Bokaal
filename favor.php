@@ -9,6 +9,14 @@ $favorite = new classes\Favorite($_SESSION['user']);
 
 $favorites = $favorite->getAllFavorites($user);
 
+if (!empty($_POST['delete-favorite-person'])) {
+    $favorite_id = $_POST['delete-favorite-person'];
+    
+    $favorite->deleteFavorite($user,$favorite_id);
+    $favorites = $favorite->getAllFavorites($user);
+
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +52,15 @@ $favorites = $favorite->getAllFavorites($user);
                                 <p class="text-primary"><?= htmlspecialchars($fav->email); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>
+
+                                <form  id="favor" action="" method="post">
+
+<div class="form-group">                                 
+    <button type="submit" name="delete-favorite-person" class="fav"
+        value="<?= htmlspecialchars($fav->id); ?>" name="fav"
+        placeholder="Favoriet">Verwijder favoriet</button>
+</div>
+</form>
                             
 
                     </div>
