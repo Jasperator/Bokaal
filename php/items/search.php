@@ -10,35 +10,22 @@ $item = new classes\Item();
 if($user->getStatus() == "seller"){
 $items = $item->getAllItemsExceptSeller($user);
 
+
 } else{
     $items = $item->getAllItems();
 }
 
-if (!empty($_POST['buy-item'])) {
-$id = $_POST['buy-item'];
-
-$item->buyItem($user,$id);
-if($user->getStatus() == "seller"){
-    $items = $item->getAllItemsExceptSeller($user);
-    
-    } else{
-        $items = $item->getAllItems();
-    }
-    
-}
-
-
 
 if (!empty($_POST['category']) and (empty($_POST['searchName']))) {
     $category = $_POST['category'];
-$items = $item->searchItemCategory($category);
+$items = $item->searchItemCategory($category, $user);
 }
 
 if (!empty($_POST['searchName']) and (empty($_POST['category']))) {
     $searchName = urlencode($_POST['searchName']);
     htmlspecialchars($searchName, ENT_QUOTES, 'UTF-8');
     $searchName = '%' . $searchName . '%';
-    $items = $item->searchItemName($searchName);
+    $items = $item->searchItemName($searchName, $user);
 }
 
 if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
@@ -46,7 +33,7 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
     $searchName = urlencode($_POST['searchName']);
     htmlspecialchars($searchName, ENT_QUOTES, 'UTF-8');
     $searchName = '%' . $searchName . '%';
-    $items = $item->searchItemCategoryAndName($searchName, $category);
+    $items = $item->searchItemCategoryAndName($searchName, $category, $user);
 }
 ?>
 
@@ -79,16 +66,19 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
 
 
             <div id="categorie" class="form-sell">
-                <select type="text" name="category" id="categorie" class="form-control" placeholder="Geef de categorie in">
+                <select type="text" name="category" id="categorie" class="form-control" placeholder="Geef de categorie in"
+                        required>
                     <option value="" selected disabled hidden>categorie</option>
                     <optgroup label="Groenten">
 
                         <option value="Bladgroenten">Bladgroenten</option>
-                        <option value="Kiengroenten">Kiengroenten</option>
+                        <option value="Kiemgroenten">Kiemgroenten (spruiten, tuinkers,...)</option>
                         <option value="Koolsoorten">Koolsoorten</option>
-                        <option value="Stengelgewassen">Stengelgewassen</option>
+                        <option value="Stengelgewassen">Stengelgewassen (prei, selder,...)</option>
                         <option value="Uien">Uien</option>
                         <option value="Vruchtgroenten">Vruchtgroenten</option>
+                        <option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
+                        <option value="Vruchtgroenten">Vruchtgroenten (tomaat, aubergine, courgette,...)</option>
                         <option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
                         <option value="Overige groenten">Overige groenten</option>
 
@@ -100,6 +90,12 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
                             <option value="Zacht fruit">Zacht fruit</option>
                             <option value="Exotisch fruit">Exotisch fruit</option>
                             <option value="overig fruit">overig fruit</option>
+                            <option value="Citrusfruit">Citrusfruit (citroen, limoen,...</option>
+                            <option value="Pitfruit">Pitfruit (appel, peer,...)</option>
+                            <option value="Steenvruchten">Steenvruchten (pruim, perzik, kers,...)</option>
+                            <option value="Zacht fruit">Zacht fruit (aardbei, bessen,...)</option>
+                            <option value="Exotisch fruit">Exotisch fruit (passievrucht, papaja,...</option>
+                            <option value="overig fruit">overig Fruit</option>
 
 
                 </select>

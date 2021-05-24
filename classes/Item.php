@@ -315,7 +315,7 @@ class Item
         //<> is the same as !=
         $statement = $conn->prepare("SELECT * FROM items WHERE seller_id <> :seller_id AND status = :status");
         $statement->bindValue(':seller_id', $user->getId());
-        $statement->bindValue(':status', "");
+        $statement->bindValue(':status', '');
 
         $statement->execute();
         $items = $statement->fetchAll(\PDO::FETCH_OBJ);
@@ -382,35 +382,16 @@ class Item
         return $result;
 
     }
-    public function searchItemName($name)
+    public function searchItemName($name, $user)
     {
         $conn = Db::getConnection();
 
-        $statement = $conn->prepare("SELECT * FROM `items` WHERE (title LIKE :name OR description LIKE  :name) AND status = :status");
+        $statement = $conn->prepare("SELECT * FROM `items` WHERE (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":name", $name);
         $statement->bindValue(":status", '');
-
-        //Execute query
-        $statement->execute();
-
-        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
-
-        //Return the results from the query
-        return $result;
-
-    }
-
-    public function searchItemCategory($category)
-    {
-        $conn = Db::getConnection();
-
-        $statement = $conn->prepare("SELECT * FROM items WHERE category = :category AND status = :status");
-
-        //Bind values to parameters from prepared query
-        $statement->bindValue(":category", $category);
-        $statement->bindValue(":status", '');
+        $statement->bindValue(":user_id", $user->getId());
 
 
         //Execute query
@@ -423,16 +404,41 @@ class Item
 
     }
 
-    public function searchItemCategoryAndName($name, $category)
+    public function searchItemCategory($category, $user)
     {
         $conn = Db::getConnection();
 
-        $statement = $conn->prepare("SELECT * FROM items WHERE category = :category AND (title LIKE :name OR description LIKE  :name) AND status = :status");
+        $statement = $conn->prepare("SELECT * FROM items WHERE category = :category AND status = :status AND seller_id <> :user_id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":category", $category);
+        $statement->bindValue(":status", '');
+        $statement->bindValue(":user_id", $user->getId());
+
+
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        //Return the results from the query
+        return $result;
+
+    }
+
+    public function searchItemCategoryAndName($name, $category, $user)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("SELECT * FROM items WHERE category = :category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":name", $name);
         $statement->bindValue(":category", $category);
         $statement->bindValue(":status", '');
+        $statement->bindValue(":user_id", $user->getId());
+
 
 
         //Execute query
