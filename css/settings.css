@@ -1,3 +1,50 @@
+@media only screen and (min-width: 900px) {
+
+    a{
+        text-decoration: none;
+
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+
+    
+    }
+
+    .all_item{
+        margin-top: 10%;
+        
+    }
+
+    .item{
+        width: 35%;
+
+        text-align: center;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 32%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+
+}
+
+
 @media only screen and (max-width: 900px) {
 
     a{

@@ -506,7 +506,7 @@ class User
     }
 
 
-    public static function checkPassword($email, $password)
+    public static function checkPassword($email, $password): bool
     {
         //Prepared \PDO statement that fetches the password corresponding to the inputted email
         $conn = Db::getConnection();
@@ -574,12 +574,51 @@ class User
             $conn = Db::getConnection();
             $statement = $conn->prepare("SELECT * FROM conversations WHERE (user_1 = :user_id OR user_2 = :user_id) AND active = 1");
             $statement->bindValue(":user_id", $this->getId());
+
             $statement->execute();
-            $result = $statement->fetch(\PDO::FETCH_OBJ);
-    
-            return $result;
+            $users = $statement->fetch(\PDO::FETCH_OBJ);
+            return $users;
         }
-   
+        public function getConversations()
+        {
+            $conn = Db::getConnection();
+    
+            //<> is the same as !=
+            $statement = $conn->prepare("SELECT * FROM conversations WHERE (user_1 = :user_id OR user_2 = :user_id) AND active = 1");
+            $statement->bindValue(':user_id', $this->getId());
+    
+            $statement->execute();
+            $users = $statement->fetchAll(\PDO::FETCH_OBJ);
+    
+            return $users;
+        }
+
+
+    public function getPartnerConversations()
+    {
+        $conn = Db::getConnection();
+
+        //<> is the same as !=
+        $statement = $conn->prepare("SELECT id,  CASE WHEN user_1 <> :user_id THEN user_1 ELSE user_2 END FROM conversations WHERE (user_1 = :user_id OR user_2 = :user_id) AND active = 1");
+        $statement->bindValue(':user_id', $this->getId());
+
+        $statement->execute();
+        $result = $statement->fetchAll(\PDO::FETCH_COLUMN);
+        return $result;
+    }
+
+    public function getUserById($user_id)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("SELECT * FROM users WHERE id = :user_id");
+        $statement->bindValue(':user_id', $user_id);
+
+        $statement->execute();
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        return $result;
+    }
 
     public function saveProfile_img()
     {
@@ -614,6 +653,91 @@ class User
                 $img = $statement->execute();
                 return $img;
             }
+        }
+    }
+
+
+    public function getAllItemsById($id)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("SELECT * FROM items WHERE seller_id = :id AND status = :status");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $id);
+        $statement->bindValue(":status", '');
+
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        //Return the results from the query
+        return $result;
+
+    }
+
+    public function getUserFromId($userId)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("SELECT * FROM users WHERE id = :userId");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":userId", $userId);
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetch(\PDO::FETCH_OBJ);
+
+        //Return the results from the query
+        return $result;
+
+    }
+    function getDistance($addressFrom, $postalcodeoFrom, $addressTo, $postalcodeoTo, $unit = ''){
+        // Google API key
+        $apiKey = 'AIzaSyAZvw5R_4B6VsHG9MTrobGTrWFAL3gosNk';
+
+        // Change address format
+        $formattedAddrFrom    = str_replace(' ', '+', $addressFrom);
+        $formattedAddrTo     = str_replace(' ', '+', $addressTo);
+
+        // Geocoding API request with start address
+        $geocodeFrom = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrFrom.'+'. $postalcodeoFrom .'&sensor=false&key='.$apiKey);
+        $outputFrom = json_decode($geocodeFrom);
+        if(!empty($outputFrom->error_message)){
+            return $outputFrom->error_message;
+        }
+
+        // Geocoding API request with end address
+        $geocodeTo = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrTo .'+'. $postalcodeoTo .'&sensor=false&key='.$apiKey);
+        $outputTo = json_decode($geocodeTo);
+        if(!empty($outputTo->error_message)){
+            return $outputTo->error_message;
+        }
+
+        // Get latitude and longitude from the geodata
+        $latitudeFrom    = $outputFrom->results[0]->geometry->location->lat;
+        $longitudeFrom    = $outputFrom->results[0]->geometry->location->lng;
+        $latitudeTo        = $outputTo->results[0]->geometry->location->lat;
+        $longitudeTo    = $outputTo->results[0]->geometry->location->lng;
+
+        // Calculate distance between latitude and longitude
+        $theta    = $longitudeFrom - $longitudeTo;
+        $dist    = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
+        $dist    = acos($dist);
+        $dist    = rad2deg($dist);
+        $miles    = $dist * 60 * 1.1515;
+
+        // Convert unit and return distance
+        $unit = strtoupper($unit);
+        if($unit == "K"){
+            return round($miles * 1.609344, 2).' km';
+        }elseif($unit == "M"){
+            return round($miles * 1609.344, 2).' meters';
+        }else{
+            return round($miles, 2).' miles';
         }
     }
 

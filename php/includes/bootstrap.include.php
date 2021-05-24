@@ -13,10 +13,10 @@ $page = basename($_SERVER['PHP_SELF']);
 //If there's no active session, redirect to login.php
 if($page == "login.php" || $page == "register.php" || $page == "register-buyer.php" || $page == "register-seller.php"){
     if (!empty($_SESSION['user'])) {
-        header("Location: index.php");
+        header("Location: /index.php");
     }
 } else {
     if (empty($_SESSION['user'])) {
-        header("Location: login.php");
+        header("Location: /php/auth/login.php");
     }
 }

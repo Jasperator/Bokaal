@@ -10,13 +10,11 @@ $page = basename($_SERVER['PHP_SELF']);
 
 
 ?>
-<style>
-<?php include 'css/navbar.css'; ?>
-</style>
 
-<nav >
-    <div id="container" class="container">
-        <a class="home-logo" href="index.php">Bokaal</a>
+
+<nav id="navbar-full" >
+    <div>
+        <a class="home-logo" href="/index.php">Bokaal</a>
             <span ></span>
         </button>
         <div  id="navbarText">
@@ -30,28 +28,28 @@ $page = basename($_SERVER['PHP_SELF']);
                     <!-- Mark a link as "active" according to the current page -->
                     <li class="listItem" <?php if ($page == "search.php") : echo "active"; ?> class="active"<?php
                                         endif; ?>>
-                        <a  href="search.php"> <img src="images/icon/zoek.png" alt="zoek icon"> </a>
+                        <a class="nav-link" href="/php/items/search.php"> <img class="nav-img" src="/images/icon/zoek.png" alt="zoek icon"> <p class="nav-bar_name">Items</p> </a>
                     </li>
                     <li class="listItem" <?php if ($page == "index.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="index.php"> <img src="images/icon/home.png" alt="zoek icon"></a>
+                        <a class="nav-link"  href="/index.php"> <img class="nav-img" src="/images/icon/home.png" alt="zoek icon"><p class="nav-bar_name">Home</p></a>
                     </li>
                     <?php 
                            if($_SESSION['user_status'] == "seller") : ?> 
                      <li class="listItem" <?php if ($page == "sell.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="sell.php"> <img src="images/icon/add.png" alt="zoek icon"></a>
+                        <a class="nav-link"  href="/php/items/sell.php"> <img class="nav-img" src="/images/icon/add.png" alt="zoek icon"><p class="nav-bar_name">Verkoop</p></a>
                     </li>
                      <?php
                         endif;?>
 
                     <li class="listItem" <?php if ($page == "cart.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a  href="cart.php"> <img src="images/icon/cart.png" alt="zoek icon"></a>
+                        <a class="nav-link"  href="/php/items/cart.php"> <img class="nav-img" src="/images/icon/cart.png" alt="zoek icon"> <p class="nav-bar_name">Winkelkar</p></a>
                     </li>
                     <li class="listItem" <?php if ($page == "profile.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="profile.php"><i class="fas fa-user"></i> <img src="images/icon/user.png" alt="zoek icon"> </a>
+                        <a class="nav-link"  href="/php/profile/favor.php"><i class="fas fa-user"></i> <img class="nav-img" src="/images/icon/user.png" alt="zoek icon"> <p class="nav-bar_name">Profiel</p> </a>
                     </li>
 
             <?php endif; ?>

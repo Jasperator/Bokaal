@@ -1,7 +1,8 @@
 <?php
 
-include_once(__DIR__ . "/bootstrap.include.php");
-
+include_once(__DIR__ . "/../includes/bootstrap.include.php");
+require_once(__DIR__ . "/../../classes/Db.php");
+require_once(__DIR__ . "/../../classes/User.php");
 //Create a new user based on the active user's email
 $user = new classes\User($_SESSION['user']);
 
@@ -50,7 +51,7 @@ if (!empty($_POST['changeEmail'])) {
 if (!empty($_POST['updateProfile'])) {
     $user = new classes\User($_SESSION['user']);
 
-    if(($_SESSION['user_status'] == "seller")) {  
+    if($_SESSION['user_status'] == "seller") {
         //Fill in the user's properties
         $user->setBio($_POST['bio']);
         $user->setAddress($_POST['address']);
@@ -96,15 +97,17 @@ if (!empty($_POST['updateProfile'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-  <link rel="stylesheet" href="css/settings_account.css">
+  <link rel="stylesheet" href="../../css/settings_account.css">
   <title>Profiel instellingen</title>
 
-  <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
+  <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
+    <link rel="stylesheet" href="/css/style.css">
+
 
 </head>
 
 <body>
-  <?php include_once("nav.include.php") ?>
+  <?php include_once("../includes/nav.include.php") ?>
   <!-- Hier moet de profile.php nav komen -->
 
   <div class="container">
@@ -113,7 +116,7 @@ if (!empty($_POST['updateProfile'])) {
 
         <div id="wrapper">
           <div id="splash-info">
-            <img class="profile_image" src="./uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" />
+            <img class="profile_image" src="/uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" />
             <?php if (isset($error)) : ?>
             <div><?php echo $error; ?></div>
             <?php endif; ?>
@@ -258,8 +261,8 @@ if (!empty($_POST['updateProfile'])) {
 
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/bootstrap.js"></script>
 </body>
 
 </html>

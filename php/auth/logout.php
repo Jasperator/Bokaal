@@ -1,6 +1,6 @@
 <?php
 
-include_once(__DIR__ . "/bootstrap.include.php");
+include_once(__DIR__ . "/../includes/bootstrap.include.php");
 
 //Remove session variables
 unset($_SESSION["user"]);
@@ -9,4 +9,4 @@ unset($_SESSION["user"]);
 session_destroy();
 
 //Redirect to homepage
-header("Location: index.php");
+header("Location: /index.php");

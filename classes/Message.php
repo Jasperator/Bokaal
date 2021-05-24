@@ -186,6 +186,7 @@ class Message
         $statement->bindValue(":timestamp", $this->gettimestamp());
 
         $result = $statement->execute();
+        print_t($result);
 
         return $result;
     } 

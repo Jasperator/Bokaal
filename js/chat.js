@@ -1,11 +1,12 @@
 $(document).ready(function () {
+  console.log( $(".sendMessage"))
   $(".sendMessage").on("click", function () {
     //Get the text from the input field
     var messageText = $(".messageText").val();
     //Ajax call
     $.ajax({
       type: "POST",
-      url: "chat.php",
+      url: "message.php",
       data: { content: messageText },
       success: function (response) {},
     });
@@ -17,7 +18,7 @@ $(document).ready(function () {
     var message_id = $(this).attr("message-id");
     $.ajax({
       type: "POST",
-      url: "chat.php",
+      url: "message.php",
       data: { like: 1, data_reaction: data_reaction, message_id: message_id },
       success: function (response) {
         //Change the reaction if the call is succesful
@@ -40,7 +41,7 @@ $(document).ready(function () {
       var message_id = $(this).attr("message-id");
       $.ajax({
         type: "POST",
-        url: "chat.php",
+        url: "message.php",
         data: { like: 0, message_id: message_id },
         success: function (response) {
           $(".reaction-btn-text." + message_id)
@@ -59,5 +60,3 @@ function updateScroll() {
   var messagebox = document.querySelector(".messagebox");
   messagebox.scrollTop = messagebox.scrollHeight;
 }
-
-console.log("test");

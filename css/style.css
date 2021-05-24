@@ -1,0 +1,871 @@
+/* ---------------DESKTOP VERSIE ---------------- */
+
+@media only screen and (min-width: 900px) {
+
+    /*----- algemeen -----*/
+
+    body {
+        height: 100vh;
+
+
+    }
+
+    /*-----NAVIGATIE BAR----- */
+
+    .nav-img {
+        display: none;
+
+    }
+
+    .listItem {
+        text-decoration: none;
+        list-style-type: none;
+        display: inline-block;
+    }
+
+    #navbar-full {
+        float: right;
+        margin-right: 0%;
+        margin-top: 3%;
+
+        z-index: 100;
+
+        padding-right: 15px;
+    }
+
+
+    .home-logo {
+        display: none;
+    }
+
+    .alles {
+        width: 40vw;
+
+        display: inline-block;
+
+        text-align: left;
+
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .nav-link {
+        text-decoration: none;
+
+        font-family: "Josefin Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .nav-link:hover {
+        color: orangered;
+    }
+
+    .nav-bar_name {
+        text-decoration: none;
+
+        padding-left: 5px;
+
+        color: #ffffff;
+    }
+
+    /*------navbar profiel-----*/
+
+    .icon_full{
+        margin-top: 150px;
+    }
+
+    /*-----Fonts-----*/
+
+    .hoofdtitel {
+        text-align: left;
+
+        margin-left: 10%;
+
+        color: orangered;
+
+        margin-top: 7%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-size: 5em;
+        font-variant: normal;
+        font-weight: 700;
+
+    }
+
+    /* -----INDEX----- */
+
+
+    #list {
+        display: inline-block;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    #index-body {
+        background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+    }
+
+
+
+    #box {
+        display: inline-block;
+    }
+
+    #all {
+
+        display: inline-block;
+
+        height: auto;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: 5%;
+        margin-top: 5%;
+
+    }
+
+    #all-buurt {
+
+        display: inline-block;
+
+        height: auto;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: 5%;
+
+    }
+
+
+    .container {
+        display: inline-flex;
+
+        margin-top: 5%;
+        margin-left: 15%;
+    }
+
+    #list {
+
+        width: 255px;
+        height: auto;
+
+        border-radius: 2.5px;
+        border: 1px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+
+        padding-top: 15px;
+        padding-bottom: 10px;
+
+        margin-bottom: 15px;
+        margin-left: 6%;
+
+    }
+
+
+
+    #wrapper {
+        width: 200px;
+        height: 200px;
+
+        object-fit: cover;
+
+        margin-top: -10px;
+
+        float: left;
+        overflow: hidden;
+
+        border-radius: 2.5%;
+    }
+
+    #picture {
+        background-size: cover;
+        width: 100%;
+        height: 200px;
+        float: left;
+
+        object-fit: cover;
+
+        margin-left: -14px;
+
+        position: absolute;
+    }
+
+    #splash-info {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #foto {
+        width: 150px;
+    }
+
+
+    #favor {
+        display: inline-block;
+    }
+
+    #knop {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        outline: none;
+
+    }
+
+    .favor-img {
+        width: 25px;
+    }
+
+    .fav-but {
+        width: 25px;
+    }
+
+
+
+    .text-primary {
+        font-family: "Josefin Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
+
+        margin: 12px;
+        padding-top: 5px;
+    }
+
+    .titel-index {
+        font-family: "Josefin Sans";
+        font-size: 26px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        line-height: 20px;
+
+        text-align: left;
+
+        margin-left: 4%;
+
+        width: 80%;
+
+        padding-top: 25px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.2);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.2);
+    }
+
+
+    /*-----search / items pagina-----*/
+
+
+    #search-body {
+        background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100vw 22%;
+        top: 0;
+        background-position: top;
+    }
+
+    .zoekertje {
+        width: 20px;
+        height: auto;
+    }
+
+
+    .button {
+        margin-left: 10%;
+        margin-top: 1%;
+    }
+
+    /*-----sell menu-----*/
+
+    #sell-body {
+        background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+    }
+
+    #categorie {
+        width: width;
+    }
+
+
+    .registerForm {
+        padding-top: 5%;
+    }
+
+    .form-sell {
+        width: 50%;
+        margin-left: 10%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        height: 50px;
+
+        border: none;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #top {
+        margin-top: 0px;
+    }
+
+    #title {
+        height: 50px;
+
+        border: none;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #description {
+        height: 100px;
+
+        border: none;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+    #quantity {
+
+
+        border: none;
+
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+    #price {
+
+        border: none;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+    }
+
+    #currency {
+
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #item_image.button {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+
+        border: none;
+
+        text-align: center;
+        color: #000000;
+    }
+
+    .button+input {
+        background-color: #d5d962;
+        color: #ffffff;
+
+        border: none;
+    }
+
+
+    #bedrag {
+        display: flex;
+        width: 50%;
+    }
+
+    #hoeveelheid {
+        display: flex;
+        width: 50%;
+    }
+
+    #item_image.button {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+
+        border: none;
+
+        text-align: center;
+        color: #000000;
+    }
+
+
+    .button+input {
+        background-color: #d5d962;
+        color: #ffffff;
+
+        border: none;
+    }
+
+    #button_or {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
+
+        border: none;
+        border-radius: 1px;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        margin-left: 25%;
+        margin-top: 2%;
+    }
+
+/*-----cart/winkelkar-----*/
+
+#cart-body{
+    background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+}
+
+
+/*-----favor-----*/
+
+#favor-body{
+    background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+}
+
+/*-----bought-----*/
+
+#bought-body{
+    background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+}
+
+/*-----settings-----*/
+
+.instel{
+    text-decoration: none;
+
+    color: #000000;
+
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+
+
+
+}
+
+.all_item{
+    margin-top: 10%;
+    
+}
+
+.item{
+    width: 35%;
+
+    text-align: center;
+
+    border-radius: 5px;
+
+    background-color: #ffffff;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 32%;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
+
+
+
+}
+
+
+
+/*---------------MOBIELE VERSIE---------------*/
+
+@media only screen and (max-width: 900px) {
+
+    /*-----NAVIGATIE BAR----- */
+
+    #navbar-full {
+        width: 90%;
+        height: 55px;
+        position: fixed;
+        background-color: #d5d962;
+        top: 88%;
+        margin: auto;
+        margin-left: 3%;
+        border-radius: 35px;
+
+        z-index: 100;
+    }
+
+    .nav-img {
+        width: 30px;
+    }
+
+    .nav-bar_name {
+        display: none;
+    }
+
+    .alles {
+        width: 100%;
+
+        display: inline-block;
+
+        text-align: left;
+
+
+        margin-top: 12px;
+    }
+
+    .listItem {
+        display: inline-block;
+        opacity: 50%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+
+    }
+
+    .active {
+        opacity: 100%;
+        background-color: #d5d962;
+    }
+
+    .home-logo {
+        display: none;
+    }
+
+    /*-----FONTS-----*/
+
+    h2 {
+        text-align: center;
+
+        color: orangered;
+
+        margin-top: 10%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-size: 2.5em;
+        font-variant: normal;
+        font-weight: 700;
+    }
+
+    /*-----INDEX-----*/
+
+    .favor-img {
+        width: 25px;
+    }
+
+    .fav-but {
+        width: 20px;
+    }
+
+
+    ul {
+        text-decoration: none;
+
+    }
+
+    li {
+        text-decoration: none;
+        list-style-type: none;
+        display: inline-block;
+    }
+
+    #box {
+        display: inline-block;
+    }
+
+    #pauze {
+        height: 25px;
+    }
+
+    .text-primary {
+        margin-top: 15px;
+    }
+
+    #all {
+        height: auto;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: -5%;
+
+
+    }
+
+
+    #all-buurt {
+        height: auto;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: -5%;
+        margin-top: 2%;
+
+
+    }
+
+    #list {
+
+        width: 95%;
+
+        border-radius: 2.5px;
+        border: 1px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+
+    #wrapper {
+        width: 120px;
+        height: 120px;
+
+        margin-top: -15px;
+
+        image-orientation: inherit;
+
+        float: left;
+        overflow: hidden;
+
+        border-radius: 5%;
+
+        border: 5px solid white;
+    }
+
+    #picture {
+        background-size: cover;
+        width: 120px;
+        height: auto;
+        float: left;
+
+        position: absolute;
+    }
+
+    #splash-info {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #foto {
+        width: 120px;
+    }
+
+    #favor {
+        height: 10%;
+    }
+
+    #space {
+        height: 100vh;
+
+        z-index: -100;
+    }
+
+    img.zoekertje {
+        width: 20px;
+        height: auto;
+    }
+
+    .titel-index {
+        font-family: "Josefin Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        line-height: 20px;
+
+        text-align: center;
+
+        margin-left: 0;
+    }
+
+    .space-favor {
+        height: 20px;
+    }
+
+    /*-----sell menu-----*/
+    #top {
+        margin-top: 15%;
+    }
+
+    #title {
+        height: 50px;
+
+        border: none;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #description {
+        height: 100px;
+
+        border: none;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #quantity {
+        margin-left: 8%;
+
+        border: none;
+
+        height: 50px;
+        width: 120%;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #unit {
+        width: 80%;
+        height: 50px;
+
+        border: none;
+
+        margin-left: 45%;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #price {
+        margin-left: 8%;
+        margin-top: -10px;
+
+        border: none;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+        width: 120%;
+        height: 50px;
+    }
+
+    #currency {
+        width: 58%;
+        height: 50px;
+
+        border: none;
+
+        margin-left: 34%;
+        margin-top: -10px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #item_image.button {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+
+        border: none;
+
+        text-align: center;
+        color: #000000;
+    }
+
+    .button+input {
+        background-color: #d5d962;
+        color: #ffffff;
+
+        border: none;
+    }
+
+    #button_or {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+
+        border: none;
+        border-radius: 5px;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        margin-left: 36%;
+        margin-bottom: 20px;
+    }
+
+}

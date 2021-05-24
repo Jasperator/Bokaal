@@ -1,8 +1,11 @@
 <?php
 
-include_once(__DIR__ . "/bootstrap.include.php");
+include_once(__DIR__ . "/../includes/bootstrap.include.php");
+require_once(__DIR__ . "/../../classes/Db.php");
+require_once(__DIR__ . "/../../classes/Item.php");
+require_once(__DIR__ . "/../../classes/User.php");
 $user = new classes\User($_SESSION['user']);
-$item = new classes\Item($_SESSION['user']);
+$item = new classes\Item();
 
 
 $items = $item->getAllItemsCart($user);
@@ -18,7 +21,11 @@ if (!empty($_POST['delete-cart-item'])) {
 
 
     if (!empty($_POST['buy-all-items'])) {
-        
+        $sellers = $item->getAllSellersCart($user);
+        foreach ($sellers as $seller){
+
+            $item->startConversationSellers($user,$seller->id);
+        }
         $item->buyAll($user);
         $items = $item->getAllItemsCart($user);
 
@@ -35,19 +42,21 @@ if (!empty($_POST['delete-cart-item'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <link rel="icon" type="image/svg" href=images/Logo/favicon.png>
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
+    <link rel="stylesheet" href="../../css/style.css">
+
 
     <title>Bokaal | Winkelmandje</title>
 </head>
-<body>
-<?php include_once("nav.include.php");
-?>
-    <div class="container">
-        <div class="jumbotron">
-            <h2>Winkelmandje</h2>
-            <p>Dit is je winkelmandje</p>
+<body id="cart-body">
+<?php include_once("../includes/nav.include.php");?>
+
+
+
+    <div>
+        <div>
+            <h2 class="hoofdtitel">Winkelmandje</h2>
+            
         </div>
 
         <ul id='all'>
@@ -59,7 +68,7 @@ if (!empty($_POST['delete-cart-item'])) {
                                 <div id="wrapper">
                                     <div id="splash-info">
                                         <form  action="" method="post">
-                                <img id="picture" src="./uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
+                                <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
                                     </div>
                                 </div>
                             
@@ -83,18 +92,20 @@ if (!empty($_POST['delete-cart-item'])) {
                     </div>
                 </li>
         </ul>
-        <form  id="delete-cart" action="" method="post">
+
+        <?php if(!empty($items)) { ?>
+        <form  id="buy-cart" action="" method="post">
 
 <div class="form-group">                                 
     <button type="submit" name="buy-all-items"
         value="buy_all" >Koop alles</button>
 </div>
 </form>
+<?php } ?>
 
 
 
-
-  	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>  
+  	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
 </body>
 </html>
