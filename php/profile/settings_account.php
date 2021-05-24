@@ -97,47 +97,48 @@ if (!empty($_POST['updateProfile'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-  <link rel="stylesheet" href="../../css/settings_account.css">
   <title>Profiel instellingen</title>
 
   <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
 
 </head>
 
-<body>
+<body id="Profiel-instellingen-body">
   <?php include_once("../includes/nav.include.php") ?>
   <!-- Hier moet de profile.php nav komen -->
 
-  <div class="container">
-    <div class="jumbotron">
-      <div class="float-left">
-
+  <div>
+     <h2 class="hoofdtitel">Profiel instellingen</h2>
+    <div>
+      <div class="profile-settings-image">
+        
         <div id="wrapper">
           <div id="splash-info">
-            <img class="profile_image" src="/uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" />
+            <img class="new-profile-image" src="/uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" />
             <?php if (isset($error)) : ?>
             <div><?php echo $error; ?></div>
             <?php endif; ?>
           </div>
-        </div>
+          </div>
+        
 
 
         <form enctype="multipart/form-data" action="" method="POST">
-          <div class="form-group">
+          <div>
             <input class="file-button" type="file" id="profile_img" name="profile_img" capture="camera" required />
           </div>
-          <div class="form-group">
-            <input class="button" type="submit" value="Upload" name="uploadPicture" />
+          <div>
+            <input class="button-profile" type="submit" value="Upload" name="uploadPicture" />
           </div>
         </form>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="jumbotron float-left">
+  <div >
+    <div>
 
       <form action="" method="POST">
 
@@ -145,7 +146,7 @@ if (!empty($_POST['updateProfile'])) {
         <br>
         <div class="form-group">
           <!-- <label for="bio">Biography</label>-->
-          <textarea placeholder="Biografie" name="bio" id="bio" class="form-control" rows="3"
+          <textarea placeholder="Biografie" name="bio" id="bio" class="form-control-settings" rows="3"
             cols="50"><?= htmlspecialchars($user->getBio()) ?></textarea>
         </div>
 
@@ -156,21 +157,22 @@ if (!empty($_POST['updateProfile'])) {
         <div>
 						<!--<label for="currency">Currency</label>-->
 						
-						<textarea type="text" name="location"  class="form-control" placeholder="Location"
-							required><?= htmlspecialchars($user->getLocation()) ?></textarea>			
+						<input type="text" name="location"  class="form-control-settings" placeholder="Location"
+							required><?= htmlspecialchars($user->getLocation()) ?></input>			
 		
 					</div>
           <div>
 						<!--<label for="currency">Currency</label>-->
 						
-						<textarea type="number" name="postal_code"  class="form-control" placeholder="Postcode"
-							required><?= htmlspecialchars($user->getPostal_code()) ?></textarea>			
+						<input type="number" name="postal_code"  class="form-control-settings" placeholder="Postcode"
+							required><?= htmlspecialchars($user->getPostal_code()) ?></input>			
 		
 					</div>
 
 					<div class="form-group">
 						<!--<label for="price">Price</label>-->
-						<textarea type="text + number" name="address" class="form-control" placeholder="Straat, nr en bus" required><?= htmlspecialchars($user->getAddress()) ?></textarea>
+						<input type="text + number" name="address" class="form-control-settings" placeholder="Straat, nr en bus" required>
+            <?= htmlspecialchars($user->getAddress()) ?></input>
 			
 					</div>
 				
@@ -182,34 +184,33 @@ if (!empty($_POST['updateProfile'])) {
 
         <div class="form-group">
           <!--<label for="btw">Btw number</label>-->
-          <textarea placeholder="BTW nummer" name="btw" id="btw" class="form-control" rows="1"
-            cols="50"><?= htmlspecialchars($user->getBtw()) ?></textarea>
+          <input placeholder="BTW nummer" name="btw" id="btw" class="form-control-settings" rows="1"
+            cols="50"><?= htmlspecialchars($user->getBtw()) ?></input>
         </div>
 
         <div class="form-group">
           <!--<label for="company">Company name</label>-->
-          <textarea placeholder="Bedrijfs naam" name="company" id="company" class="form-control" rows="1"
-            cols="50"><?= htmlspecialchars($user->getCompany()) ?></textarea>
+          <input placeholder="Bedrijfs naam" name="company" id="company" class="form-control-settings" rows="1"
+            cols="50"><?= htmlspecialchars($user->getCompany()) ?></input>
         </div>
 
         <div class="form-group">
           <!--<label for="number">Telephone number</label>-->
-          <textarea placeholder="Telefoon nummer" name="number" id="number" class="form-control" rows="1"
-            cols="50"><?= htmlspecialchars($user->getTelephone()) ?></textarea>
+          <input placeholder="Telefoon nummer" name="number" id="number" class="form-control-settings"><?= htmlspecialchars($user->getTelephone()) ?></input>
         </div>
 
         <?php
                         endif;?>
 
         <div class="form-group">
-          <input class="button" type="submit" value="Opslaan" name="updateProfile">
+          <input class="button-profile" type="submit" value="Opslaan" name="updateProfile">
         </div>
       </form>
     </div>
   </div>
 
-  <div class="container">
-    <div class="jumbotron float-right">
+  <div>
+    <div>
       <form method="POST" action="">
         <p style="color:red">
           <?php if (!empty($error_mail)) : ?>
@@ -224,14 +225,14 @@ if (!empty($_POST['updateProfile'])) {
         </p>
         <div class="form-group">
           <!--<label for="emailpassword">Current password</label>-->
-          <input placeholder="email" type="email" name="emailpassword" id="emailpassword" class="form-control">
+          <input placeholder="email" type="email" name="emailpassword" id="emailpassword" class="form-control-settings">
         </div>
 
         <div class="form-group">
           <!--<label for="new_email">New email</label>-->
-          <input placeholder="Nieuw email adres" type="email" name="new_email" id="new_email" class="form-control">
+          <input placeholder="Nieuw email adres" type="email" name="new_email" id="new_email" class="form-control-settings">
         </div>
-        <input class="button" type="submit" value="Verander Email" name="changeEmail">
+        <input class="button-profile" type="submit" value="Verander Email" name="changeEmail">
 
         <form method="POST" action="">
           <div class="form-group">
@@ -245,13 +246,13 @@ if (!empty($_POST['updateProfile'])) {
             </p>
 
             <!--<label for="old_password">Current password</label>-->
-            <input placeholder="Oud wachtwoord" type="password" name="old_password" id="old_password" class="form-control">
+            <input placeholder="Oud wachtwoord" type="password" name="old_password" id="old_password" class="form-control-settings">
           </div>
           <div class="form-group">
             <!--<label for="new_password">New password</label>-->
-            <input placeholder="Nieuw wachtwoord" type="password" name="new_password" id="new_password" class="form-control">
+            <input placeholder="Nieuw wachtwoord" type="password" name="new_password" id="new_password" class="form-control-settings">
           </div>
-          <input class="button" type="submit" value="Verander Wachtwoord" name="changePassword">
+          <input class="button-profile" type="submit" value="Verander Wachtwoord" name="changePassword">
         </form>
       </form>
       <div class="spacing-bottom"></div>
