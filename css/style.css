@@ -78,8 +78,8 @@
 
         float: center;
 
-        margin-top: 15px;
-        margin-left: 42%;
+        margin-top: 25px;
+        margin-left: 40%;
         margin-bottom: 5%;
 
         z-index: 150;
@@ -160,6 +160,23 @@
 
     }
 
+    .subtitel {
+        text-align: left;
+
+        margin-left: 10%;
+
+        color: orangered;
+
+        margin-top: 10%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-size: 2.5em;
+        font-variant: normal;
+        font-weight: 700;
+
+    }
+
     /*-----profiel instellingen-----*/
 
     #Profiel-instellingen-body {
@@ -170,17 +187,20 @@
         background-position: top;
     }
 
-    .profile-settings-image{
+    .profile-settings-image {
         margin-left: 20%;
         margin-bottom: 5%;
         margin-top: 5%;
+
+
     }
 
-    .form-control-settings{
+    .form-control-settings {
         width: 50%;
         height: 50px;
 
         margin-left: 15%;
+        margin-top: 15px;
 
         border: none;
 
@@ -196,8 +216,8 @@
 
     .new-profile-image {
         width: 100%;
-        height: auto;       
-        
+        height: auto;
+
         object-fit: cover;
 
     }
@@ -206,7 +226,7 @@
         height: 100px;
     }
 
-    .button-profile {
+    .button-profile-img {
         font-family: "Josefin Sans";
         font-style: normal;
         font-variant: normal;
@@ -224,6 +244,30 @@
         text-align: center;
         width: 25%;
         margin-left: 5%;
+        margin-bottom: 20px;
+    }
+
+
+    .button-profile {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        width: 15%;
+
+        margin-top: 15px;
+        margin-left: 30%;
         margin-bottom: 20px;
     }
 
@@ -424,6 +468,12 @@
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.2);
     }
 
+    /*-----detail item page-----*/
+
+    #info-farmer {
+        margin-top: -7%;
+    }
+
 
     /*-----search / items pagina-----*/
 
@@ -457,10 +507,10 @@
         background-position: top;
     }
 
-    #categorie {
-        width: width;
+    #unit {
+        margin-left: 15px;
+        margin-top: 1px;
     }
-
 
     .registerForm {
         padding-top: 5%;
@@ -533,6 +583,9 @@
 
     #currency {
 
+        margin-left: 28px;
+
+        width: 120%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -626,6 +679,29 @@
         background-size: 100% 22%;
         top: 0;
         background-position: top;
+    }
+
+    #del-fav {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8em;
+
+        background-color: red;
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        text-align: center;
+
+        width: 100%;
+
+        margin-top: 5px;
+        margin-left: 5%;
+        margin-bottom: 5px;
     }
 
     /*-----bought-----*/
@@ -745,9 +821,8 @@
     }
 
     /*-----navbar - profiel-----*/
-    .icon_full {
-        margin-left: 70%;
-        margin-top: 0%;
+    .icon-full-nav-profile {
+        margin-left: 10%;
     }
 
     .icons {
@@ -762,10 +837,6 @@
 
     /*------settings - frofiel-----*/
 
-    .icon-full-nav-profile {
-        margin-top: 30%;
-
-    }
 
     .item_profile {
         width: 80%;
@@ -816,6 +887,123 @@
         font-variant: normal;
         font-weight: 700;
     }
+
+    .subtitel {
+        text-align: left;
+
+        margin-left: 10%;
+
+        color: orangered;
+
+        margin-top: 10%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-size: 1.5em;
+        font-variant: normal;
+        font-weight: 700;
+
+    }
+
+    /*------settings - profiel-----*/
+
+
+    .profile-settings-image {
+        margin-left: 30%;
+        margin-top: 5%;
+    }
+
+    .form-control-settings {
+        width: 90%;
+        height: 50px;
+
+        margin-left: 5%;
+        margin-top: 15px;
+
+        border: none;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+    .new-profile-image {
+        width: 100%;
+        height: auto;
+
+        object-fit: cover;
+
+    }
+
+    .spacing-bottom {
+        height: 100px;
+    }
+
+    .button-profile-img {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        width: 50%;
+        margin-left: 0%;
+        margin-bottom: 20px;
+    }
+
+
+    .button-profile {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        width: 50%;
+
+        margin-top: 15px;
+        margin-left: 25%;
+        margin-bottom: 20px;
+    }
+
+    .file-button {
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        text-align: center;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0;
+        padding-right: 5%;
+
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+
 
     /*-----INDEX-----*/
 
@@ -964,8 +1152,40 @@
     }
 
     /*-----sell menu-----*/
+
+    #unit {
+        margin-left: 25px;
+        margin-top: 1px;
+    }
+
+    .registerForm {
+        padding-top: 5%;
+    }
+
+    .form-sell {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        height: 50px;
+
+        border: none;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
     #top {
-        margin-top: 15%;
+        margin-top: 0px;
     }
 
     #title {
@@ -986,65 +1206,35 @@
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
+
     #quantity {
-        margin-left: 8%;
+        width: 130%;
 
         border: none;
-
-        height: 50px;
-        width: 120%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
-    #unit {
-        width: 80%;
-        height: 50px;
-
-        border: none;
-
-        margin-left: 45%;
-
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
 
     #price {
-        margin-left: 8%;
-        margin-top: -10px;
+
+        width: 90%;
 
         border: none;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-        width: 120%;
-        height: 50px;
     }
 
     #currency {
-        width: 58%;
-        height: 50px;
+        width: 110%;
 
-        border: none;
-
-        margin-left: 34%;
-        margin-top: -10px;
+        margin-left: 5%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
-
-    #item_image.button {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-
-        border: none;
-
-        text-align: center;
-        color: #000000;
     }
 
     .button+input {
@@ -1054,24 +1244,49 @@
         border: none;
     }
 
-    #button_or {
+
+    #bedrag {
+        display: flex;
+        width: 90%;
+    }
+
+    #hoeveelheid {
+        display: flex;
+        width: 90%;
+    }
+
+    #item_image.button {
         font-family: "Josefin Sans";
         font-style: normal;
         font-variant: normal;
 
+        margin-left: 25%;
+
         border: none;
-        border-radius: 5px;
+
+        text-align: center;
+        color: #000000;
+    }
+
+    #button_or {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
+
+        border: none;
+        border-radius: 1px;
 
         background-color: orangered;
         color: #ffffff;
 
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
 
-        margin-left: 36%;
-        margin-bottom: 20px;
+        margin-left: 25%;
+        margin-top: 7%;
     }
 
 }

@@ -24,7 +24,7 @@ if (!empty($_POST['upload'])) {
     $price = $_POST['price'];
     $currency = $_POST['currency'];
 
-	
+
     $item->setSeller_id($seller_id);
     $item->setTitle($title);
     $item->setCategory($category);
@@ -71,18 +71,20 @@ if (!empty($_POST['upload'])) {
 
 
 			<div id="categorie" class="form-sell">
-				<select type="text" name="category" id="categorie" class="form-control" placeholder="Geef de categorie in"
+				<select type="text" name="title" id="categorie" class="form-control" placeholder="Geef de categorie in"
 					required>
 					<option value="" selected disabled hidden>categorie</option>
 					<optgroup label="Groenten">
 
 						<option value="Bladgroenten">Bladgroenten</option>
-						<option value="Kiengroenten">Kiengroenten</option>
+						<option value="Kiemgroenten">Kiemgroenten (spruiten, tuinkers,...)</option>
 						<option value="Koolsoorten">Koolsoorten</option>
-						<option value="Stengelgewassen">Stengelgewassen</option>
+						<option value="Stengelgewassen">Stengelgewassen (prei, selder,...)</option>
 						<option value="Uien">Uien</option>
 						<option value="Vruchtgroenten">Vruchtgroenten</option>
 						<option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
+						<option value="Vruchtgroenten">Vruchtgroenten (tomaat, aubergine, courgette,...)</option>
+						<option value="Wortel- knolgewassen">Wortel- knolgewassen</option>
 						<option value="Overige groenten">Overige groenten</option>
 
 					<optgroup label="Fruit">
@@ -93,6 +95,12 @@ if (!empty($_POST['upload'])) {
 						<option value="Zacht fruit">Zacht fruit</option>
 						<option value="Exotisch fruit">Exotisch fruit</option>
 						<option value="overig fruit">overig fruit</option>
+						<option value="Citrusfruit">Citrusfruit (citroen, limoen,...</option>
+						<option value="Pitfruit">Pitfruit (appel, peer,...)</option>
+						<option value="Steenvruchten">Steenvruchten (pruim, perzik, kers,...)</option>
+						<option value="Zacht fruit">Zacht fruit (aardbei, bessen,...)</option>
+						<option value="Exotisch fruit">Exotisch fruit (passievrucht, papaja,...</option>
+						<option value="overig fruit">overig Fruit</option>
 
 
 				</select>
@@ -121,7 +129,7 @@ if (!empty($_POST['upload'])) {
 
 					<div id="unit" class="form-sell">
 
-						<select type="text" name="unit" id="categorie" class="form-control"
+						<select type="text" name="unit" id="unit" class="form-control"
 							placeholder="Kies soort hoeveelheid" required>
 							<option value="" selected disabled hidden>Kies soort hoeveelheid</option>
 
@@ -174,6 +182,9 @@ if (!empty($_POST['upload'])) {
 	</form>
 
 	</div>
+
+	<div id="space"></div>
+	<div id="space"></div>
 
 	<!-- <div>style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px; margin-top:10px;"</div> -->
 
