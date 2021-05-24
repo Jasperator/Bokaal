@@ -70,7 +70,7 @@ if (!empty($_POST['upload'])) {
 		<form class="registerForm" enctype="multipart/form-data" action="" method="post">
 
 
-			<div id="categorie" class="form-sell">
+			<div id="category" class="form-sell">
 				<select type="text" name="title" id="categorie" class="form-control" placeholder="Geef de categorie in"
 					required>
 					<option value="" selected disabled hidden>categorie</option>
