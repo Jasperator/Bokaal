@@ -7,6 +7,7 @@ class Item
     private $id;
     private $seller_id;
     private $title;
+    private $category;
     private $description;
     private $quantity;
     private $unit;
@@ -75,6 +76,22 @@ class Item
         $this->title = $title;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category): void
+    {
+        $this->category = $category;
     }
 
     /**
@@ -269,11 +286,12 @@ class Item
 
       
         //Prepare the INSERT query
-        $statement = $conn->prepare("INSERT INTO items (seller_id, title, description, quantity, unit, price, currency, item_image) VALUES (:seller_id, :title, :description, :quantity, :unit, :price, :currency, ('" . $_FILES['item_image']['name'] . "'))");
+        $statement = $conn->prepare("INSERT INTO items (seller_id, title, description, category, quantity, unit, price, currency, item_image) VALUES (:seller_id, :title, :description,:category, :quantity, :unit, :price, :currency, ('" . $_FILES['item_image']['name'] . "'))");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":seller_id", $this->getSeller_id());
         $statement->bindValue(":title", $this->getTitle());
+        $statement->bindValue(":category", $this->getCategory());
         $statement->bindValue(":description", $this->getDescription());
         $statement->bindValue(":quantity", $this->getQuantity());
         $statement->bindValue(":unit", $this->getUnit());
@@ -359,6 +377,68 @@ class Item
         $statement->execute();
 
         $result = $statement->fetch(\PDO::FETCH_OBJ);
+
+        //Return the results from the query
+        return $result;
+
+    }
+    public function searchItemName($name)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("SELECT * FROM `items` WHERE (title LIKE :name OR description LIKE  :name) AND status = :status");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":name", $name);
+        $statement->bindValue(":status", '');
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        //Return the results from the query
+        return $result;
+
+    }
+
+    public function searchItemCategory($category)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("SELECT * FROM items WHERE category = :category AND status = :status");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":category", $category);
+        $statement->bindValue(":status", '');
+
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        //Return the results from the query
+        return $result;
+
+    }
+
+    public function searchItemCategoryAndName($name, $category)
+    {
+        $conn = Db::getConnection();
+
+        $statement = $conn->prepare("SELECT * FROM items WHERE category = :category AND (title LIKE :name OR description LIKE  :name) AND status = :status");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":name", $name);
+        $statement->bindValue(":category", $category);
+        $statement->bindValue(":status", '');
+
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
 
         //Return the results from the query
         return $result;
@@ -463,7 +543,7 @@ class Item
         $conn = Db::getConnection();
 
         //Prepare the INSERT query
-            $statement = $conn->prepare("INSERT INTO conversations (user_1, user_2, active) VALUES (:buyer_id, :seller_id, 1)");
+            $statement = $conn->prepare("INSERT INTO conversations (user_1, user_2, active) SELECT :buyer_id, :seller_id, 1 WHERE NOT EXISTS (SELECT * FROM conversations WHERE (user_1 = :buyer_id AND user_2 = :seller_id) OR (user_1 = :seller_id AND user_2 = :buyer_id) )");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":buyer_id", $user->getId());

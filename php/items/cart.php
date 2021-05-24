@@ -75,6 +75,7 @@ if (!empty($_POST['delete-cart-item'])) {
                             </div>
                             <div class="pl-3 pt-2 pr-2 pb-2 w-75">
                                 <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
+                                <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($item->quantity); ?> :  <?= htmlspecialchars($item->unit); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($item->price); ?> :  <?= htmlspecialchars($item->currency); ?></p>

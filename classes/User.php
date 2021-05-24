@@ -349,7 +349,7 @@ class User
         $statement->bindValue(":fullname", $this->getFullname());
         $statement->bindValue(":postal_code", $this->getPostal_code());
         $statement->bindValue(":address", $this->getAddress());
-        $statement->bindValue(":location", $this->getAddress());
+        $statement->bindValue(":location", $this->getLocation());
         $statement->bindValue(":email", $this->getEmail());
         $statement->bindValue(":password", $this->getPassword());
         $statement->bindValue(":status", "buyer");
@@ -374,7 +374,7 @@ class User
         $statement->bindValue(":fullname", $this->getFullname());
         $statement->bindValue(":postal_code", $this->getPostal_code());
         $statement->bindValue(":address", $this->getAddress());
-        $statement->bindValue(":location", $this->getAddress());
+        $statement->bindValue(":location", $this->getLocation());
         $statement->bindValue(":email", $this->getEmail());
         $statement->bindValue(":password", $this->getPassword());
         $statement->bindValue(":status", "seller");

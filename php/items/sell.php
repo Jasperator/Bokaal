@@ -18,13 +18,16 @@ if (!empty($_POST['upload'])) {
     $seller_id = $user -> getId();
     $title = $_POST['title'];
     $description = $_POST['description'];
+    $category = $_POST['category'];
 	$quantity = $_POST['quantity'];
     $unit = $_POST['unit'];
     $price = $_POST['price'];
     $currency = $_POST['currency'];
+
 	
     $item->setSeller_id($seller_id);
     $item->setTitle($title);
+    $item->setCategory($category);
     $item->setDescription($description);
 	$item->setQuantity($quantity);
     $item->setUnit($unit);
@@ -68,7 +71,7 @@ if (!empty($_POST['upload'])) {
 
 
 			<div id="categorie" class="form-sell">
-				<select type="text" name="title" id="categorie" class="form-control" placeholder="Geef de categorie in"
+				<select type="text" name="category" id="categorie" class="form-control" placeholder="Geef de categorie in"
 					required>
 					<option value="" selected disabled hidden>categorie</option>
 					<optgroup label="Groenten">
@@ -79,7 +82,7 @@ if (!empty($_POST['upload'])) {
 						<option value="Stengelgewassen">Stengelgewassen</option>
 						<option value="Uien">Uien</option>
 						<option value="Vruchtgroenten">Vruchtgroenten</option>
-						<option value="Wortel- knolgewassen">Wortel- knolgewassen</option>
+						<option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
 						<option value="Overige groenten">Overige groenten</option>
 
 					<optgroup label="Fruit">
@@ -89,7 +92,7 @@ if (!empty($_POST['upload'])) {
 						<option value="Steenvruchten">Steenvruchten</option>
 						<option value="Zacht fruit">Zacht fruit</option>
 						<option value="Exotisch fruit">Exotisch fruit</option>
-						<option value="overig fruit">overig frui</option>
+						<option value="overig fruit">overig fruit</option>
 
 
 				</select>

@@ -41,23 +41,24 @@ if (!empty($_POST['chat_id'])) {
     <?php include_once("../includes/nav.include.php"); ?>
     <?php include_once("profile.php");?>
 
-    <form action="" method="POST" class="chat">
         <?php
         foreach($getPartnerConversations as $getPartnerConversation){
             $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
 
-            ?>
-                <div id="startChat">
-            <input type="submit" name="chat_name" value="<?= htmlspecialchars($getPartnerName->fullname); ?>" placeholder="<?= htmlspecialchars($getPartnerConversation);?>" />
-            <input type="submit" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation); ?>" placeholder="naam" />
+            ?>    <form action="../profile/chat.php" method="POST" class="chat">
+
+    <div id="startChat">
+            <input type="hidden" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation); ?>" placeholder="naam" />
+                    <input type="submit" name="chat_name" value="<?= htmlspecialchars($getPartnerName->fullname); ?>" />
+
                 </div>
+            </form>
 
             <?php
 
         }
 ?>
 
-    </form>
 
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.js"></script>

@@ -125,6 +125,7 @@ if (!empty($_POST['buy-item'])) {
                             </div>
                             <div id="info">
                                 <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
+                                <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
                                 <p class="text-primary"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
                                     <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>

@@ -27,6 +27,27 @@ if($user->getStatus() == "seller"){
     
 }
 
+
+
+if (!empty($_POST['category']) and (empty($_POST['searchName']))) {
+    $category = $_POST['category'];
+$items = $item->searchItemCategory($category);
+}
+
+if (!empty($_POST['searchName']) and (empty($_POST['category']))) {
+    $searchName = urlencode($_POST['searchName']);
+    htmlspecialchars($searchName, ENT_QUOTES, 'UTF-8');
+    $searchName = '%' . $searchName . '%';
+    $items = $item->searchItemName($searchName);
+}
+
+if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
+    $category = $_POST['category'];
+    $searchName = urlencode($_POST['searchName']);
+    htmlspecialchars($searchName, ENT_QUOTES, 'UTF-8');
+    $searchName = '%' . $searchName . '%';
+    $items = $item->searchItemCategoryAndName($searchName, $category);
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +73,43 @@ if($user->getStatus() == "seller"){
             <h2 class="hoofdtitel">Items</h2>
         </div>
 
+        <form class="" enctype="multipart/form-data" action="" method="post">
+            <label for="searchName">Search</label>
+            <input type="text" name="searchName" value=""/>
+
+
+            <div id="categorie" class="form-sell">
+                <select type="text" name="category" id="categorie" class="form-control" placeholder="Geef de categorie in">
+                    <option value="" selected disabled hidden>categorie</option>
+                    <optgroup label="Groenten">
+
+                        <option value="Bladgroenten">Bladgroenten</option>
+                        <option value="Kiengroenten">Kiengroenten</option>
+                        <option value="Koolsoorten">Koolsoorten</option>
+                        <option value="Stengelgewassen">Stengelgewassen</option>
+                        <option value="Uien">Uien</option>
+                        <option value="Vruchtgroenten">Vruchtgroenten</option>
+                        <option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
+                        <option value="Overige groenten">Overige groenten</option>
+
+                        <optgroup label="Fruit">
+
+                            <option value="Citrusfruit">Vruchtgroenten</option>
+                            <option value="Pitfruit">Pitfruit</option>
+                            <option value="Steenvruchten">Steenvruchten</option>
+                            <option value="Zacht fruit">Zacht fruit</option>
+                            <option value="Exotisch fruit">Exotisch fruit</option>
+                            <option value="overig fruit">overig fruit</option>
+
+
+                </select>
+
+            </div>
+            <div class="form-group">
+                <input id="button_or" type="submit" class="" value="Search" name="searchCategory">
+            </div>
+        </form>
+
         <ul id='all'>
             <?php foreach ($items as $item) : ?>
             <li id="list">
@@ -69,6 +127,7 @@ if($user->getStatus() == "seller"){
                         </div>
                         <div id="info">
                             <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
+                            <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
                             <p class="text-primary"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
                                 <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
