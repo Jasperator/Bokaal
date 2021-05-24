@@ -643,7 +643,9 @@ class User
             throw new \Exception("Your image is too big.");
         } else {
             if ($fileError === 0) {
-                $fileDestination = 'uploads/' . $fileName;
+                define ('SITE_ROOT', realpath(dirname(__FILE__)));
+
+                $fileDestination = '/uploads/' . $fileName;
                 move_uploaded_file($fileTmpName, $fileDestination);
 
                 //Put the file path in the database

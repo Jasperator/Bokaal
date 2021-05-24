@@ -49,7 +49,7 @@ if (!empty($_POST['delete-favorite-person'])) {
         <ul id="all">
             <?php foreach ($favorites as $fav) : ?>
             <li id="list">
-                <div class="container">
+                <div class="container users" data-id = "<?= htmlspecialchars($fav->id); ?>"">
                     <div >
                         <div id="foto">
                             <div id="wrapper">
@@ -86,6 +86,12 @@ if (!empty($_POST['delete-favorite-person'])) {
 <div id="space" ></div>
 
 
+    <script>
+        document.querySelectorAll('.users').forEach(item => { item.addEventListener('click', function () {
+
+            window.location.href = `/detailsUser.php?data-id=${this.getAttribute('data-id')}`
+        })})
+    </script>
     <script src="../../js/jquery.min.js"></script>
 </body>
 

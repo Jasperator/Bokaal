@@ -13,16 +13,23 @@ $favorite = new classes\Favorite();
 $favorites = $favorite->getAllFavorites($user);
 $sellers = $user->getSellersExceptUser();
 
+foreach ($favorites as $favor) {
+    $favor->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code), "K");
+}
 
+foreach ($sellers as $sell) {
+    $sell->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code), "K");
+}
 
-// $addressFrom = 'Adolf Mortelmansstraat 74';
-// $addressTo   = 'Dascoottelei 890';
+usort($favorites, function($a, $b)
+{
+    return strcmp($a->distance, $b->distance);
+});
 
-
-
-// // Get distance in km
-// $distance = getDistance($addressFrom, $addressTo, "K");
-
+usort($sellers, function($a, $b)
+{
+    return strcmp($a->distance, $b->distance);
+});
 
 if (!empty($_POST['favorite-person'])) {
     $favorite_id = $_POST['favorite-person'];
@@ -31,6 +38,23 @@ if (!empty($_POST['favorite-person'])) {
     
 $favorites = $favorite->getAllFavorites($user);
 $sellers = $user->getSellersExceptUser();
+    foreach ($favorites as $favor) {
+        $favor->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code), "K");
+    }
+
+    foreach ($sellers as $sell) {
+        $sell->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code), "K");
+    }
+    usort($favorites, function($a, $b)
+    {
+        return strcmp($a->distance, $b->distance);
+    });
+
+    usort($sellers, function($a, $b)
+    {
+        return strcmp($a->distance, $b->distance);
+    });
+
 
     }
 ?>
@@ -58,9 +82,10 @@ $sellers = $user->getSellersExceptUser();
 
         <ul id="all">
             <h3 class="titel-index">Favorieten</h3>
-            <?php foreach ($favorites as $fav) : ?>
+            <?php
+            foreach ($favorites as $fav) : ?>
             <li id="list">
-                <div class="container">
+                <div class="container users" data-id = "<?= htmlspecialchars($fav->id); ?>">
                     <div>
                         <div id="foto">
                             <div id="wrapper">
@@ -76,7 +101,7 @@ $sellers = $user->getSellersExceptUser();
                             <p class="text-primary"><?= htmlspecialchars($fav->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($fav->company);  ?></p>
                             <p class="text-primary"> Afstand:
-                                <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), urlencode($fav->address), urlencode($fav->postal_code), "K");  ?>
+                                <?= htmlspecialchars($fav->distance);  ?>
                             </p>
 
                             
@@ -111,7 +136,7 @@ $sellers = $user->getSellersExceptUser();
                             <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                             <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
                             <p class="text-primary"> Afstand:
-                                <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?>
+                                <?= htmlspecialchars($seller->distance);  ?>
                             </p>
 
 
