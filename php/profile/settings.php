@@ -39,6 +39,9 @@ require_once(__DIR__ . "/../../classes/User.php");
         <div class="item_profile"> 
             <a class="instel" href="../profile/blocked.php">Geblokkeerd</a>
         </div>
+        <div class="item_profile"> 
+            <a class="instel" href="../profile/settings_items.php">Mijn Items</a>
+        </div>
         <div class="item_profile">
             <a class="instel" href="../auth/logout.php">Logout</a>
         </div>

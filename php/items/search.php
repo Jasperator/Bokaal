@@ -60,12 +60,14 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
             <h2 class="hoofdtitel">Items</h2>
         </div>
 
-        <form class="" enctype="multipart/form-data" action="" method="post">
-            <label for="searchName">Search</label>
-            <input type="text" name="searchName" value=""/>
+        <form  class="" enctype="multipart/form-data" action="" method="post">
+        <div>
+            <!--<label  for="searchName">Search</label>-->
+            <input class="search-bar" placeholder="Search" type="text" name="searchName" value=""/>
+        </div>
 
 
-            <div id="categorie" class="form-sell">
+            <div id="categorie-item" class="form-sell">
                 <select type="text" name="category" id="categorie" class="form-control" placeholder="Geef de categorie in"
                         required>
                     <option value="" selected disabled hidden>categorie</option>
@@ -101,9 +103,11 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
                 </select>
 
             </div>
+
             <div class="form-group">
                 <input id="button_or" type="submit" class="" value="Search" name="searchCategory">
             </div>
+
         </form>
 
         <ul id='all'>

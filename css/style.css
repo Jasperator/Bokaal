@@ -406,9 +406,6 @@
     }
 
 
-    #favor {
-        display: inline-block;
-    }
 
     #knop {
         background-color: Transparent;
@@ -425,6 +422,7 @@
 
     .fav-but {
         width: 25px;
+        margin-left: 45%;
     }
 
 
@@ -485,6 +483,22 @@
         top: 0;
         background-position: top;
     }
+
+    .search-bar{
+        width: 200px;
+
+        margin-left: 15%;
+        font-family: "Josefin Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+    }
+
+    #categorie-item{
+        
+    }
+
 
     .zoekertje {
         width: 20px;
@@ -1011,9 +1025,6 @@
         width: 25px;
     }
 
-    .fav-but {
-        width: 20px;
-    }
 
 
     ul {
@@ -1122,6 +1133,12 @@
         height: 10%;
     }
 
+    .fav-but {
+        width: 20px;
+    }
+
+
+
     #space {
         height: 10vh;
 
@@ -1149,6 +1166,30 @@
 
     .space-favor {
         height: 20px;
+    }
+
+    /*-----favor-----*/
+    #del-fav {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8em;
+
+        background-color: red;
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        text-align: center;
+
+        width: 75%;
+
+        margin-top: 5px;
+        margin-left: 10%;
+        margin-bottom: 5px;
     }
 
     /*-----sell menu-----*/
