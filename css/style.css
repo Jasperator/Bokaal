@@ -485,18 +485,43 @@
     }
 
     .search-bar{
-        width: 200px;
+        width: 250px;
+        height:30px;
 
         margin-left: 15%;
+        margin-top: 15px;
+
+        padding-left: 15px;
+
         font-family: "Josefin Sans";
         font-size: 18px;
         font-style: normal;
         font-variant: normal;
         font-weight: 400;
+
+        border: none;
+        border-radius: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
-    #categorie-item{
-        
+    .form-control-search{
+        width: 250px;
+        height: 30px;
+
+        border: none;
+        border-radius: 2px;
+
+        margin-left: 11%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
 
@@ -506,9 +531,31 @@
     }
 
 
-    .button {
-        margin-left: 10%;
-        margin-top: 1%;
+    #button_or_search {
+        display: inline-block;
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1em;
+
+        border: none;
+        border-radius: 5px;
+
+        background-color: orangered;
+
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom:5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        text-align: center;
+
+        width: auto;
+
+        margin-left:40%;
+        margin-bottom: 20px;
     }
 
     /*-----sell menu-----*/
@@ -849,7 +896,78 @@
 
     }
 
-    /*------settings - frofiel-----*/
+    /*----search/item menu*/
+    .search-bar{
+        width: 250px;
+        height:30px;
+
+        margin-left: 11%;
+        margin-top: 15px;
+
+        padding-left: 15px;
+
+        font-family: "Josefin Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        border: none;
+        border-radius: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .form-control-search{
+        width: 260px;
+        height: 30px;
+
+        border: none;
+        border-radius: 2px;
+
+        margin-left: 8%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+
+    #button_or_search {
+        display: inline-block;
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1em;
+
+        border: none;
+        border-radius: 5px;
+
+        background-color: orangered;
+
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom:5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        text-align: center;
+
+        width: auto;
+
+        margin-left:40%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    /*------settings - profiel-----*/
 
 
     .item_profile {
