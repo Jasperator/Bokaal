@@ -66,7 +66,7 @@ $sellers = $user->getSellersExceptUser();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/svg" href=images/logo/favicon.png> <title>Bokaal | Home</title>
 </head>
@@ -114,16 +114,14 @@ $sellers = $user->getSellersExceptUser();
         <div class="space-favor"></div>
           <h3 class="titel-index"> Verkopers</h3>
 
-        <ul id="all-detail">
+        <ul id="all-detail" class="row col-md-12">
             <!--<div id="pauze"></div>-->
           
             <?php foreach ($sellers as $seller) : ?>
-            <li id="list-decoration">
+            <div id="list-decoration" class="col-md-3">
 
                 <div class="itemId" data-id = "<?= htmlspecialchars($seller->id); ?>">
                     <div  class="container">
-                        <div class="row row-cols-1 row-cols-md-3">
-                            <div class="col mb-4">
                                 <div class="card h-100" style="width: 18rem;">
                                     <form action="" method="post">
                                         <img  class="card-img-top" src="./uploads/<?= htmlspecialchars($seller->profile_img); ?>"
@@ -144,24 +142,21 @@ $sellers = $user->getSellersExceptUser();
                                 <div class="fav-but" class="form-group">
                                     <button id="knop" type="submit" name="favorite-person" class="fav"
                                         value="<?= htmlspecialchars($seller->id); ?>" name="fav"> <img class="favor-img"
-                                            src="images\icon\star.png" alt=""></button>
+                                            src="/images/icon/star.png" alt=""></button>
                                 </div>
                             </form>
 
 
                         </div>
                         </div>
-                            </div>
-                        </div>
+                    </div></div></div>
 
                         
 
                         <?php endforeach ?>
-                    </div>
-            </li>
         </ul>
 
-    </div>
+
     <div id="space"></div>
     
 
