@@ -322,6 +322,21 @@ class Item
 
         return $items;
     }
+    public function getAvailableItemsFromSeller($user)
+    {
+        $conn = Db::getConnection();
+
+        //<> is the same as !=
+        $statement = $conn->prepare("SELECT * FROM items WHERE seller_id = :seller_id AND status = :status");
+        $statement->bindValue(':seller_id', $user->getId());
+        $statement->bindValue(':status', '');
+
+        $statement->execute();
+        $items = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        return $items;
+    }
+
 
     public function getAllItems()
     {
@@ -520,6 +535,25 @@ class Item
         //Execute query
         $result = $statement->execute();
     
+        //Return the results from the query
+        return $result;
+    }
+
+    public function deleteOwnItem($item_id, $user){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("DELETE FROM items WHERE id = :id AND seller_id = :seller_id AND status = :status AND buyer_id = :buyer_id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $item_id);
+        $statement->bindValue(":seller_id", $user->getId());
+        $statement->bindValue(":status", "");
+        $statement->bindValue(":buyer_id", 0);
+        //Execute query
+        $result = $statement->execute();
+
         //Return the results from the query
         return $result;
     }
