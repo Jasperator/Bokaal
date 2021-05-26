@@ -3,6 +3,9 @@ include_once(__DIR__ . "/../includes/bootstrap.include.php");
 require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/User.php");
 
+$page = basename($_SERVER['PHP_SELF']);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +33,14 @@ require_once(__DIR__ . "/../../classes/User.php");
 <!-- Hier moet de profile.php nav komen -->
 
     <div class="all_item_profile">
+        <?php
+        if($_SESSION['user_status'] == "seller") : ?>
+            <div class="item_profile">
+                <a class="instel" href="../profile/settings_items.php">Mijn Items</a>
+            </div>
+        <?php
+        endif;?>
+
         <div class="item_profile">
             <a class="instel" href="../profile/settings_account.php">Account instellingen</a>
         </div>
@@ -39,9 +50,7 @@ require_once(__DIR__ . "/../../classes/User.php");
         <div class="item_profile"> 
             <a class="instel" href="../profile/blocked.php">Geblokkeerd</a>
         </div>
-        <div class="item_profile"> 
-            <a class="instel" href="../profile/settings_items.php">Mijn Items</a>
-        </div>
+
         <div class="item_profile">
             <a class="instel" href="../auth/logout.php">Logout</a>
         </div>

@@ -60,11 +60,11 @@ if(!empty($_POST['delete'])){
 
                 </div>
                 <form action="" method="POST" class="delete">
-                <div class="form-group">
-                    <input id="button_or" type="submit" class="delete" value="Delete" name="delete">
-                    <input id="button_or" type="hidden" class="delete" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
+                    <div class="form-group">
+                        <input id="button_or" type="submit" class="delete" value="Delete" name="delete">
+                        <input id="button_or" type="hidden" class="delete" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
 
-                </div>
+                    </div>
                 </form>
                 <?php endforeach ?>
             </div>
