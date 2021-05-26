@@ -13,6 +13,12 @@ if(!empty($_POST['delete'])){
     $itemsAvailable = $item->getAvailableItemsFromSeller($user);
 
 }
+if(!empty($_POST['edit_item'])){
+    session_status();
+    $_SESSION['item_id'] = $_POST['edit_item'];
+    header('Location: edit_item.php');
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +42,7 @@ if(!empty($_POST['delete'])){
 
     <?php foreach ($itemsAvailable as $item) : ?>
     <li id="list">
-        <div class="container" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
+        <div class="container" ">
             <div>
                 <div id='foto'>
                     <div id="wrapper">
@@ -59,6 +65,13 @@ if(!empty($_POST['delete'])){
 
 
                 </div>
+                <form action="" method="POST" class="edit">
+                    <div class="form-group">
+                        <input id="button_or" type="submit" class="delete" value="Edit">
+                        <input id="button_or" type="hidden" class="delete"  name="edit_item" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
+
+                    </div>
+                </form>
                 <form action="" method="POST" class="delete">
                     <div class="form-group">
                         <input id="button_or" type="submit" class="delete" value="Delete" name="delete">
@@ -66,10 +79,12 @@ if(!empty($_POST['delete'])){
 
                     </div>
                 </form>
+
                 <?php endforeach ?>
             </div>
     </li>
 </ul>
+
 
 </body>
 </html>

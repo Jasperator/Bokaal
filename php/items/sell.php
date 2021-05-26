@@ -71,7 +71,7 @@ if (!empty($_POST['upload'])) {
 
 
 			<div id="category" class="form-sell">
-				<select type="text" name="title" id="categorie" class="form-control" placeholder="Geef de categorie in"
+				<select type="text" name="category" id="categorie" class="form-control" placeholder="Geef de categorie in"
 					required>
 					<option value="" selected disabled hidden>categorie</option>
 					<optgroup label="Groenten">

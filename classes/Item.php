@@ -397,6 +397,33 @@ class Item
         return $result;
 
     }
+
+    public function updateItem($item_id)
+    {
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("UPDATE items SET title = :title, category = :category, description = :description, quantity  = :quantity, unit = :unit, price = :price, currency = :currency WHERE id = :item_id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":title", $this->getTitle());
+        $statement->bindValue(":category", $this->getCategory());
+        $statement->bindValue(":description", $this->getDescription());
+        $statement->bindValue(":quantity", $this->getQuantity());
+        $statement->bindValue(":unit", $this->getUnit());
+        $statement->bindValue(":price", $this->getPrice());
+        $statement->bindValue(":currency", $this->getCurrency());
+        $statement->bindValue(":item_id", $item_id);
+
+
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+
+    }
     public function searchItemName($name, $user)
     {
         $conn = Db::getConnection();
