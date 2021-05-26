@@ -68,7 +68,8 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
 
 
             <div id="categorie-item" class="form-sell">
-                <select type="text" name="category" id="" class="form-control-search" placeholder="Geef de categorie in">
+                <select type="text" name="category" id="" class="form-control-search" placeholder="Geef de categorie in"
+                        required>
                     <option value="" selected disabled hidden>categorie</option>
                     <optgroup label="Groenten">
 

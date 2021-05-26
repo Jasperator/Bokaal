@@ -72,6 +72,30 @@
         color: #ffffff;
     }
 
+    /*-----detail item page-----*/ 
+
+    
+    #list-decoration{
+        display: flex;
+    }
+
+    .card-body{
+        background-color: #f8f8f8;
+    }
+
+    #all-detail{
+        height: auto;
+        width: 100vw;
+        display: flex;
+    }
+    .card-img-top{
+        border: none;
+        width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    }
+
+
     /*-----navbar - profiel-----*/
 
     .icon-full-nav-profile {
@@ -146,7 +170,7 @@
     .hoofdtitel {
         text-align: left;
 
-        margin-left: 10%;
+        margin-left: 0;
 
         color: orangered;
 
@@ -313,7 +337,7 @@
 
     #all {
 
-        display: inline-block;
+        display: flex;
 
         height: auto;
         width: 90%;
@@ -337,12 +361,12 @@
     }
 
 
-    .container {
+    /*.container {
         display: inline-flex;
 
         margin-top: 5%;
         margin-left: 15%;
-    }
+    }*/
 
     #list {
 
@@ -367,7 +391,7 @@
 
 
     #wrapper {
-        width: 200px;
+        width: 100%;
         height: 200px;
 
         object-fit: cover;
@@ -388,7 +412,6 @@
 
         object-fit: cover;
 
-        margin-left: -14px;
 
         position: absolute;
     }
@@ -896,6 +919,7 @@
 
     }
 
+    
     /*----search/item menu*/
     .search-bar{
         width: 250px;

@@ -42,8 +42,8 @@ if (!empty($_POST['buy-item'])) {
 <div>
     <h2 class="hoofdtitel">Verkoper</h2>
 
-    <div class="container">
-        <div>
+    <div >
+        <div class="detail-item">
             <div id="foto">
                 <div id="wrapper">
                     <div id="splash-info">
