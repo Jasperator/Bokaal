@@ -44,8 +44,10 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png> <link rel="stylesheet"
+        href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+
 
     <title>Bokaal | Search</title>
 </head>
@@ -54,22 +56,30 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
     <?php include_once("../includes/nav.include.php");?>
 
 
-    <div>
+    <div class="container">
 
         <div class="titel">
             <h2 class="hoofdtitel">Items</h2>
         </div>
 
-        <form  class="" enctype="multipart/form-data" action="" method="post">
-        <div>
-            <!--<label  for="searchName">Search</label>-->
-            <input class="search-bar" placeholder="Zoek" type="text" name="searchName" value=""/>
-        </div>
+        <form class="" enctype="multipart/form-data" action="" method="post">
+            <div>
+                <!--<label  for="searchName">Search</label>-->
+                <input class="form-control rounded" placeholder="Zoek" type="search" name="searchName" aria-label="Search" aria-describedby="search-addon" value="" /> 
+                 </span>
+            </div>
 
+            <!--<div class="input-group rounded">
+  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+    aria-describedby="search-addon" />
+  <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+</div>-->
 
-            <div id="categorie-item" class="form-sell">
+            <div id="categorie-item" class="form-select form-select-sm" aria-label=".form-select-sm example">
                 <select type="text" name="category" id="" class="form-control-search" placeholder="Geef de categorie in"
-                        required>
+                    required>
                     <option value="" selected disabled hidden>categorie</option>
                     <optgroup label="Groenten">
 
@@ -84,69 +94,80 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
                         <option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
                         <option value="Overige groenten">Overige groenten</option>
 
-                        <optgroup label="Fruit">
+                    <optgroup label="Fruit">
 
-                            <option value="Citrusfruit">Vruchtgroenten</option>
-                            <option value="Pitfruit">Pitfruit</option>
-                            <option value="Steenvruchten">Steenvruchten</option>
-                            <option value="Zacht fruit">Zacht fruit</option>
-                            <option value="Exotisch fruit">Exotisch fruit</option>
-                            <option value="overig fruit">overig fruit</option>
-                            <option value="Citrusfruit">Citrusfruit (citroen, limoen,...</option>
-                            <option value="Pitfruit">Pitfruit (appel, peer,...)</option>
-                            <option value="Steenvruchten">Steenvruchten (pruim, perzik, kers,...)</option>
-                            <option value="Zacht fruit">Zacht fruit (aardbei, bessen,...)</option>
-                            <option value="Exotisch fruit">Exotisch fruit (passievrucht, papaja,...</option>
-                            <option value="overig fruit">overig Fruit</option>
+                        <option value="Citrusfruit">Vruchtgroenten</option>
+                        <option value="Pitfruit">Pitfruit</option>
+                        <option value="Steenvruchten">Steenvruchten</option>
+                        <option value="Zacht fruit">Zacht fruit</option>
+                        <option value="Exotisch fruit">Exotisch fruit</option>
+                        <option value="overig fruit">overig fruit</option>
+                        <option value="Citrusfruit">Citrusfruit (citroen, limoen,...</option>
+                        <option value="Pitfruit">Pitfruit (appel, peer,...)</option>
+                        <option value="Steenvruchten">Steenvruchten (pruim, perzik, kers,...)</option>
+                        <option value="Zacht fruit">Zacht fruit (aardbei, bessen,...)</option>
+                        <option value="Exotisch fruit">Exotisch fruit (passievrucht, papaja,...</option>
+                        <option value="overig fruit">overig Fruit</option>
 
 
                 </select>
 
                 <div class="">
-                <input id="button_or_search" type="submit" class="" value="Search" name="searchCategory">
-            </div>
+                    <input id="button_or_search" type="submit" class="" value="Search" name="searchCategory">
+                </div>
 
             </div>
 
 
         </form>
+        <div >
 
-        <ul id='all'>
-            <?php foreach ($items as $item) : ?>
-            <li id="list">
-                <div class="container" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
-                    <div>
-                        <div id='foto'>
-                            <div id="wrapper">
-                                <div id="splash-info">
-                                    <form action="" method="post">
-                                        <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "/>
-                                            
+            <ul id='all-detail'>
+
+                <?php foreach ($items as $item) : ?>
+                <li id="list-decoration">
+                    
+                    <div class="itemId" data-id="<?= htmlspecialchars($item->id); ?> ">
+                        <div class="container">
+                            <div>
+                                <div>
+                                    <div class="card" style="width: 18rem;">
+                                        <form action="" method="post">
+                                            <img class="card-img-top"
+                                                src="/uploads/<?= htmlspecialchars($item->item_image); ?> " />
+
+                                    </div>
                                 </div>
+
                             </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
+                                <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
+                               <!-- <p class="card-text"><?= htmlspecialchars($item->description); ?></p>-->
+                                <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg"
+                                        alt="">
+                                    <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?>
+                                </p>
+                                <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg"
+                                        alt="">
+                                    <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?>
+                                </p>
 
+
+                            </div>
+                            <?php endforeach ?>
                         </div>
-                        <div id="info">
-                            <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
-                            <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
-                            <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
-                            <p class="text-primary"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
-                                <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
-                            <p class="text-primary"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
-                                <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
-
-
-                        </div>
-                        <?php endforeach ?>
-                    </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
     <script>
-        document.querySelectorAll('.container').forEach(item => { item.addEventListener('click', function () {
+        document.querySelectorAll('.itemId').forEach(item => {
+            item.addEventListener('click', function () {
 
                 window.location.href = `detailItem.php?data-id=${this.getAttribute('data-id')}`
-})})
+            })
+        })
     </script>
 
     <script src="../../js/jquery.min.js"></script>
