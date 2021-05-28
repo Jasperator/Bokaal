@@ -7,6 +7,12 @@
     body {
         height: 100vh;
 
+        background-image: url("/images/background/background-field-pic.png");
+        background-repeat: no-repeat;
+        background-size: 100% 20%;
+        top: 0;
+        background-position: top;
+
 
     }
 
@@ -74,34 +80,29 @@
 
     .card-text{
         font-family: "Josefin Sans";
-        font-size: 1.3em;
+        font-size: 1.1em;
         font-style: normal;
         font-variant: normal;
         font-weight: 400;
         line-height: 20px;
     }
 
-    /*-----detail item page-----*/ 
-
-    .container {
-        display: inline-flex;
-
-        padding:0;
-    }
-
-    
-    #list-decoration{
-        padding: 0;
-    }
+    /*-----bootsdtrap instel card-----*/ 
 
     .card-body{
         background-color: #f8f8f8;
+    }
+
+    .container{
+        margin-top: 7%;
     }
 
     #all-detail{
         height: auto;
         width: 100%;
         display: flex;
+        margin-left: auto;
+        margin-right: auto;
     }
     .card-img-top{
         border: none;
@@ -184,7 +185,7 @@
     .hoofdtitel {
         text-align: left;
 
-        margin-left: 0;
+        margin-left: 2%;
 
         color: orangered;
 
@@ -213,6 +214,38 @@
         font-variant: normal;
         font-weight: 700;
 
+    }
+
+    .titel-index {
+        font-family: "Josefin Sans";
+        font-size: 26px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        line-height: 20px;
+
+        text-align: left;
+
+        width: 50%;
+
+        text-align: center;
+
+        margin-bottom: 2%;
+        margin-top: 3%;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
     /*-----profiel instellingen-----*/
@@ -335,15 +368,6 @@
         list-style-type: none;
     }
 
-    #index-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
-    }
-
-
 
     #box {
         display: inline-block;
@@ -374,9 +398,6 @@
 
     }
 
-
-    
-
     #list {
 
         width: 255px;
@@ -397,9 +418,7 @@
 
     }
 
-
-
-    #wrapper {
+     #wrapper {
         width: 100%;
         height: 200px;
 
@@ -437,8 +456,6 @@
         width: 150px;
     }
 
-
-
     #knop {
         background-color: Transparent;
         background-repeat: no-repeat;
@@ -457,8 +474,6 @@
         margin-left: 45%;
     }
 
-
-
     .text-primary {
         font-family: "Josefin Sans";
         font-size: 16px;
@@ -469,34 +484,7 @@
 
         margin: 12px;
         padding-top: 5px;
-    }
-
-    .titel-index {
-        font-family: "Josefin Sans";
-        font-size: 26px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-
-        line-height: 20px;
-
-        text-align: left;
-
-        margin-left: 4%;
-
-        width: 80%;
-
-        padding-top: 25px;
-        padding-bottom: 10px;
-        padding-left: 25px;
-
-        border-radius: 5px;
-
-        background-color: #ffffff;
-
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.2);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.2);
-    }
+    }   
 
     /*-----detail item page-----*/
 
@@ -849,6 +837,9 @@
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
+    #space {
+        height: 10vh;
+    }
 
 
 
@@ -1292,8 +1283,6 @@
 
     #space {
         height: 10vh;
-
-        z-index: -100;
     }
 
     img.zoekertje {

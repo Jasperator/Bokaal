@@ -80,18 +80,18 @@ $sellers = $user->getSellersExceptUser();
             <h2 class="hoofdtitel">Home</h2>
         </div>
         <h3 class="titel-index">Favorieten</h3>
-        <ul id="all-detail" class="row col-md-12">
+        <ul id="all-detail" class="row col-md-12"  >
 
             <?php foreach ($favorites as $fav) : ?>
-                <div id="list-decoration" class="col-md-3">
+                <div id="list-decoration" class="col-md-4">
                     <div class="itemId" data-id="<?= htmlspecialchars($fav->id); ?>">
-                        <div class="container">
-                            <div class="card h-100" style="width: 18rem;">
+                        <div class="container" >
+                            <div class="card h-100" style="width: auto;">
                                 <form action="" method="post">
                                     <img class="card-img-top" src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>"
                                         class="img-thumbnail border-0" />
 
-                                    <div id="card-body">
+                                    <div id="card-body" style="padding:15px;">
                                         <h5 class="card-title"><?= htmlspecialchars($fav->fullname); ?></h5>
                                         <p class="card-text"><?= htmlspecialchars($fav->location); ?></p>
                                         <p class="card-text"><?= htmlspecialchars($fav->company);  ?></p>
@@ -113,10 +113,10 @@ $sellers = $user->getSellersExceptUser();
             <!--<div id="pauze"></div>-->
 
             <?php foreach ($sellers as $seller) : ?>
-            <div id="list-decoration" class="col-md-3">
+            <div id="list-decoration" class="col-md-4">
                 <div class="itemId" data-id="<?= htmlspecialchars($seller->id); ?>">
                     <div class="container">
-                        <div class="card h-100" style="width: 18rem;">
+                        <div class="card h-100" style="width: auto;">
                             <form action="" method="post">
                                 <img class="card-img-top" src="./uploads/<?= htmlspecialchars($seller->profile_img); ?>"
                                     class="img-thumbnail border-0" />
