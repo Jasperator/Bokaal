@@ -36,7 +36,9 @@ if (!empty($_POST['upload'])) {
 
 	try {
 		$item->save_item();
-	} catch (\Throwable $th) {
+        header('Location: ../profile/settings_items.php');
+
+    } catch (\Throwable $th) {
 		$error = $th->getMessage();
 	  }
 
@@ -157,7 +159,7 @@ if (!empty($_POST['upload'])) {
 		<div id="bedrag">
 			<div>
 				<!--<label for="price">Price</label>-->
-				<input type="number" name="price" id="price" class="form-control" placeholder="Prijs" required>
+				<input type="number" name="price" id="price" class="form-control" placeholder="Prijs" step=".01" required>
 
 			</div>
 			<div>

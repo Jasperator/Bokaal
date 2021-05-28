@@ -22,9 +22,6 @@ $active_conversation = $_SESSION['chat_id'];
  if (!empty($_POST['content'])) {
      $time = date('Y-m-d H:i:s');
 
-print_r($active_conversation);
-     print_r($chat_partner->id);
-     echo('test');
      $active_conversation = $_SESSION['chat_id'];
 
      $message = new classes\Message();

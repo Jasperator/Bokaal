@@ -144,7 +144,7 @@ if (!empty($_POST['updateItem'])) {
     <div id="bedrag">
         <div>
             <!--<label for="price">Price</label>-->
-            <input type="number" name="price" id="price" class="form-control" placeholder="Prijs" value="<?= htmlspecialchars($detailItem->price); ?>" required>
+            <input type="number" name="price" id="price" class="form-control" placeholder="Prijs" step=".01" value="<?= htmlspecialchars($detailItem->price); ?>" required>
 
         </div>
         <div>
