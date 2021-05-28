@@ -622,6 +622,7 @@ class Item
         //Return the results from the query
         return $result;
     }
+
     public function buyAll($user){
         //Database connection
         $conn = Db::getConnection();

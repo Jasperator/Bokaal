@@ -593,6 +593,21 @@ class User
             return $users;
         }
 
+    public function getSpecifiqueConversations($seller_id)
+    {
+        $conn = Db::getConnection();
+
+        //<> is the same as !=
+        $statement = $conn->prepare("SELECT * FROM conversations WHERE (user_1 = :user_id AND user_2 = :seller_id) OR (user_1 = :seller_id AND user_2 = :user_id)AND active = 1");
+        $statement->bindValue(':user_id', $this->getId());
+        $statement->bindValue(':seller_id', $seller_id);
+
+
+        $statement->execute();
+        $users = $statement->fetch(\PDO::FETCH_OBJ);
+
+        return $users;
+    }
 
     public function getPartnerConversations()
     {
