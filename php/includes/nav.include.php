@@ -26,15 +26,14 @@ $page = basename($_SERVER['PHP_SELF']);
                 <ul class="alles" >
 
                     <!-- Mark a link as "active" according to the current page -->
-                    <li class="listItem" <?php if ($page == "index.php") : echo "active";?> class="active"<?php
-                                        endif; ?>>
-                        <a class="nav-link"  href="/index.php"> <img class="nav-img" src="/images/icon/home.png" alt="zoek icon"><p class="nav-bar_name">Home</p></a>
-                    </li>
                     <li class="listItem" <?php if ($page == "search.php") : echo "active"; ?> class="active"<?php
                                         endif; ?>>
                         <a class="nav-link" href="/php/items/search.php"> <img class="nav-img" src="/images/icon/zoek.png" alt="zoek icon"> <p class="nav-bar_name">Items</p> </a>
                     </li>
-                    
+                    <li class="listItem" <?php if ($page == "index.php") : echo "active";?> class="active"<?php
+                                        endif; ?>>
+                        <a class="nav-link"  href="/index.php"> <img class="nav-img" src="/images/icon/home.png" alt="zoek icon"><p class="nav-bar_name">Home</p></a>
+                    </li>
                     <?php 
                            if($_SESSION['user_status'] == "seller") : ?> 
                      <li class="listItem" <?php if ($page == "sell.php") : echo "active";?> class="active"<?php

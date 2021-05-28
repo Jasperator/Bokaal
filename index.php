@@ -123,9 +123,9 @@ $sellers = $user->getSellersExceptUser();
 
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
-                                    <p class="card-text"><?= htmlspecialchars($seller->location); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
-                                    <p class="card-text"><small class="text-muted">Afstand:
+                                    <p class="card-text p-0"><?= htmlspecialchars($seller->location); ?></p>
+                                    <p class="card-text p-0"><?= htmlspecialchars($seller->company);  ?></p>
+                                    <p class="card-text p-0"><small class="text-muted">Afstand:
                                             <?= htmlspecialchars($seller->distance);  ?></small>
                                     </p>
                                     <form id="favor" action="" method="post">

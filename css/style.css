@@ -87,14 +87,14 @@
         line-height: 20px;
     }
 
-    /*-----bootsdtrap instel card-----*/ 
+    /*-----bootsdtrap instel -----*/ 
 
     .card-body{
         background-color: #f8f8f8;
     }
 
     .container{
-        margin-top: 7%;
+        margin-top: 10%;
     }
 
     #all-detail{
@@ -109,6 +109,13 @@
         width: 100%;
         height: 15vw;
         object-fit: cover;
+    }
+
+    #detail-button{
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 20%;
     }
 
     /*-----navbar - profiel-----*/
@@ -136,13 +143,13 @@
 
     /*------settings - profiel-----*/
 
-    #settings-body {
+   /* #settings-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-    }
+    }*/
 
     .all-item_full {
         height: 100vh;
@@ -250,13 +257,13 @@
 
     /*-----profiel instellingen-----*/
 
-    #Profiel-instellingen-body {
+    /*#Profiel-instellingen-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-    }
+    }*/
 
     .profile-settings-image {
         margin-left: 20%;
@@ -496,13 +503,13 @@
     /*-----search / items pagina-----*/
 
 
-    #search-body {
+   /* #search-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100vw 22%;
         top: 0;
         background-position: top;
-    }
+    }*/
 
     .search-bar{
         width: 250px;
@@ -580,13 +587,13 @@
 
     /*-----sell menu-----*/
 
-    #sell-body {
+    /*#sell-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-    }
+    }*/
 
     #unit {
         margin-left: 15px;
@@ -743,24 +750,24 @@
 
     /*-----cart/winkelkar-----*/
 
-    #cart-body {
+   /* #cart-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-    }
+    }*/
 
 
     /*-----favor-----*/
 
-    #favor-body {
+   /* #favor-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-    }
+    }*/
 
     #del-fav {
         font-family: "Josefin Sans";
@@ -787,13 +794,13 @@
 
     /*-----bought-----*/
 
-    #bought-body {
+    /*#bought-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-    }
+    }*/
 
     /*-----settings-----*/
 
@@ -853,7 +860,39 @@
 
 @media only screen and (max-width: 900px) {
 
-    /*-----NAVIGATIE BAR----- */
+     /*-----bootsdtrap instel -----*/ 
+
+     .card-body{
+        background-color: #f8f8f8;
+        padding: 0;
+    }
+
+    .container{
+        margin-top: 10%;
+    }
+
+    #all-detail{
+        height: auto;
+        width: 100%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-img-top{
+        border: none;
+        width: 100%;
+        height: 50vw;
+        object-fit: cover;
+    }
+
+    #detail-button{
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 20%;
+    }
+
+    /*-----NAVIGATIE BAR----- 
 
     #navbar-full {
         width: 90%;
@@ -902,7 +941,7 @@
 
     .home-logo {
         display: none;
-    }
+    }*/
 
     /*-----navbar - profiel-----*/
     .icon-full-nav-profile {
@@ -1060,6 +1099,38 @@
         font-weight: 700;
 
     }
+    
+
+    .titel-index {
+        font-family: "Josefin Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        line-height: 20px;
+
+        width: 50%;
+
+        text-align: center;
+
+        margin-bottom: 2%;
+        margin-top: 3%;
+        margin-left: 25%;
+        margin-right: 25%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
 
     /*------settings - profiel-----*/
 

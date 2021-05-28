@@ -52,7 +52,9 @@ if (!empty($_POST['upload'])) {
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
+	<link rel="icon" type="image/svg" href=images/logo/favicon.png>
 
 	<title>Bokaal | Sell</title>
 
@@ -177,6 +179,9 @@ if (!empty($_POST['upload'])) {
 	<div class="form-group">
 		<input id="button_or" type="submit" class="register" value="Upload" name="upload">
 	</div>
+
+
+
 	<div id="result"> </div>
 
 	</form>

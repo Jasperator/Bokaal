@@ -29,62 +29,63 @@ if(!empty($_POST['edit_item'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
 
     <title>Bokaal | Search</title>
 </head>
 
-<body id="search-body">
-<?php include_once("../includes/nav.include.php");?>
+<body>
+    <?php include_once("../includes/nav.include.php");?>
+    <div>
 
-<ul id='all'>
-    <h1>Items for sale</h1>
 
-    <?php foreach ($itemsAvailable as $item) : ?>
-    <li id="list">
-        <div class="container" ">
-            <div>
-                <div id='foto'>
-                    <div id="wrapper">
-                        <div id="splash-info">
-                            <form action="" method="post">
-                                <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "/>
+        <div>
+            <h2 class="hoofdtitel">Items for sale</h2>
+        </div>
+        <ul id="all-detail" class="row col-md-12">    
+            
+            <?php foreach ($itemsAvailable as $item) : ?>    
+                <div id="list-decoration" class="col-md-3">
+                    <div class="container" >
+                        <div class="card h-100" style="width: auto;">
+                                    <form action="" method="post">
+                                        <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "
+                                            class="img-thumbnail border-0"/>                           
 
+                        
+                                        <div id="card-body" style="padding:15px;">
+                                            <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
+                                            <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
+                                            <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
+                                            <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
+                                                <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
+                                            <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
+                                                <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+                                        </div>
+
+                                    <form action="" method="POST" class="edit">
+                                        <div id="detail-button" class="form-group">
+                                            <input type="submit" class="btn btn-dark btn-lg rounded" value="Edit">
+                                            <input type="hidden" class="btn btn-primary btn-lg"  name="edit_item" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
+
+                                        </div>
+                                    </form>
+                                    
+                                    <form action="" method="POST" class="delete">
+                                        <div id="detail-button" class="form-group">
+                                            <input type="submit" class="btn btn-danger btn-lg" value="Delete" name="delete">
+                                            <input type="hidden" class="btn btn-danger btn-lg" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
+
+                                        </div>
+                                    </form>
                         </div>
                     </div>
+                </div>                    
+            <?php endforeach ?>
 
-                </div>
-                <div id="info">
-                    <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
-                    <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
-                    <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
-                    <p class="text-primary"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
-                        <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
-                    <p class="text-primary"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
-                        <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
-
-
-                </div>
-                <form action="" method="POST" class="edit">
-                    <div class="form-group">
-                        <input id="button_or" type="submit" class="delete" value="Edit">
-                        <input id="button_or" type="hidden" class="delete"  name="edit_item" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
-
-                    </div>
-                </form>
-                <form action="" method="POST" class="delete">
-                    <div class="form-group">
-                        <input id="button_or" type="submit" class="delete" value="Delete" name="delete">
-                        <input id="button_or" type="hidden" class="delete" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
-
-                    </div>
-                </form>
-
-                <?php endforeach ?>
-            </div>
-    </li>
-</ul>
-
+        </ul>
+    <div id="space"></div>
 
 </body>
 </html>
