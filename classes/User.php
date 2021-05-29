@@ -630,7 +630,7 @@ class User
         $statement->bindValue(':user_id', $user_id);
 
         $statement->execute();
-        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+        $result = $statement->fetch(\PDO::FETCH_OBJ);
 
         return $result;
     }
@@ -751,10 +751,6 @@ class User
         $unit = strtoupper($unit);
         if($unit == "K"){
             return round($miles * 1.609344, 2).' km';
-        }elseif($unit == "M"){
-            return round($miles * 1609.344, 2).' meters';
-        }else{
-            return round($miles, 2).' miles';
         }
     }
 
