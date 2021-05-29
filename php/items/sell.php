@@ -175,13 +175,28 @@ if (!empty($_POST['upload'])) {
 	<?php if (isset($error)) : ?>
 	<div><?php echo $error; ?></div>
 	<?php endif; ?>
-	<div class="form-group">
-		<input class="button" type="file" id="item_image" name="item_image" capture="camera" />
-	</div>
-	<div class="form-group">
-		<input id="button_or" type="submit" class="register" value="Upload" name="upload">
+
+	<div class="col text-center">
+		<div class="input-group" style="width:50%;" >
+			<div class="custom-file ">
+				<input class="custom-file-input" id="inputGroupFile04" type="file" id="item_image" name="item_image" capture="camera" />
+				<label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+			</div>
+			<div class="input-group-append">
+				<input class="btn btn-outline-secondary" type="button"  value="Upload" name="upload">
+			</div>
+		</div>
 	</div>
 
+	<!--<div class="input-group">
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile04">
+    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+  </div>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+</div>
 
 
 	<div id="result"> </div>

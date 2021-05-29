@@ -67,8 +67,8 @@ if (!empty($_POST['delete-favorite-person'])) {
                                 </div>
 
                                 <form id="favor" action="" method="post">
-                                    <div class="form-group">
-                                        <button class="btn btn-dark btn-lg rounded" id='del-fav' type="submit" name="delete-favorite-person" class="fav"
+                                    <div class="col text-center">
+                                        <button class="btn btn-danger btn-lg rounded" style="margin-bottom:15px;" type="submit" name="delete-favorite-person"
                                             value="<?= htmlspecialchars($fav->id); ?>" name="fav"
                                             placeholder="Favoriet">Verwijder favoriet</button>
                                     </div>

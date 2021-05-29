@@ -128,11 +128,11 @@ $sellers = $user->getSellersExceptUser();
                                     <p class="card-text p-0"><small class="text-muted">Afstand:
                                             <?= htmlspecialchars($seller->distance);  ?></small>
                                     </p>
-                                    <form id="favor" action="" method="post">
-                                        <div class="fav-but" class="form-group">
-                                            <button id="knop" type="submit" name="favorite-person" class="fav"
-                                                value="<?= htmlspecialchars($seller->id); ?>" name="fav"> <img
-                                                    class="favor-img" src="/images/icon/star.png" alt=""></button>
+                                    <form  action="" method="post">
+                                        <div id="favor" class="btn btn-outline-secondary col text-center">
+                                            <button id="knop" type="submit" name="favorite-person" 
+                                                value="<?= htmlspecialchars($seller->id); ?>" name="fav"> 
+                                                <img class="favor-img" src="/images/icon/star.png" alt=""> voeg toe aan favorieten</button>
                                         </div>
                                     </form>
 
