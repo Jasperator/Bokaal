@@ -65,7 +65,7 @@ if(!empty($_POST['edit_item'])){
                                         </div>
 
                                     <form action="" method="POST" class="edit">
-                                        <div id="detail-button" class="form-group">
+                                        <div class="col text-center" style="margin-bottom:15px;">
                                             <input type="submit" class="btn btn-dark btn-lg rounded" value="Edit">
                                             <input type="hidden" class="btn btn-primary btn-lg"  name="edit_item" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
 
@@ -73,7 +73,7 @@ if(!empty($_POST['edit_item'])){
                                     </form>
                                     
                                     <form action="" method="POST" class="delete">
-                                        <div id="detail-button" class="form-group">
+                                        <div class="col text-center" style="margin-bottom:15px;">
                                             <input type="submit" class="btn btn-danger btn-lg" value="Delete" name="delete">
                                             <input type="hidden" class="btn btn-danger btn-lg" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
 

@@ -469,7 +469,6 @@
         border: none;
         overflow: hidden;
         outline: none;
-
     }
 
     .favor-img {
@@ -1121,7 +1120,6 @@
 
         padding-top: 15px;
         padding-bottom: 15px;
-        padding-left: 25px;
 
         border-radius: 5px;
 
@@ -1342,15 +1340,21 @@
         width: 120px;
     }
 
-    #favor {
-        height: 10%;
+    #knop {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        outline: none;
     }
 
-    .fav-but {
-        width: 20px;
+    .favor-img {
+        width: 25px;
     }
 
-
+    #favor{
+        margin-bottom: 15px;
+    }
 
     #space {
         height: 10vh;
@@ -1371,8 +1375,6 @@
         line-height: 20px;
 
         text-align: center;
-
-        margin-left: 0;
     }
 
     .space-favor {
