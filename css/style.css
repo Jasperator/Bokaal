@@ -599,6 +599,10 @@
         margin-top: 1px;
     }
 
+    #kolom-file{
+        margin-left: 9%;
+    }
+
     .registerForm {
         padding-top: 5%;
     }

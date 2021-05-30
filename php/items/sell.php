@@ -176,7 +176,7 @@ if (!empty($_POST['upload'])) {
 	<div><?php echo $error; ?></div>
 	<?php endif; ?>
 
-	<div class="col text-center">
+	<div id="kolom-file" class="col text-center">
 		<div class="input-group" style="width:50%;" >
 			<div class="custom-file ">
 				<input class="custom-file-input" id="inputGroupFile04" type="file" id="item_image" name="item_image" capture="camera" />
@@ -187,28 +187,6 @@ if (!empty($_POST['upload'])) {
 			</div>
 		</div>
 	</div>
-
-	<!--<div class="input-group">
-  <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile04">
-    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-  </div>
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button">Button</button>
-  </div>
-</div>
-
-
-	<div id="result"> </div>
-
-	</form>
-
-	</div>
-
-	<div id="space"></div>
-	<div id="space"></div>
-
-	<!-- <div>style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px; margin-top:10px;"</div> -->
 
 	<script src="../../js/jquery.min.js"></script>
 	<script src="../../js/bootstrap.js"></script>
