@@ -51,25 +51,22 @@ $active_conversation = $_SESSION['chat_id'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/chat.css">
     <link rel="stylesheet" href="../../css/reaction.css" />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
 
     <title>Chat</title>
 </head>
 
 <body onload="updateScroll()">
-<?php include_once("../includes/nav.include.php"); ?>
-<?php include_once("profile.php");?>
 
 <form action="" method="POST" class="chat">
+<h2 class="hoofdtitel"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
     <div class="chatbox">
         <?php if (!empty($active_conversation)) : ?>
-            <h2 class="d-inline-block">Chat</h2>
-            <div class="line-under" ></div>
-            <h4 class="float-right d-inline-block"><?php echo htmlspecialchars($chat_partner->fullname); ?></h4>
-            <div class="messagebox" style="min-height: 400px; padding-right:10px;">
+            
+            <h3 class="float-right d-inline-block"><?php echo htmlspecialchars($chat_partner->fullname); ?></h3>
+            <div class="messagebox" style="min-height: 350px; padding-right:10px;">
                 <?php
                 if (!empty($active_conversation)) :
                     //Print out all messages
@@ -116,7 +113,7 @@ $active_conversation = $_SESSION['chat_id'];
                                                         else :
                                                             echo "Like";
                                                         endif; ?>
-                                                    </span>
+                                                </span>
                                                     <ul class="emojies-box">
                                                         <!-- Reaction buttons container-->
                                                         <li class="emoji emo-like" data-reaction="Like" message-id="<?= $message->id ?>"></li>
@@ -136,8 +133,10 @@ $active_conversation = $_SESSION['chat_id'];
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
-            <textarea id="messageText" cols="30" rows="1" class="messageText float-left" style="margin-right:30px; padding-bottom:10px;"></textarea>
-            <button id="sendMessage" class="sendMessage btn btn-dark">Send</button>
+            <div id="reply">
+            <textarea id="messageText" class="messageText float-left" ></textarea>
+            <button id="sendMessage" class="sendMessage btn btn-danger btn-s rounded">Send</button>
+            </div>
         <?php else : ?>
             <h2 class="d-inline-block">You have no body to chat with!</h2>
             <h6>Send a request to someone or wait for someone else to ask you.</h6>
