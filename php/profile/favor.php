@@ -45,6 +45,7 @@ if (!empty($_POST['delete-favorite-person'])) {
         <div>
             <h2 class="hoofdtitel">Favorieten</h2>
         </div>
+        
         <?php include_once("../profile/profile.php");?>
 
         <ul id="all-detail" class="row col-md-12">

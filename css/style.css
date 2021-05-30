@@ -847,19 +847,27 @@
 
     /*-----Chat----- */
 
-    h2 {
-        text-align: left;
-        margin-left: 5%;
-
-        color: orangered;
-
-        margin-top: 3%;
+    #chatbutton-box{
+        background-color: #d5d962;
 
         font-family: "Josefin Sans";
-        font-style: normal;
-        font-size: 3.5em;
-        font-variant: normal;
-        font-weight: 700;
+
+        text-align: center;
+
+        width: 20%;
+        height: 5%;
+
+        border-radius: 15px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        color: white;
+    }
+
+    #chatnaam{
+        color: #f8f8f8;
+        font-size: 1.5em;
     }
 
     .chatbox {
