@@ -17,11 +17,16 @@ $items = $item->getAllItemsExceptSeller($user);
 
 
 if (!empty($_POST['category']) and (empty($_POST['searchName']))) {
+    $user = new classes\User($_SESSION['user']);
     $category = $_POST['category'];
 $items = $item->searchItemCategory($category, $user);
 }
 
+
+
 if (!empty($_POST['searchName']) and (empty($_POST['category']))) {
+    $user = new classes\User($_SESSION['user']);
+
     $searchName = urlencode($_POST['searchName']);
     htmlspecialchars($searchName, ENT_QUOTES, 'UTF-8');
     $searchName = '%' . $searchName . '%';
@@ -29,6 +34,8 @@ if (!empty($_POST['searchName']) and (empty($_POST['category']))) {
 }
 
 if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
+    $user = new classes\User($_SESSION['user']);
+
     $category = $_POST['category'];
     $searchName = urlencode($_POST['searchName']);
     htmlspecialchars($searchName, ENT_QUOTES, 'UTF-8');
@@ -69,8 +76,7 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
 
 
             <div id="categorie-item" class="form-sell">
-                <select type="text" name="category" id="" class="form-control-search" placeholder="Geef de categorie in"
-                    required>
+                <select type="text" name="category" id="" class="form-control-search" placeholder="Geef de categorie in">
                     <option value="" selected disabled hidden>categorie</option>
                     <optgroup label="Groenten">
 
@@ -114,7 +120,14 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
 
         <ul  id="all-detail" class="row col-md-12">
 
-            <?php foreach ($items as $item) : ?>
+            <?php foreach ($items as $item) :
+                $user = new classes\User($_SESSION['user']);
+
+                $seller = $user->getUserById($item->seller_id);
+                $item->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($seller->address), urlencode($seller->postal_code), "K");
+
+
+                ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId" data-id="<?= htmlspecialchars($item->id); ?> ">
                         <div class="container">
@@ -131,6 +144,8 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
                                     <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
                                     <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+                                    <p class="card-text">Afstand: <?= htmlspecialchars($item->distance); ?></p>
+
                                 </div>
                             </div>
                         </div>

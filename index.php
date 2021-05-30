@@ -84,7 +84,7 @@ $sellers = $user->getSellersExceptUser();
 
             <?php foreach ($favorites as $fav) : ?>
                 <div id="list-decoration" class="col-md-4">
-                    <div class="itemId" data-id="<?= htmlspecialchars($fav->id); ?>">
+                    <div class="itemId users" data-id="<?= htmlspecialchars($fav->id); ?>">
                         <div class="container" >
                             <div class="card h-100" style="width: auto;">
                                 <form action="" method="post">
@@ -114,7 +114,7 @@ $sellers = $user->getSellersExceptUser();
 
             <?php foreach ($sellers as $seller) : ?>
             <div id="list-decoration" class="col-md-4">
-                <div class="itemId" data-id="<?= htmlspecialchars($seller->id); ?>">
+                <div class="itemId users" data-id="<?= htmlspecialchars($seller->id); ?>">
                     <div class="container">
                         <div class="card h-100" style="width: auto;">
                             <form action="" method="post">
