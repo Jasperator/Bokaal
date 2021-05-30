@@ -281,7 +281,7 @@ class Item
              throw new \Exception("Your image is too big.");
          } else {
              if ($fileError === 0) {
-                 $fileDestination = '/uploads/' . $fileName;
+                 $fileDestination = '../../uploads/' . $fileName;
                  move_uploaded_file($fileTmpName, $fileDestination);
 
       
