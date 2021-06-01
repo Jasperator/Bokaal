@@ -163,7 +163,9 @@ $sellers = $user->getSellersExceptUser();
             })
         </script>
 
-
+<footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.js"></script>
