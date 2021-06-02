@@ -123,7 +123,6 @@ if (!empty($_POST['delete-cart-item'])) {
 </form>
 <?php } ?>
 
-
         <?php include_once("../includes/footer.php");?>
 
 
