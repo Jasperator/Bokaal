@@ -50,7 +50,6 @@ if (!empty($_POST['delete-cart-item'])) {
 
         }
         $item->buyAll($user);
-        $items = $item->getAllItemsCart($user);
         header('Location: ../profile/chat.php');
 
 

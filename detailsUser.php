@@ -11,6 +11,19 @@ $userId = $_GET["data-id"];
 $seller = $user->getUserFromId($userId);
 $allItemsSeller = $user->getAllItemsById($userId);
 
+if(!empty($_POST['start_chat'])){
+    $user = new classes\User($_SESSION['user']);
+    $userId = $_GET["data-id"];
+
+    $item->startConversationSellers($user,$userId);
+    $active_conversations = $user->getSpecifiqueConversations($userId);
+    $active_conversation = $active_conversations->id;
+
+    session_status();
+    $_SESSION['chat_id'] = $active_conversation;
+    header('Location: php/profile/message.php');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +67,13 @@ $allItemsSeller = $user->getAllItemsById($userId);
                 <p class="text-primary"> Afstand:
                     <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?>
                 </p>
+                <form  id="start_chat" action="" method="post">
+
+                    <div class="form-group">
+                        <button type="submit" name="start_chat"
+                                value="Chat" >Chat</button>
+                    </div>
+                </form>
 
                 <h2 class="hoofdtitel">Items</h2>
 
@@ -94,7 +114,7 @@ $allItemsSeller = $user->getAllItemsById($userId);
                     window.location.href = `/php/items/detailItem.php?data-id=${this.getAttribute('data-id')}`
                 })})
             </script>
-            <script src="../../js/jquery.min.js"></script>
+            <script src="/js/jquery.min.js"></script>
 
 <?php include_once("php/includes/footer.php");?>
 
