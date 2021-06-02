@@ -975,7 +975,9 @@ footer{
     height: 200px;
     color: #fff;
     font-family: "Josefin Sans";
-
+    margin-top: 100px;
+    bottom: 0;
+    position: absolute;
 }
 
 .footerCenter{
@@ -1029,6 +1031,7 @@ margin-left: -40px;
     text-align: right;
     height: 150px;
     right: 0;
+    padding-top: 0.8%;
 }
 .footerContact a{
 
@@ -1041,6 +1044,14 @@ margin-left: -40px;
 
     color: orangered;
     text-decoration: none;
+
+}
+
+.footerContact i{
+
+    font-size: 2em;
+    margin-left: 5%;
+    margin-top: 10px;
 
 }
 
