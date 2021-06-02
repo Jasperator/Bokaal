@@ -42,19 +42,19 @@ if (!empty($_POST['buy-item'])) {
 <div>
     <h2 class="hoofdtitel">Verkoper</h2>
 
-    <div class="container">
-        <div>
+    <div >
+        <div class="detail-item">
             <div id="foto">
                 <div id="wrapper">
                     <div id="splash-info">
                         <form action="" method="post">
                             <img id="picture" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"
-                                 class="img-thumbnail border-0" />
+                                />
                     </div>
                 </div>
             </div>
 
-            <div id="info">
+            <div id="info-farmer">
                 <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
                 <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
                 <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
@@ -65,7 +65,7 @@ if (!empty($_POST['buy-item'])) {
 
 
                 <div class="titel">
-        <h2 class="hoofdtitel">Item</h2>
+        <h2 class="subtitel" >Items</h2>
     </div>
 
     <ul id='all'>
@@ -105,7 +105,7 @@ if (!empty($_POST['buy-item'])) {
     </ul>
 </div>
             <div class="titel">
-                <h2 class="hoofdtitel">Other items</h2>
+                <h2 class="subtitel">Other items</h2>
             </div>
 
             <ul id='all'>
@@ -125,6 +125,7 @@ if (!empty($_POST['buy-item'])) {
                             </div>
                             <div id="info">
                                 <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
+                                <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
                                 <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
                                 <p class="text-primary"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
                                     <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
@@ -138,6 +139,8 @@ if (!empty($_POST['buy-item'])) {
                 </li>
             </ul>
 
+            <div id="space"></div>
+
             <script>
                 document.querySelectorAll('.others').forEach(item => { item.addEventListener('click', function () {
 
@@ -145,6 +148,9 @@ if (!empty($_POST['buy-item'])) {
                 })})
             </script>
 <script src="../../js/jquery.min.js"></script>
+<footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
 </body>
 
 </html>

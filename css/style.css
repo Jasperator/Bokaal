@@ -7,6 +7,12 @@
     body {
         height: 100vh;
 
+        background-image: url("/images/background/background-field-pic.png");
+        background-repeat: no-repeat;
+        background-size: 100% 20%;
+        top: 0;
+        background-position: top;
+
 
     }
 
@@ -26,7 +32,6 @@
     #navbar-full {
         float: right;
         margin-right: 0%;
-        margin-top: 3%;
 
         z-index: 100;
 
@@ -73,22 +78,126 @@
         color: #ffffff;
     }
 
-    /*------navbar profiel-----*/
-
-    .icon_full{
-        margin-top: 150px;
+    .card-text {
+        font-family: "Josefin Sans";
+        font-size: 1.1em;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
     }
+
+    /*-----bootsdtrap instel -----*/
+
+    .card-body {
+        background-color: #f8f8f8;
+    }
+
+    .container {
+        margin-top: 10%;
+    }
+
+    #all-detail {
+        height: auto;
+        width: 100%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-img-top {
+        border: none;
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+
+    #detail-button {
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 20%;
+    }
+
+    /*-----navbar - profiel-----*/
+
+    .icon-full-nav-profile {
+
+        float: center;
+
+        margin-top: 25px;
+        margin-left: 40%;
+        margin-bottom: 5%;
+
+        z-index: 150;
+    }
+
+    .icons {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 15px;
+        margin-left: 15px;
+
+
+    }
+
+    /*------settings - profiel-----*/
+
+    /* #settings-body {
+        background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+    }*/
+
+    .all-item_full {
+        height: 100vh;
+    }
+
+    .item_profile {
+        width: 35%;
+
+        text-align: center;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        margin-bottom: 15px;
+        margin-left: 32%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .instel {
+        text-decoration: none;
+
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+    }
+
 
     /*-----Fonts-----*/
 
     .hoofdtitel {
         text-align: left;
 
-        margin-left: 10%;
+        margin-left: 2%;
 
         color: orangered;
 
-        margin-top: 7%;
+        margin-top: 5%;
 
         font-family: "Josefin Sans";
         font-style: normal;
@@ -96,6 +205,166 @@
         font-variant: normal;
         font-weight: 700;
 
+    }
+
+    .subtitel {
+        text-align: left;
+
+        margin-left: 10%;
+
+        color: orangered;
+
+        margin-top: 10%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-size: 2.5em;
+        font-variant: normal;
+        font-weight: 700;
+
+    }
+
+    .titel-index {
+        font-family: "Josefin Sans";
+        font-size: 26px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        line-height: 20px;
+
+        text-align: left;
+
+        width: 50%;
+
+        text-align: center;
+
+        margin-bottom: 2%;
+        margin-top: 3%;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    /*-----profiel instellingen-----*/
+
+    /*#Profiel-instellingen-body {
+        background-image: url("/images/background/field-dark.png");
+        background-repeat: no-repeat;
+        background-size: 100% 22%;
+        top: 0;
+        background-position: top;
+    }*/
+
+    .profile-settings-image {
+        margin-left: 20%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+
+
+    }
+
+    .form-control-settings {
+        width: 50%;
+        height: 50px;
+
+        margin-left: 15%;
+        margin-top: 15px;
+
+        border: none;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+    .new-profile-image {
+        width: 100%;
+        height: auto;
+
+        object-fit: cover;
+
+    }
+
+    .spacing-bottom {
+        height: 100px;
+    }
+
+    .button-profile-img {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        width: 25%;
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+
+
+    .button-profile {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        width: 15%;
+
+        margin-top: 15px;
+        margin-left: 30%;
+        margin-bottom: 20px;
+    }
+
+    .file-button {
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        text-align: center;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        margin-left: 5%;
+        margin-bottom: 20px;
     }
 
     /* -----INDEX----- */
@@ -107,15 +376,6 @@
         list-style-type: none;
     }
 
-    #index-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
-    }
-
-
 
     #box {
         display: inline-block;
@@ -123,7 +383,7 @@
 
     #all {
 
-        display: inline-block;
+        display: flex;
 
         height: auto;
         width: 90%;
@@ -146,14 +406,6 @@
 
     }
 
-
-    .container {
-        display: inline-flex;
-
-        margin-top: 5%;
-        margin-left: 15%;
-    }
-
     #list {
 
         width: 255px;
@@ -174,10 +426,8 @@
 
     }
 
-
-
     #wrapper {
-        width: 200px;
+        width: 100%;
         height: 200px;
 
         object-fit: cover;
@@ -198,7 +448,6 @@
 
         object-fit: cover;
 
-        margin-left: -14px;
 
         position: absolute;
     }
@@ -215,18 +464,12 @@
         width: 150px;
     }
 
-
-    #favor {
-        display: inline-block;
-    }
-
     #knop {
         background-color: Transparent;
         background-repeat: no-repeat;
         border: none;
         overflow: hidden;
         outline: none;
-
     }
 
     .favor-img {
@@ -235,9 +478,8 @@
 
     .fav-but {
         width: 25px;
+        margin-left: 45%;
     }
-
-
 
     .text-primary {
         font-family: "Josefin Sans";
@@ -251,44 +493,64 @@
         padding-top: 5px;
     }
 
-    .titel-index {
-        font-family: "Josefin Sans";
-        font-size: 26px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
+    /*-----detail item page-----*/
 
-        line-height: 20px;
-
-        text-align: left;
-
-        margin-left: 4%;
-
-        width: 80%;
-
-        padding-top: 25px;
-        padding-bottom: 10px;
-        padding-left: 25px;
-
-        border-radius: 5px;
-
-        background-color: #ffffff;
-
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.2);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.2);
+    #info-farmer {
+        margin-top: -7%;
     }
 
 
     /*-----search / items pagina-----*/
 
 
-    #search-body {
+    /* #search-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100vw 22%;
         top: 0;
         background-position: top;
+    }*/
+
+    .search-bar {
+        width: 250px;
+        height: 30px;
+
+        margin-left: 15%;
+        margin-top: 15px;
+
+        padding-left: 15px;
+
+        font-family: "Josefin Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        border: none;
+        border-radius: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
+
+    .form-control-search {
+        width: 250px;
+        height: 30px;
+
+        border: none;
+        border-radius: 2px;
+
+        margin-left: 11%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
 
     .zoekertje {
         width: 20px;
@@ -296,25 +558,43 @@
     }
 
 
-    .button {
-        margin-left: 10%;
-        margin-top: 1%;
+    #button_or_search {
+        display: inline-block;
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1em;
+
+        border: none;
+        border-radius: 5px;
+
+        background-color: orangered;
+
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        text-align: center;
+
+        width: auto;
+
+        margin-left: 40%;
+        margin-bottom: 20px;
     }
 
     /*-----sell menu-----*/
 
-    #sell-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
+    #unit {
+        margin-left: 15px;
+        margin-top: 1px;
     }
 
-    #categorie {
-        width: width;
+    #kolom-file {
+        margin-left: 9%;
     }
-
 
     .registerForm {
         padding-top: 5%;
@@ -387,6 +667,9 @@
 
     #currency {
 
+        margin-left: 28px;
+
+        width: 120%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -461,88 +744,282 @@
         margin-top: 2%;
     }
 
-/*-----cart/winkelkar-----*/
+    /*-----cart/winkelkar-----*/
 
-#cart-body{
-    background-image: url("/images/background/field-dark.png");
+    /* #cart-body {
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-}
+    }*/
 
 
-/*-----favor-----*/
+    /*-----favor-----*/
 
-#favor-body{
-    background-image: url("/images/background/field-dark.png");
+    /* #favor-body {
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-}
+    }*/
 
-/*-----bought-----*/
+    #del-fav {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8em;
 
-#bought-body{
-    background-image: url("/images/background/field-dark.png");
+        background-color: red;
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        text-align: center;
+
+        width: 100%;
+
+        margin-top: 5px;
+        margin-left: 5%;
+        margin-bottom: 5px;
+    }
+
+    /*-----bought-----*/
+
+    /*#bought-body {
+        background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
         top: 0;
         background-position: top;
-}
+    }*/
 
-/*-----settings-----*/
+    /*-----settings-----*/
 
-.instel{
-    text-decoration: none;
+    .instel {
+        text-decoration: none;
 
-    color: #000000;
+        color: #000000;
 
+        font-family: "Josefin Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+
+
+    }
+
+    .all_item {
+        margin-top: 10%;
+
+    }
+
+    .item {
+        width: 35%;
+
+        text-align: center;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 32%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #space {
+        height: 10vh;
+    }
+
+
+    /*-----Chat----- */
+
+    #chatbutton-box{
+        background-color: #d5d962;
+
+        font-family: "Josefin Sans";
+
+        text-align: center;
+
+        width: 20%;
+        height: 5%;
+
+        border-radius: 15px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        color: white;
+    }
+
+    #chatnaam{
+        color: #f8f8f8;
+        font-size: 1.5em;
+    }
+
+    .chatbox {
+        border-radius: 25px;
+
+        margin-right: 27.5%;
+        margin-left: 27.5%;
+        margin-top: 15px;
+
+        padding: 20px;
+
+        max-width: 45%;
+
+        height: 60vh;
+
+        font-family: "Josefin Sans";
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .messagebox {
+        max-height: 600px;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+    }
+
+    .messageContent {
+        display: block;
+        clear: both;
+    }
+
+    .messageElement .container {
+        margin-bottom: 20px;
+    }
+
+    .messageElement p {
+        margin-top: 10px;
+        max-width: 250px;
+        word-wrap: break-word;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .messageContent small {
+        position: relative;
+        top: 3px;
+    }
+
+    #messageText{
+        border-radius: 5px;
+
+        margin-top: 35px;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 5px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+        width: 70%;        
+    }
+
+/*-----footer-----*/
+
+
+#body-footer {
+    background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
     font-family: "Josefin Sans";
-    font-size: 25px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-
-
-
+    height: 100 !important
 }
 
-.all_item{
-    margin-top: 10%;
-    
+.container-fluid {
+    overflow: hidden;
+    margin-top: 250px;
+    background: #d5d962;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom: 0
 }
 
-.item{
-    width: 35%;
+small {
+    font-size: 1.1em;
+}
 
-    text-align: center;
 
-    border-radius: 5px;
+.mt-55 {
+    margin-top: 1.3em;
+}
 
-    background-color: #ffffff;
+#social-media{
+    font-size: 1.8em;
+    margin: 5px;
+}
 
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 32%;
-
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+.social {
+    font-size: 1.2em;
 }
 
 
 
+.rights {
+    font-size:1.2em ;
 }
+
+.link-unstyled {
+    color: black;
+  }
+
+}
+
+
 
 
 
 /*---------------MOBIELE VERSIE---------------*/
 
 @media only screen and (max-width: 900px) {
+
+    /*-----bootsdtrap instel -----*/
+
+    .card-body {
+        background-color: #f8f8f8;
+        padding: 0;
+    }
+
+    .container {
+        margin-top: 10%;
+    }
+
+    #all-detail {
+        height: auto;
+        width: 100%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-img-top {
+        border: none;
+        width: 100%;
+        height: 50vw;
+        object-fit: cover;
+    }
+
+    #detail-button {
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 20%;
+    }
 
     /*-----NAVIGATIE BAR----- */
 
@@ -588,12 +1065,135 @@
 
     .active {
         opacity: 100%;
-        background-color: #d5d962;
     }
 
     .home-logo {
         display: none;
     }
+
+    /*-----navbar - profiel-----*/
+    .icon-full-nav-profile {
+        margin-left: 10%;
+    }
+
+    .icons {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 15px;
+        margin-left: 15px;
+
+
+    }
+
+
+    /*----search/item menu*/
+    .search-bar {
+        width: 250px;
+        height: 30px;
+
+        margin-left: 11%;
+        margin-top: 15px;
+
+        padding-left: 15px;
+
+        font-family: "Josefin Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        border: none;
+        border-radius: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .form-control-search {
+        width: 260px;
+        height: 30px;
+
+        border: none;
+        border-radius: 2px;
+
+        margin-left: 8%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+
+    #button_or_search {
+        display: inline-block;
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1em;
+
+        border: none;
+        border-radius: 5px;
+
+        background-color: orangered;
+
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        text-align: center;
+
+        width: auto;
+
+        margin-left: 40%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    /*------settings - profiel-----*/
+
+
+    .item_profile {
+        width: 80%;
+
+        text-align: center;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 10%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .instel {
+        text-decoration: none;
+
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+    }
+
+
 
     /*-----FONTS-----*/
 
@@ -611,15 +1211,160 @@
         font-weight: 700;
     }
 
+    .subtitel {
+        text-align: left;
+
+        margin-left: 10%;
+
+        color: orangered;
+
+        margin-top: 10%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-size: 1.5em;
+        font-variant: normal;
+        font-weight: 700;
+
+    }
+
+
+    .titel-index {
+        font-family: "Josefin Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        line-height: 20px;
+
+        width: 50%;
+
+        text-align: center;
+
+        margin-bottom: 2%;
+        margin-top: 3%;
+        margin-left: 25%;
+        margin-right: 25%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        border-radius: 5px;
+
+        background-color: #ffffff;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+    /*------settings - profiel-----*/
+
+
+    .profile-settings-image {
+        margin-left: 30%;
+        margin-top: 5%;
+    }
+
+    .form-control-settings {
+        width: 90%;
+        height: 50px;
+
+        margin-left: 5%;
+        margin-top: 15px;
+
+        border: none;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+    .new-profile-image {
+        width: 100%;
+        height: auto;
+
+        object-fit: cover;
+
+    }
+
+    .spacing-bottom {
+        height: 100px;
+    }
+
+    .button-profile-img {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        width: 50%;
+        margin-left: 0%;
+        margin-bottom: 20px;
+    }
+
+
+    .button-profile {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        width: 50%;
+
+        margin-top: 15px;
+        margin-left: 25%;
+        margin-bottom: 20px;
+    }
+
+    .file-button {
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        text-align: center;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0;
+        padding-right: 5%;
+
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+
+
     /*-----INDEX-----*/
 
     .favor-img {
         width: 25px;
     }
 
-    .fav-but {
-        width: 20px;
-    }
 
 
     ul {
@@ -724,14 +1469,24 @@
         width: 120px;
     }
 
+    #knop {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        outline: none;
+    }
+
+    .favor-img {
+        width: 25px;
+    }
+
     #favor {
-        height: 10%;
+        margin-bottom: 15px;
     }
 
     #space {
-        height: 100vh;
-
-        z-index: -100;
+        height: 10vh;
     }
 
     img.zoekertje {
@@ -749,17 +1504,71 @@
         line-height: 20px;
 
         text-align: center;
-
-        margin-left: 0;
     }
 
     .space-favor {
         height: 20px;
     }
 
+    /*-----favor-----*/
+    #del-fav {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8em;
+
+        background-color: red;
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        text-align: center;
+
+        width: 75%;
+
+        margin-top: 5px;
+        margin-left: 10%;
+        margin-bottom: 5px;
+    }
+
     /*-----sell menu-----*/
+
+    #unit {
+        margin-left: 25px;
+        margin-top: 1px;
+    }
+
+    .registerForm {
+        padding-top: 5%;
+    }
+
+    .form-sell {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        height: 50px;
+
+        border: none;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
     #top {
-        margin-top: 15%;
+        margin-top: 0px;
     }
 
     #title {
@@ -780,65 +1589,35 @@
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
+
     #quantity {
-        margin-left: 8%;
+        width: 130%;
 
         border: none;
-
-        height: 50px;
-        width: 120%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
-    #unit {
-        width: 80%;
-        height: 50px;
-
-        border: none;
-
-        margin-left: 45%;
-
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
 
     #price {
-        margin-left: 8%;
-        margin-top: -10px;
+
+        width: 90%;
 
         border: none;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-        width: 120%;
-        height: 50px;
     }
 
     #currency {
-        width: 58%;
-        height: 50px;
+        width: 110%;
 
-        border: none;
-
-        margin-left: 34%;
-        margin-top: -10px;
+        margin-left: 5%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
-
-    #item_image.button {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-
-        border: none;
-
-        text-align: center;
-        color: #000000;
     }
 
     .button+input {
@@ -848,24 +1627,116 @@
         border: none;
     }
 
-    #button_or {
+
+    #bedrag {
+        display: flex;
+        width: 90%;
+    }
+
+    #hoeveelheid {
+        display: flex;
+        width: 90%;
+    }
+
+    #item_image.button {
         font-family: "Josefin Sans";
         font-style: normal;
         font-variant: normal;
 
+        margin-left: 25%;
+
         border: none;
-        border-radius: 5px;
+
+        text-align: center;
+        color: #000000;
+    }
+
+    #button_or {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
+
+        border: none;
+        border-radius: 1px;
 
         background-color: orangered;
         color: #ffffff;
 
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
 
-        margin-left: 36%;
+        margin-left: 25%;
+        margin-top: 7%;
+    }
+
+    /*-----Chat----- */
+
+    .chatbox {
+        border-radius: 15px;
+
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 5%;
+
+        padding: 20px;
+
+        max-width: 80%;
+
+        height: 60vh;
+
+        font-family: "Josefin Sans";
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .messagebox {
+        max-height: 100px;
+        overflow-y: scroll;
         margin-bottom: 20px;
     }
+
+    .messageContent {
+        display: block;
+        clear: both;
+    }
+
+    .messageElement .container {
+        margin-bottom: 20px;
+    }
+
+    .messageElement p {
+        margin-top: 10px;
+        max-width: 250px;
+        word-wrap: break-word;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .messageContent small {
+        position: relative;
+        top: 3px;
+    }
+
+    #messageText{
+        border-radius: 5px;
+
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 5px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+        width: 70%;        
+    }
+
+    
+
 
 }

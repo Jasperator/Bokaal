@@ -349,7 +349,7 @@ class User
         $statement->bindValue(":fullname", $this->getFullname());
         $statement->bindValue(":postal_code", $this->getPostal_code());
         $statement->bindValue(":address", $this->getAddress());
-        $statement->bindValue(":location", $this->getAddress());
+        $statement->bindValue(":location", $this->getLocation());
         $statement->bindValue(":email", $this->getEmail());
         $statement->bindValue(":password", $this->getPassword());
         $statement->bindValue(":status", "buyer");
@@ -374,7 +374,7 @@ class User
         $statement->bindValue(":fullname", $this->getFullname());
         $statement->bindValue(":postal_code", $this->getPostal_code());
         $statement->bindValue(":address", $this->getAddress());
-        $statement->bindValue(":location", $this->getAddress());
+        $statement->bindValue(":location", $this->getLocation());
         $statement->bindValue(":email", $this->getEmail());
         $statement->bindValue(":password", $this->getPassword());
         $statement->bindValue(":status", "seller");
@@ -593,6 +593,21 @@ class User
             return $users;
         }
 
+    public function getSpecifiqueConversations($seller_id)
+    {
+        $conn = Db::getConnection();
+
+        //<> is the same as !=
+        $statement = $conn->prepare("SELECT * FROM conversations WHERE (user_1 = :user_id AND user_2 = :seller_id) OR (user_1 = :seller_id AND user_2 = :user_id)AND active = 1");
+        $statement->bindValue(':user_id', $this->getId());
+        $statement->bindValue(':seller_id', $seller_id);
+
+
+        $statement->execute();
+        $users = $statement->fetch(\PDO::FETCH_OBJ);
+
+        return $users;
+    }
 
     public function getPartnerConversations()
     {
@@ -615,7 +630,7 @@ class User
         $statement->bindValue(':user_id', $user_id);
 
         $statement->execute();
-        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+        $result = $statement->fetch(\PDO::FETCH_OBJ);
 
         return $result;
     }
@@ -643,7 +658,9 @@ class User
             throw new \Exception("Your image is too big.");
         } else {
             if ($fileError === 0) {
-                $fileDestination = 'uploads/' . $fileName;
+                define ('SITE_ROOT', realpath(dirname(__FILE__)));
+
+                $fileDestination = '/uploads/' . $fileName;
                 move_uploaded_file($fileTmpName, $fileDestination);
 
                 //Put the file path in the database
@@ -734,10 +751,6 @@ class User
         $unit = strtoupper($unit);
         if($unit == "K"){
             return round($miles * 1.609344, 2).' km';
-        }elseif($unit == "M"){
-            return round($miles * 1609.344, 2).' meters';
-        }else{
-            return round($miles, 2).' miles';
         }
     }
 

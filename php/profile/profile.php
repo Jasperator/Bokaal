@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     <title>Bokaal | Profile</title>
 
@@ -21,12 +21,16 @@
   naast dese profiel foto moet ook de naam van de gebruiker komen -->
   </div>
 
-  <div class="icon_full" >
+  <div class="icon-full-nav-profile" >
     <a href="favor.php"><img class="icons" src="../../images/icon/star.png" alt=""></a>
     <a href="chat.php"><img class="icons" src="../../images/icon/messenger.png" alt=""></a>
     <a href="bought.php"><img class="icons" src="../../images/icon/dollar.png" alt=""></a>
     <a href="settings.php"><img class="icons" src="../../images/icon/setting.png" alt=""></a>
   </div>
+
+  <footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
   
 </body>
 </html>
