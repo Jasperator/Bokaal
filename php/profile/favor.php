@@ -45,7 +45,7 @@ if (!empty($_POST['delete-favorite-person'])) {
         <div>
             <h2 class="hoofdtitel">Favorieten</h2>
         </div>
-        
+
         <?php include_once("../profile/profile.php");?>
 
         <ul id="all-detail" class="row col-md-12">
@@ -82,13 +82,15 @@ if (!empty($_POST['delete-favorite-person'])) {
         </ul>      
     </div>
    
-    
+
 
     <div id="space"></div>
 
 
+    <?php include_once("../includes/footer.php");?>
+
     <script>
-        document.querySelectorAll('.users').forEach(item => {
+        document.querySelectorAll('.itemId').forEach(item => {
             item.addEventListener('click', function () {
 
                 window.location.href = `/detailsUser.php?data-id=${this.getAttribute('data-id')}`
@@ -97,7 +99,6 @@ if (!empty($_POST['delete-favorite-person'])) {
     </script>
     <script src="../../js/jquery.min.js"></script>
 
-<?php include_once("../profile/footer.php");?>
 
 </body>
 
