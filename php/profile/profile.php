@@ -27,6 +27,10 @@
     <a href="bought.php"><img class="icons" src="../../images/icon/dollar.png" alt=""></a>
     <a href="settings.php"><img class="icons" src="../../images/icon/setting.png" alt=""></a>
   </div>
+
+  <footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
   
 </body>
 </html>

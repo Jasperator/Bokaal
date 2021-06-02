@@ -68,6 +68,9 @@ if (!empty($_POST['chat_id'])) {
 
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.js"></script>
+    <footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
 </body>
 
 </html>

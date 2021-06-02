@@ -55,6 +55,11 @@ $page = basename($_SERVER['PHP_SELF']);
             <a class="instel" href="../auth/logout.php">Logout</a>
         </div>
     </div>
+
+    <footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
+
 </body>
 
 </html>

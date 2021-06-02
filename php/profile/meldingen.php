@@ -12,7 +12,9 @@
 <body>
     <?php include_once("../includes/nav.include.php");?>
     <!-- Hier moet de profile.php nav komen -->
-
+    <footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
 
 </body>
 </html>

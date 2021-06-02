@@ -148,6 +148,9 @@ if (!empty($_POST['buy-item'])) {
                 })})
             </script>
 <script src="../../js/jquery.min.js"></script>
+<footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
 </body>
 
 </html>

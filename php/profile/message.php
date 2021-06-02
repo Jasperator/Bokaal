@@ -144,6 +144,10 @@ $active_conversation = $_SESSION['chat_id'];
     </div>
 </form>
 
+<footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
+
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/chat.js"></script>
 <script src="../../js/bootstrap.js"></script>

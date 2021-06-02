@@ -96,6 +96,9 @@ if (!empty($_POST['delete-favorite-person'])) {
         })
     </script>
     <script src="../../js/jquery.min.js"></script>
+    <footer>
+<?php include_once("php/includes/footer.php");?><div>
+</footer>
 </body>
 
 </html>

@@ -123,6 +123,9 @@ if (!empty($_POST['delete-cart-item'])) {
 </form>
 <?php } ?>
 
+    <footer>
+        <?php include_once("php/includes/footer.php");?><div>
+    </footer>
 
 
   	<script src="../../js/jquery.min.js"></script>
