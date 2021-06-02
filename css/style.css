@@ -7,7 +7,7 @@
     nav {
         height: 20vh;
 
-        background-image: url("/images/background/background-field-pic.png");
+        background-image: url("/images/background/header.png");
         background-repeat: no-repeat;
         background-size: 100%;
         top: 0;
@@ -225,17 +225,17 @@ cursor: pointer}
     .hoofdtitel {
         text-align: left;
 
-        margin-left: 2%;
+        margin-left: 10%;
 
-        color: orangered;
+        color: #fff;
 
-        margin-top: -7%;
-
+        margin-top: -6%;
+        margin-bottom: 7%;
         font-family: "Josefin Sans";
         font-style: normal;
-        font-size: 5em;
+        font-size: 3em;
         font-variant: normal;
-        font-weight: 700;
+        font-weight: 500;
 
     }
 

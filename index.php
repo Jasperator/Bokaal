@@ -77,9 +77,9 @@ $sellers = $user->getSellersExceptUser();
 
 
         <div>
-            <h2 class="hoofdtitel">Home</h2>
+            <h2 class="hoofdtitel">Bokaal</h2>
         </div>
-        <h3 class="titel-index">Favorieten</h3>
+        <h3 class="titel-index">FAVORIETEN</h3>
         <ul id="all-detail" class="row col-md-12"  >
 
             <?php foreach ($favorites as $fav) : ?>
@@ -107,7 +107,7 @@ $sellers = $user->getSellersExceptUser();
                             
         </ul>
         <div class="space-favor"></div>
-        <h3 class="titel-index"> Verkopers</h3>
+        <h3 class="titel-index"> VERKOPERS</h3>
 
         <ul id="all-detail" class="row col-md-12">
             <!--<div id="pauze"></div>-->

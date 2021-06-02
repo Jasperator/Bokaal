@@ -28,29 +28,29 @@ $page = basename($_SERVER['PHP_SELF']);
                     <!-- Mark a link as "active" according to the current page -->
                     <li class="listItem" <?php if ($page == "index.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a  href="/index.php"> <img class="nav-img" src="/images/icon/home.png" alt="zoek icon"><p class="nav-bar_name">Home</p></a>
+                        <a  href="/index.php"> <img class="nav-img" src="/images/icon/home.png" alt="zoek icon"><p class="nav-bar_name">HOME</p></a>
                     </li>
                     <li class="listItem" <?php if ($page == "search.php") : echo "active"; ?> class="active"<?php
                                         endif; ?>>
-                        <a href="/php/items/search.php"> <img class="nav-img" src="/images/icon/zoek.png" alt="zoek icon"> <p class="nav-bar_name">Items</p> </a>
+                        <a href="/php/items/search.php"> <img class="nav-img" src="/images/icon/zoek.png" alt="zoek icon"> <p class="nav-bar_name">ITEMS</p> </a>
                     </li>
                     
                     <?php 
                            if($_SESSION['user_status'] == "seller") : ?> 
                      <li class="listItem" <?php if ($page == "sell.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a   href="/php/items/sell.php"> <img class="nav-img" src="/images/icon/add.png" alt="zoek icon"><p class="nav-bar_name">Verkoop</p></a>
+                        <a   href="/php/items/sell.php"> <img class="nav-img" src="/images/icon/add.png" alt="zoek icon"><p class="nav-bar_name">VERKOOP</p></a>
                     </li>
                      <?php
                         endif;?>
 
                     <li class="listItem" <?php if ($page == "cart.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a  href="/php/items/cart.php"> <img class="nav-img" src="/images/icon/cart.png" alt="zoek icon"> <p class="nav-bar_name">Winkelkar</p></a>
+                        <a  href="/php/items/cart.php"> <img class="nav-img" src="/images/icon/cart.png" alt="zoek icon"> <p class="nav-bar_name">WINKELMANDJE</p></a>
                     </li>
                     <li class="listItem" <?php if ($page == "profile.php") : echo "active";?> class="active"<?php
                                         endif; ?>>
-                        <a href="/php/profile/favor.php"><i></i> <img class="nav-img" src="/images/icon/user.png" alt="zoek icon"> <p class="nav-bar_name">Profiel</p> </a>
+                        <a href="/php/profile/favor.php"><i></i> <img class="nav-img" src="/images/icon/user.png" alt="zoek icon"> <p class="nav-bar_name">PROFIEL</p> </a>
                     </li>
 
             <?php endif; ?>

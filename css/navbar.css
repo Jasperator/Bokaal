@@ -10,7 +10,6 @@
     margin: auto;
     margin-left: 38%;
     border-radius: 5px;
-
     z-index: 100;
   }
 
@@ -28,7 +27,7 @@
     padding-left: 15px;
 
     margin-left: -5%;
-    margin-top: 5px;
+    margin-top: 50px;
 
     /*padding: 0px;
         padding-left: 10px;*/
@@ -37,12 +36,12 @@
   .listItem {
     display: inline-block;
     opacity: 50%;
-
+    font-size: 2em;
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .active {
+  .listItem:active {
     opacity: 100%;
     background-color: #d5d962;
   }
