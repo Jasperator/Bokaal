@@ -11,9 +11,9 @@
 </head>
 <body>
 <?php include_once("../includes/nav.include.php");?>
-<footer>
-<?php include_once("php/includes/footer.php");?><div>
-</footer>
+
+<?php include_once("../includes/footer.php");?>
+
 
 </body>
 </html>

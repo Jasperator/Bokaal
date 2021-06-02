@@ -60,8 +60,8 @@ $items = $item->getAllItemsbought($user);
                     </div>
                 </li>
         </ul>
-        <footer>
-<?php include_once("php/includes/footer.php");?><div>
-</footer>
+
+<?php include_once("../includes/footer.php");?>
+
 </body>
 </html>

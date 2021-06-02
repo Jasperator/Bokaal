@@ -87,9 +87,7 @@ if(!empty($_POST['edit_item'])){
         </ul>
     <div id="space"></div>
 
-    <footer>
-<?php include_once("php/includes/footer.php");?><div>
-</footer>
+<?php include_once("../includes/footer.php");?>
 
 </body>
 </html>

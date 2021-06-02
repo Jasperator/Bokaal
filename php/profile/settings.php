@@ -56,9 +56,7 @@ $page = basename($_SERVER['PHP_SELF']);
         </div>
     </div>
 
-    <footer>
-<?php include_once("php/includes/footer.php");?><div>
-</footer>
+<?php include_once("../includes/footer.php");?>
 
 </body>
 

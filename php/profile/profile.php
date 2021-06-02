@@ -28,9 +28,7 @@
     <a href="settings.php"><img class="icons" src="../../images/icon/setting.png" alt=""></a>
   </div>
 
-  <footer>
-<?php include_once("php/includes/footer.php");?><div>
-</footer>
+<?php include_once("../includes/footer.php");?>
   
 </body>
 </html>

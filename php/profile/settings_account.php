@@ -257,9 +257,7 @@ if (!empty($_POST['updateProfile'])) {
     </div>
   </div>
 
-  <footer>
-<?php include_once("php/includes/footer.php");?><div>
-</footer>
+<?php include_once("../includes/footer.php");?>
 
 
   <script src="../../js/jquery.min.js"></script>

@@ -59,7 +59,7 @@ $active_conversation = $_SESSION['chat_id'];
 </head>
 
 <body onload="updateScroll()">
-
+    <?php include_once("../includes/nav.include.php");?>
 <form action="" method="POST" class="chat">
 <h2 class="hoofdtitel"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
     <div class="chatbox">
@@ -144,9 +144,7 @@ $active_conversation = $_SESSION['chat_id'];
     </div>
 </form>
 
-<footer>
-<?php include_once("php/includes/footer.php");?><div>
-</footer>
+<?php include_once("../includes/footer.php");?>
 
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/chat.js"></script>

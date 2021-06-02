@@ -165,7 +165,7 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
 
     <script src="../../js/jquery.min.js"></script>
     <footer>
-<?php include_once("php/includes/footer.php");?><div>
+<?php include_once("../includes/footer.php");?><div>
 </footer>
 </body>
 
