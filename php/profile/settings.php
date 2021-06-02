@@ -58,7 +58,7 @@ $page = basename($_SERVER['PHP_SELF']);
         <div id="delete_acc_modal" class="modal">
             <div class="modalContent">
                 <span class="close">&times;</span>
-                <p>Ben je zeker dat je jouw account wilt verwijderen?</p>
+                <h4>Ben je zeker dat je jouw account wilt verwijderen?</h4>
                 <form method="get" action="../profile/delete_account.php">
                     <button type="submit">Verwijder</button>
                 </form>

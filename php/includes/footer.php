@@ -1,9 +1,5 @@
 
      <footer>
-         <div>
-             <div>
-                 <div>
-                    
                      <div class="footerMenu">
                          <h5><b>MENU</b></h5>
 
@@ -17,7 +13,6 @@
                          <div class="footerCenter">
                 <img class="footerLogo" src="../../images/Logo/LogoWhite.svg">
                      </div>
-                 <div>
 
                      <div class="footerContact">
                          <h5><b>CONTACT</b></h5><a HREF="mailto:bokaal@bodockxdesign.be">bokaal@bodockxdesign.be</a>
@@ -26,7 +21,4 @@
                             <span> <a href="https://twitter.com/BokaalS"><i id="social-media" class="fa fa-twitter">           </i></a></span>
                             <span> <a href="https://www.instagram.com/bokaal.schoolproject/"><i id="social-media" class="fa fa-instagram">         </i></a></span> 
                         </div>
-                 </div>
-             </div>
-         </div>
      </footer>

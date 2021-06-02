@@ -4,12 +4,12 @@
 
     /*----- algemeen -----*/
 
-    body {
-        height: 100vh;
+    nav {
+        height: 20vh;
 
         background-image: url("/images/background/background-field-pic.png");
         background-repeat: no-repeat;
-        background-size: 100% 20%;
+        background-size: 100%;
         top: 0;
         background-position: top;
 
@@ -29,13 +29,9 @@
         display: inline-block;
     }
 
-    #navbar-full {
+    #navbarText {
         float: right;
-        margin-right: 0%;
 
-        z-index: 100;
-
-        padding-right: 15px;
     }
 
 
@@ -45,14 +41,10 @@
 
     .alles {
         width: 40vw;
-
+        margin-top: 10vh;
         display: inline-block;
 
         text-align: left;
-
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
     }
 
     .nav-link {
@@ -237,7 +229,7 @@ cursor: pointer}
 
         color: orangered;
 
-        margin-top: 5%;
+        margin-top: -7%;
 
         font-family: "Josefin Sans";
         font-style: normal;
@@ -1145,17 +1137,6 @@ margin-left: -40px;
 
     .nav-bar_name {
         display: none;
-    }
-
-    .alles {
-        width: 100%;
-
-        display: inline-block;
-
-        text-align: left;
-
-
-        margin-top: 12px;
     }
 
     .listItem {
