@@ -165,4 +165,21 @@ class Conversation
 
         return $result;
     }
+
+    public function deleteConversations($user){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("DELETE FROM conversations WHERE user_1 = :id OR user_2 = :id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $user->getId());
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
+
 }

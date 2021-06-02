@@ -753,7 +753,21 @@ class User
             return round($miles * 1.609344, 2).' km';
         }
     }
+    public function deleteUser(){
+        //Database connection
+        $conn = Db::getConnection();
 
+        //Prepare the INSERT query
+        $statement = $conn->prepare("DELETE FROM users WHERE id = :id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $this->getId());
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
 
 
     

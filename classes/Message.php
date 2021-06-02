@@ -211,4 +211,20 @@ class Message
         $result = $statement->execute();
         return $result;
     }
+
+    public function deleteOwnMessages($user){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("DELETE FROM messages WHERE sender_id = :id OR receiver_id = :id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $user->getId());
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
 }
