@@ -972,53 +972,7 @@ cursor: pointer}
         width: 70%;        
     }
 
-/*-----footer-----*/
 
-
-#body-footer {
-    background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
-    font-family: "Josefin Sans";
-    height: 100 !important
-}
-
-.container-fluid {
-    overflow: hidden;
-    margin-top: 250px;
-    background: #d5d962;
-    color: #627482 !important;
-    margin-bottom: 0;
-    padding-bottom: 0
-}
-
-small {
-    font-size: 1.1em;
-}
-
-
-.mt-55 {
-    margin-top: 1.3em;
-}
-
-#social-media{
-    font-size: 1.8em;
-    margin: 5px;
-}
-
-.social {
-    font-size: 1.2em;
-}
-
-
-
-.rights {
-    font-size:1.2em ;
-}
-
-.link-unstyled {
-    color: black;
-  }
-
-}
     /*-----footer-----*/
 
 footer{
@@ -1084,8 +1038,19 @@ margin-left: -40px;
     height: 150px;
     right: 0;
 }
+.footerContact a{
 
+    color: #fff;
+    font-size: 1.3em;
 
+}
+
+.footerContact a:hover{
+
+    color: orangered;
+    text-decoration: none;
+
+}
 
 /*---------------MOBIELE VERSIE---------------*/
 
