@@ -1,9 +1,5 @@
 
      <footer>
-         <div>
-             <div>
-                 <div>
-                    
                      <div class="footerMenu">
                          <h5><b>MENU</b></h5>
 
@@ -17,13 +13,9 @@
                          <div class="footerCenter">
                 <img class="footerLogo" src="../../images/Logo/LogoWhite.svg">
                      </div>
-                 <div>
 
                      <div class="footerContact">
                          <h5><b>CONTACT</b></h5><a HREF="mailto:bokaal@bodockxdesign.be">bokaal@bodockxdesign.be</a>
                          
                         </div>
-                 </div>
-             </div>
-         </div>
      </footer>
