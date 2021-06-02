@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
 
-    <title>Document</title>
-</head>
-<body id="body-footer">
-<div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
      <footer>
          <div class="row my-5 justify-content-center py-5">
              <div class="col-11">
@@ -52,6 +39,3 @@
              </div>
          </div>
      </footer>
- </div>
-</body>
-</html>
