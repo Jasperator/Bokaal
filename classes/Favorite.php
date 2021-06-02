@@ -125,4 +125,19 @@ public function deleteFavorite($user, $favorite_id){
     //Return the results from the query
     return $result;
 }
+    public function deleteOwnFavorites($user){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("DELETE FROM favorites WHERE user_id = :id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $user->getId());
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
 }

@@ -586,6 +586,42 @@ class Item
     }
 
 
+    public function deleteAllOwnItem($user){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("DELETE FROM items WHERE seller_id = :seller_id AND status = :status AND buyer_id = :buyer_id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":seller_id", $user->getId());
+        $statement->bindValue(":status", "");
+        $statement->bindValue(":buyer_id", 0);
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
+    public function deleteAllItemCart($user){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("UPDATE items SET status = :status, buyer_id = :buyer_id Where buyer_id = :id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $user->getId());
+        $statement->bindValue(":status", "");
+        $statement->bindValue(":buyer_id", 0);
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
+
+
     public function getAllSellersCart($user){
         //Database connection
         $conn = Db::getConnection();

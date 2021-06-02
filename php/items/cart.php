@@ -106,10 +106,12 @@ if (!empty($_POST['delete-cart-item'])) {
                                         </div>
                                     </form>
                                 </div>
-                            <?php endforeach ?>
                         </div>
                     </div>
-                </div>       
+                </div>
+
+            <?php endforeach ?>
+
         </ul>
 
         <?php if(!empty($items)) { ?>
