@@ -41,7 +41,7 @@ if (!empty($_POST['chat_id'])) {
         <?php include_once("../includes/nav.include.php"); ?>
         
     <div>
-        <h2 class="hoofdtitel">Favorieten</h2>
+        <h2 class="hoofdtitel">Berichten</h2>
     </div>
 
     <?php include_once("../includes/subNav.php");?>
