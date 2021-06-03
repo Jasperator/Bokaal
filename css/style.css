@@ -46,11 +46,10 @@
     }
 
     .alles {
-        width: 60%;
+        width: 50%;
         margin-top: 4.5%;
         display: inline-block;
         float: right;
-        margin-right: -9%;
     }
 
 
@@ -212,13 +211,12 @@ cursor: pointer}
     /*-----Fonts-----*/
 
     .hoofdtitel {
-        text-align: left;
 
         margin-left: 10%;
 
         color: #fff;
 
-        margin-top: -6%;
+        margin-top: -120px;
         margin-bottom: 7%;
         font-family: "Josefin Sans";
         font-style: normal;
@@ -1100,13 +1098,9 @@ margin-left: -40px;
         width: 30px;
     }
 
-    .nav-bar_name {
-        display: none;
-    }
-
     .listItem {
         display: inline-block;
-        opacity: 50%;
+        opacity: 80%;
         padding-left: 2.5%;
         padding-right: 2.5%;
 
