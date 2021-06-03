@@ -38,17 +38,7 @@
         letter-spacing: 0.2em;
 
     }
-    #sellNav{
-        color: white;
-        background-color: orangered;
-        padding: 10px 20px 10px 20px;        
-        border-radius: 40px;
-    }
-    #sellNav:hover{
 
-        color: orangered;
-        background-color: white;
-    }
 
 
     .home-logo {
@@ -60,7 +50,7 @@
         margin-top: 4.5%;
         display: inline-block;
         float: right;
-        margin-right: -3%;
+        margin-right: -9%;
     }
 
 
