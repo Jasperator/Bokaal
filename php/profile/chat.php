@@ -32,9 +32,10 @@ if (!empty($_POST['chat_id'])) {
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/reaction.css" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
 
 
-    <title>Chat</title>
+    <title>Bokaal | Chat</title>
 </head>
 
 <body>
@@ -45,28 +46,31 @@ if (!empty($_POST['chat_id'])) {
     </div>
 
     <?php include_once("../includes/subNav.php");?>
-        <?php
-        foreach($getPartnerConversations as $getPartnerConversation){
-            $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
-            $unreadMessages = $conversation->countUnreadMessages($user, $getPartnerName->id);
 
-            ?>
-            <label for="" style="display:flex;justify-content: center"><?= htmlspecialchars($getPartnerName->email);  ?></label>
+    <?php
+    foreach($getPartnerConversations as $getPartnerConversation){
+        $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
+        $unreadMessages = $conversation->countUnreadMessages($user, $getPartnerName->id);
 
-            <div id="chatbutton-box">
+    ?>
+
+            <div class="chatPreview">
+
+                <img src="../../images/chatPlaceholder.jpg" alt="Chat placeholder" class="chatImg">
+
                 <form action="../profile/chat.php" method="POST" class="chat">
-                    <div id="startChat">
                         <input type="hidden" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation);?>" placeholder="naam" />
-                        <?php if($unreadMessages> 0){ print_r($unreadMessages);} ?>
                         <input id="chatnaam"  class="btn" type="submit" name="chat_name" value="<?= htmlspecialchars($getPartnerName->fullname); ?>" />
-                    </div>
                 </form>
+
+                <div class="notification"> <?php if($unreadMessages> 0){ print_r($unreadMessages);} ?> </div>
+
             </div>
 
-            <?php
+        <?php
 
-        }
-?>
+     }
+        ?>
 
 
     <script src="../../js/jquery.min.js"></script>
