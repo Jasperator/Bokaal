@@ -45,11 +45,9 @@ if(!empty($_POST['start_chat'])){
 <?php include_once("php/includes/nav.include.php");?>
 
 
-<div>
     <h2 class="hoofdtitel">Verkoper</h2>
 
     <div class="container">
-        <div>
             <div id="foto">
                 <div id="wrapper">
                     <div id="splash-info">
@@ -74,6 +72,7 @@ if(!empty($_POST['start_chat'])){
                                 value="Chat" >Chat</button>
                     </div>
                 </form>
+            </div>
 
                 <h2 class="hoofdtitel">Items</h2>
 
@@ -81,7 +80,6 @@ if(!empty($_POST['start_chat'])){
                 <?php foreach ($allItemsSeller as $item) : ?>
                 <li id="list">
                     <div class="container others" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
-                        <div>
                             <div id='foto'>
                                 <div id="wrapper">
                                     <div id="splash-info">
@@ -101,12 +99,17 @@ if(!empty($_POST['start_chat'])){
                                 <p class="text-primary"> <img class="zoekertje" src="/images/icon/kg-green.svg" alt="">
                                     <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
 
-
                             </div>
-                            <?php endforeach ?>
                         </div>
-                </li>
+
+    </li>
+
+    <?php endforeach ?>
             </ul>
+    </div>
+
+
+
 
             <script>
                 document.querySelectorAll('.others').forEach(item => { item.addEventListener('click', function () {
