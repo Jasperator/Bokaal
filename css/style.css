@@ -27,6 +27,7 @@
 
     }
     .subIcon{
+        opacity: 50%;
         width: 7%;
         margin-left: 8%;
         margin-right: 8%;
@@ -37,12 +38,15 @@
     
 
     .subIcon:hover{
+        opacity: 100%;
 
         border-bottom: 5px solid black;
 
     }
 
     .activated{
+        opacity: 100%;
+
         border-bottom: 5px solid black;
     }
 
