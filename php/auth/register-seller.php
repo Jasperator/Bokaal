@@ -44,9 +44,8 @@ if (!empty($_POST['register'])) {
 
         //Save the user
         $user->save_seller();
+        $user->standardProfilePicture();
 
-        //Let him know he's registered
-        $succesfull = "You have been succesfully registered! A confirmation mail has been sent to your email account.";
 
 		$user = new classes\User($email);
 		

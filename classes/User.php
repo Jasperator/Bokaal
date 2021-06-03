@@ -635,6 +635,17 @@ class User
         return $result;
     }
 
+    public function standardProfilePicture()
+    {
+                //Put the file path in the database
+                $conn = Db::getConnection();
+                $statement = $conn->prepare("UPDATE users  SET profile_img = ('no-profile.png') WHERE email = :email");
+                $statement->bindValue(":email", $this->getEmail());
+                $img = $statement->execute();
+                return $img;
+            }
+
+
     public function saveProfile_img()
     {
         //Put all $_FILES array values in seperate variables
@@ -660,7 +671,7 @@ class User
             if ($fileError === 0) {
                 define ('SITE_ROOT', realpath(dirname(__FILE__)));
 
-                $fileDestination = '/uploads/' . $fileName;
+                $fileDestination = '../../uploads/' . $fileName;
                 move_uploaded_file($fileTmpName, $fileDestination);
 
                 //Put the file path in the database
