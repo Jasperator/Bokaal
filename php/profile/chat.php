@@ -46,17 +46,18 @@ if (!empty($_POST['chat_id'])) {
     </div>
 
     <?php include_once("../includes/subNav.php");?>
+        <ul id="all-chats" class="row col-md-12">
 
     <?php
-    foreach($getPartnerConversations as $getPartnerConversation){
+    foreach($getPartnerConversations as $getPartnerConversation):
         $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
         $unreadMessages = $conversation->countUnreadMessages($user, $getPartnerName->id);
 
     ?>
 
-            <div class="chatPreview">
+            <div class="chatPreview col-md-2">
 
-                <img src="../../images/chatPlaceholder.jpg" alt="Chat placeholder" class="chatImg">
+                <img src="/uploads/<?= htmlspecialchars($getPartnerName->profile_img); ?>" alt="Chat placeholder" class="chatImg">
 
                 <form action="../profile/chat.php" method="POST" class="chat">
                         <input type="hidden" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation);?>" placeholder="naam" />
@@ -66,17 +67,17 @@ if (!empty($_POST['chat_id'])) {
                 <div class="notification"> <?php if($unreadMessages> 0){ print_r($unreadMessages);} ?> </div>
 
             </div>
+        <?php endforeach ?>
+        </ul>
 
-        <?php
 
-     }
-        ?>
+
+        <?php include_once("../includes/footer.php");?>
 
 
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.js"></script>
     
-<?php include_once("../includes/footer.php");?>
 
 </body>
 
