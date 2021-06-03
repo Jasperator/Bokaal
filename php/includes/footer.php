@@ -6,10 +6,10 @@
                          <h5><b>MENU</b></h5>
 
                          <ul>
-                             <li><a href="/index.php">Home</a></li>
-                             <li><a href="/php/items/search.php">Items</a></li>
-                             <li><a href="/php/items/cart.php">Winkelmandje</a></li>
-                             <li><a href="/php/profile/favor.php">Profiel</a></li>
+                             <li><a href="/index.php">HOME</a></li>
+                             <li><a href="/php/items/search.php">ZOEKEN</a></li>
+                             <li><a href="/php/items/cart.php">WINKELMANDJE</a></li>
+                             <li><a href="/php/profile/favor.php">PROFIEL</a></li>
                          </ul>
                      </div>
                          <div class="footerCenter">

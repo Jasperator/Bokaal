@@ -65,7 +65,7 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
     <div>
 
         <div class="titel">
-            <h2 class="hoofdtitel">Items</h2>
+            <h2 class="hoofdtitel">Zoeken</h2>
         </div>
 
         <form class="" enctype="multipart/form-data" action="" method="post">

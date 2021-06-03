@@ -4,12 +4,8 @@
   nav {
     width: 20%;
     height: 40px;
-    position: fixed;
-    background-color: #d5d962;
     top: 88%;
-    margin: auto;
     margin-left: 38%;
-    border-radius: 5px;
     z-index: 100;
   }
 
@@ -26,7 +22,7 @@
 
     padding-left: 15px;
 
-    margin-left: -5%;
+    margin-left: 50%;
     margin-top: 50px;
 
     /*padding: 0px;
@@ -39,9 +35,16 @@
     font-size: 2em;
     padding-left: 10px;
     padding-right: 10px;
+
   }
 
-  .listItem:active {
+.listItem a{
+
+  color: #fff;
+
+}
+
+  .active {
     opacity: 100%;
     background-color: #d5d962;
   }

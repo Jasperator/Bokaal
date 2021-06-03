@@ -27,11 +27,27 @@
         text-decoration: none;
         list-style-type: none;
         display: inline-block;
+        margin-left: 3%;
+        margin-right: 3%;
     }
+    .listItem a{
 
-    #navbarText {
-        float: right;
+        color: #fff;
+        font-size: 1.3em;
+        margin-top: -4%;
+        letter-spacing: 0.2em;
 
+    }
+    #sellNav{
+        color: white;
+        background-color: orangered;
+        padding: 15px 25px 15px 25px;        
+        border-radius: 40px;
+    }
+    #sellNav:hover{
+
+        color: orangered;
+        background-color: white;
     }
 
 
@@ -40,34 +56,17 @@
     }
 
     .alles {
-        width: 40vw;
-        margin-top: 10vh;
+        width: 60%;
+        margin-top: 4.5%;
         display: inline-block;
-
-        text-align: left;
+        float: right;
+        margin-right: 2%;
     }
 
-    .nav-link {
-        text-decoration: none;
 
-        font-family: "Josefin Sans";
-        font-size: 20px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-        line-height: 20px;
-    }
-
-    .nav-link:hover {
+    .listItem a:hover {
         color: orangered;
-    }
-
-    .nav-bar_name {
         text-decoration: none;
-
-        padding-left: 5px;
-
-        color: #ffffff;
     }
 
     .card-text {
@@ -1010,8 +1009,8 @@ list-style-type: none;
 .footerMenu ul li a{
     color: #fff;
     float: left;
-    margin-right: 5%;
-    font-size: 1.3em;
+    margin-right: 4%;
+    font-size: 1.2em;
 }
 .footerMenu ul li:first-child{
 
@@ -1036,7 +1035,7 @@ margin-left: -40px;
 .footerContact a{
 
     color: #fff;
-    font-size: 1.3em;
+    font-size: 1.2em;
 
 }
 
