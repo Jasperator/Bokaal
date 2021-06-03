@@ -44,7 +44,7 @@ if (!empty($_POST['chat_id'])) {
         <h2 class="hoofdtitel">Favorieten</h2>
     </div>
 
-    <?php include_once("profile.php");?>
+    <?php include_once("../includes/subNav.php");?>
         <?php
         foreach($getPartnerConversations as $getPartnerConversation){
             $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);

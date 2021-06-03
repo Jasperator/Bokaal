@@ -32,7 +32,7 @@ $items = $item->getAllItemsbought($user);
             <h2 class="hoofdtitel" >Bestellingen</h2>
         </div>
         
-<?php include_once("../profile/profile.php");?>
+<?php include_once("../includes/subNav.php");?>
 
 <ul id='all'>
             <?php foreach ($items as $item) : ?>
