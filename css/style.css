@@ -469,8 +469,6 @@ cursor: pointer}
 
         object-fit: cover;
 
-
-        position: absolute;
     }
 
     #splash-info {
@@ -1787,5 +1785,7 @@ margin-left: -40px;
 
     
 
+
+}  
 
 }

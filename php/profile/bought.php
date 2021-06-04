@@ -35,32 +35,28 @@ $items = $item->getAllItemsbought($user);
 <?php include_once("../profile/profile.php");?>
 
 <ul id='all'>
-            <?php foreach ($items as $item) : ?>
-                <li id="list">
-                    <div class="container">
-                        <div>
-                            <div id='foto'>
-                                <div id="wrapper">
-                                    <div id="splash-info">
-                                        <form  action="" method="post">
-                                <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
+            <?php foreach ($items as $item) : ?>                
+                <div id="list-decoration" class="col-md-4">
+                    <div class="itemId users" >
+                        <div class="container">
+                            <div class="card h-100" style="width: auto;">
+                                <form  action="" method="post">
+                                    <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
+                                                            
+                                    <div id="card-body" style="padding:15px;">
+                                        <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
+                                        <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
+                                        <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
+                                        <p class="card-text"><?= htmlspecialchars($item->quantity); ?> :  <?= htmlspecialchars($item->unit); ?></p>
+                                        <p class="card-text"><?= htmlspecialchars($item->price); ?> :  <?= htmlspecialchars($item->currency); ?></p>
                                     </div>
-                                </div>
-                            
+
                             </div>
-                            <div class="pl-3 pt-2 pr-2 pb-2 w-75">
-                                <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
-                                <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
-                                <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
-                                <p class="text-primary"><?= htmlspecialchars($item->quantity); ?> :  <?= htmlspecialchars($item->unit); ?></p>
-                                <p class="text-primary"><?= htmlspecialchars($item->price); ?> :  <?= htmlspecialchars($item->currency); ?></p>
-
-
+                        </div>
                     </div>
-                    <?php endforeach ?>
-                    </div>
-                </li>
-        </ul>
+                </div>
+            <?php endforeach ?>                                    
+</ul>
 
 <?php include_once("../includes/footer.php");?>
 
