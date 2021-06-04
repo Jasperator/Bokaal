@@ -95,7 +95,7 @@ $sellers = $user->getSellersExceptUser();
                                         <h5 class="card-title"><?= htmlspecialchars($fav->fullname); ?></h5>
                                         <p class="card-text"><?= htmlspecialchars($fav->location); ?></p>
                                         <p class="card-text"><?= htmlspecialchars($fav->company);  ?></p>
-                                        <p class="card-text"><small class="text-muted"> Afstand:
+                                        <p class="card-text"><small class="text-muted"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand:
                                                 <?= htmlspecialchars($fav->distance);  ?></small>
                                         </p>
                                     </div>
@@ -125,7 +125,7 @@ $sellers = $user->getSellersExceptUser();
                                     <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
                                     <p class="card-text p-0"><?= htmlspecialchars($seller->location); ?></p>
                                     <p class="card-text p-0"><?= htmlspecialchars($seller->company);  ?></p>
-                                    <p class="card-text p-0"><small class="text-muted">Afstand:
+                                    <p class="card-text p-0"><small class="text-muted"><img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand:
                                             <?= htmlspecialchars($seller->distance);  ?></small>
                                     </p>
                                     <form  action="" method="post">
