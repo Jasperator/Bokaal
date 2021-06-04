@@ -24,7 +24,7 @@ $page = basename($_SERVER['PHP_SELF']);
 
         <!-- Mark a link as "active" according to the current page -->
 
-        <li class="listItem" <?php if ($page == "index.php") : echo "active";?> <?php endif; ?>>
+        <li class="listItem">
             <a  href="/index.php"> <img class="nav-img" src="/images/icon/home.png" alt="home icon">HOME</a>
         </li>
 
