@@ -15,8 +15,11 @@ $items = $item->getAllItemsExceptSeller($user);
     $items = $item->getAllItems();
 }
 
+$maxPrice = $item->maxPrice();
 
 if(!empty($_POST['searchCategory'])){
+    $priceRange = $_POST['priceRange'];
+
     $user = new classes\User($_SESSION['user']);
 
     if(!empty($_POST['category'])) {
@@ -26,9 +29,10 @@ if(!empty($_POST['searchCategory'])){
     }
     $searchName = urlencode($_POST['searchName']);
     $searchName = '%' . $searchName . '%';
-    $items = $item->searchItemCategoryAndName($searchName, $category, $user);
+    $items = $item->searchItemCategoryAndName($searchName, $category, $user, $priceRange);
 
 }
+
 
 
 ?>
@@ -102,7 +106,9 @@ if(!empty($_POST['searchCategory'])){
                 <label for="priceRange">Max Range</label>
 
                 <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="1" class="slider" id="priceRange">
+                    <input type="range" min="1.00" max="<?=$maxPrice?>" value="<?=$maxPrice?>" class="slider" name="priceRange" id="priceRange">
+                    <p>Value: <span id="priceVal"></span></p>
+
                 </div>
 
                 <div class="">
@@ -154,6 +160,14 @@ if(!empty($_POST['searchCategory'])){
         </ul>
     </div>
     <script>
+        var slider = document.getElementById("priceRange");
+
+        var output = document.getElementById("priceVal");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
         document.querySelectorAll('.itemId').forEach(item => {
             item.addEventListener('click', function () {
 
