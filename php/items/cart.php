@@ -93,8 +93,8 @@ if (!empty($_POST['delete-cart-item'])) {
                                     <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
                                     <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
                                     <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($item->quantity); ?> :  <?= htmlspecialchars($item->unit); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($item->price); ?> :  <?= htmlspecialchars($item->currency); ?></p>
+                                    <p class="card-text"><?= htmlspecialchars($item->quantity); ?>    <?= htmlspecialchars($item->unit); ?></p>
+                                    <p class="card-text"><?= htmlspecialchars($item->price); ?>    <?= htmlspecialchars($item->currency); ?></p>
                             
                                     <form  id="delete-cart" action="" method="post">
 

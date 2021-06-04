@@ -39,17 +39,21 @@ $items = $item->getAllItemsbought($user);
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId users" >
                         <div class="container">
-                            <div class="card h-100" style="width: auto;">
+                            <div class="card h-100 breed" >
                                 <form  action="" method="post">
                                     <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
                                                             
                                     <div id="card-body" style="padding:15px;">
                                         <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
                                         <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
+
                                         <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
-                                        <p class="card-text"><?= htmlspecialchars($item->quantity); ?> :  <?= htmlspecialchars($item->unit); ?></p>
-                                        <p class="card-text"><?= htmlspecialchars($item->price); ?> :  <?= htmlspecialchars($item->currency); ?></p>
-                                    </div>
+
+                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg"                                    alt="">
+                                        <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>       
+
+                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
+                                        <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>                                    </div>
 
                             </div>
                         </div>
