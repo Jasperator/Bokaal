@@ -47,16 +47,16 @@ $items = $item->getAllItemsbought($user);
                                         <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
 
                                         <p class="card-text"><img class="zoekertje" src="../../images/icon/vegetables.png" alt="icon vegetables">
-                                        <?= htmlspecialchars($item->category); ?></p>
+                                         <?= htmlspecialchars($item->category); ?></p>
 
                                         <p class="card-text"> <img class="zoekertje" src="../../images/icon/description.png" alt="icon description">
-                                        <?= htmlspecialchars($item->description); ?></p>
+                                         <?= htmlspecialchars($item->description); ?></p>
 
                                         <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="icon stock">
-                                        <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>       
+                                         <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>       
 
                                         <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
-                                        <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>                                    </div>
+                                         <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>                                    </div>
 
                             </div>
                         </div>

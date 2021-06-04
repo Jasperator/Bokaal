@@ -531,15 +531,22 @@ cursor: pointer}
 
     #knop {
         background-color: Transparent;
-        background-repeat: no-repeat;
         border: none;
         overflow: hidden;
         outline: none;
+        margin-left: 80%;
+        position: absolute;
+        margin-top: -30%;
+        opacity: 50%;
+    }
+    #knop:hover{
+        opacity: 100%;
     }
 
-    .favor-img {
-        width: 25px;
-    }
+    .fa-star {
+        
+        color: #d5d962;    
+}
 
     .fav-but {
         width: 25px;

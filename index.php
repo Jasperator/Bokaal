@@ -68,6 +68,7 @@ $sellers = $user->getSellersExceptUser();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="icon" type="image/svg" href=images/logo/favicon.png> <title>Bokaal | Home</title>
 </head>
 
@@ -129,11 +130,12 @@ $sellers = $user->getSellersExceptUser();
                                             <?= htmlspecialchars($seller->distance);  ?></small>
                                     </p>
                                     <form  action="" method="post">
-                                        <div id="favor" class="btn btn-outline-secondary col text-center">
+                                        
                                             <button id="knop" type="submit" name="favorite-person" 
                                                 value="<?= htmlspecialchars($seller->id); ?>" name="fav"> 
-                                                <img class="favor-img" src="/images/icon/star.png" alt=""> voeg toe aan favorieten</button>
-                                        </div>
+                                                <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
+                                            </button>
+                                        
                                     </form>
 
 

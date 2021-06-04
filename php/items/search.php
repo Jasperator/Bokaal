@@ -140,15 +140,15 @@ if(!empty($_POST['searchCategory'])){
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
                                     <p class="card-text"><img class="zoekertje" src="../../images/icon/vegetables.png" alt="icon vegetables">
-                                    <?= htmlspecialchars($item->category); ?></p>
+                                     <?= htmlspecialchars($item->category); ?></p>
 
                                     <!--<p class="card-text"><?= htmlspecialchars($item->description); ?></p>-->
 
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="icon stock">
-                                    <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>
+                                     <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>
 
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
-                                    <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
+                                     <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
                                     
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand: <?= htmlspecialchars($item->distance); ?></p>
 
