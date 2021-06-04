@@ -206,14 +206,11 @@ cursor: pointer}
 
     .custom{
         width: 20% !important;
+        font-family: "Josefin Sans";
     }
 
     .instel:link{
         color: #ffffff;
-    }
-
-    .instel:hover{
-        color: orangered;
     }
 
     .instel {

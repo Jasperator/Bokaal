@@ -39,17 +39,17 @@ $page = basename($_SERVER['PHP_SELF']);
         if($_SESSION['user_status'] == "seller") : ?>
 
             <div class="item_profile">
-                <button type="button" class="btn btn-info custom">
-                    <a class="instel" href="../profile/settings_items.php">Mijn Items</a>
-                </button>
+                <button onclick="window.location.href='../profile/settings_items.php'" type="button" 
+                class="btn btn-info custom">Mijn items</button>
             </div>
         <?php
         endif;?>
 
+        
+
         <div class="item_profile">
-            <button type="button" class="btn btn-info custom">
-                <a class="instel" href="../profile/settings_account.php">Account instellingen</a>
-            </button>
+            <button onclick="window.location.href='../profile/settings_account.php'" type="button" 
+            class="btn btn-info custom">Account instellingen</button>
         </div>
 
         <div class="item_profile">
