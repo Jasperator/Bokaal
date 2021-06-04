@@ -20,11 +20,10 @@ if(!empty($_POST['searchCategory'])){
     $user = new classes\User($_SESSION['user']);
 
     if(!empty($_POST['category'])) {
-        $category = $_POST['category'];
+        $category =  "'". $_POST['category'] . "'";
     } else {
-        $category = 'category';
+        $category = "category";
     }
-    print_r($category);
     $searchName = urlencode($_POST['searchName']);
     $searchName = '%' . $searchName . '%';
     $items = $item->searchItemCategoryAndName($searchName, $category, $user);
@@ -99,17 +98,19 @@ if(!empty($_POST['searchCategory'])){
 
                 </select>
 
+
+                <label for="priceRange">Max Range</label>
+
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="1" class="slider" id="priceRange">
+                </div>
+
                 <div class="">
                     <input id="button_or_search" type="submit" class="" value="Search" name="searchCategory">
                 </div>
 
             </div>
 
-            <label for="priceRange">Max Range</label>
-
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="1" class="slider" id="priceRange">
-            </div>
 
 
         </form>

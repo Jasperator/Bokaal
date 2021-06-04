@@ -77,9 +77,8 @@ if (!empty($_POST['delete-cart-item'])) {
 <?php include_once("../includes/nav.include.php");?>
 
 
-        <div>
-            <h2 class="hoofdtitel">Winkelmandje</h2>            
-        </div>
+            <h2 class="hoofdtitel">Winkelmandje</h2>
+
         <ul id="all-detail" class="row col-md-12">
 
             <?php foreach ($items as $item) : ?>
