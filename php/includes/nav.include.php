@@ -29,7 +29,7 @@ $page = basename($_SERVER['PHP_SELF']);
         </li>
 
         <li class="listItem" >
-            <a href="/php/items/search.php" <?php if ($page == "search.php") : echo "active"; ?> class="navActive" <?php endif; ?>> <img class="nav-img" src="/images/icon/zoek.png" alt="zoek icon"> ZOEKEN </a>
+            <a href="/php/items/search.php" <?php if ($page == "search.php") : echo "active"; ?> class="navActive" <?php endif; ?>> <img class="nav-img" src="/images/icon/zoek.png" alt="zoek icon">ZOEKEN</a>
         </li>
         <?php if($_SESSION['user_status'] == "seller") : ?> 
 
@@ -39,11 +39,11 @@ $page = basename($_SERVER['PHP_SELF']);
 
         <?php endif;?>
         <li class="listItem" >
-            <a  href="/php/items/cart.php" <?php if ($page == "cart.php") : echo "active"; ?> class="navActive" <?php endif; ?>> <img class="nav-img" src="/images/icon/cart.png" alt="winkelmandje icon"> WINKELMANDJE</a>
+            <a  href="/php/items/cart.php" <?php if ($page == "cart.php") : echo "active"; ?> class="navActive" <?php endif; ?>> <img class="nav-img" src="/images/icon/cart.png" alt="winkelmandje icon">WINKELMANDJE</a>
         </li>
 
         <li class="listItem">
-            <a href="/php/profile/favor.php" <?php if ($page == "favor.php") : echo "active"; ?> class="navActive" <?php endif; ?>>  <img class="nav-img" src="/images/icon/user.png" alt="profiel icon"> PROFIEL </a>
+            <a href="/php/profile/favor.php" <?php if ($page == "favor.php") : echo "active"; ?> class="navActive" <?php endif; ?>>  <img class="nav-img" src="/images/icon/user.png" alt="profiel icon">PROFIEL</a>
         </li>
 
 

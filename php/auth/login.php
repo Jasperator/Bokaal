@@ -61,6 +61,8 @@ if (!empty($_POST)) {
 
   <?php // include_once("nav.include.php"); ?>
 
+  <img src="../../images/background/OGbackground.png" class="loginImage"></div>
+
   <div class="container-fluid">
     <div class="row no-gutter">
       <div id="frame" class="col-md-8 col-lg-6">
@@ -70,7 +72,7 @@ if (!empty($_POST)) {
               <div class="col-md-9 col-lg-8 mx-auto">
 
                 <img class="logo" src="../../images/logo/LogoBlack.svg" alt="login logo Bokaal">
-                <h3 class="login-heading mb-4">Welcome back!</h3>
+                <h3>Welcome back!</h3>
 
 
                 <?php if (isset($error)) : ?>
@@ -81,13 +83,13 @@ if (!empty($_POST)) {
 
                 <form action="" method="post">
                   <div class="form-label-group">
-                    <input type="text" name="email" id="email" class="form-control" autofocus placeholder="Email">
+                    <input type="text" name="email" id="email" placeholder="Email">
                    <!-- <label for="inputEmail">Email</label>-->
                    <br>
                   </div>
 
                   <div class="form-label-group">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord">
+                    <input type="password" name="password" id="password" placeholder="Wachtwoord">
                     <!-- <label for="inputPassword">Password</label> -->
                     <br>
                   </div>
