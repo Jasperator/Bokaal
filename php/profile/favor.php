@@ -46,7 +46,7 @@ if (!empty($_POST['delete-favorite-person'])) {
             <h2 class="hoofdtitel">Favorieten</h2>
         </div>
 
-        <?php include_once("../profile/profile.php");?>
+        <?php include_once("../includes/subNav.php");?>
 
         <ul id="all-detail" class="row col-md-12">
 
@@ -56,7 +56,7 @@ if (!empty($_POST['delete-favorite-person'])) {
                     <div class="container">
                         <div class="card h-100" style="width: auto;">
                             <form action="" method="post">
-                                <img class="card-img-top" src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>"
+                                <img class="card-img-top" src="/uploads/<?= htmlspecialchars($fav->profile_img); ?>"
                                     class="img-thumbnail border-0" />
 
 

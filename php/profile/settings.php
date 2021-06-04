@@ -31,7 +31,7 @@ $page = basename($_SERVER['PHP_SELF']);
             <h2 class="hoofdtitel">Settings</h2>
         </div>
 
-        <?php include_once("../profile/profile.php");?>
+        <?php include_once("../includes/subNav.php");?>
 <!-- Hier moet de profile.php nav komen -->
 
     <div class="all_item_profile">

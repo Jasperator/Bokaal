@@ -32,44 +32,52 @@ if (!empty($_POST['chat_id'])) {
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/reaction.css" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
 
 
-    <title>Chat</title>
+    <title>Bokaal | Chat</title>
 </head>
 
 <body>
         <?php include_once("../includes/nav.include.php"); ?>
         
     <div>
-        <h2 class="hoofdtitel">Favorieten</h2>
+        <h2 class="hoofdtitel">Berichten</h2>
     </div>
 
-    <?php include_once("profile.php");?>
-        <?php
-        foreach($getPartnerConversations as $getPartnerConversation){
-            $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
+    <?php include_once("../includes/subNav.php");?>
+        <ul id="all-chats" class="row col-md-12">
 
-            ?>    
+    <?php
+    foreach($getPartnerConversations as $getPartnerConversation):
+        $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
+        $unreadMessages = $conversation->countUnreadMessages($user, $getPartnerName->id);
 
-            <div id="chatbutton-box">
+    ?>
+
+            <div class="chatPreview col-md-2">
+
+                <img src="/uploads/<?= htmlspecialchars($getPartnerName->profile_img); ?>" alt="Chat placeholder" class="chatImg">
+
                 <form action="../profile/chat.php" method="POST" class="chat">
-                    <div id="startChat">
-                        <input type="hidden" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation); ?>" placeholder="naam" />
+                        <input type="hidden" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation);?>" placeholder="naam" />
                         <input id="chatnaam"  class="btn" type="submit" name="chat_name" value="<?= htmlspecialchars($getPartnerName->fullname); ?>" />
-                    </div>
                 </form>
+
+                <div class="notification"> <?php if($unreadMessages> 0){ print_r($unreadMessages);} ?> </div>
+
             </div>
+        <?php endforeach ?>
+        </ul>
 
-            <?php
 
-        }
-?>
+
+        <?php include_once("../includes/footer.php");?>
 
 
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.js"></script>
     
-<?php include_once("../includes/footer.php");?>
 
 </body>
 

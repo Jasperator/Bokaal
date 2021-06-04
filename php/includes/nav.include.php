@@ -34,7 +34,7 @@ $page = basename($_SERVER['PHP_SELF']);
         <?php if($_SESSION['user_status'] == "seller") : ?> 
 
             <li class="listItem" <?php if ($page == "sell.php") : echo "active";?> <?php endif; ?>>
-                <a id="sellNav" href="/php/items/sell.php"> <img class="nav-img" src="/images/icon/add.png" alt="verkoop icon">VERKOOP</a>
+                <a href="/php/items/sell.php"> <img class="nav-img" src="/images/icon/add.png" alt="verkoop icon">VERKOOP</a>
             </li>
 
         <?php endif;?>
