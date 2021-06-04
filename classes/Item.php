@@ -480,6 +480,7 @@ class Item
         $statement->bindValue(":category", $category);
         $statement->bindValue(":status", '');
         $statement->bindValue(":user_id", $user->getId());
+        print_r($statement);
 
 
 
