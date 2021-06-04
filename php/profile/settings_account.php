@@ -123,7 +123,7 @@ if (!empty($_POST['updateProfile'])) {
             <div><?php echo $error; ?></div>
             <?php endif; ?>
           </div>
-          </div>
+        </div>
         
 
 
@@ -154,7 +154,7 @@ if (!empty($_POST['updateProfile'])) {
 
         
         <div>
-				<div class="row">
+				<div >
 
         <div>
 						<!--<label for="currency">Currency</label>-->

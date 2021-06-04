@@ -292,30 +292,26 @@ cursor: pointer}
 
     /*-----profiel instellingen-----*/
 
-    /*#Profiel-instellingen-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
-    }*/
 
     .profile-settings-image {
-        margin-left: 20%;
         margin-bottom: 5%;
         margin-top: 5%;
+        margin-left: calc(17.5% - 125px + 5%);
 
 
     }
 
     .form-control-settings {
-        width: 50%;
+        width: 35%;
         height: 50px;
 
-        margin-left: 15%;
+        margin-left: 5%;
         margin-top: 15px;
 
+        padding-left: 15px;
+
         border: none;
+        border-radius: 5px;
 
         font-family: "Josefin Sans";
         font-style: normal;
@@ -328,8 +324,8 @@ cursor: pointer}
 
 
     .new-profile-image {
-        width: 100%;
-        height: auto;
+        width: 250px;
+        height: 250px;
 
         object-fit: cover;
 
@@ -343,21 +339,28 @@ cursor: pointer}
         font-family: "Josefin Sans";
         font-style: normal;
         font-variant: normal;
+
         border: none;
         border-radius: 5px;
+
         font-size: 1em;
 
         background-color: orangered;
         color: #ffffff;
 
+        margin-left: 0%;
+        margin-bottom: 20px;
+
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
+
         text-align: center;
-        width: 25%;
-        margin-left: 5%;
-        margin-bottom: 20px;
+
+        width: 250px;
+
+        float: left;
+
+        
     }
 
 
@@ -374,14 +377,15 @@ cursor: pointer}
 
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+
         text-align: center;
-        width: 15%;
+        width: 10%;
 
         margin-top: 15px;
-        margin-left: 30%;
-        margin-bottom: 20px;
+        margin-left: 17.5%;
+        margin-bottom: 30px;
     }
 
     .file-button {
