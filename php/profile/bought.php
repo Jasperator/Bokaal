@@ -22,7 +22,7 @@ $items = $item->getAllItemsbought($user);
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
 
-    <title>Aankopen</title>
+    <title>Bokaal | Bestellingen</title>
 </head>
 <body id="bought-body">
 <?php include_once("../includes/nav.include.php") ?>

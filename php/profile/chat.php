@@ -41,9 +41,7 @@ if (!empty($_POST['chat_id'])) {
 <body>
         <?php include_once("../includes/nav.include.php"); ?>
         
-    <div>
         <h2 class="hoofdtitel">Berichten</h2>
-    </div>
 
     <?php include_once("../includes/subNav.php");?>
         <ul id="all-chats" class="row col-md-12">

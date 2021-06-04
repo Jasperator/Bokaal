@@ -76,6 +76,9 @@
         font-size: 1.3em;
         margin-top: -4%;
         letter-spacing: 0.2em;
+        padding-bottom: 5px;
+        vertical-align: middle;
+        position: relative;
 
     }
 
@@ -94,8 +97,8 @@
 
 
     .listItem a:hover {
-        color: orangered;
         text-decoration: none;
+        border-bottom: 3px solid white;
     }
 
     .card-text {
@@ -106,6 +109,17 @@
         font-weight: 400;
         line-height: 20px;
     }
+
+    a.navActive{
+
+
+        text-decoration: none;
+        border-bottom: 3px solid white;
+        font-weight: 600;
+
+
+    }
+
 
     /*-----bootstrap instel -----*/
 
@@ -920,6 +934,7 @@ cursor: pointer}
         height: 370px;
         float: left;
         margin: 100px;
+        margin-left: 218px;
     }
 
     

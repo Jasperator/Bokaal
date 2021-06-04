@@ -57,7 +57,7 @@ $active_conversation = $_SESSION['chat_id'];
 
 
 
-    <title>Chat</title>
+    <title>Bokaal | Chat</title>
 </head>
 
 <body onload="updateScroll()">

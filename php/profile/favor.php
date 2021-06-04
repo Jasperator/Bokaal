@@ -34,7 +34,7 @@ if (!empty($_POST['delete-favorite-person'])) {
     <link rel="stylesheet" href="../../css/style.css">
 
 
-    <title>Favorieten</title>
+    <title>Bokaal | Favorieten</title>
 </head>
 
 <body>

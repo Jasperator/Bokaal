@@ -469,17 +469,37 @@ class Item
 
     }
 
-    public function searchItemCategoryAndName($name, $category, $user)
+    public function maxPrice()
     {
         $conn = Db::getConnection();
 
 
-        $statement = $conn->prepare("SELECT * FROM items WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id");
+        $statement = $conn->prepare("SELECT MAX(price) FROM `items` WHERE status = :status");
+        $statement->bindValue(":status", '');
+
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetch(\PDO::FETCH_COLUMN);
+
+        //Return the results from the query
+        return $result;
+
+    }
+    public function searchItemCategoryAndName($name, $category, $user, $maxPrice)
+    {
+        $conn = Db::getConnection();
+
+
+        $statement = $conn->prepare("SELECT * FROM items WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id AND price <= :maxPrice");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":name", $name);
         $statement->bindValue(":status", '');
         $statement->bindValue(":user_id", $user->getId());
+        $statement->bindValue(":maxPrice",$maxPrice);
+
 
 
 
