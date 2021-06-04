@@ -158,6 +158,14 @@
         margin: auto;
     }
 
+    .breed:hover{
+    
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    
+    }
+
+
 
     /*------settings - verwijder-modal-----*/
 #delete_account {
