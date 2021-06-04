@@ -144,10 +144,10 @@ if(!empty($_POST['searchCategory'])){
                                     <!--<p class="card-text"><?= htmlspecialchars($item->description); ?></p>-->
 
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg"                                    alt="">
-                                    <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
+                                    <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>
 
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
-                                    <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+                                    <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
                                     
                                     <p class="card-text">Afstand: <?= htmlspecialchars($item->distance); ?></p>
 
