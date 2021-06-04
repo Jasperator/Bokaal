@@ -16,32 +16,22 @@ $items = $item->getAllItemsExceptSeller($user);
 }
 
 
-if (!empty($_POST['category']) and (empty($_POST['searchName']))) {
-    $user = new classes\User($_SESSION['user']);
-    $category = $_POST['category'];
-$items = $item->searchItemCategory($category, $user);
-}
-
-
-
-if (!empty($_POST['searchName']) and (empty($_POST['category']))) {
+if(!empty($_POST['searchCategory'])){
     $user = new classes\User($_SESSION['user']);
 
+    if(!empty($_POST['category'])) {
+        $category = $_POST['category'];
+    } else {
+        $category = 'category';
+    }
+    print_r($category);
     $searchName = urlencode($_POST['searchName']);
-    htmlspecialchars($searchName, ENT_QUOTES, 'UTF-8');
-    $searchName = '%' . $searchName . '%';
-    $items = $item->searchItemName($searchName, $user);
-}
-
-if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
-    $user = new classes\User($_SESSION['user']);
-
-    $category = $_POST['category'];
-    $searchName = urlencode($_POST['searchName']);
-    htmlspecialchars($searchName, ENT_QUOTES, 'UTF-8');
     $searchName = '%' . $searchName . '%';
     $items = $item->searchItemCategoryAndName($searchName, $category, $user);
+
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -115,6 +105,12 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
 
             </div>
 
+            <label for="priceRange">Max Range</label>
+
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="1" class="slider" id="priceRange">
+            </div>
+
 
         </form>
 
@@ -139,6 +135,7 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
                                     <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
 
                                     <!--<p class="card-text"><?= htmlspecialchars($item->description); ?></p>-->
+<<<<<<< HEAD
 
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg"                                    alt="">
                                     <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
@@ -146,6 +143,12 @@ if (!empty($_POST['searchName']) and (!empty($_POST['category']))) {
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
                                     <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
                                     
+=======
+                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg"                                    alt="">
+                                    <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>
+                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
+                                    <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
+>>>>>>> 46d76800961601a7b44435a0791b8ea4fd71f06c
                                     <p class="card-text">Afstand: <?= htmlspecialchars($item->distance); ?></p>
 
                                 </div>
