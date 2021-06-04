@@ -37,34 +37,46 @@ $page = basename($_SERVER['PHP_SELF']);
     <div class="all_item_profile">
         <?php
         if($_SESSION['user_status'] == "seller") : ?>
+
             <div class="item_profile">
-                <a class="instel" href="../profile/settings_items.php">Mijn Items</a>
+                <button type="button" class="btn btn-info custom">
+                    <a class="instel" href="../profile/settings_items.php">Mijn Items</a>
+                </button>
             </div>
         <?php
         endif;?>
 
         <div class="item_profile">
-            <a class="instel" href="../profile/settings_account.php">Account instellingen</a>
+            <button type="button" class="btn btn-info custom">
+                <a class="instel" href="../profile/settings_account.php">Account instellingen</a>
+            </button>
         </div>
+
         <div class="item_profile">
+        <button type="button" class="btn btn-info custom">
             <a class="instel" href="../profile/meldingen.php">Meldingen</a>
+            </button>
         </div>
-        <div class="item_profile"> 
-            <a class="instel" href="../profile/blocked.php">Geblokkeerd</a>
-        </div>
+
+
         <div class="item_profile" id="delete_account">
+        <button type="button" class="btn btn-info custom">
             <a class="instel">Verwijder account</a>
+            </button>
         </div>
-        <div id="delete_acc_modal" class="modal">
+
+        <div id="delete_acc_modal" class="modal">      
             <div class="modalContent">
                 <span class="close">&times;</span>
                 <h4>Ben je zeker dat je jouw account wilt verwijderen?</h4>
                 <form method="get" action="../profile/delete_account.php">
-                    <button type="submit">Verwijder</button>
+                    <button class="btn btn-info custom" type="submit">Verwijder</button>
                 </form>
             </div>
         </div>
+
         <div class="item_profile">
+        <button type="button" class="btn btn-info custom">
             <a class="instel" href="../auth/logout.php">Log uit</a>
         </div>
     </div>

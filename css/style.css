@@ -177,41 +177,42 @@ cursor: pointer}
     }
     /*------settings - profiel-----*/
 
-    /* #settings-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
-    }*/
-
     .all-item_full {
         height: 100vh;
     }
 
+    .all_item_profile{
+        margin-top: 10%;
+    }
+    
+
     .item_profile {
-        width: 35%;
 
         text-align: center;
 
         border-radius: 5px;
 
-        background-color: #ffffff;
-
         margin-bottom: 15px;
-        margin-left: 32%;
+    }
 
-        padding-top: 15px;
-        padding-bottom: 15px;
+    .custom{
+        width: 20% !important;
+    }
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    .instel:link{
+        color: #ffffff;
+    }
+
+    .instel:hover{
+        color: orangered;
     }
 
     .instel {
         text-decoration: none;
 
-        color: #000000;
+        width: 15%;
+
+        color: #ffffff;
 
         font-family: "Josefin Sans";
         font-size: 25px;
@@ -219,6 +220,7 @@ cursor: pointer}
         font-variant: normal;
         font-weight: 400;
     }
+    
 
 
     /*-----Fonts-----*/
