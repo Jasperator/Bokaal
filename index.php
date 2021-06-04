@@ -86,7 +86,7 @@ $sellers = $user->getSellersExceptUser();
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId users" data-id="<?= htmlspecialchars($fav->id); ?>">
                         <div class="container" >
-                            <div class="card h-100" style="width: auto;">
+                            <div class="card h-100 breed" >
                                 <form action="" method="post">
                                     <img class="card-img-top" src="./uploads/<?= htmlspecialchars($fav->profile_img); ?>"
                                         class="img-thumbnail border-0" />
@@ -116,7 +116,7 @@ $sellers = $user->getSellersExceptUser();
             <div id="list-decoration" class="col-md-4">
                 <div class="itemId users" data-id="<?= htmlspecialchars($seller->id); ?>">
                     <div class="container">
-                        <div class="card h-100" style="width: auto;">
+                        <div class="card h-100 breed" >
                             <form action="" method="post">
                                 <img class="card-img-top" src="./uploads/<?= htmlspecialchars($seller->profile_img); ?>"
                                     class="img-thumbnail border-0" />

@@ -20,11 +20,10 @@ if(!empty($_POST['searchCategory'])){
     $user = new classes\User($_SESSION['user']);
 
     if(!empty($_POST['category'])) {
-        $category = $_POST['category'];
+        $category =  "'". $_POST['category'] . "'";
     } else {
-        $category = 'category';
+        $category = "category";
     }
-    print_r($category);
     $searchName = urlencode($_POST['searchName']);
     $searchName = '%' . $searchName . '%';
     $items = $item->searchItemCategoryAndName($searchName, $category, $user);
@@ -99,17 +98,19 @@ if(!empty($_POST['searchCategory'])){
 
                 </select>
 
+
+                <label for="priceRange">Max Range</label>
+
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="1" class="slider" id="priceRange">
+                </div>
+
                 <div class="">
                     <input id="button_or_search" type="submit" class="" value="Search" name="searchCategory">
                 </div>
 
             </div>
 
-            <label for="priceRange">Max Range</label>
-
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="1" class="slider" id="priceRange">
-            </div>
 
 
         </form>
@@ -118,16 +119,14 @@ if(!empty($_POST['searchCategory'])){
 
             <?php foreach ($items as $item) :
                 $user = new classes\User($_SESSION['user']);
-
                 $seller = $user->getUserById($item->seller_id);
                 $item->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($seller->address), urlencode($seller->postal_code), "K");
-
-
-                ?>
+            ?>
+                
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId" data-id="<?= htmlspecialchars($item->id); ?> ">
                         <div class="container">
-                            <div class="card h-100" style="width: auto;">
+                            <div class="card h-100 breed">
                                 <form action="" method="post">
                                     <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?> " 
                                     class="img-thumbnail border-0"/>
@@ -135,11 +134,15 @@ if(!empty($_POST['searchCategory'])){
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
                                     <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
+
                                     <!--<p class="card-text"><?= htmlspecialchars($item->description); ?></p>-->
-                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg"                                    alt="">
-                                    <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>
-                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
-                                    <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
+
+                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg"                                    alt="">
+                                    <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
+
+                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
+                                    <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+                                    
                                     <p class="card-text">Afstand: <?= htmlspecialchars($item->distance); ?></p>
 
                                 </div>

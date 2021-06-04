@@ -139,6 +139,10 @@
         width: 20%;
     }
 
+    .breed{
+        width: 75%;
+    }
+
 
     /*------settings - verwijder-modal-----*/
 #delete_account {
@@ -157,7 +161,7 @@ cursor: pointer}
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     }
 
-    /* Modal Content/Box */
+    /*----- Modal Content/Box -----*/
     .modalContent {
         background-color: #fefefe;
         width: 30%;
@@ -433,6 +437,7 @@ cursor: pointer}
 
         margin-bottom: 15px;
         margin-left: 5%;
+        margin-right: 5%;
         margin-top: 5%;
 
     }
