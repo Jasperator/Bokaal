@@ -70,75 +70,66 @@ if (!empty($_POST['buy-item'])) {
         <h2 class="subtitel" >Items</h2>
     </div>
 
-    <ul id='all'>
-        <li id="list">
-            <div class="container">
-                <div>
-                    <div id='foto'>
-                        <div id="wrapper">
-                            <div id="splash-info">
-                                <form action="" method="post">
-                                    <img id="picture" src="/uploads/<?= htmlspecialchars($detailItem->item_image); ?> "/>
+    <ul id="all-detail" class="row col-md-12">
+            <div id="list-decoration" class="col-md-4">
+                <div class="itemId">
+                    <div class="container">
+                        <div class="card h-100 breed">
+                            <form action="" method="post">
+                                <img class="card-img-top" id="picture" src="/uploads/<?= htmlspecialchars($detailItem->item_image); ?> "
+                                class="img-thumbnail border-0"/>
+                            
+                            <div class="card-body">
+                                <h5 class="card-title"><?= htmlspecialchars($detailItem->title); ?></h5>
+                                <p class="card-text"><?= htmlspecialchars($detailItem->description); ?></p>
+                                <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
+                                    <?= htmlspecialchars($detailItem->quantity); ?> : <?= htmlspecialchars($detailItem->unit); ?></p>
+                                <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
+                                    <?= htmlspecialchars($detailItem->price); ?> : <?= htmlspecialchars($detailItem->currency); ?></p>
 
+                                <form action="" method="post">
+                                    <div class="form-group">
+                                        <button type="submit" name="buy-item" class="buy"
+                                            value="<?= htmlspecialchars($detailItem->id); ?>" name="buy"
+                                            placeholder="Koop">Toevoegen aan winkelmandje</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-
-                    </div>
-                    <div id="info">
-                        <h5 class="text-primary"><?= htmlspecialchars($detailItem->title); ?></h5>
-                        <p class="text-primary"><?= htmlspecialchars($detailItem->description); ?></p>
-                        <p class="text-primary"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
-                            <?= htmlspecialchars($detailItem->quantity); ?> : <?= htmlspecialchars($detailItem->unit); ?></p>
-                        <p class="text-primary"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
-                            <?= htmlspecialchars($detailItem->price); ?> : <?= htmlspecialchars($detailItem->currency); ?></p>
-
-                        <form action="" method="post">
-
-                            <div class="form-group">
-                                <button type="submit" name="buy-item" class="buy"
-                                        value="<?= htmlspecialchars($detailItem->id); ?>" name="buy"
-                                        placeholder="Koop">Toevoegen aan winkelmandje</button>
-                            </div>
-                        </form>
-
                     </div>
                 </div>
-        </li>
+            </div>
     </ul>
 </div>
             <div class="titel">
                 <h2 class="subtitel">Other items</h2>
             </div>
 
-            <ul id='all'>
+            <ul id="all-detail" class="row col-md-12">
+
                 <?php foreach ($allItemsSeller as $item) : ?>
-                <li id="list">
-                    <div class="container others" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
-                        <div>
-                            <div id='foto'>
-                                <div id="wrapper">
-                                    <div id="splash-info">
-                                        <form action="" method="post">
-                                            <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "/>
-
-                                    </div>
+                    <div id="list-decoration" class="col-md-4">
+                        <div class="itemId" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
+                            <div class="container">
+                                <div class="card h-100 breed">
+                                    <form action="" method="post">
+                                        <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "
+                                        class="img-thumbnail border-0"/>
+                                    
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
+                                        <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
+                                        <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
+                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
+                                            <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
+                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
+                                            <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+                                    </div>                           
                                 </div>
-
                             </div>
-                            <div id="info">
-                                <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
-                                <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
-                                <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
-                                <p class="text-primary"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
-                                    <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
-                                <p class="text-primary"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
-                                    <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
-
-
-                            </div>
-                            <?php endforeach ?>
                         </div>
-                </li>
+                    </div>
+                <?php endforeach ?>
             </ul>
 
             <div id="space"></div>

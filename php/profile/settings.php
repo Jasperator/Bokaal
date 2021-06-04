@@ -70,7 +70,7 @@ $page = basename($_SERVER['PHP_SELF']);
                 <span class="close">&times;</span>
                 <h4>Ben je zeker dat je jouw account wilt verwijderen?</h4>
                 <form method="get" action="../profile/delete_account.php">
-                    <button class="btn btn-info custom" type="submit">Verwijder</button>
+                    <button class="btn btn-danger" style="width=25%; margin-left:calc(75%/2); " type="submit">Verwijder account</button>
                 </form>
             </div>
         </div>
