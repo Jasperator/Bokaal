@@ -57,7 +57,7 @@ if (!empty($_POST['chat_id'])) {
 
             <div class="chatPreview col-md-2">
 
-            <div class="notification"> <?php if($unreadMessages> 0){ print_r($unreadMessages);} ?> </div>
+            <?php if($unreadMessages> 0){  ?> <div class="notification"> <?php print_r($unreadMessages); ?>  </div> <?php } ?>
 
 
                 <img src="/uploads/<?= htmlspecialchars($getPartnerName->profile_img); ?>" alt="Chat placeholder" class="chatImg">
