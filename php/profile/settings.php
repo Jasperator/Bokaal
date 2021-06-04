@@ -49,18 +49,17 @@ $page = basename($_SERVER['PHP_SELF']);
 
         <div class="item_profile">
             <button onclick="window.location.href='../profile/settings_account.php'" type="button" 
-            class="btn btn-info custom">Account instellingen</button>
+            class="btn btn custom">Account instellingen</button>
         </div>
 
         <div class="item_profile">
-        <button type="button" class="btn btn-info custom">
-            <a class="instel" href="../profile/meldingen.php">Meldingen</a>
-            </button>
+            <button onclick="window.location.href='../profile/meldingen.php'" type="button" 
+            class="btn btn-info custom">Meldingen</button>
         </div>
 
 
         <div class="item_profile" id="delete_account">
-        <button type="button" class="btn btn-info custom">
+        <button type="button" class="btn btn-info custom ">
             <a class="instel">Verwijder account</a>
             </button>
         </div>

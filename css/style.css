@@ -207,7 +207,14 @@ cursor: pointer}
 
     .custom{
         width: 20% !important;
+
+        border: none !important;
+
         font-family: "Josefin Sans";
+        font-size: 25px !important;
+
+        color: #ffffff !important;
+        background-color: orangered !important;
     }
 
     .instel:link{
@@ -801,13 +808,6 @@ cursor: pointer}
 
     /*-----favor-----*/
 
-    /* #favor-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
-    }*/
 
     #del-fav {
         font-family: "Josefin Sans";
@@ -831,6 +831,7 @@ cursor: pointer}
         margin-left: 5%;
         margin-bottom: 5px;
     }
+
 
     /*-----bought-----*/
 
