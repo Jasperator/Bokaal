@@ -1,9 +1,10 @@
 @media only screen and (min-width: 900px) {
-  body {
-    background-image: url("../images/background/OGbackground.png");
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-color: cornsilk;
+  .loginImage{
+    object-fit: cover;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
   }
 
   .login {

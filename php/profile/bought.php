@@ -45,15 +45,18 @@ $items = $item->getAllItemsbought($user);
                                                             
                                     <div id="card-body" style="padding:15px;">
                                         <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
-                                        <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
 
-                                        <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
+                                        <p class="card-text"><img class="zoekertje" src="../../images/icon/vegetables.png" alt="icon vegetables">
+                                        <?= htmlspecialchars($item->category); ?></p>
 
-                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg"                                    alt="">
-                                        <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>       
+                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/description.png" alt="icon description">
+                                        <?= htmlspecialchars($item->description); ?></p>
 
-                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
-                                        <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>                                    </div>
+                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="icon stock">
+                                        <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>       
+
+                                        <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
+                                        <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>                                    </div>
 
                             </div>
                         </div>

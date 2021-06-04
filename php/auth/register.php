@@ -32,6 +32,9 @@ if (!empty($_POST['Koper'])) {
 
 	<?php //include_once("nav.include.php") ?>
 
+	<img src="../../images/background/OGbackground.png" class="loginImage"></div>
+
+
 	<div class="d-flex justify-content-center">
 			<form  action="" method="post">
 				<h2>Ik ben een</h2>

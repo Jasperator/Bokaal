@@ -66,6 +66,9 @@ if (!empty($_POST['register'])) {
 
 	<?php // include_once("nav.include.php") ?>
 
+	<img src="../../images/background/OGbackground.png" class="loginImage"></div>
+
+
 	<div class="d-flex justify-content-center">
 		<form class="registerForm" action="" method="post">
 			<img class="logo" src="../../images/logo/LogoBlack.svg" alt="login logo Bokaal">
