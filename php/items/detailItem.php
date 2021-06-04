@@ -44,31 +44,29 @@ if (!empty($_POST['buy-item'])) {
 <div>
     <h2 class="hoofdtitel">Verkoper</h2>
 
-    <div >
-        <div class="detail-item">
-            <div id="foto">
-                <div id="wrapper">
-                    <div id="splash-info">
-                        <form action="" method="post">
-                            <img id="picture" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"
-                                />
-                    </div>
-                </div>
+    <div class="card mb-3" style="max-width: 540px;" >
+        <div class="row g-0">
+            <div class="col-md-4">
+                <form action="" method="post">
+                    <img id="picture" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
+                        </div>    
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
+                                <p class="card-text"><?= htmlspecialchars($seller->location); ?></p>
+                                <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
+                                <p class="card-text"> Afstand:
+                                    <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?></p>
+                                </div>
+                            </div>            
+                        </div>
             </div>
-
-            <div id="info-farmer">
-                <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
-                <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
-                <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
-                <p class="text-primary"> Afstand:
-                    <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?>
-                </p>
-
-
-
-                <div class="titel">
+        </div>
+    </div>            
+    
+    <div class="titel">
         <h2 class="subtitel" >Items</h2>
-    </div>
+    
 
     <ul id="all-detail" class="row col-md-12">
             <div id="list-decoration" class="col-md-4">
