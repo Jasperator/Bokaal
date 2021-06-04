@@ -141,6 +141,7 @@
 
     .breed{
         width: 75%;
+        margin: auto;
     }
 
 
@@ -919,6 +920,8 @@ cursor: pointer}
         float: left;
         margin: 100px;
     }
+
+    
 
     .notification{
 

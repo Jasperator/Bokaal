@@ -473,14 +473,13 @@ class Item
     {
         $conn = Db::getConnection();
 
-        $statement = $conn->prepare("SELECT * FROM items WHERE category = :category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id");
+
+        $statement = $conn->prepare("SELECT * FROM items WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":name", $name);
-        $statement->bindValue(":category", $category);
         $statement->bindValue(":status", '');
         $statement->bindValue(":user_id", $user->getId());
-        print_r($statement);
 
 
 
