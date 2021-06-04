@@ -57,6 +57,9 @@ if (!empty($_POST['chat_id'])) {
 
             <div class="chatPreview col-md-2">
 
+            <div class="notification"> <?php if($unreadMessages> 0){ print_r($unreadMessages);} ?> </div>
+
+
                 <img src="/uploads/<?= htmlspecialchars($getPartnerName->profile_img); ?>" alt="Chat placeholder" class="chatImg">
 
                 <form action="../profile/chat.php" method="POST" class="chat">
@@ -64,7 +67,6 @@ if (!empty($_POST['chat_id'])) {
                         <input id="chatnaam"  class="btn" type="submit" name="chat_name" value="<?= htmlspecialchars($getPartnerName->fullname); ?>" />
                 </form>
 
-                <div class="notification"> <?php if($unreadMessages> 0){ print_r($unreadMessages);} ?> </div>
 
             </div>
         <?php endforeach ?>
