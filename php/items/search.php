@@ -135,7 +135,6 @@ if(!empty($_POST['searchCategory'])){
                                     <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
 
                                     <!--<p class="card-text"><?= htmlspecialchars($item->description); ?></p>-->
-<<<<<<< HEAD
 
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg"                                    alt="">
                                     <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
@@ -143,12 +142,6 @@ if(!empty($_POST['searchCategory'])){
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
                                     <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
                                     
-=======
-                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg"                                    alt="">
-                                    <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>
-                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
-                                    <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
->>>>>>> 46d76800961601a7b44435a0791b8ea4fd71f06c
                                     <p class="card-text">Afstand: <?= htmlspecialchars($item->distance); ?></p>
 
                                 </div>
