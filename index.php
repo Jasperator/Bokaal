@@ -96,9 +96,19 @@ $sellers = $user->getSellersExceptUser();
                                         <h5 class="card-title"><?= htmlspecialchars($fav->fullname); ?></h5>
                                         <p class="card-text"><?= htmlspecialchars($fav->location); ?></p>
                                         <p class="card-text"><?= htmlspecialchars($fav->company);  ?></p>
-                                        <p class="card-text"><small class="text-muted"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand:
+                                        <p class="card-text"><small class="text-muted"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place">
                                                 <?= htmlspecialchars($fav->distance);  ?></small>
                                         </p>
+
+                                        <form  action="" method="post">
+                                        
+                                            <button id="knop1" type="submit" name="favorite-person" 
+                                                value="" name="fav"> 
+                                                <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
+                                            </button>
+                                        
+                                        </form>
+
                                     </div>
                             </div>
                         </div>
@@ -126,12 +136,12 @@ $sellers = $user->getSellersExceptUser();
                                     <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
                                     <p class="card-text p-0"><?= htmlspecialchars($seller->location); ?></p>
                                     <p class="card-text p-0"><?= htmlspecialchars($seller->company);  ?></p>
-                                    <p class="card-text p-0"><small class="text-muted"><img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand:
+                                    <p class="card-text p-0"><small class="text-muted"><img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place">
                                             <?= htmlspecialchars($seller->distance);  ?></small>
                                     </p>
                                     <form  action="" method="post">
                                         
-                                            <button id="knop" type="submit" name="favorite-person" 
+                                            <button id="knop2" type="submit" name="favorite-person" 
                                                 value="<?= htmlspecialchars($seller->id); ?>" name="fav"> 
                                                 <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
                                             </button>
