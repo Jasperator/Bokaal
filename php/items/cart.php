@@ -75,7 +75,6 @@ if (!empty($_POST['delete-cart-item'])) {
 </head>
 <body id="cart-body">
 <?php include_once("../includes/nav.include.php");?>
-    <div>
 
 
         <div>
