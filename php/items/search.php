@@ -103,11 +103,11 @@ if(!empty($_POST['searchCategory'])){
                 </select>
 
 
-                <label for="priceRange">Max Range</label>
+                <label for="priceRange">Max. prijs</label>
 
                 <div class="slidecontainer">
                     <input type="range" min="1.00" max="<?=$maxPrice?>" value="<?=$maxPrice?>" class="slider" name="priceRange" id="priceRange">
-                    <p>Value: <span id="priceVal"></span></p>
+                    <p> <span id="priceVal"></span> Euro </p>
 
                 </div>
 
