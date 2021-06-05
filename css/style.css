@@ -170,8 +170,29 @@
 
 
     /*------settings - verwijder-modal-----*/
-#delete_account {
-cursor: pointer}
+    .delete_account {
+
+        background-color: #BE1818;
+        color: white;
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+        width: 13%;
+        padding: 15px;
+        border: none;
+        margin: 10px;
+        margin-top: 30px;
+        outline: none;
+
+    }
+
+    .delete_account:hover {
+
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;        
+
+    }
+
     /* The Modal (background) */
     .modal {
         display: none; /* Hidden by default */
@@ -195,6 +216,26 @@ cursor: pointer}
         border: 1px solid #888;
     }
 
+    .deleteButton{
+
+        background-color: #BE1818;
+        color: white;
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+        width: 45%;
+        margin-top: 20px;
+        padding: 12px;
+        border: none;
+        margin-left: 27.5%;
+    }
+
+    .deleteButton:hover{
+    
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;   
+    
+    }
     /* The Close Button */
     .close {
         color: #aaa;
@@ -209,6 +250,30 @@ cursor: pointer}
         text-decoration: none;
         cursor: pointer;
     }
+
+    /*------settings-----*/
+
+    .settingsButton{
+
+        background-color: orangered;
+        color: #fff;
+        width: 20%;
+        padding: 15px;
+
+        font-family: "Josefin Sans";
+        font-size: 1.5em;
+        margin: 10px;
+        border: none;
+    }
+
+    .settingsButton:hover{
+    
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #FF5419;
+
+    }
+
     /*------settings - profiel-----*/
 
     .all-item_full {

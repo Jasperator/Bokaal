@@ -40,7 +40,7 @@ $page = basename($_SERVER['PHP_SELF']);
 
             <div class="item_profile">
                 <button onclick="window.location.href='../profile/settings_items.php'" type="button" 
-                class="btn btn custom">Mijn items</button>
+                class="">Mijn items</button>
             </div>
         <?php
         endif;?>
@@ -49,18 +49,22 @@ $page = basename($_SERVER['PHP_SELF']);
 
         <div class="item_profile">
             <button onclick="window.location.href='../profile/settings_account.php'" type="button" 
-            class="btn btn custom">Account instellingen</button>
+            class="settingsButton">Account instellingen</button>
         </div>
 
         <div class="item_profile">
             <button onclick="window.location.href='../profile/meldingen.php'" type="button" 
-            class="btn btn custom">Meldingen</button>
+            class="settingsButton">Meldingen</button>
         </div>
 
+        <div class="item_profile">
+        <button onclick="window.location.href='../auth/logout.php'" type="button" 
+            class="settingsButton">Log out</button>
+        </div>
 
         <div class="item_profile" id="delete_account">
-        <button type="button" class="btn btn custom ">
-            <a class="instel">Verwijder account</a>
+        <button type="button" class="delete_account">
+            <a>Verwijder account</a>
             </button>
         </div>
 
@@ -69,15 +73,11 @@ $page = basename($_SERVER['PHP_SELF']);
                 <span class="close">&times;</span>
                 <h4>Ben je zeker dat je jouw account wilt verwijderen?</h4>
                 <form method="get" action="../profile/delete_account.php">
-                    <button class="btn btn-danger" style="width=25%; margin-left:calc(75%/2); " type="submit">Verwijder account</button>
+                    <button class="deleteButton" type="submit">Verwijder account</button>
                 </form>
             </div>
         </div>
-
-        <div class="item_profile">
-        <button type="button" class="btn btn-info custom">
-            <a class="instel" href="../auth/logout.php">Log uit</a>
-        </div>
+        
     </div>
 
 <script>
