@@ -627,7 +627,7 @@ cursor: pointer}
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
-    .chat{
+    .chat-button{
         width: 20% !important;
 
         border: none !important;
@@ -639,7 +639,7 @@ cursor: pointer}
         background-color: orangered !important;
     }
 
-    .chat:hover{
+    .chat-button:hover{
         color: black !important;
         background-color: #d5d962 !important;
     }

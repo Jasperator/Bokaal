@@ -61,7 +61,7 @@ if(!empty($_POST['start_chat'])){
                                 <p class="card-text"> Afstand:
                                     <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?></p>
                 
-                                <form  id="start_chat" action="" method="post">
+                                <form  id="start_chat" class="chat-button" action="" method="post">
                                     <div class="form-group">
                                         <button type="submit" name="start_chat" class="btn btn chat"
                                         value="Chat" >Chat</button>
