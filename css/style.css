@@ -163,6 +163,10 @@
     
     }
 
+    .card{
+        background-color: #ffffff;
+    }
+
 
 
     /*------settings - verwijder-modal-----*/
@@ -586,21 +590,35 @@ cursor: pointer}
 
     /*-----detail item page-----*/
 
-    #info-farmer {
-        margin-top: -7%;
+    .boer-detail{
+        margin-left: 25%;
+        border: none;
+        border-radius: 100px 5px 5px 100px !important;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
+    .detail{
+        width: 90% !important;
+
+        border: none !important;
+
+        font-family: "Josefin Sans";
+        font-size: 16px !important;
+
+        color: #ffffff !important;
+        background-color: orangered !important;
+    }
+    
+    .boer-img{
+        border-radius: 50%;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
     /*-----search / items pagina-----*/
 
-
-    /* #search-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100vw 22%;
-        top: 0;
-        background-position: top;
-    }*/
 
     .search-bar {
         width: 250px;

@@ -44,11 +44,11 @@ if (!empty($_POST['buy-item'])) {
 <div>
     <h2 class="hoofdtitel">Verkoper</h2>
 
-    <div class="card mb-3" style="max-width: 540px;" >
+    <div class="card mb-3 boer-detail" style="max-width: 50%; height:auto;" >
         <div class="row g-0">
             <div class="col-md-4">
                 <form action="" method="post">
-                    <img id="picture" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
+                    <img class="boer-img" id="picture" style="height:200px; width:200px;" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
                         </div>    
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -86,8 +86,8 @@ if (!empty($_POST['buy-item'])) {
                                     <?= htmlspecialchars($detailItem->price); ?> : <?= htmlspecialchars($detailItem->currency); ?></p>
 
                                 <form action="" method="post">
-                                    <div class="form-group">
-                                        <button type="submit" name="buy-item" class="buy"
+                                    <div class="item_profile">
+                                        <button type="submit" name="buy-item" class="btn btn detail"
                                             value="<?= htmlspecialchars($detailItem->id); ?>" name="buy"
                                             placeholder="Koop">Toevoegen aan winkelmandje</button>
                                     </div>
@@ -122,6 +122,12 @@ if (!empty($_POST['buy-item'])) {
                                             <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
                                         <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
                                             <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+
+                                        <form action="" method="post">
+                                            <div class="item_profile">
+                                                <button type="submit" name="buy-item" class="btn btn detail"
+                                                    value="<?= htmlspecialchars($detailItem->id); ?>" name="buy"
+                                                    placeholder="Koop">Toevoegen aan winkelmandje</button>
                                     </div>                           
                                 </div>
                             </div>

@@ -40,7 +40,7 @@ $page = basename($_SERVER['PHP_SELF']);
 
             <div class="item_profile">
                 <button onclick="window.location.href='../profile/settings_items.php'" type="button" 
-                class="btn btn-info custom">Mijn items</button>
+                class="btn btn custom">Mijn items</button>
             </div>
         <?php
         endif;?>
@@ -54,12 +54,12 @@ $page = basename($_SERVER['PHP_SELF']);
 
         <div class="item_profile">
             <button onclick="window.location.href='../profile/meldingen.php'" type="button" 
-            class="btn btn-info custom">Meldingen</button>
+            class="btn btn custom">Meldingen</button>
         </div>
 
 
         <div class="item_profile" id="delete_account">
-        <button type="button" class="btn btn-info custom ">
+        <button type="button" class="btn btn custom ">
             <a class="instel">Verwijder account</a>
             </button>
         </div>

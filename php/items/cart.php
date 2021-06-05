@@ -84,7 +84,7 @@ if (!empty($_POST['delete-cart-item'])) {
             <?php foreach ($items as $item) : ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="container" >
-                        <div class="card h-100" style="width: auto;">
+                        <div class="card h-100 breed" >
                             <form  action="" method="post">
                                 <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" 
                                 class="img-thumbnail border-0" />
