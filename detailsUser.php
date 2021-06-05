@@ -91,9 +91,9 @@ if(!empty($_POST['start_chat'])){
                                                 <p class="card-title"><?= htmlspecialchars($item->category); ?></p>
                                                 <p class="card-title"><?= htmlspecialchars($item->description); ?></p>
                                                 <p class="card-title"> <img class="zoekertje" src="/images/icon/coin-green.svg" alt="">
-                                                    <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
+                                                    <?= htmlspecialchars($item->quantity); ?> <?= htmlspecialchars($item->unit); ?></p>
                                                 <p class="card-text"> <img class="zoekertje" src="/images/icon/kg-green.svg" alt="">
-                                                    <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+                                                    <?= htmlspecialchars($item->price); ?> <?= htmlspecialchars($item->currency); ?></p>
                                             </div>
                                     </div>
                                 </div>
