@@ -47,64 +47,59 @@ if(!empty($_POST['start_chat'])){
 
     <h2 class="hoofdtitel">Verkoper</h2>
 
-    <div class="container">
-            <div id="foto">
-                <div id="wrapper">
-                    <div id="splash-info">
-                        <form action="" method="post">
-                            <img id="picture" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"
-                                 class="img-thumbnail border-0" />
-                    </div>
-                </div>
+    <div class="card mb-3 boer-detail" style="max-width: 50%; max-height:;" >
+        <div class="row g-0">
+            <div class="col-md-4">
+                <form action="" method="post">
+                    <img class="boer-img" id="picture" style="height:250px; width:250px;" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
+                        </div>    
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
+                                <p class="card-text"><?= htmlspecialchars($seller->location); ?></p>
+                                <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
+                                <p class="card-text"> Afstand:
+                                    <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?></p>
+                
+                                <form  id="start_chat" action="" method="post">
+                                    <div class="form-group">
+                                        <button type="submit" name="start_chat" class="btn btn chat"
+                                        value="Chat" >Chat</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
             </div>
-
-            <div id="info">
-                <h5 class="text-primary"><?= htmlspecialchars($seller->fullname); ?></h5>
-                <p class="text-primary"><?= htmlspecialchars($seller->location); ?></p>
-                <p class="text-primary"><?= htmlspecialchars($seller->company);  ?></p>
-                <p class="text-primary"> Afstand:
-                    <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?>
-                </p>
-                <form  id="start_chat" action="" method="post">
-
-                    <div class="form-group">
-                        <button type="submit" name="start_chat"
-                                value="Chat" >Chat</button>
-                    </div>
-                </form>
-            </div>
+        </div>
+    </div>
 
                 <h2 class="hoofdtitel">Items</h2>
 
-            <ul id='all'>
-                <?php foreach ($allItemsSeller as $item) : ?>
-                <li id="list">
-                    <div class="container others" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
-                            <div id='foto'>
-                                <div id="wrapper">
-                                    <div id="splash-info">
-                                        <form action="" method="post">
-                                            <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "/>
+            <ul id="all-detail" class="row col-md-12">
 
+                <?php foreach ($allItemsSeller as $item) : ?>  
+                    <div id="list-decoration" class="col-md-4">              
+                        <div class="itemId" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
+                                <div class="container">
+                                    <div class="card h-100 breed">
+                                            <form action="" method="post">
+                                                <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "
+                                                class="img-thumbnail border-0"/>
+
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
+                                                <p class="card-title"><?= htmlspecialchars($item->category); ?></p>
+                                                <p class="card-title"><?= htmlspecialchars($item->description); ?></p>
+                                                <p class="card-title"> <img class="zoekertje" src="/images/icon/coin-green.svg" alt="">
+                                                    <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
+                                                <p class="card-text"> <img class="zoekertje" src="/images/icon/kg-green.svg" alt="">
+                                                    <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+                                            </div>
                                     </div>
                                 </div>
-
-                            </div>
-                            <div id="info">
-                                <h5 class="text-primary"><?= htmlspecialchars($item->title); ?></h5>
-                                <p class="text-primary"><?= htmlspecialchars($item->category); ?></p>
-                                <p class="text-primary"><?= htmlspecialchars($item->description); ?></p>
-                                <p class="text-primary"> <img class="zoekertje" src="/images/icon/coin-green.svg" alt="">
-                                    <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
-                                <p class="text-primary"> <img class="zoekertje" src="/images/icon/kg-green.svg" alt="">
-                                    <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
-
-                            </div>
                         </div>
-
-    </li>
-
-    <?php endforeach ?>
+                    </div>
+                <?php endforeach ?>
             </ul>
     </div>
 
