@@ -241,6 +241,11 @@ cursor: pointer}
         background-color: orangered !important;
     }
 
+    .custom:hover{
+        color: black !important;
+        background-color: #d5d962 !important;
+    }
+
     .instel:link{
         color: #ffffff;
     }
