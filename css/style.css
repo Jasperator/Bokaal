@@ -813,6 +813,17 @@
     #linker{
         margin-left: 10%;
     }
+
+
+
+    #sell-img{
+        height: 75%;
+        right: 10%;
+        top: 25%;
+        z-index: 15;
+
+        position: absolute;
+    }
     
     #unit {
         margin-left: 15px;

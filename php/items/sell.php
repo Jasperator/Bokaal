@@ -69,8 +69,12 @@ if (!empty($_POST['upload'])) {
 	<div >
             <h2 class="hoofdtitel">Verkoop</h2>
         </div>
+
+		<img id="sell-img" src="../../images/setting-img.jpg" alt="">
     
 	<div>
+
+	
 		
 		<form class="registerForm" enctype="multipart/form-data" action="" method="post">
 
@@ -149,6 +153,9 @@ if (!empty($_POST['upload'])) {
 						<div>
 							<input type="text" name="currency" id="unit" class="form-control" Value="Euro" required>
 						</div>
+
+						
+
 					</div>
 
 				</div>
@@ -171,7 +178,7 @@ if (!empty($_POST['upload'])) {
 	<?php endif; ?>
 
     <div id="linker" class="form-group">
-        <input class="button" type="file" id="item_image" name="item_image" capture="camera" />
+        <input class="button" type="file" name="item_image" capture="camera" />
     </div>
     <div class="form-group">
         <input id="button_orange" type="submit" class="register" value="Upload" name="upload">
