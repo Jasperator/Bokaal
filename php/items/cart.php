@@ -94,8 +94,10 @@ if(!empty($_POST['start_chat'])){
 
         <ul id="all-detail" class="row col-md-12">
 
-            <?php foreach ($items as $item) :
+            <?php $price = 0;
+            foreach ($items as $item) :
                 $seller = $itemClass->getUserFromItem($item->id);
+                $price += $item->price;
                 ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="container" >
@@ -135,18 +137,62 @@ if(!empty($_POST['start_chat'])){
         </ul>
 
         <?php if(!empty($items)) { ?>
-        <form  id="buy-cart" action="" method="post">
 
-<div class="form-group">                                 
-    <button type="submit" name="buy-all-items"
-        value="buy_all" >Koop alles</button>
-</div>
-</form>
+                <div class="total_price">
+                    <p>Totale prijs: <?= $price ?></p>
+                </div>
+
+            <button type="button" id="buy-all" class="buy-all">
+                <a>Afrekenen</a>
+            </button>
+
+            <div id="buy-all-items-modal" class="modal">
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <h4>Afrekenen</h4>
+                    <div class="total_price">
+                        <p>Totale prijs: <?= $price ?></p>
+                    </div>
+                    <form  id="buy-cart" action="" method="post">
+
+                        <div class="form-group">
+                            <button type="submit" name="buy-all-items" value="buy_all" >Koop alles</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
 <?php } ?>
 
         <?php include_once("../includes/footer.php");?>
 
+<script>
+    // Get the modal
+    var modal = document.getElementById("buy-all-items-modal");
 
+    // Get the button that opens the modal
+    var btn = document.getElementById("buy-all");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
   	<script src="../../js/jquery.min.js"></script>
 	<script src="../../js/bootstrap.js"></script>
