@@ -126,7 +126,7 @@ if (!empty($_POST['updateProfile'])) {
         </div>
         
         <div class="setImg">
-          <img  src="../../images/setting-img.jpg" alt="">
+          <img class="setImage" src="../../images/setting-img.jpg" alt="">
         </div>
 
         <form enctype="multipart/form-data" action="" method="POST">
