@@ -112,7 +112,7 @@ if(!empty($_POST['searchCategory'])){
                 </div>
 
                 <div class="">
-                    <input id="button_or_search" type="submit" class="" value="Search" name="searchCategory">
+                    <input id="button_or_search" type="submit" class="search" value="Search" name="searchCategory">
                 </div>
 
             </div>
@@ -178,8 +178,10 @@ if(!empty($_POST['searchCategory'])){
     </script>
 
     <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/search.js"></script>
 
-<?php include_once("../includes/footer.php");?>
+
+    <?php include_once("../includes/footer.php");?>
 
 </body>
 
