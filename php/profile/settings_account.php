@@ -125,7 +125,9 @@ if (!empty($_POST['updateProfile'])) {
           </div>
         </div>
         
-
+        <div class="setImg">
+          <img  src="../../images/setting-img.jpg" alt="">
+        </div>
 
         <form enctype="multipart/form-data" action="" method="POST">
           <div>
@@ -255,9 +257,12 @@ if (!empty($_POST['updateProfile'])) {
           <input class="button-profile" type="submit" value="Verander Wachtwoord" name="changePassword">
         </form>
       </form>
+              
       <div class="spacing-bottom"></div>
     </div>
   </div>
+
+  
 
 <?php include_once("../includes/footer.php");?>
 
