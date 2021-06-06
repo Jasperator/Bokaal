@@ -14,11 +14,11 @@ $favorites = $favorite->getAllFavorites($user);
 $sellers = $user->getSellersExceptUser();
 
 foreach ($favorites as $favor) {
-    $favor->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code), "K");
+    $favor->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code));
 }
 
 foreach ($sellers as $sell) {
-    $sell->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code), "K");
+    $sell->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code));
 }
 
 usort($favorites, function($a, $b)
@@ -35,25 +35,6 @@ if (!empty($_POST['favorite-person'])) {
     $favorite_id = $_POST['favorite-person'];
     
     $favorite->insertFavorite($user,$favorite_id);
-    
-$favorites = $favorite->getAllFavorites($user);
-$sellers = $user->getSellersExceptUser();
-    foreach ($favorites as $favor) {
-        $favor->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code), "K");
-    }
-
-    foreach ($sellers as $sell) {
-        $sell->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code), "K");
-    }
-    usort($favorites, function($a, $b)
-    {
-        return strcmp($a->distance, $b->distance);
-    });
-
-    usort($sellers, function($a, $b)
-    {
-        return strcmp($a->distance, $b->distance);
-    });
 
 
     }
@@ -62,26 +43,6 @@ if (!empty($_POST['delete-favorite-person'])) {
     $favorite_id = $_POST['delete-favorite-person'];
 
     $favorite->deleteFavorite($user,$favorite_id);
-
-        $favorites = $favorite->getAllFavorites($user);
-$sellers = $user->getSellersExceptUser();
-    foreach ($favorites as $favor) {
-        $favor->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code), "K");
-    }
-
-    foreach ($sellers as $sell) {
-        $sell->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code), "K");
-    }
-    usort($favorites, function($a, $b)
-    {
-        return strcmp($a->distance, $b->distance);
-    });
-
-    usort($sellers, function($a, $b)
-    {
-        return strcmp($a->distance, $b->distance);
-    });
-
 
 }
 
@@ -130,7 +91,7 @@ $sellers = $user->getSellersExceptUser();
 
                                         <form  action="" method="post">
                                         
-                                            <button id="knop1" type="submit" name="delete-favorite-person"
+                                            <button id="knop1" type="submit" class="fav-delete" name="delete-favorite-person"
                                                 value="<?= htmlspecialchars($fav->id); ?>">
                                                 <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
                                             </button>
@@ -169,7 +130,7 @@ $sellers = $user->getSellersExceptUser();
                                     </p>
                                     <form  action="" method="post">
                                         
-                                            <button id="knop2" type="submit" name="favorite-person" 
+                                            <button id="knop2" type="submit" class="fav" name="favorite-person"
                                                 value="<?= htmlspecialchars($seller->id); ?>" name="fav"> 
                                                 <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
                                             </button>
@@ -206,9 +167,10 @@ $sellers = $user->getSellersExceptUser();
 
 <?php include_once("php/includes/footer.php");?>
 
-
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+
 </body>
 
 </html>
