@@ -45,7 +45,7 @@ if(!empty($_POST['start_chat'])){
 <?php include_once("php/includes/nav.include.php");?>
 
 
-    <h2 class="hoofdtitel">Verkoper</h2>
+    <h2 class="hoofdtitel"><?= htmlspecialchars($seller->fullname); ?></h2>
 
     <div class="card mb-3 boer-detail" style="max-width: 50%; max-height:;" >
         <div class="row g-0">
@@ -55,9 +55,11 @@ if(!empty($_POST['start_chat'])){
                         </div>    
                             <div class="col-md-8">
                                 <div class="card-body">
-                                <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
-                                <p class="card-text"><?= htmlspecialchars($seller->location); ?></p>
-                                <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
+                                <p class="card-text"><?= htmlspecialchars($seller->postal_code); ?>, <?= htmlspecialchars($seller->location); ?></p>
+                                    <p class="card-text"><?= htmlspecialchars($seller->bio); ?></p>
+                                    <p class="card-text"><?= htmlspecialchars($seller->email); ?></p>
+                                    <p class="card-text"><?= htmlspecialchars($seller->telephone); ?></p>
+                                    <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
                                 <p class="card-text"> Afstand:
                                     <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?></p>
                 
@@ -79,7 +81,7 @@ if(!empty($_POST['start_chat'])){
 
                 <?php foreach ($allItemsSeller as $item) : ?>  
                     <div id="list-decoration" class="col-md-4">              
-                        <div class="itemId" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
+                        <div class="others" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
                                 <div class="container">
                                     <div class="card h-100 breed">
                                             <form action="" method="post">
