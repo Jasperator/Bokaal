@@ -14,13 +14,12 @@ $conversation = new classes\Conversation();
 
 $active_conversations = $user->getConversations();
 $getPartnerConversations = $user->getPartnerConversations();
-
-if (!empty($_POST['chat_id'])) {
+function message() {
     session_status();
     $_SESSION['chat_id'] = $_POST['chat_id'];
     header('Location: message.php');
-
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -54,15 +53,15 @@ if (!empty($_POST['chat_id'])) {
 
         ?>
 
-            <div class="chatPreview col-md-2">
+            <div class="chatPreview col-md-2" id="chat" ">
 
                 <?php if($unreadMessages> 0){  ?> <div class="notification"> <?php print_r($unreadMessages); ?>  </div> <?php } ?>
 
 
                 <img src="/uploads/<?= htmlspecialchars($getPartnerName->profile_img); ?>" alt="Chat placeholder" class="chatImg">
 
-                <form action="../profile/chat.php" method="POST" class="chat">
-                        <input type="hidden" name="chat_id" value="<?= htmlspecialchars($getPartnerConversation);?>" placeholder="naam" />
+                <form action="" method="POST" class="chat">
+                        <input type="hidden" name="chat_id" class="convoId" value="<?= htmlspecialchars($getPartnerConversation);?>" placeholder="naam" />
                         <input id="chatnaam"  class="btn" type="submit" name="chat_name" value="<?= htmlspecialchars($getPartnerName->fullname); ?>" />
                 </form>
 
@@ -78,6 +77,16 @@ if (!empty($_POST['chat_id'])) {
 
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.js"></script>
+
+        <script>
+            document.querySelectorAll('.chatPreview').forEach(item => {
+                item.addEventListener('click', function () {
+
+                    sessionStorage.setItem("chat_id", this.getElementsByClassName('convoId').item(0).value);
+                    window.location.href = `message.php?chat_id=${this.getElementsByClassName('convoId').item(0).value}`;
+
+                })})
+        </script>
     
 
 </body>

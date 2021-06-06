@@ -6,8 +6,13 @@ require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/Message.php");
 
 $user = new classes\User($_SESSION['user']);
+if(isset($_GET['chat_id'])){
+    $active_conversation = $_GET['chat_id'];
 
-$active_conversation = $_SESSION['chat_id'];
+}else {
+    $active_conversation = $_SESSION['chat_id'];
+
+}
 
  if ($active_conversation) {
      $conversation = new classes\Conversation();
