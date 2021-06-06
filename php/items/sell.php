@@ -71,6 +71,7 @@ if (!empty($_POST['upload'])) {
         </div>
     
 	<div>
+		
 		<form class="registerForm" enctype="multipart/form-data" action="" method="post">
 
 
@@ -128,7 +129,6 @@ if (!empty($_POST['upload'])) {
 					<div>
 						<input type="number" name="quantity" id="quantity" class="form-control"
 							placeholder="Hoeveelheid" required>
-
 					</div>
 
 					<div id="unit" class="form-sell">
@@ -147,7 +147,6 @@ if (!empty($_POST['upload'])) {
 
 					</div>
 
-
 				</div>
 
 
@@ -158,17 +157,13 @@ if (!empty($_POST['upload'])) {
 	<div  class="form-sell">
 		<div id="bedrag">
 			<div>
-				<!--<label for="price">Price</label>-->
 				<input type="number" name="price" id="price" class="form-control" placeholder="Prijs" step=".01" required>
-
 			</div>
 			<div>
-				<!--<label for="currency">Currency</label>-->
-
 				<input type="text" name="currency" id="currency" class="form-control" Value="Euro" required>
-
-
 			</div>
+
+			
 		</div>
 	</div>
 

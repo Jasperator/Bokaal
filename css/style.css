@@ -419,9 +419,15 @@
         margin-right: 10%;
         object-fit: cover;
 
-
+        -webkit-box-shadow: inset 0px 0px 15px 17px #FFFFFF; 
+                box-shadow: inset 0px 0px 15px 17px #FFFFFF;
         
-}
+    }
+
+    .setImage{
+        z-index: 14;
+        position: relative;   
+    }
 
     }
 
@@ -818,7 +824,7 @@
     }
 
     .form-sell {
-        width: 50%;
+        width: 40%;
         margin-left: 10%;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -872,6 +878,10 @@
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
+    #bedrag {
+        display: flex;
+        width: 100%;
+    }
 
     #price {
 
@@ -883,10 +893,6 @@
     }
 
     #currency {
-
-        margin-left: 28px;
-
-        width: 120%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -910,11 +916,7 @@
         border: none;
     }
 
-
-    #bedrag {
-        display: flex;
-        width: 50%;
-    }
+    
 
     #hoeveelheid {
         display: flex;
@@ -1856,6 +1858,8 @@ margin-left: -40px;
     }
 
 
+
+
     #price {
 
         width: 90%;
@@ -1881,12 +1885,6 @@ margin-left: -40px;
         color: #ffffff;
 
         border: none;
-    }
-
-
-    #bedrag {
-        display: flex;
-        width: 90%;
     }
 
     #hoeveelheid {
