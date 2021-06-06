@@ -51,7 +51,10 @@ $page = basename($_SERVER['PHP_SELF']);
         </li>
 
         <li class="listItem">
-            <a href="/php/profile/favor.php" <?php if ($page == "favor.php") : echo "active"; ?> class="navActive" <?php endif; ?>>  <img class="nav-img" src="/images/icon/user.png" alt="profiel icon"> <?php if($AllunreadMessages> 0){  ?> <div class="navNotification"><?php print_r($AllunreadMessages); ?></div><?php } ?> PROFIEL
+            <a href="/php/profile/favor.php" <?php if ($page == "favor.php") : echo "active"; ?> class="navActive" <?php endif; ?>>  <img class="nav-img" src="/images/icon/user.png" alt="profiel icon">
+                <?php if ($page != "favor.php" and $page != "chat.php" and $page != "bought.php" and $page != "settings.php" and $page != "settings_account.php" and $page != "meldingen.php") {
+                   if($AllunreadMessages> 0){  ?> <div class="navNotification"><?php print_r($AllunreadMessages); ?></div>
+                        <?php } }?> PROFIEL
             </a>
 
         </li>

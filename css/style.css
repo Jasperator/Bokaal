@@ -1156,7 +1156,25 @@
         padding-top: 2%;
     }
 
-    .messagebox {
+.subNavNotification{
+
+    color: #fff;
+    font-family: "Josefin Sans";
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 15px;
+    background-color: #d5d962;
+    width: 25px;
+    height: 25px;
+    margin-left: 40%;
+    margin-top: -13%;
+    position: absolute;
+
+}
+
+
+.messagebox {
         max-height: 600px;
         overflow-y: scroll;
         margin-bottom: 20px;
