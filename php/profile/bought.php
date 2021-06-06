@@ -73,13 +73,14 @@ if(!empty($_POST['start_chat'])){
 
                                         <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
                                          <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
+                                        <?php if($seller->id > 0){ ?>
                                         <form  id="start_chat" class="chat-button" action="" method="post">
                                             <div class="form-group">
 
                                                 <input type="hidden" name="chat_id" value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
                                                 <input id="chatnaam"  class="btn" type="submit" name="start_chat" value="chat" />
                                             </div>
-                                        </form>
+                                        </form> <?php } ?>
                                     </div>
 
                             </div>
