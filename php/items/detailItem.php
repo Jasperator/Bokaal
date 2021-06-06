@@ -20,6 +20,19 @@ if (!empty($_POST['buy-item'])) {
 
 
 }
+
+if(!empty($_POST['start_chat'])){
+    $user = new classes\User($_SESSION['user']);
+    $userId = $_POST["chat_id"];
+
+    $item->startConversationSellers($user,$userId);
+    $active_conversations = $user->getSpecifiqueConversations($userId);
+    $active_conversation = $active_conversations->id;
+
+    session_status();
+    $_SESSION['chat_id'] = $active_conversation;
+    header('Location: ../profile/message.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +70,14 @@ if (!empty($_POST['buy-item'])) {
                                 <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
                                 <p class="card-text"> Afstand:
                                     <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?></p>
-                                
+
+                                    <form  id="start_chat" class="chat-button" action="" method="post">
+                                        <div class="form-group">
+
+                                            <input type="hidden" name="chat_id" value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
+                                            <input id="chatnaam"  class="btn" type="submit" name="start_chat" value="chat" />
+                                        </div>
+                                    </form>
                                 </div>
                             </div>            
                         </div>

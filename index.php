@@ -57,6 +57,34 @@ $sellers = $user->getSellersExceptUser();
 
 
     }
+
+if (!empty($_POST['delete-favorite-person'])) {
+    $favorite_id = $_POST['delete-favorite-person'];
+
+    $favorite->deleteFavorite($user,$favorite_id);
+
+        $favorites = $favorite->getAllFavorites($user);
+$sellers = $user->getSellersExceptUser();
+    foreach ($favorites as $favor) {
+        $favor->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code), "K");
+    }
+
+    foreach ($sellers as $sell) {
+        $sell->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code), "K");
+    }
+    usort($favorites, function($a, $b)
+    {
+        return strcmp($a->distance, $b->distance);
+    });
+
+    usort($sellers, function($a, $b)
+    {
+        return strcmp($a->distance, $b->distance);
+    });
+
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -102,8 +130,8 @@ $sellers = $user->getSellersExceptUser();
 
                                         <form  action="" method="post">
                                         
-                                            <button id="knop1" type="submit" name="favorite-person" 
-                                                value="" name="fav"> 
+                                            <button id="knop1" type="submit" name="delete-favorite-person"
+                                                value="<?= htmlspecialchars($fav->id); ?>">
                                                 <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
                                             </button>
                                         

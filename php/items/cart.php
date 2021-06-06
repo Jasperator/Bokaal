@@ -8,26 +8,39 @@ require_once(__DIR__ . "/../../classes/Conversation.php");
 require_once(__DIR__ . "/../../classes/Message.php");
 
 $user = new classes\User($_SESSION['user']);
-$item = new classes\Item();
+$itemClass = new classes\Item();
 
 
-$items = $item->getAllItemsCart($user);
+$items = $itemClass->getAllItemsCart($user);
 
 if (!empty($_POST['delete-cart-item'])) {
     $item_id = $_POST['delete-cart-item'];
-    
-    $item->deleteItemCart($item_id);
-    $items = $item->getAllItemsCart($user);
+
+    $itemClass->deleteItemCart($item_id);
+    $items = $itemClass->getAllItemsCart($user);
 
     }
+
+if(!empty($_POST['start_chat'])){
+    $user = new classes\User($_SESSION['user']);
+    $userId = $_POST["chat_id"];
+
+    $itemClass->startConversationSellers($user,$userId);
+    $active_conversations = $user->getSpecifiqueConversations($userId);
+    $active_conversation = $active_conversations->id;
+
+    session_status();
+    $_SESSION['chat_id'] = $active_conversation;
+    header('Location: ../profile/message.php');
+}
 
 
 
     if (!empty($_POST['buy-all-items'])) {
-        $sellers = $item->getAllSellersCart($user);
+        $sellers = $itemClass->getAllSellersCart($user);
         foreach ($sellers as $seller){
 
-            $item->startConversationSellers($user,$seller->id);
+            $itemClass->startConversationSellers($user,$seller->id);
             $active_conversations = $user->getSpecifiqueConversations($seller->id);
             $active_conversation = $active_conversations->id;
 
@@ -49,7 +62,7 @@ if (!empty($_POST['delete-cart-item'])) {
 
 
         }
-        $item->buyAll($user);
+        $itemClass->buyAll($user);
         header('Location: ../profile/chat.php');
 
 
@@ -81,7 +94,9 @@ if (!empty($_POST['delete-cart-item'])) {
 
         <ul id="all-detail" class="row col-md-12">
 
-            <?php foreach ($items as $item) : ?>
+            <?php foreach ($items as $item) :
+                $seller = $itemClass->getUserFromItem($item->id);
+                ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="container" >
                         <div class="card h-100 breed" >

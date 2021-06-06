@@ -45,7 +45,7 @@ if(!empty($_POST['start_chat'])){
 <?php include_once("php/includes/nav.include.php");?>
 
 
-    <h2 class="hoofdtitel">Verkoper</h2>
+    <h2 class="hoofdtitel"><?= htmlspecialchars($seller->fullname); ?></h2>
 
     <div class="card mb-3 boer-detail" style="max-width: 50%; max-height:;" >
         <div class="row g-0">
@@ -79,7 +79,7 @@ if(!empty($_POST['start_chat'])){
 
                 <?php foreach ($allItemsSeller as $item) : ?>  
                     <div id="list-decoration" class="col-md-4">              
-                        <div class="itemId" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
+                        <div class="others" id="item" data-id = "<?= htmlspecialchars($item->id); ?> ">
                                 <div class="container">
                                     <div class="card h-100 breed">
                                             <form action="" method="post">
