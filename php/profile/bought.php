@@ -5,10 +5,24 @@ require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/Item.php");
 require_once(__DIR__ . "/../../classes/User.php");
 $user = new classes\User($_SESSION['user']);
-$item = new classes\Item();
+$itemClass = new classes\Item();
 
 
-$items = $item->getAllItemsbought($user);
+$items = $itemClass->getAllItemsbought($user);
+
+if(!empty($_POST['start_chat'])){
+    $user = new classes\User($_SESSION['user']);
+    $userId = $_POST["chat_id"];
+
+    $itemClass->startConversationSellers($user,$userId);
+    $active_conversations = $user->getSpecifiqueConversations($userId);
+    $active_conversation = $active_conversations->id;
+
+    session_status();
+    $_SESSION['chat_id'] = $active_conversation;
+    header('Location: ../profile/message.php');
+}
+
 
 ?>
 
@@ -35,7 +49,9 @@ $items = $item->getAllItemsbought($user);
 <?php include_once("../includes/subNav.php");?>
 
 <ul id='all'>
-            <?php foreach ($items as $item) : ?>                
+            <?php foreach ($items as $item) :
+                $seller = $itemClass->getUserFromItem($item->id);
+                ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId users" >
                         <div class="container">
@@ -56,7 +72,15 @@ $items = $item->getAllItemsbought($user);
                                          <?= htmlspecialchars($item->quantity); ?>   <?= htmlspecialchars($item->unit); ?></p>       
 
                                         <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
-                                         <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>                                    </div>
+                                         <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
+                                        <form  id="start_chat" class="chat-button" action="" method="post">
+                                            <div class="form-group">
+
+                                                <input type="hidden" name="chat_id" value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
+                                                <input id="chatnaam"  class="btn" type="submit" name="start_chat" value="chat" />
+                                            </div>
+                                        </form>
+                                    </div>
 
                             </div>
                         </div>

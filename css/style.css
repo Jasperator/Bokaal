@@ -1093,6 +1093,22 @@
         position: absolute;
     }
 
+    .navNotification{
+
+        color: #fff;
+        font-family: "Josefin Sans";
+        font-size: 0.7em;
+        text-align: center;
+        vertical-align: middle;
+
+        border-radius: 30px;
+        background-color: #d5d962;
+        width: 20px;
+        height: 20px;
+        margin-left: 100%;
+        position: absolute;
+    }
+
     .messagebox {
         max-height: 600px;
         overflow-y: scroll;

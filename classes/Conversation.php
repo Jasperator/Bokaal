@@ -181,6 +181,19 @@ class Conversation
         return $result;
 
     }
+    public function countAllUnreadMessages($user)
+    {
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT COUNT(id) FROM `messages` WHERE receiver_id = :user_id AND message_read = 0
+");
+        $statement->bindValue(":user_id", $user->getId());
+
+        $statement->execute();
+        $result = $statement->fetch(\PDO::FETCH_COLUMN);
+
+        return $result;
+
+    }
     public function deleteConversations($user){
         //Database connection
         $conn = Db::getConnection();

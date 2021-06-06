@@ -51,7 +51,8 @@ if (!empty($_POST['chat_id'])) {
         $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
         $unreadMessages = $conversation->countUnreadMessages($user, $getPartnerName->id);
 
-    ?>
+
+        ?>
 
             <div class="chatPreview col-md-2">
 
