@@ -160,6 +160,7 @@
     
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     
     }
 
@@ -189,6 +190,7 @@
 
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         background-color: #D41C1C;        
 
     }
@@ -233,6 +235,7 @@
     
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         background-color: #D41C1C;   
     
     }
@@ -270,6 +273,7 @@
     
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         background-color: #FF5419;
 
     }
@@ -406,7 +410,18 @@
         margin-bottom: 5%;
         margin-top: 5%;
         margin-left: calc(17.5% - 125px + 5%);
+    }
 
+    .setImg{
+        float: right;
+
+        z-index: 15;
+        margin-right: 10%;
+        object-fit: cover;
+
+
+        
+}
 
     }
 
@@ -693,7 +708,7 @@
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
-    .chat-button{
+    .chatColor{
         width: 20% !important;
 
         border: none !important;
@@ -705,7 +720,7 @@
         background-color: orangered !important;
     }
 
-    .chat-button:hover{
+    .chatColor:hover{
         color: black !important;
         background-color: #d5d962 !important;
     }
@@ -1982,4 +1997,3 @@ margin-left: -40px;
 
 }  
 
-}

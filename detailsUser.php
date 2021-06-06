@@ -55,17 +55,15 @@ if(!empty($_POST['start_chat'])){
                         </div>    
                             <div class="col-md-8">
                                 <div class="card-body">
-                                <p class="card-text"><?= htmlspecialchars($seller->postal_code); ?>, <?= htmlspecialchars($seller->location); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($seller->bio); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($seller->email); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($seller->telephone); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
-                                <p class="card-text"> Afstand:
+                                <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
+                                <p class="card-text"><?= htmlspecialchars($seller->location); ?></p>
+                                <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
+                                <p class="card-text"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand:
                                     <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?></p>
                 
                                 <form  id="start_chat" class="chat-button" action="" method="post">
                                     <div class="form-group">
-                                        <button type="submit" name="start_chat" class="btn btn chat"
+                                        <button type="submit" name="start_chat" class="btn btn chatColor"
                                         value="Chat" >Chat</button>
                                     </div>
                                 </form>

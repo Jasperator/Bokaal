@@ -106,23 +106,23 @@ if(!empty($_POST['start_chat'])){
                                 
                                 <div id="card-body" style="padding:15px;">
                                     <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
-                                    <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($item->quantity); ?>    <?= htmlspecialchars($item->unit); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($item->price); ?>    <?= htmlspecialchars($item->currency); ?></p>
-                                    <form  id="start_chat" class="chat-button" action="" method="post">
-                                        <div class="form-group">
+                                    <p class="card-text"><img class="zoekertje" src="../../images/icon/vegetables.png" alt="icon vegetables">
+                                    <?= htmlspecialchars($item->category); ?></p>
 
-                                            <input type="hidden" name="chat_id" value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
-                                            <input id="chatnaam"  class="btn" type="submit" name="start_chat" value="chat" />
-                                        </div>
-                                    </form>
+                                    <p class="card-text"><img class="zoekertje" src="../../images/icon/description.png" alt="icon place">
+                                    <?= htmlspecialchars($item->description); ?></p>
+
+                                    <p class="card-text"><img class="zoekertje" src="../../images/icon/kg-green.svg" alt="icon stock">
+                                    <?= htmlspecialchars($item->quantity); ?>    <?= htmlspecialchars($item->unit); ?></p>
+
+                                    <p class="card-text"><img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
+                                    <?= htmlspecialchars($item->price); ?>    <?= htmlspecialchars($item->currency); ?></p>
                             
                                     <form  id="delete-cart" action="" method="post">
 
                                         <div class="form-group">                                 
-                                            <button type="submit" name="delete-cart-item"
-                                            value="<?= htmlspecialchars($item->id); ?>" >Verwijder item</button>
+                                            <button class="btn btn detail" type="submit" name="delete-cart-item"
+                                            value="<?= htmlspecialchars($item->id); ?>">Verwijder item</button>
                                         </div>
                                     </form>
                                 </div>
