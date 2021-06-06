@@ -1113,16 +1113,19 @@
 
         color: #fff;
         font-family: "Josefin Sans";
-        font-size: 0.7em;
+        font-size: 0.8em;
         text-align: center;
         vertical-align: middle;
 
-        border-radius: 30px;
+        border-radius: 15px;
         background-color: #d5d962;
-        width: 20px;
-        height: 20px;
-        margin-left: 100%;
+        width: 25px;
+        height: 25px;
+        margin-left: 97%;
+        margin-top: -5%;
         position: absolute;
+        padding-left: 4%;
+        padding-top: 2%;
     }
 
     .messagebox {
