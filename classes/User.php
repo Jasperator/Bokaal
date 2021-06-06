@@ -723,7 +723,7 @@ class User
         return $result;
 
     }
-    function getDistance($addressFrom, $postalcodeoFrom, $addressTo, $postalcodeoTo, $unit = ''){
+    function getDistance($addressFrom, $postalcodeoFrom, $addressTo, $postalcodeoTo){
         // Google API key
         $apiKey = 'AIzaSyAZvw5R_4B6VsHG9MTrobGTrWFAL3gosNk';
 
@@ -732,37 +732,13 @@ class User
         $formattedAddrTo     = str_replace(' ', '+', $addressTo);
 
         // Geocoding API request with start address
-        $geocodeFrom = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrFrom.'+'. $postalcodeoFrom .'&sensor=false&key='.$apiKey);
-        $outputFrom = json_decode($geocodeFrom);
-        if(!empty($outputFrom->error_message)){
-            return $outputFrom->error_message;
-        }
+        $calculateDistanceMatrix = file_get_contents('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$formattedAddrFrom.','. $postalcodeoFrom .'&destinations='.$formattedAddrTo .'+'. $postalcodeoTo . '&key=' .$apiKey);
+        $calculateDistance = json_decode($calculateDistanceMatrix);
+        $calculeteDistanceKm = $calculateDistance->rows[0]->elements[0]->distancex;
+        return($calculeteDistanceKm);
 
-        // Geocoding API request with end address
-        $geocodeTo = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$formattedAddrTo .'+'. $postalcodeoTo .'&sensor=false&key='.$apiKey);
-        $outputTo = json_decode($geocodeTo);
-        if(!empty($outputTo->error_message)){
-            return $outputTo->error_message;
-        }
 
-        // Get latitude and longitude from the geodata
-        $latitudeFrom    = $outputFrom->results[0]->geometry->location->lat;
-        $longitudeFrom    = $outputFrom->results[0]->geometry->location->lng;
-        $latitudeTo        = $outputTo->results[0]->geometry->location->lat;
-        $longitudeTo    = $outputTo->results[0]->geometry->location->lng;
 
-        // Calculate distance between latitude and longitude
-        $theta    = $longitudeFrom - $longitudeTo;
-        $dist    = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
-        $dist    = acos($dist);
-        $dist    = rad2deg($dist);
-        $miles    = $dist * 60 * 1.1515;
-
-        // Convert unit and return distance
-        $unit = strtoupper($unit);
-        if($unit == "K"){
-            return round($miles * 1.609344, 2).' km';
-        }
     }
     public function deleteUser(){
         //Database connection
