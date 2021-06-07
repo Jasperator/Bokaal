@@ -1104,6 +1104,10 @@
     border: none;
 }
 
+.paypal{
+    display: flex;
+}
+
 #pp, #cd{
     margin-right: 15px;
     margin-left: 15px;
@@ -1248,6 +1252,107 @@
     background-color: transparent;
 }
 
+#buy-all{
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+
+    background-color: orangered;
+    color: #ffffff;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    text-align: center;
+
+    width: 25%;
+
+    margin-top: 5px;
+    margin-left: calc(75%/2);
+    margin-bottom: 5px;
+}
+
+.total_price{
+    border: solid 1px lightgrey;
+    width: 88%;
+
+    margin-left: calc(12%/2);
+    margin-bottom: 15px;
+
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
+}
+
+.total_price_titel{
+    font-family: "Josefin Sans";    
+
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    font-size: 1.8em;
+
+    text-align: left;
+
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    color: white;
+
+    background-color: lightgrey;
+}
+
+#prijs-start{
+    display: flex;
+    margin-left: 15px;
+}
+
+.prijs_een{
+    padding-left: 15px;
+}
+
+.line-rechts{
+    margin-left: 65%;
+}
+
+.prijs{
+    padding-left: 15px;
+}
+
+#prijs-twee{
+    display: flex;
+    margin-left: 15px;
+}
+
+.prijs_twee{
+    padding-left: 15px;
+}
+
+.line-rechts-twee{
+    margin-left: 61.5%;
+}
+
+#prijs-alles{
+    display: flex;
+    font-family: "Josefin Sans";    
+    font-size: 1.2em;
+
+    font-style: normal;
+    font-variant: normal;
+    border: none;    
+}
+
+.prijs-tott{
+    
+    padding-left: 5%;
+}
+
+.bedrag-eind{
+    margin-left: 57.5%;
+}
 
     /*-----favor-----*/
 
