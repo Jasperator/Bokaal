@@ -73,8 +73,8 @@ if(!empty($_POST['start_chat'])){
                         </div>
             </div>
         </div>
-    </div>
 
+<?php if(count($allItemsSeller) > 0){ ?>
                 <h2 class="hoofdtitel">Items</h2>
 
             <ul id="all-detail" class="row col-md-12">
@@ -103,9 +103,8 @@ if(!empty($_POST['start_chat'])){
                     </div>
                 <?php endforeach ?>
             </ul>
-    </div>
 
-
+<?php } ?>
 
 
             <script>
