@@ -1144,7 +1144,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35vh;
+    height: 50vh;
     flex-direction: column;
 
     border: none;
@@ -1155,7 +1155,7 @@
 }
 
 #expiry-date{
-    margin-left: 15px;
+    margin-left: 35px;
 }
 
 .cardholdername{
@@ -1200,12 +1200,20 @@
     box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
 }
 
-.small-cardIcon {
-    float: right;
-    margin-right: 15px;
+.small-cardIcon-pp {
+    margin-left: 15%;
     width: 42px;
     height: 30px;
-    margin-left: 10px;
+    margin-left: 165px;
+    margin-bottom: 35px;
+
+    object-fit: cover;
+}
+
+.small-cardIcon {
+    margin-left: 15%;
+    width: 42px;
+    height: 30px;
 
     object-fit: cover;
 }
@@ -1215,13 +1223,22 @@
     font-weight: 400;
     letter-spacing: 1px;
     width: 50%;
+
+    margin-top: 15px;
     margin-left: 25%;
     background-color: orangered;
     border: none;
     color: #fff;
-    padding: 18px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
     border-radius: 5px;
     outline: none;
+}
+
+.left{
+    margin-right: 50px;
 }
 
 
@@ -1230,27 +1247,7 @@
     margin-top: 15px;
 }
 
-.radio{
-    position: absolute;
-    top: -2px;
-    left: -20px;
-    border: 3px solid #414365;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #292B52;
-}
 
-.radio::before{
-    position: absolute;
-    content: '';
-    border-radius: 50%;
-    top: 5px;
-    left: 5px;
-    width: 9px;
-    height: 9px;
-    background-color: transparent;
-}
 
 #buy-all{
     font-family: "Josefin Sans";

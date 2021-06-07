@@ -194,19 +194,19 @@ if(!empty($_POST['start_chat'])){
                     <div class="card-deco">
                         <div class="row paypal">
                             <div class="left">
-                                <input id="pp" type="radio" name="payment" />
+                                <input class="radio" id="pp" type="radio" name="payment" />
                                 <div class="radio">
                                 </div>
                                 <label  class="label" for="pp">Paypal</label>
                             </div>
 
                             <div class="right">
-                                <img class="small-cardIcon" src="../../images/paycard/paypal.jpg" alt="paypal" />
+                                <img class="small-cardIcon-pp" src="../../images/paycard/paypal.jpg" alt="paypal" />
                             </div>
                         </div>
                         <div class="row credit">
                             <div class="left">
-                                <input id="cd" type="radio" name="payment" />
+                                <input class="radio" id="cd" type="radio" name="payment" />
                                 <div class="radio"></div>
                                 <label  class="label" class="naam" for="cd">Bank kaart</label>
                             </div>
