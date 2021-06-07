@@ -734,26 +734,6 @@
 
     /*-----search / items pagina-----*/
     .search-bar:hover{
-<<<<<<< HEAD
-
-        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
-
-    }
-
-    .form-control-search:hover{
-
-        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
-
-        cursor: pointer;
-    }
-
-    #button_or_search:hover{
-        cursor: pointer;
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        background-color: #FF5419;
-=======
->>>>>>> dad3ccd3e0b3756988af4e7b1ccd0ca2c41cdfae
 
         box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
 
