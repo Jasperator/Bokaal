@@ -152,7 +152,23 @@ if(!empty($_POST['start_chat'])){
         <?php if(!empty($items)) { ?>
 
     <div class="total_price">
-        <p>Totale prijs: <?= $price ?></p>
+        <p class="total_price_titel">Totale prijs</p>
+
+        <div id="prijs-start">
+            <p class="prijs_een">Prijs item: </p> 
+            <p class="line-rechts" ><?= $price ?></p>
+        </div>
+
+        <div id="prijs-twee" >
+            <p class="prijs_twee" > Kopers garantie </p>
+            <p class="line-rechts-twee"><?= ($price/100)*10 ?></p>
+        </div>
+
+        <div id="prijs-alles">
+            <p class="prijs-tott">Totaal bedrag </p>
+            <p class="bedrag-eind"><?= $price+(($price/100))*10 ?></p>
+        </div>
+
     </div>
 
     <button type="button" id="buy-all" class="buy-all">
@@ -171,32 +187,31 @@ if(!empty($_POST['start_chat'])){
             <div class="container-box">
                 <h4 class="head-calc">Afrekenen</h4>
                 <div class="price">
-                    <h1>Totale prijs <?= $price ?> Euro !</h1>
+                    <h1>Totale prijs <?= $price+(($price/100)*10) ?> Euro !</h1><br>
                 </div>
 
                 <div class="card__container">
                     <div class="card-deco">
                         <div class="row paypal">
                             <div class="left">
-                                <input id="pp" type="radio" name="payment" />
+                                <input class="radio" id="pp" type="radio" name="payment" />
                                 <div class="radio">
                                 </div>
-                                <label for="pp">Paypal</label>
+                                <label  class="label" for="pp">Paypal</label>
                             </div>
 
                             <div class="right">
-                                <img class="small-cardIcon" src="../../images/paycard/paypal.jpg" alt="paypal" />
+                                <img class="small-cardIcon-pp" src="../../images/paycard/paypal.jpg" alt="paypal" />
                             </div>
                         </div>
                         <div class="row credit">
                             <div class="left">
-                                <input id="cd" type="radio" name="payment" />
+                                <input class="radio" id="cd" type="radio" name="payment" />
                                 <div class="radio"></div>
-                                <label for="cd">Bank kaart</label>
+                                <label  class="label" class="naam" for="cd">Bank kaart</label>
                             </div>
 
                             <div class="right">
-                                <img class="small-cardIcon" src="../../images/paycard/visa.jpg" alt="visa" />
                                 <img class="small-cardIcon" src="../../images/paycard/mastercard-word.svg" alt="mastercard" />
                                 <img class="small-cardIcon" src="../../images/paycard/amex.png" alt="amex" />
                                 <img class="small-cardIcon" src="../../images/paycard/maestro-word.svg" alt="maestro" />
@@ -204,22 +219,22 @@ if(!empty($_POST['start_chat'])){
                         </div>
                         <div>
                             <div class="info">
-                                <label for="cardholdername">Naam</label>
+                                <label  class="label" for="cardholdername">Naam</label>
                                 <input class="cardholdername" placeholder="Naam" id="cardholdername" type="text" />
                             </div>
                         </div>
                         <div>
                             <div class="info">
-                                <label for="cardnumber">Kaart nummer</label>
+                                <label  class="label" id="label" for="cardnumber">Kaart nummer</label>
                                 <input class="cardnumber" id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19"
                                     placeholder="8888-8888-8888-8888" />
                             </div>
                         </div>
                         <div class="row details">
                             <div class="left">
-                                <label class="label" for="expiry-date">Verval datum</label>
+                                <label class="label-expiry" for="expiry-date">Verval datum</label>
                                 <select class="select" id="expiry-date">
-                                    <option>MM</option>
+                                    <option>Maand</option>
                                     <option value="1">01</option>
                                     <option value="2">02</option>
                                     <option value="3">03</option>
@@ -232,9 +247,8 @@ if(!empty($_POST['start_chat'])){
                                     <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
-                                <span class="span">/</span>
                                 <select class="select" id="expiry-date">
-                                    <option>YYYY</option>
+                                    <option>Jaar</option>
                                     <option value="2021">2021</option>
                                     <option value="2022">2022</option>
                                     <option value="2023">2023</option>

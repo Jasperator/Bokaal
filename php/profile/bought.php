@@ -55,7 +55,7 @@ if(!empty($_POST['start_chat'])){
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId users" >
                         <div class="container">
-                            <div class="card h-100 breed" >
+                            <div class="card h-100 breed">
                                 <form  action="" method="post">
                                     <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
                                                             
