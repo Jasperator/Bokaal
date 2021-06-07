@@ -1064,7 +1064,12 @@
     }
 
    /*-----cart/winkelkar-----*/
+#cartPlaceholder{
 
+    width: 50%;
+    margin-left: 25%;
+
+}
 .head-calc{
     margin-top: -15px;
 }
