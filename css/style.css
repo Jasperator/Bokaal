@@ -848,16 +848,40 @@
 
       }
 
-      .slider{
+      input[type="range"].slider{
 
-          width: 24.5%;
+        width: 24.5%;
+        color: #d5d962;
+        -webkit-appearance: none;  
+        appearance: none;
 
-          
+        height: 10px;
+        background: #FCFFB6; 
+        margin-top: 1%;
+        margin-bottom: 1%;
+
       }
-  
-      
+
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; 
+        appearance: none;
+        width: 35px; 
+        height: 50px; 
+        border-radius: 20px;
+        cursor: pointer;
+        background: url('/images/icon/carrot.png');
+        background-size: cover;
 
 
+      }
+
+      input[type="range"].slider:hover{
+
+        background: #f7fa9b; 
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+      }
     /*-----sell menu-----*/
 
     #linker{
