@@ -181,7 +181,7 @@ if(!empty($_POST['start_chat'])){
                                 <input id="pp" type="radio" name="payment" />
                                 <div class="radio">
                                 </div>
-                                <label for="pp">Paypal</label>
+                                <label  class="label" for="pp">Paypal</label>
                             </div>
 
                             <div class="right">
@@ -192,7 +192,7 @@ if(!empty($_POST['start_chat'])){
                             <div class="left">
                                 <input id="cd" type="radio" name="payment" />
                                 <div class="radio"></div>
-                                <label for="cd">Bank kaart</label>
+                                <label  class="label" class="naam" for="cd">Bank kaart</label>
                             </div>
 
                             <div class="right">
@@ -204,20 +204,20 @@ if(!empty($_POST['start_chat'])){
                         </div>
                         <div>
                             <div class="info">
-                                <label for="cardholdername">Naam</label>
+                                <label  class="label" for="cardholdername">Naam</label>
                                 <input class="cardholdername" placeholder="Naam" id="cardholdername" type="text" />
                             </div>
                         </div>
                         <div>
                             <div class="info">
-                                <label for="cardnumber">Kaart nummer</label>
+                                <label  class="label" for="cardnumber">Kaart nummer</label>
                                 <input class="cardnumber" id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19"
                                     placeholder="8888-8888-8888-8888" />
                             </div>
                         </div>
                         <div class="row details">
                             <div class="left">
-                                <label class="label" for="expiry-date">Verval datum</label>
+                                <label class="label-expiry" for="expiry-date">Verval datum</label>
                                 <select class="select" id="expiry-date">
                                     <option>MM</option>
                                     <option value="1">01</option>
