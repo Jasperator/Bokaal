@@ -91,9 +91,11 @@ if(!empty($_POST['start_chat'])){
 
 
             <h2 class="hoofdtitel">Winkelmandje</h2>
+<?php if(count($items) <= 0){ ?>
+
 
             <img id="cartPlaceholder" src="../../images/cartPlaceholder.png" alt="cart placeholder">
-
+<?php } else { ?>
         <ul id="all-detail" class="row col-md-12">
 
             <?php $price = 0;
@@ -137,6 +139,9 @@ if(!empty($_POST['start_chat'])){
             <?php endforeach ?>
 
         </ul>
+
+<?php } ?>
+
 
         <?php if(!empty($items)) { ?>
 
