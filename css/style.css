@@ -455,11 +455,11 @@
 
 
     .new-profile-image {
-        width: 250px;
-        height: 250px;
-
+        width: 150px;
+        height: 200px;
         object-fit: cover;
 
+        margin-left: 3%;
     }
 
     .spacing-bottom {
@@ -529,10 +529,8 @@
 
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 5%;
         padding-right: 5%;
 
-        margin-left: 5%;
         margin-bottom: 20px;
     }
 
@@ -900,8 +898,12 @@
     }
     
     #unit {
-        margin-left: 15px;
+        float: right;
+        margin-right: 30px;
+        margin-left:10px;
         margin-top: 1px;
+
+        width: 35%;
     }
 
     #kolom-file {
@@ -924,8 +926,7 @@
         display: flex;
         width: 78%;
         margin-left: 10%;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 55px;
     }
 
     .form-control {
@@ -954,12 +955,16 @@
 
         border: none;
 
+        margin-top: 15px;
+
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
     #description {
         height: 100px;
+        
+        margin-top: 30px;
 
         border: none;
 
@@ -969,10 +974,9 @@
 
 
     #quantity {
-
-
         border: none;
 
+        width: 100%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -986,6 +990,8 @@
     #price {
 
         border: none;
+
+        width: 180px;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -1018,8 +1024,9 @@
 
     #hoeveelheid {
         display: flex;
-        width: 50%;
-        margin-top: 5%;
+        width: 100%;
+        margin-top: 95px;
+        margin-left: -17px;
     }
 
     #item_image.button {
@@ -1084,15 +1091,25 @@
     }
 
    /*-----cart/winkelkar-----*/
-#cartPlaceholder{
 
+#cartPlaceholder{
     width: 50%;
     margin-left: 25%;
-
 }
+
+#expiry-date{
+    font-family: "Josefin Sans";
+}
+
+.label{
+    font-family: "Josefin Sans";
+}
+
 .head-calc{
     margin-top: -15px;
 }
+
+
 
 .container-box {
     border-radius: 25px;
@@ -1109,9 +1126,14 @@
     border: none;
 }
 
+#expiry-date{
+    margin-left: 15px;
+}
+
 .cardholdername{
     float: right;
     margin: 0;
+    font-family: "Josefin Sans";
 }
 
 .right{
@@ -1126,6 +1148,7 @@
 .cardnumber{
     float: right;
     margin: 0;
+    font-family: "Josefin Sans";
 }
 
 .small-cardIcon {
@@ -1142,20 +1165,43 @@
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 1px;
-    width: 520px;
+    width: 50%;
+    margin-left: 25%;
     background-color: orangered;
     border: none;
     color: #fff;
     padding: 18px;
     border-radius: 5px;
     outline: none;
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.radio{
+    position: absolute;
+    top: -2px;
+    left: -20px;
+    border: 3px solid #414365;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #292B52;
+}
+
+.radio::before{
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    width: 9px;
+    height: 9px;
+    background-color: transparent;
+}
+
 
     /*-----favor-----*/
 
@@ -1186,14 +1232,7 @@
 
     /*-----bought-----*/
 
-    /*#bought-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
-    }*/
-
+   
     /*-----settings-----*/
 
     .instel {
@@ -1206,9 +1245,6 @@
         font-style: normal;
         font-variant: normal;
         font-weight: 400;
-
-
-
     }
 
     .all_item {
@@ -2010,10 +2046,7 @@ margin-left: -40px;
         margin-left: 5%;
         margin-top: 15px;
         margin-bottom: 15px;
-    }
-    
-
-    
+    }    
 
     .form-control {
         width: 100%;
