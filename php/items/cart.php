@@ -75,126 +75,224 @@ if(!empty($_POST['start_chat'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png> <link rel="stylesheet" href="../../css/style.css">
+    
 
 
     <title>Bokaal | Winkelmandje</title>
 </head>
+
 <body id="cart-body">
-<?php include_once("../includes/nav.include.php");?>
+    <?php include_once("../includes/nav.include.php");?>
 
 
-            <h2 class="hoofdtitel">Winkelmandje</h2>
+    <h2 class="hoofdtitel">Winkelmandje</h2>
 
-        <ul id="all-detail" class="row col-md-12">
+    <ul id="all-detail" class="row col-md-12">
 
-            <?php $price = 0;
+        <?php $price = 0;
             foreach ($items as $item) :
                 $seller = $itemClass->getUserFromItem($item->id);
                 $price += $item->price;
                 ?>
-                <div id="list-decoration" class="col-md-4">
-                    <div class="container" >
-                        <div class="card h-100 breed" >
-                            <form  action="" method="post">
-                                <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" 
-                                class="img-thumbnail border-0" />
-                                
-                                <div id="card-body" style="padding:15px;">
-                                    <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
-                                    <p class="card-text"><img class="zoekertje" src="../../images/icon/vegetables.png" alt="icon vegetables">
-                                    <?= htmlspecialchars($item->category); ?></p>
+        <div id="list-decoration" class="col-md-4">
+            <div class="container">
+                <div class="card h-100 breed">
+                    <form action="" method="post">
+                        <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?>"
+                            class="img-thumbnail border-0" />
 
-                                    <p class="card-text"><img class="zoekertje" src="../../images/icon/description.png" alt="icon place">
-                                    <?= htmlspecialchars($item->description); ?></p>
+                        <div id="card-body" style="padding:15px;">
+                            <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
+                            <p class="card-text"><img class="zoekertje" src="../../images/icon/vegetables.png"
+                                    alt="icon vegetables">
+                                <?= htmlspecialchars($item->category); ?></p>
 
-                                    <p class="card-text"><img class="zoekertje" src="../../images/icon/kg-green.svg" alt="icon stock">
-                                    <?= htmlspecialchars($item->quantity); ?>    <?= htmlspecialchars($item->unit); ?></p>
+                            <p class="card-text"><img class="zoekertje" src="../../images/icon/description.png"
+                                    alt="icon place">
+                                <?= htmlspecialchars($item->description); ?></p>
 
-                                    <p class="card-text"><img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
-                                    <?= htmlspecialchars($item->price); ?>    <?= htmlspecialchars($item->currency); ?></p>
-                            
-                                    <form  id="delete-cart" action="" method="post">
+                            <p class="card-text"><img class="zoekertje" src="../../images/icon/kg-green.svg"
+                                    alt="icon stock">
+                                <?= htmlspecialchars($item->quantity); ?> <?= htmlspecialchars($item->unit); ?></p>
 
-                                        <div class="form-group">                                 
-                                            <button class="btn btn detail" type="submit" name="delete-cart-item"
-                                            value="<?= htmlspecialchars($item->id); ?>">Verwijder item</button>
-                                        </div>
-                                    </form>
+                            <p class="card-text"><img class="zoekertje" src="../../images/icon/coin-green.svg"
+                                    alt="icon price">
+                                <?= htmlspecialchars($item->price); ?> <?= htmlspecialchars($item->currency); ?></p>
+
+                            <form id="delete-cart" action="" method="post">
+
+                                <div class="form-group">
+                                    <button class="btn btn detail" type="submit" name="delete-cart-item"
+                                        value="<?= htmlspecialchars($item->id); ?>">Verwijder item</button>
                                 </div>
+                            </form>
                         </div>
-                    </div>
-                </div>
-
-            <?php endforeach ?>
-
-        </ul>
-
-        <?php if(!empty($items)) { ?>
-
-                <div class="total_price">
-                    <p>Totale prijs: <?= $price ?></p>
-                </div>
-
-            <button type="button" id="buy-all" class="buy-all">
-                <a>Afrekenen</a>
-            </button>
-
-            <div id="buy-all-items-modal" class="modal">
-                <div class="modalContent">
-                    <span class="close">&times;</span>
-                    <h4>Afrekenen</h4>
-                    <div class="total_price">
-                        <p>Totale prijs: <?= $price ?></p>
-                    </div>
-                    <form  id="buy-cart" action="" method="post">
-
-                        <div class="form-group">
-                            <button type="submit" name="buy-all-items" value="buy_all" >Koop alles</button>
-                        </div>
-                    </form>
                 </div>
             </div>
+        </div>
 
-<?php } ?>
+        <?php endforeach ?>
 
-        <?php include_once("../includes/footer.php");?>
+    </ul>
 
-<script>
-    // Get the modal
-    var modal = document.getElementById("buy-all-items-modal");
+    <?php if(!empty($items)) { ?>
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("buy-all");
+    <div class="total_price">
+        <p>Totale prijs: <?= $price ?></p>
+    </div>
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    <button type="button" id="buy-all" class="buy-all">
+        <a>Afrekenen</a>
+    </button>
 
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
+    <!-- buy thingy-->
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+    <div id="buy-all-items-modal" class="modal">
+        <div class="modalContent">
+            <span class="close">&times;</span>
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
+            
+            
+
+            <div class="container-box">
+                <h4 class="head-calc">Afrekenen</h4>
+                <div class="price">
+                    <h1>Totale prijs <?= $price ?> Euro !</h1>
+                </div>
+
+                <div class="card__container">
+                    <div class="card-deco">
+                        <div class="row paypal">
+                            <div class="left">
+                                <input id="pp" type="radio" name="payment" />
+                                <div class="radio">
+                                </div>
+                                <label for="pp">Paypal</label>
+                            </div>
+
+                            <div class="right">
+                                <img class="small-cardIcon" src="../../images/paycard/paypal.jpg" alt="paypal" />
+                            </div>
+                        </div>
+                        <div class="row credit">
+                            <div class="left">
+                                <input id="cd" type="radio" name="payment" />
+                                <div class="radio"></div>
+                                <label for="cd">Bank kaart</label>
+                            </div>
+
+                            <div class="right">
+                                <img class="small-cardIcon" src="../../images/paycard/visa.jpg" alt="visa" />
+                                <img class="small-cardIcon" src="../../images/paycard/mastercard-word.svg" alt="mastercard" />
+                                <img class="small-cardIcon" src="../../images/paycard/amex.png" alt="amex" />
+                                <img class="small-cardIcon" src="../../images/paycard/maestro-word.svg" alt="maestro" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info">
+                                <label for="cardholdername">Name</label>
+                                <input class="cardholdername" placeholder="e.g. Richard Bovell" id="cardholdername" type="text" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info">
+                                <label for="cardnumber">Card number</label>
+                                <input class="cardnumber" id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19"
+                                    placeholder="8888-8888-8888-8888" />
+                            </div>
+                        </div>
+                        <div class="row details">
+                            <div class="left">
+                                <label class="label" for="expiry-date">Expiry</label>
+                                <select class="select" id="expiry-date">
+                                    <option>MM</option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <span class="span">/</span>
+                                <select class="select" id="expiry-date">
+                                    <option>YYYY</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                    <option value="2031">2031</option>
+                                    <option value="2032">2032</option>
+                                    <option value="2033">2033</option>
+                                    <option value="2034">2034</option>
+                                    <option value="2035">2035</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <form id="buy-cart" action="" method="post">
+
+                <div class="form-group">
+                    <button class="buy-all-items" type="submit" name="buy-all-items" value="buy_all">Koop alles</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <?php } ?>
+
+    <?php include_once("../includes/footer.php");?>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("buy-all-items-modal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("buy-all");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
             modal.style.display = "none";
         }
-    }
-</script>
 
-  	<script src="../../js/jquery.min.js"></script>
-	<script src="../../js/bootstrap.js"></script>
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.js"></script>
 </body>
+
 </html>
