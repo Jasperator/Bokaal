@@ -11,7 +11,18 @@ $favorite = new classes\Favorite();
 
 
 $favorites = $favorite->getAllFavorites($user);
-$sellers = $user->getSellersExceptUser();
+$pageAndUsers = $user->getSellersExceptUser();
+$page = $pageAndUsers[0];
+$totalPages = $user->countPages($page);
+$sellers = $pageAndUsers[1];
+
+print_r($totalPages);
+for ($i=1; $i<=$totalPages; $i++) {  // print links for all pages
+    echo "<a href='index.php?page=".$i."'";
+    if ($i==$page)  echo " class='curPage'";
+    echo ">".$i."</a> ";
+};
+
 
 foreach ($favorites as $favor) {
     $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code));
