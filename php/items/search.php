@@ -12,20 +12,9 @@ $items = $itemClass->getAllItemsExceptSeller($user);
 
 
 } else{
-    $items = $itemClass->getAllItems();
+    $items = $itemClass->getAllItems($user);
 }
 $maxPrice = $itemClass->maxPrice();
-
-foreach ($items as $item) {
-    $user = new classes\User($_SESSION['user']);
-    $seller = $user->getUserById($item->seller_id);
-    $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($seller->address), urlencode($seller->postal_code));
-    $item->distance = $distance->text;
-    $item->distanceValue = $distance->value;
-}
-usort($items,function($first,$second){
-    return $first->distanceValue > $second->distanceValue;
-});
 
 
 if(!empty($_POST['searchCategory'])){

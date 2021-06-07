@@ -313,8 +313,8 @@ class Item
         $conn = Db::getConnection();
 
         //<> is the same as !=
-        $statement = $conn->prepare("SELECT * FROM items WHERE seller_id <> :seller_id AND status = :status");
-        $statement->bindValue(':seller_id', $user->getId());
+        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id)  WHERE seller_id <> :user_id AND status = :status");
+        $statement->bindValue(':user_id', $user->getId());
         $statement->bindValue(':status', '');
 
         $statement->execute();
@@ -338,11 +338,13 @@ class Item
     }
 
 
-    public function getAllItems()
+    public function getAllItems($user)
     {
         $conn = Db::getConnection();
-        $statement = $conn->prepare("SELECT * FROM items WHERE status = :status");
+        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id) WHERE status = :status ORDER BY distanceValue ASC");
         $statement->bindValue(':status', "");
+        $statement->bindValue(':user_id', $user->getId());
+
 
         $statement->execute();
         $items = $statement->fetchAll(\PDO::FETCH_OBJ);
