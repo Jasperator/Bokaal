@@ -735,40 +735,42 @@
 
 
     .search-bar {
-        width: 250px;
-        height: 30px;
+        width: 20%;
+        height: 50px;
 
-        margin-left: 15%;
+        margin-left: 17.5%;
         margin-top: 15px;
 
-        padding-left: 15px;
+        padding-left: 25px;
 
         font-family: "Josefin Sans";
-        font-size: 18px;
-        font-style: normal;
-        font-variant: normal;
+        font-size: 1.3em;
         font-weight: 400;
 
+        float: left;
+
+
         border: none;
-        border-radius: 15px;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
     .form-control-search {
-        width: 250px;
-        height: 30px;
+        width: 20%;
+        height: 50px;
 
         border: none;
-        border-radius: 2px;
 
-        margin-left: 11%;
+        margin-top: 15px;
+        margin-left: 50px;
+        padding-left: 25px;
 
         font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        font-size: 16px;
+        font-size: 1.3em;
+        font-weight: 400;
+
+        float: left;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -782,31 +784,50 @@
 
 
     #button_or_search {
-        display: inline-block;
+
+        float: left;
+
         font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        font-size: 1em;
+        font-size: 1.3em;
+        font-weight: 400;
 
         border: none;
-        border-radius: 5px;
 
         background-color: orangered;
 
         color: #ffffff;
 
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
 
-        text-align: center;
 
-        width: auto;
+        width: 5%;
+        height: 50px;
 
-        margin-left: 40%;
-        margin-bottom: 20px;
+        margin-top: 15px;
+        margin-left: 50px;
+
+
     }
+
+    .priceLabel{
+
+        margin-top: 30px;
+
+    }
+
+    .slidecontainer, .priceLabel{
+
+        margin-left: 17.5%;
+
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+        font-weight: 400;
+
+      }
+  
+      
+
 
     /*-----sell menu-----*/
 
@@ -824,10 +845,11 @@
     }
 
     .form-sell {
-        width: 40%;
-        margin-left: 10%;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        width: 100%;
+        height: 50px;
+
+        float: left;
+
     }
 
     .form-control {
@@ -1367,7 +1389,6 @@ margin-left: -40px;
         font-weight: 400;
 
         border: none;
-        border-radius: 15px;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -1407,18 +1428,11 @@ margin-left: -40px;
 
         color: #ffffff;
 
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
 
         text-align: center;
 
-        width: auto;
+        width: 10%;
 
-        margin-left: 40%;
-        margin-top: 15px;
-        margin-bottom: 20px;
     }
 
     /*------settings - profiel-----*/
@@ -1807,11 +1821,12 @@ margin-left: -40px;
     }
 
     .form-sell {
-        width: 90%;
+        width: 100%;
         margin-left: 5%;
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    
 
     .form-control {
         width: 100%;

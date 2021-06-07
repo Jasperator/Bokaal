@@ -57,20 +57,15 @@ if(!empty($_POST['searchCategory'])){
 
     <div>
 
-        <div class="titel">
-            <h2 class="hoofdtitel">Zoeken</h2>
-        </div>
+            <h2 class="hoofdtitel"> Zoeken </h2>
 
         <form class="" enctype="multipart/form-data" action="" method="post">
-            <div>
                 <!--<label  for="searchName">Search</label>-->
                 <input class="search-bar" placeholder="Zoek" type="text" name="searchName" value="" />
-            </div>
 
-
-            <div id="categorie-item" class="form-sell">
+            <div id="categorie-item">
                 <select type="text" name="category" id="" class="form-control-search" placeholder="Geef de categorie in">
-                    <option value="" selected disabled hidden>categorie</option>
+                    <option value="" selected disabled hidden>Categorie</option>
                     <optgroup label="Groenten">
 
                         <option value="Bladgroenten">Bladgroenten</option>
@@ -99,24 +94,20 @@ if(!empty($_POST['searchCategory'])){
                         <option value="Exotisch fruit">Exotisch fruit (passievrucht, papaja,...</option>
                         <option value="overig fruit">overig Fruit</option>
 
-
                 </select>
-
-
-                <label for="priceRange">Max. prijs</label>
-
-                <div class="slidecontainer">
-                    <input type="range" min="1.00" max="<?=$maxPrice?>" value="<?=$maxPrice?>" class="slider" name="priceRange" id="priceRange">
-                    <p> <span id="priceVal"></span> Euro </p>
-
-                </div>
-
-                <div class="">
-                    <input id="button_or_search" type="submit" class="" value="Search" name="searchCategory">
-                </div>
-
             </div>
 
+            <input id="button_or_search" type="submit" value="Zoek" name="searchCategory">
+            
+
+                <br><br><br>
+
+            <label class="priceLabel" for="priceRange">Max. prijs</label>
+
+            <div class="slidecontainer">
+                <input type="range" min="1.00" max="<?=$maxPrice?>" value="<?=$maxPrice?>" class="slider" name="priceRange" id="priceRange">
+                <p> <span id="priceVal"></span> Euro </p>
+            </div>
 
 
         </form>
