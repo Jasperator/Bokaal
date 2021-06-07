@@ -732,7 +732,27 @@
     }
 
     /*-----search / items pagina-----*/
+    .search-bar:hover{
 
+        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+
+    }
+
+    .form-control-search:hover{
+
+        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+
+        cursor: pointer;
+    }
+
+    #button_or_search:hover{
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #FF5419;
+
+
+    }
 
     .search-bar {
         width: 20%;
@@ -748,7 +768,6 @@
         font-weight: 400;
 
         float: left;
-
 
         border: none;
 
@@ -777,6 +796,7 @@
     }
 
 
+
     .zoekertje {
         width: 20px;
         height: auto;
@@ -801,7 +821,7 @@
         padding-right: 15px;
 
 
-        width: 5%;
+        width: 7%;
         height: 50px;
 
         margin-top: 15px;
@@ -1163,8 +1183,13 @@
         margin: 100px;
     }
 
-    
+    .chatPreview:hover{
 
+        cursor: pointer;
+        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+
+
+    }
     .notification{
 
         color: #fff;

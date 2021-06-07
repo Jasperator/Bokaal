@@ -70,7 +70,7 @@ if(!empty($_POST['searchCategory'])){
     <link rel="icon" type="image/svg" href=../../images/logo/favicon.png> <link rel="stylesheet"
         href="../../css/style.css">
 
-    <title>Bokaal | Search</title>
+    <title>Bokaal | Zoeken</title>
 </head>
 
 <body id="search-body">
