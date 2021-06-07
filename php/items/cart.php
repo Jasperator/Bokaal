@@ -92,6 +92,8 @@ if(!empty($_POST['start_chat'])){
 
             <h2 class="hoofdtitel">Winkelmandje</h2>
 
+            <img id="cartPlaceholder" src="../../images/cartPlaceholder.png" alt="cart placeholder">
+
         <ul id="all-detail" class="row col-md-12">
 
             <?php $price = 0;
