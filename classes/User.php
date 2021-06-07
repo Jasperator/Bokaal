@@ -577,9 +577,10 @@ class User
 
         $conn = Db::getConnection();
         $results_per_page = 3;
-        //<> is the same as !=
-        $statement = $conn->prepare("SELECT COUNT(ID) FROM users WHERE email <> :email AND status = 'seller' AND  id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
 
+        $statement = $conn->prepare("SELECT COUNT(id) FROM users WHERE email <> :email AND status = 'seller' AND  id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
+        $statement->bindValue(':email', $this->getEmail());
+        $statement->bindValue(':user_id', $this->getId());
         $statement->execute();
         $row = $statement->fetch(\PDO::FETCH_COLUMN);
         $total_pages = ceil($row / $results_per_page); // calculate total pages with results
