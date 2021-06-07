@@ -11,7 +11,10 @@ $favorite = new classes\Favorite();
 
 
 $favorites = $favorite->getAllFavorites($user);
-$sellers = $user->getSellersExceptUser();
+$pageAndUsers = $user->getSellersExceptUser();
+$page = $pageAndUsers[0];
+$totalPages = $user->countPages();
+$sellers = $pageAndUsers[1];
 
 foreach ($favorites as $favor) {
     $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code));
@@ -156,8 +159,14 @@ if (!empty($_POST['delete-favorite-person'])) {
 
         <div id="space"></div>
 
-
-
+<div id="pages" style="text-align: center">
+<?php for ($i=1; $i<$totalPages; $i++) {  // print links for all pages
+    echo "<a href='index.php?page=".$i."'";
+    if ($i==$page)  echo " class='curPage'";
+    echo ">".$i."</a> ";
+};
+?>
+</div>
 
         <script>
             document.querySelectorAll('.users').forEach(item => {

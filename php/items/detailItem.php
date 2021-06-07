@@ -122,6 +122,8 @@ if(!empty($_POST['start_chat'])){
             </div>
     </ul>
 </div>
+
+<?php if(count($allItemsSeller) > 0){ ?>
             <div class="titel">
                 <h2 class="subtitel">Other items</h2>
             </div>
@@ -155,6 +157,7 @@ if(!empty($_POST['start_chat'])){
                     </div>
                 <?php endforeach ?>
             </ul>
+<?php } ?>
 
             <div id="space"></div>
 

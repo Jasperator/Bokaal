@@ -1,11 +1,41 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@bodockx 
+Jasperator
+/
+Bokaal
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Bokaal/css/style.css
+@YannickJ7
+YannickJ7 commit
+Latest commit 5146606 25 minutes ago
+ History
+ 3 contributors
+@bodockx@YannickJ7@jasperyoureka
+2112 lines (1479 sloc)  36.7 KB
+  
 /* ---------------DESKTOP VERSIE ---------------- */
 
 @media only screen and (min-width: 900px) {
 
     /*----- algemeen -----*/
 
-    html,
-    body {
+    html,body{
         height: 100%;
         margin: 0;
     }
@@ -24,7 +54,7 @@
 
     /*-----SUB NAVIGATIE----- */
 
-    .subMenu {
+    .subMenu{
         width: 30%;
         margin-left: 35%;
         margin-top: -2%;
@@ -32,8 +62,7 @@
         position: absolute;
 
     }
-
-    .subIcon {
+    .subIcon{
         opacity: 50%;
         width: 7%;
         margin-left: 8%;
@@ -42,16 +71,16 @@
         position: relative;
         vertical-align: top;
     }
+    
 
-
-    .subIcon:hover {
+    .subIcon:hover{
         opacity: 100%;
 
         border-bottom: 5px solid black;
 
     }
 
-    .activated {
+    .activated{
         opacity: 100%;
 
         border-bottom: 5px solid black;
@@ -72,8 +101,7 @@
         margin-left: 2%;
         margin-right: 2%;
     }
-
-    .listItem a {
+    .listItem a{
 
         color: #fff;
         font-size: 1.3em;
@@ -113,7 +141,7 @@
         line-height: 20px;
     }
 
-    a.navActive {
+    a.navActive{
 
 
         text-decoration: none;
@@ -154,20 +182,20 @@
         width: 20%;
     }
 
-    .breed {
+    .breed{
         width: 75%;
         margin: auto;
     }
 
-    .breed:hover {
-
+    .breed:hover{
+    
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-
+                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    
     }
 
-    .card {
+    .card{
         background-color: #ffffff;
     }
 
@@ -193,44 +221,35 @@
 
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        background-color: #D41C1C;
+                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;        
 
     }
 
     /* The Modal (background) */
     .modal {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
         left: 0;
         top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     }
 
     /*----- Modal Content/Box -----*/
     .modalContent {
         background-color: #fefefe;
         width: 30%;
-        margin: 15% auto;
-        /* 15% from the top and centered */
+        margin: 15% auto; /* 15% from the top and centered */
         padding: 20px;
         border: 1px solid #888;
     }
 
-    .deleteButton {
+    .deleteButton{
 
         background-color: #BE1818;
         color: white;
@@ -243,15 +262,14 @@
         margin-left: 27.5%;
     }
 
-    .deleteButton:hover {
-
+    .deleteButton:hover{
+    
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        background-color: #D41C1C;
-
+                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;   
+    
     }
-
     /* The Close Button */
     .close {
         color: #aaa;
@@ -269,7 +287,7 @@
 
     /*------settings-----*/
 
-    .settingsButton {
+    .settingsButton{
 
         background-color: orangered;
         color: #fff;
@@ -282,11 +300,11 @@
         border: none;
     }
 
-    .settingsButton:hover {
-
+    .settingsButton:hover{
+    
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         background-color: #FF5419;
 
     }
@@ -297,10 +315,10 @@
         height: 100vh;
     }
 
-    .all_item_profile {
+    .all_item_profile{
         margin-top: 10%;
     }
-
+    
 
     .item_profile {
 
@@ -311,7 +329,7 @@
         margin-bottom: 15px;
     }
 
-    .custom {
+    .custom{
         width: 20% !important;
 
         border: none !important;
@@ -323,12 +341,12 @@
         background-color: orangered !important;
     }
 
-    .custom:hover {
+    .custom:hover{
         color: black !important;
         background-color: #d5d962 !important;
     }
 
-    .instel:link {
+    .instel:link{
         color: #ffffff;
     }
 
@@ -345,7 +363,7 @@
         font-variant: normal;
         font-weight: 400;
     }
-
+    
 
 
     /*-----Fonts-----*/
@@ -411,10 +429,10 @@
 
         background-color: #ffffff;
 
-        box-shadow: 0px 0px 65px 20px rgba(0, 0, 0, 0.1);
-        -webkit-box-shadow: 0px 0px 65px 20px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: 0px 0px 65px 20px rgba(0, 0, 0, 0.1);
-    }
+        box-shadow: 0px 0px 65px 20px rgba(0,0,0,0.1);
+        -webkit-box-shadow: 0px 0px 65px 20px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 0px 65px 20px rgba(0,0,0,0.1);
+        }
 
     /*-----profiel instellingen-----*/
 
@@ -425,607 +443,653 @@
         margin-left: calc(17.5% - 125px + 5%);
     }
 
-    .setImg {
+    .setImg{
         float: right;
 
         z-index: 15;
         margin-right: 10%;
         object-fit: cover;
 
-        -webkit-box-shadow: inset 0px 0px 15px 17px #FFFFFF;
-        box-shadow: inset 0px 0px 15px 17px #FFFFFF;
-
+        -webkit-box-shadow: inset 0px 0px 15px 17px #FFFFFF; 
+                box-shadow: inset 0px 0px 15px 17px #FFFFFF;
+        
     }
 
-    .setImage {
+    .setImage{
         z-index: 14;
-        position: relative;
+        position: relative;   
     }
 
+    }
+
+    .form-control-settings {
+        width: 35%;
+        height: 50px;
+
+        margin-left: 5%;
+        margin-top: 15px;
+
+        padding-left: 15px;
+
+        border: none;
+        border-radius: 5px;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+
+    .new-profile-image {
+        width: 250px;
+        height: 250px;
+
+        object-fit: cover;
+
+    }
+
+    .spacing-bottom {
+        height: 100px;
+    }
+
+    .button-profile-img {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+
+        border: none;
+        border-radius: 5px;
+
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        margin-left: 0%;
+        margin-bottom: 20px;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        text-align: center;
+
+        width: 250px;
+
+        float: left;
+
+        
+    }
+
+
+    .button-profile {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        text-align: center;
+        width: 10%;
+
+        margin-top: 15px;
+        margin-left: 17.5%;
+        margin-bottom: 30px;
+    }
+
+    .file-button {
+        color: #000000;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        text-align: center;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+
+    /* -----INDEX----- */
+
+
+    #list {
+        display: inline-block;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+
+    #box {
+        display: inline-block;
+    }
+
+    #all {
+
+        display: flex;
+
+        height: auto;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+
+    }
+
+    #all-buurt {
+
+        display: inline-block;
+
+        height: auto;
+        width: 90%;
+
+        margin-bottom: 15px;
+        margin-left: 5%;
+
+    }
+
+    #list {
+
+        width: 255px;
+        height: auto;
+
+        border-radius: 2.5px;
+        border: 1px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+
+        padding-top: 15px;
+        padding-bottom: 10px;
+
+        margin-bottom: 15px;
+        margin-left: 6%;
+
+    }
+
+    #wrapper {
+        width: 100%;
+        height: 200px;
+
+        object-fit: cover;
+
+        margin-top: -10px;
+
+        float: left;
+        overflow: hidden;
+
+        border-radius: 2.5%;
+    }
+
+    #picture {
+        background-size: cover;
+        width: 100%;
+        height: 200px;
+        float: left;
+
+        object-fit: cover;
+
+    }
+
+    #splash-info {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #foto {
+        width: 150px;
+    }
+    #knop1 {
+        background-color: Transparent;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        margin-left: 80%;
+        position: absolute;
+        margin-top: -30%;
+        opacity: 100%;
+    }
+    #knop1:hover{
+        opacity: 50%;
+    }
+
+    #knop2 {
+        background-color: Transparent;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        margin-left: 80%;
+        position: absolute;
+        margin-top: -30%;
+        opacity: 50%;
+    }
+    #knop2:hover{
+        opacity: 100%;
+    }
+
+    .fa-star {
+        
+        color: #d5d962;    
 }
 
-.form-control-settings {
-    width: 35%;
-    height: 50px;
+    .fav-but {
+        width: 25px;
+        margin-left: 45%;
+    }
 
-    margin-left: 5%;
-    margin-top: 15px;
+    .text-primary {
+        font-family: "Josefin Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
 
-    padding-left: 15px;
+        margin: 12px;
+        padding-top: 5px;
+    }
 
-    border: none;
-    border-radius: 5px;
+    /*-----detail item/user page-----*/
 
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    font-size: 16px;
+    .boer-detail{
+        margin-left: 25%;
+        border: none;
+        border-radius: 125px 5px 5px 125px !important;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
+    .detail{
+        width: 90% !important;
 
-.new-profile-image {
-    width: 250px;
-    height: 250px;
+        border: none !important;
 
-    object-fit: cover;
+        font-family: "Josefin Sans";
+        font-size: 16px !important;
 
-}
+        color: #ffffff !important;
+        background-color: orangered !important;
+    }
 
-.spacing-bottom {
-    height: 100px;
-}
+    .detail:hover{
+        color: black !important;
+        background-color: #d5d962 !important;
+    }
+    
+    .boer-img{
+        border-radius: 50%;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-.button-profile-img {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
+    .chatColor{
+        width: 20% !important;
 
-    border: none;
-    border-radius: 5px;
+        border: none !important;
 
-    font-size: 1em;
+        font-family: "Josefin Sans";
+        font-size: 16px !important;
 
-    background-color: orangered;
-    color: #ffffff;
+        color: #ffffff !important;
+        background-color: orangered !important;
+    }
 
-    margin-left: 0%;
-    margin-bottom: 20px;
+    .chatColor:hover{
+        color: black !important;
+        background-color: #d5d962 !important;
+    }
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /*-----search / items pagina-----*/
+    .search-bar:hover{
 
-    text-align: center;
+        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
 
-    width: 250px;
+    }
 
-    float: left;
+    .form-control-search:hover{
 
+        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
 
-}
+        cursor: pointer;
+    }
 
+    #button_or_search:hover{
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #FF5419;
 
-.button-profile {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
 
-    background-color: orangered;
-    color: #ffffff;
+    }
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
+    .search-bar {
+        width: 20%;
+        height: 50px;
 
-    text-align: center;
-    width: 10%;
+        margin-left: 17.5%;
+        margin-top: 15px;
 
-    margin-top: 15px;
-    margin-left: 17.5%;
-    margin-bottom: 30px;
-}
+        padding-left: 25px;
 
-.file-button {
-    color: #000000;
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+        font-weight: 400;
 
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    text-align: center;
+        float: left;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5%;
-    padding-right: 5%;
+        border: none;
 
-    margin-left: 5%;
-    margin-bottom: 20px;
-}
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-/* -----INDEX----- */
+    .form-control-search {
+        width: 20%;
+        height: 50px;
 
+        border: none;
 
-#list {
-    display: inline-block;
-    text-decoration: none;
-    list-style-type: none;
-}
+        margin-top: 15px;
+        margin-left: 50px;
+        padding-left: 25px;
 
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+        font-weight: 400;
 
-#box {
-    display: inline-block;
-}
+        float: left;
 
-#all {
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-    display: flex;
 
-    height: auto;
-    width: 90%;
 
-    margin-bottom: 15px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
+    .zoekertje {
+        width: 20px;
+        height: auto;
+    }
 
-}
 
-#all-buurt {
+    #button_or_search {
 
-    display: inline-block;
+        float: left;
 
-    height: auto;
-    width: 90%;
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+        font-weight: 400;
 
-    margin-bottom: 15px;
-    margin-left: 5%;
+        border: none;
 
-}
+        background-color: orangered;
 
-#list {
+        color: #ffffff;
 
-    width: 255px;
-    height: auto;
+        padding-left: 15px;
+        padding-right: 15px;
 
-    border-radius: 2.5px;
-    border: 1px;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        width: 7%;
+        height: 50px;
 
+        margin-top: 15px;
+        margin-left: 50px;
 
-    padding-top: 15px;
-    padding-bottom: 10px;
 
-    margin-bottom: 15px;
-    margin-left: 6%;
+    }
 
-}
+    .priceLabel{
 
-#wrapper {
-    width: 100%;
-    height: 200px;
+        margin-top: 30px;
 
-    object-fit: cover;
+    }
 
-    margin-top: -10px;
+    .slidecontainer, .priceLabel{
 
-    float: left;
-    overflow: hidden;
+        margin-left: 17.5%;
 
-    border-radius: 2.5%;
-}
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+        font-weight: 400;
 
-#picture {
-    background-size: cover;
-    width: 100%;
-    height: 200px;
-    float: left;
+      }
 
-    object-fit: cover;
+      .slider{
 
-}
+          width: 24.5%;
 
-#splash-info {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 5px;
-    font-size: 15px;
-    font-weight: bold;
-}
+          
+      }
+  
+      
 
-#foto {
-    width: 150px;
-}
 
-#knop1 {
-    background-color: Transparent;
-    border: none;
-    overflow: hidden;
-    outline: none;
-    margin-left: 80%;
-    position: absolute;
-    margin-top: -30%;
-    opacity: 100%;
-}
+    /*-----sell menu-----*/
 
-#knop1:hover {
-    opacity: 50%;
-}
+    #linker{
+        margin-left: 10%;
+    }
 
-#knop2 {
-    background-color: Transparent;
-    border: none;
-    overflow: hidden;
-    outline: none;
-    margin-left: 80%;
-    position: absolute;
-    margin-top: -30%;
-    opacity: 50%;
-}
 
-#knop2:hover {
-    opacity: 100%;
-}
 
-.fa-star {
+    #sell-img{
+        height: 75%;
+        right: 10%;
+        top: 25%;
+        z-index: 15;
 
-    color: #d5d962;
-}
+        position: absolute;
+    }
+    
+    #unit {
+        margin-left: 15px;
+        margin-top: 1px;
+    }
 
-.fav-but {
-    width: 25px;
-    margin-left: 45%;
-}
+    #kolom-file {
+        margin-left: 9%;
+    }
 
-.text-primary {
-    font-family: "Josefin Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    line-height: 20px;
+    .registerForm {
+        padding-top: 5%;
+    }
 
-    margin: 12px;
-    padding-top: 5px;
-}
+    .form-sell {
+        width: 100%;
+        height: 50px;
 
-/*-----detail item/user page-----*/
+        float: left;
 
-.boer-detail {
-    margin-left: 25%;
-    border: none;
-    border-radius: 125px 5px 5px 125px !important;
+    }
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
+    .form-sell-item {
+        display: flex;
+        width: 78%;
+        margin-left: 10%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 
-.detail {
-    width: 90% !important;
+    .form-control {
+        width: 100%;
+        height: 50px;
 
-    border: none !important;
+        border: none;
 
-    font-family: "Josefin Sans";
-    font-size: 16px !important;
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 16px;
 
-    color: #ffffff !important;
-    background-color: orangered !important;
-}
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-.detail:hover {
-    color: black !important;
-    background-color: #d5d962 !important;
-}
+    #top {
+        margin-top: 0px;
+    }
 
-.boer-img {
-    border-radius: 50%;
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
+    #title {
+        height: 50px;
 
-.chatColor {
-    width: 20% !important;
+        border: none;
 
-    border: none !important;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-    font-family: "Josefin Sans";
-    font-size: 16px !important;
+    #description {
+        height: 100px;
 
-    color: #ffffff !important;
-    background-color: orangered !important;
-}
+        border: none;
 
-.chatColor:hover {
-    color: black !important;
-    background-color: #d5d962 !important;
-}
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-/*-----search / items pagina-----*/
 
+    #quantity {
 
-.search-bar {
-    width: 250px;
-    height: 30px;
 
-    margin-left: 15%;
-    margin-top: 15px;
+        border: none;
 
-    padding-left: 15px;
 
-    font-family: "Josefin Sans";
-    font-size: 18px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
-    border: none;
-    border-radius: 15px;
+    #bedrag {
+        display: flex;
+        width: 100%;
+    }
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
+    #price {
 
-.form-control-search {
-    width: 250px;
-    height: 30px;
+        border: none;
 
-    border: none;
-    border-radius: 2px;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-    margin-left: 11%;
+    }
 
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    font-size: 16px;
+    #currency {
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
 
+    #item_image.button {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
 
-.zoekertje {
-    width: 20px;
-    height: auto;
-}
+        border: none;
 
+        text-align: center;
+        color: #000000;
+    }
 
-#button_or_search {
-    display: inline-block;
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    font-size: 1em;
+    .button+input {
+        background-color: #d5d962;
+        color: #ffffff;
 
-    border: none;
-    border-radius: 5px;
+        border: none;
+    }
 
-    background-color: orangered;
+    
 
-    color: #ffffff;
+    #hoeveelheid {
+        display: flex;
+        width: 50%;
+    }
 
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    #item_image.button {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
 
-    text-align: center;
+        border: none;
 
-    width: auto;
+        text-align: center;
+        color: #000000;
+    }
 
-    margin-left: 40%;
-    margin-bottom: 20px;
-}
 
-/*-----sell menu-----*/
+    .button+input {
+        background-color: #d5d962;
+        color: #ffffff;
 
-#linker {
-    margin-left: 10%;
-}
+        border: none;
+    }
 
+    #button_or {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
 
+        border: none;
+        border-radius: 1px;
 
-#sell-img {
-    height: 75%;
-    right: 10%;
-    top: 25%;
-    z-index: 15;
+        background-color: orangered;
+        color: #ffffff;
 
-    position: absolute;
-}
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
 
-#unit {
-    margin-left: 15px;
-    margin-top: 1px;
-}
+        margin-left: 25%;
+        margin-top: 2%;
+    }
 
-#kolom-file {
-    margin-left: 9%;
-}
+    #button_orange {
+        width: 40%;
 
-.registerForm {
-    padding-top: 5%;
-}
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
 
-.form-sell {
-    width: 40%;
-    margin-left: 10%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+        border: none;
+        border-radius: 1px;
 
-.form-sell-item {
-    display: flex;
-    width: 78%;
-    margin-left: 10%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+        background-color: orangered;
+        color: #ffffff;
 
-.form-control {
-    width: 100%;
-    height: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
 
-    border: none;
+        margin-left: 10%;
+        margin-top: 2%;
+    }
 
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    font-size: 16px;
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
-
-#top {
-    margin-top: 0px;
-}
-
-#title {
-    height: 50px;
-
-    border: none;
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
-
-#description {
-    height: 100px;
-
-    border: none;
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
-
-
-#quantity {
-
-
-    border: none;
-
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
-
-#bedrag {
-    display: flex;
-    width: 100%;
-}
-
-#price {
-
-    border: none;
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-
-}
-
-#currency {
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
-
-#item_image.button {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-
-    border: none;
-
-    text-align: center;
-    color: #000000;
-}
-
-.button+input {
-    background-color: #d5d962;
-    color: #ffffff;
-
-    border: none;
-}
-
-
-
-#hoeveelheid {
-    display: flex;
-    width: 50%;
-}
-
-#item_image.button {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-
-    border: none;
-
-    text-align: center;
-    color: #000000;
-}
-
-
-.button+input {
-    background-color: #d5d962;
-    color: #ffffff;
-
-    border: none;
-}
-
-#button_or {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    font-size: 1.5em;
-
-    border: none;
-    border-radius: 1px;
-
-    background-color: orangered;
-    color: #ffffff;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-
-    margin-left: 25%;
-    margin-top: 2%;
-}
-
-#button_orange {
-    width: 40%;
-
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    font-size: 1.5em;
-
-    border: none;
-    border-radius: 1px;
-
-    background-color: orangered;
-    color: #ffffff;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-
-    margin-left: 10%;
-    margin-top: 2%;
-}
-
-/*-----cart/winkelkar-----*/
+    /-----cart/winkelkar-----/
 
 .head-calc{
     margin-top: -15px;
@@ -1094,37 +1158,36 @@
     margin-bottom: 5px;
 }
 
-
-/*-----favor-----*/
-
-
-#del-fav {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.8em;
-
-    background-color: red;
-    color: #ffffff;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    text-align: center;
-
-    width: 100%;
-
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-bottom: 5px;
-}
+    /*-----favor-----*/
 
 
-/*-----bought-----*/
+    #del-fav {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8em;
 
-/*#bought-body {
+        background-color: red;
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        text-align: center;
+
+        width: 100%;
+
+        margin-top: 5px;
+        margin-left: 5%;
+        margin-bottom: 5px;
+    }
+
+
+    /*-----bought-----*/
+
+    /*#bought-body {
         background-image: url("/images/background/field-dark.png");
         background-repeat: no-repeat;
         background-size: 100% 22%;
@@ -1132,124 +1195,129 @@
         background-position: top;
     }*/
 
-/*-----settings-----*/
+    /*-----settings-----*/
 
-.instel {
-    text-decoration: none;
+    .instel {
+        text-decoration: none;
 
-    color: #000000;
+        color: #000000;
 
-    font-family: "Josefin Sans";
-    font-size: 25px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-
-
-
-}
-
-.all_item {
-    margin-top: 10%;
-
-}
-
-.item {
-    width: 35%;
-
-    text-align: center;
-
-    border-radius: 5px;
-
-    background-color: #ffffff;
-
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 32%;
-
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-}
-
-#space {
-    height: 10vh;
-}
-
-
-/*-----Chat----- */
-
-#chatnaam {
-    color: #000;
-    font-size: 1.5em;
-    background-color: none;
-    font-family: "Josefin Sans";
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    margin-top: 4%;
-}
-
-.chatImg {
-
-    width: 110%;
-    height: 300px;
-    object-fit: cover;
-    margin-left: -5%;
-
-}
-
-.chatPreview {
-
-    background-color: white;
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    width: 12%;
-    height: 370px;
-    float: left;
-    margin: 100px;
-}
+        font-family: "Josefin Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
 
 
 
-.notification {
+    }
 
-    color: #fff;
-    font-family: "Josefin Sans";
-    font-size: 1.3em;
-    text-align: center;
-    vertical-align: middle;
+    .all_item {
+        margin-top: 10%;
 
-    border-radius: 30px;
-    padding: 10px;
-    background-color: #d5d962;
-    width: 50px;
-    height: 50px;
-    margin-left: 87%;
-    position: absolute;
-}
+    }
 
-.navNotification {
+    .item {
+        width: 35%;
 
-    color: #fff;
-    font-family: "Josefin Sans";
-    font-size: 0.8em;
-    text-align: center;
-    vertical-align: middle;
+        text-align: center;
 
-    border-radius: 15px;
-    background-color: #d5d962;
-    width: 25px;
-    height: 25px;
-    margin-left: 97%;
-    margin-top: -5%;
-    position: absolute;
-    padding-left: 4%;
-    padding-top: 2%;
-}
+        border-radius: 5px;
 
-.subNavNotification {
+        background-color: #ffffff;
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 32%;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #space {
+        height: 10vh;
+    }
+
+
+    /*-----Chat----- */
+
+    #chatnaam{
+        color: #000;
+        font-size: 1.5em;
+        background-color: none;
+        font-family: "Josefin Sans";
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 4%;
+    }
+
+    .chatImg{
+
+        width: 110%;
+        height: 300px;
+        object-fit: cover;
+        margin-left: -5%;
+
+    }
+
+    .chatPreview{
+
+        background-color: white;
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        width: 12%;
+        height: 370px;
+        float: left;
+        margin: 100px;
+    }
+
+    .chatPreview:hover{
+
+        cursor: pointer;
+        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+
+
+    }
+    .notification{
+
+        color: #fff;
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+        text-align: center;
+        vertical-align: middle;
+
+        border-radius: 30px;
+        padding: 10px;
+        background-color: #d5d962;
+        width: 50px;
+        height: 50px;
+        margin-left: 87%;
+        position: absolute;
+    }
+
+    .navNotification{
+
+        color: #fff;
+        font-family: "Josefin Sans";
+        font-size: 0.8em;
+        text-align: center;
+        vertical-align: middle;
+
+        border-radius: 15px;
+        background-color: #d5d962;
+        width: 25px;
+        height: 25px;
+        margin-left: 97%;
+        margin-top: -5%;
+        position: absolute;
+        padding-left: 4%;
+        padding-top: 2%;
+    }
+
+.subNavNotification{
 
     color: #fff;
     font-family: "Josefin Sans";
@@ -1268,52 +1336,52 @@
 
 
 .messagebox {
-    max-height: 600px;
-    overflow-y: scroll;
-    margin-bottom: 20px;
-}
+        max-height: 600px;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+    }
 
-.messageContent {
-    display: block;
-    clear: both;
-}
+    .messageContent {
+        display: block;
+        clear: both;
+    }
 
-.messageElement .container {
-    margin-bottom: 20px;
-}
+    .messageElement .container {
+        margin-bottom: 20px;
+    }
 
-.messageElement p {
-    margin-top: 10px;
-    max-width: 250px;
-    word-wrap: break-word;
-    border-radius: 10px;
-    padding: 10px;
-}
+    .messageElement p {
+        margin-top: 10px;
+        max-width: 250px;
+        word-wrap: break-word;
+        border-radius: 10px;
+        padding: 10px;
+    }
 
-.messageContent small {
-    position: relative;
-    top: 3px;
-}
+    .messageContent small {
+        position: relative;
+        top: 3px;
+    }
 
-#messageText {
-    border-radius: 5px;
+    #messageText{
+        border-radius: 5px;
 
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: auto;
+        margin-top: 35px;
+        margin-left: auto;
+        margin-right: auto;
 
-    padding: 5px;
+        padding: 5px;
 
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-    width: 70%;
-}
+        width: 70%;        
+    }
 
 
-/*-----footer-----*/
+    /*-----footer-----*/
 
-footer {
+footer{
 
     background-color: #d5d962;
     padding: 30px;
@@ -1321,60 +1389,55 @@ footer {
     height: 200px;
     color: #fff;
     font-family: "Josefin Sans";
-    margin-top: 100px;
+    margin-top: 100px; 
     bottom: 0;
     position: relative;
 }
 
-.footerCenter {
+.footerCenter{
     width: 23.333333%;
     float: left;
     margin-left: 5%;
     margin-right: 5%;
     height: 150px;
-
+    
 
 }
-
-.footerLogo {
+.footerLogo{
     width: 20%;
     margin-left: 40%;
 }
 
-.footerMenu {
+.footerMenu{
     float: left;
     width: 23.333333%;
     margin-left: 5%;
     margin-right: 5%;
     height: 150px;
     padding-top: 2%;
-
+    
 }
+.footerMenu ul{
 
-.footerMenu ul {
-
-    list-style-type: none;
+list-style-type: none;
 }
-
-.footerMenu ul li a {
+.footerMenu ul li a{
     color: #fff;
     float: left;
     margin-right: 4%;
     font-size: 1.2em;
 }
+.footerMenu ul li:first-child{
 
-.footerMenu ul li:first-child {
-
-    margin-left: -40px;
+margin-left: -40px;
 
 }
-
-.footerMenu ul li a:hover {
+.footerMenu ul li a:hover{
     color: orangered;
     text-decoration: none;
 }
 
-.footerContact {
+.footerContact{
     float: left;
     width: 23.333333%;
     margin-left: 5%;
@@ -1384,22 +1447,21 @@ footer {
     right: 0;
     padding-top: 0.8%;
 }
-
-.footerContact a {
+.footerContact a{
 
     color: #fff;
     font-size: 1.2em;
 
 }
 
-.footerContact a:hover {
+.footerContact a:hover{
 
     color: orangered;
     text-decoration: none;
 
 }
 
-.footerContact i {
+.footerContact i{
 
     font-size: 2em;
     margin-left: 5%;
@@ -1512,7 +1574,6 @@ footer {
         font-weight: 400;
 
         border: none;
-        border-radius: 15px;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -1552,18 +1613,11 @@ footer {
 
         color: #ffffff;
 
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
 
         text-align: center;
 
-        width: auto;
+        width: 10%;
 
-        margin-left: 40%;
-        margin-top: 15px;
-        margin-bottom: 20px;
     }
 
     /*------settings - profiel-----*/
@@ -1953,13 +2007,14 @@ footer {
     }
 
     .form-sell {
-        width: 90%;
+        width: 100%;
         margin-left: 5%;
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    
 
-
+    
 
     .form-control {
         width: 100%;
@@ -2126,7 +2181,7 @@ footer {
         top: 3px;
     }
 
-    #messageText {
+    #messageText{
         border-radius: 5px;
 
         margin-top: 5%;
@@ -2138,10 +2193,10 @@ footer {
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-        width: 70%;
+        width: 70%;        
     }
 
+    
 
 
-
-}
+} 

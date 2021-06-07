@@ -92,9 +92,13 @@ if(!empty($_POST['start_chat'])){
     <?php include_once("../includes/nav.include.php");?>
 
 
-    <h2 class="hoofdtitel">Winkelmandje</h2>
+            <h2 class="hoofdtitel">Winkelmandje</h2>
+<?php if(count($items) <= 0){ ?>
 
-    <ul id="all-detail" class="row col-md-12">
+
+            <img id="cartPlaceholder" src="../../images/cartPlaceholder.png" alt="cart placeholder">
+<?php } else { ?>
+        <ul id="all-detail" class="row col-md-12">
 
         <?php $price = 0;
             foreach ($items as $item) :
@@ -142,7 +146,14 @@ if(!empty($_POST['start_chat'])){
 
     </ul>
 
+<<<<<<< HEAD
     <?php if(!empty($items)) { ?>
+=======
+<?php } ?>
+
+
+        <?php if(!empty($items)) { ?>
+>>>>>>> f9af8b2a8616f6f813ffbcc1fc59ca998f257ee9
 
     <div class="total_price">
         <p>Totale prijs: <?= $price ?></p>

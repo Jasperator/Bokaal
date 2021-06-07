@@ -555,17 +555,38 @@ class User
 
     public function getSellersExceptUser()
     {
+
         $conn = Db::getConnection();
 
+        $results_per_page = 6; // number of results per page
+        if (isset($_GET["page"])) { $page = $_GET["page"]; } else { $page=1; };
+        $start_from = ($page-1) * $results_per_page;
         //<> is the same as !=
-        $statement = $conn->prepare("SELECT * FROM users WHERE email <> :email AND status = 'seller' AND  id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
+        $statement = $conn->prepare("SELECT * FROM users WHERE email <> :email AND status = 'seller' AND  id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id) LIMIT  $start_from, $results_per_page");
         $statement->bindValue(':email', $this->getEmail());
         $statement->bindValue(':user_id', $this->getId());
 
         $statement->execute();
         $users = $statement->fetchAll(\PDO::FETCH_OBJ);
 
-        return $users;
+        return array($page, $users);
+    }
+
+    public function countPages()
+    {
+
+        $conn = Db::getConnection();
+        $results_per_page = 3;
+
+        $statement = $conn->prepare("SELECT COUNT(id) FROM users WHERE email <> :email AND status = 'seller' AND  id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
+        $statement->bindValue(':email', $this->getEmail());
+        $statement->bindValue(':user_id', $this->getId());
+        $statement->execute();
+        $row = $statement->fetch(\PDO::FETCH_COLUMN);
+        $total_pages = ceil($row / $results_per_page); // calculate total pages with results
+
+        return $total_pages;
+
     }
 
         //Function that finds all conversations a user is a part of
