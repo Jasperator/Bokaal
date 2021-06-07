@@ -171,7 +171,7 @@ if(!empty($_POST['start_chat'])){
             <div class="container-box">
                 <h4 class="head-calc">Afrekenen</h4>
                 <div class="price">
-                    <h1>Totale prijs <?= $price ?> Euro !</h1>
+                    <h1>Totale prijs <?= $price+(($price/100)*10) ?> Euro !</h1><br>
                 </div>
 
                 <div class="card__container">
@@ -196,7 +196,6 @@ if(!empty($_POST['start_chat'])){
                             </div>
 
                             <div class="right">
-                                <img class="small-cardIcon" src="../../images/paycard/visa.jpg" alt="visa" />
                                 <img class="small-cardIcon" src="../../images/paycard/mastercard-word.svg" alt="mastercard" />
                                 <img class="small-cardIcon" src="../../images/paycard/amex.png" alt="amex" />
                                 <img class="small-cardIcon" src="../../images/paycard/maestro-word.svg" alt="maestro" />
@@ -210,7 +209,7 @@ if(!empty($_POST['start_chat'])){
                         </div>
                         <div>
                             <div class="info">
-                                <label  class="label" for="cardnumber">Kaart nummer</label>
+                                <label  class="label" id="label" for="cardnumber">Kaart nummer</label>
                                 <input class="cardnumber" id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19"
                                     placeholder="8888-8888-8888-8888" />
                             </div>
@@ -219,7 +218,7 @@ if(!empty($_POST['start_chat'])){
                             <div class="left">
                                 <label class="label-expiry" for="expiry-date">Verval datum</label>
                                 <select class="select" id="expiry-date">
-                                    <option>MM</option>
+                                    <option>Maand</option>
                                     <option value="1">01</option>
                                     <option value="2">02</option>
                                     <option value="3">03</option>
@@ -232,9 +231,8 @@ if(!empty($_POST['start_chat'])){
                                     <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
-                                <span class="span">/</span>
                                 <select class="select" id="expiry-date">
-                                    <option>YYYY</option>
+                                    <option>Jaar</option>
                                     <option value="2021">2021</option>
                                     <option value="2022">2022</option>
                                     <option value="2023">2023</option>

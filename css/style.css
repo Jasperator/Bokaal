@@ -1075,10 +1075,34 @@
 
 #expiry-date{
     font-family: "Josefin Sans";
+    width:75px;
+    margin-top: 5px;
+    border: none;
+}
+
+#pp, #cd{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#expiry-date:hover{
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+}
+
+
+.label-expiry{
+    margin-left: 15px;
+    margin-right: 12px;
 }
 
 .label{
     font-family: "Josefin Sans";
+    margin-right: 15px;
+}
+
+#label{
+    margin-right: 15px !important;
 }
 
 .head-calc{
@@ -1110,6 +1134,17 @@
     float: right;
     margin: 0;
     font-family: "Josefin Sans";
+
+    border-bottom: solid 1px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+.cardholdername:hover{
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
 }
 
 .right{
@@ -1125,6 +1160,16 @@
     float: right;
     margin: 0;
     font-family: "Josefin Sans";
+    border: none;
+    border-bottom: solid 1px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.cardnumber:hover{
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
 }
 
 .small-cardIcon {
@@ -1151,9 +1196,10 @@
     outline: none;
 }
 
+
 .info{
-    margin-top: 5px;
     margin-bottom: 5px;
+    margin-top: 15px;
 }
 
 .radio{
