@@ -755,7 +755,8 @@
 
     }
 
-    
+
+
 
     .search-bar {
         width: 20%;
@@ -1017,11 +1018,9 @@
         color: #000000;
     }
 
-
     .button+input {
         background-color: #d5d962;
         color: #ffffff;
-
         border: none;
     }
 
@@ -1070,7 +1069,12 @@
     }
 
    /*-----cart/winkelkar-----*/
+#cartPlaceholder{
 
+    width: 50%;
+    margin-left: 25%;
+
+}
 .head-calc{
     margin-top: -15px;
 }

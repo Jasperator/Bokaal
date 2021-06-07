@@ -162,7 +162,7 @@ if(!empty($_POST['searchCategory'])){
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
                                      <?= htmlspecialchars($item->price); ?>   <?= htmlspecialchars($item->currency); ?></p>
                                     
-                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand: <?= htmlspecialchars($item->distance); ?></p>
+                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> <?= htmlspecialchars($item->distance); ?></p>
 
                                 </div>
                             </div>

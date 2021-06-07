@@ -82,7 +82,7 @@ function message() {
             document.querySelectorAll('.chatPreview').forEach(item => {
                 item.addEventListener('click', function () {
 
-                    sessionStorage.setItem("chat_id", this.getElementsByClassName('convoId').item(0).value);
+                    // this.getElementsByClassName('convoId').item(0)
                     window.location.href = `message.php?chat_id=${this.getElementsByClassName('convoId').item(0).value}`;
 
                 })})

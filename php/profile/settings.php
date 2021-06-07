@@ -40,7 +40,7 @@ $page = basename($_SERVER['PHP_SELF']);
 
             <div class="item_profile">
                 <button onclick="window.location.href='../profile/settings_items.php'" type="button" 
-                class="">Mijn items</button>
+                class="settingsButton">Mijn items</button>
             </div>
         <?php
         endif;?>
