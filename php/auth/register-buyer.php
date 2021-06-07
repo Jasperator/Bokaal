@@ -3,6 +3,8 @@
 include_once(__DIR__ . "/../includes/bootstrap.include.php");
 require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/User.php");
+require_once(__DIR__ . "/../../classes/Distance.php");
+
 
 //Check if values have been sent
 if (!empty($_POST['register'])) {
@@ -38,8 +40,21 @@ if (!empty($_POST['register'])) {
 
 
 		$user = new classes\User($email);
-		
-            session_start();
+        $distance = new classes\Distance();
+        $otherUsers = $user->getAllUsers();
+        foreach ($otherUsers as $otherUser){
+            $user = new classes\User($email);
+            $distance = new classes\Distance();
+
+            $distanceCalculation =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($otherUser->address), urlencode($otherUser->postal_code));
+
+            if(isset($distanceCalculation)) {
+                $distance->insertDistance($user->getId(), $otherUser->id, $distanceCalculation->text, $distanceCalculation->value);
+            }
+        }
+
+
+        session_start();
             $_SESSION['user'] = $email;
             $_SESSION['user_status'] = "buyer";
             header("Location: /index.php");

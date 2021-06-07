@@ -5,8 +5,12 @@ include_once(__DIR__ . "/php/includes/bootstrap.include.php");
 require_once(__DIR__ . "/classes/Db.php");
 require_once(__DIR__ . "/classes/Favorite.php");
 require_once(__DIR__ . "/classes/User.php");
+require_once(__DIR__ . "/classes/Distance.php");
+
 $user = new classes\User($_SESSION['user']);
 $favorite = new classes\Favorite();
+$distanceClass = new classes\Distance();
+
 
 
 
@@ -16,27 +20,9 @@ $page = $pageAndUsers[0];
 $totalPages = $user->countPages();
 $sellers = $pageAndUsers[1];
 
-foreach ($favorites as $favor) {
-    $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code));
-    $favor->distance = $distance->text;
-    $favor->distanceValue = $distance->value;
 
-}
 
-foreach ($sellers as $sell) {
-    $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code));
-    $sell->distance = $distance->text;
-    $sell->distanceValue = $distance->value;
 
-}
-
-usort($favorites,function($first,$second){
-    return $first->distanceValue > $second->distanceValue;
-});
-
-usort($sellers,function($first,$second){
-    return $first->distanceValue > $second->distanceValue;
-});
 
 if (!empty($_POST['favorite-person'])) {
     $favorite_id = $_POST['favorite-person'];
@@ -138,7 +124,7 @@ if (!empty($_POST['delete-favorite-person'])) {
                                     <form  action="" method="post">
                                         
                                             <button id="knop2" type="submit" class="fav" name="favorite-person"
-                                                value="<?= htmlspecialchars($seller->id); ?>" name="fav"> 
+                                                value="<?= htmlspecialchars($seller->id); ?>" name="fav">
                                                 <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
                                             </button>
                                         
