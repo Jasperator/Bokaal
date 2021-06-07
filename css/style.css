@@ -1,3 +1,4 @@
+
 /* ---------------DESKTOP VERSIE ---------------- */
 
 @media only screen and (min-width: 900px) {
@@ -754,6 +755,9 @@
 
     }
 
+
+
+
     .search-bar {
         width: 20%;
         height: 50px;
@@ -862,8 +866,6 @@
         margin-left: 10%;
     }
 
-
-
     #sell-img{
         height: 75%;
         right: 10%;
@@ -903,8 +905,10 @@
     }
 
     .form-control {
-        width: 100%;
+        width: 35%;
         height: 50px;
+
+        margin-left: 10%;
 
         border: none;
 
@@ -991,6 +995,7 @@
     #hoeveelheid {
         display: flex;
         width: 50%;
+        margin-top: 5%;
     }
 
     #item_image.button {
@@ -1032,7 +1037,7 @@
     }
 
     #button_orange {
-        width: 40%;
+        width: 35%;
 
         font-family: "Josefin Sans";
         font-style: normal;
@@ -1054,14 +1059,79 @@
         margin-top: 2%;
     }
 
-    /*-----cart/winkelkar-----*/
-
-   #cartPlaceholder{
+   /*-----cart/winkelkar-----*/
+#cartPlaceholder{
 
     width: 50%;
     margin-left: 25%;
 
-   }
+}
+.head-calc{
+    margin-top: -15px;
+}
+
+.container-box {
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+    flex-direction: column;
+
+    border: none;
+}
+
+.card-deco {
+    border: none;
+}
+
+.cardholdername{
+    float: right;
+    margin: 0;
+}
+
+.right{
+    float: right;
+    display: flex;
+}
+
+.left{
+    display: flex;
+}
+
+.cardnumber{
+    float: right;
+    margin: 0;
+}
+
+.small-cardIcon {
+    float: right;
+    margin-right: 15px;
+    width: 42px;
+    height: 30px;
+    margin-left: 10px;
+
+    object-fit: cover;
+}
+
+.buy-all-items {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 520px;
+    background-color: orangered;
+    border: none;
+    color: #fff;
+    padding: 18px;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
     /*-----favor-----*/
 
@@ -2104,5 +2174,4 @@ margin-left: -40px;
     
 
 
-}  
-
+} 

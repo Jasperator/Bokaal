@@ -58,7 +58,7 @@ if(!empty($_POST['start_chat'])){
 <div>
     <h2 class="hoofdtitel">Verkoper</h2>
 
-    <div class="card mb-3 boer-detail" style="max-width: 50%; max-height:;" >
+    <div class="card mb-3 boer-detail" style="max-width: 50%; max-height:250px;" >
         <div class="row g-0">
             <div class="col-md-4">
                 <form action="" method="post">
