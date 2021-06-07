@@ -988,8 +988,6 @@
         border: none;
     }
 
-    
-
     #hoeveelheid {
         display: flex;
         width: 50%;
@@ -1006,11 +1004,9 @@
         color: #000000;
     }
 
-
     .button+input {
         background-color: #d5d962;
         color: #ffffff;
-
         border: none;
     }
 
