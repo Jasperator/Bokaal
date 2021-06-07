@@ -863,8 +863,6 @@
         margin-left: 10%;
     }
 
-
-
     #sell-img{
         height: 75%;
         right: 10%;
@@ -904,8 +902,10 @@
     }
 
     .form-control {
-        width: 100%;
+        width: 35%;
         height: 50px;
+
+        margin-left: 10%;
 
         border: none;
 
@@ -994,6 +994,7 @@
     #hoeveelheid {
         display: flex;
         width: 50%;
+        margin-top: 5%;
     }
 
     #item_image.button {
@@ -1037,7 +1038,7 @@
     }
 
     #button_orange {
-        width: 40%;
+        width: 35%;
 
         font-family: "Josefin Sans";
         font-style: normal;
