@@ -146,14 +146,10 @@ if(!empty($_POST['start_chat'])){
 
     </ul>
 
-<<<<<<< HEAD
-    <?php if(!empty($items)) { ?>
-=======
 <?php } ?>
 
 
         <?php if(!empty($items)) { ?>
->>>>>>> f9af8b2a8616f6f813ffbcc1fc59ca998f257ee9
 
     <div class="total_price">
         <p>Totale prijs: <?= $price ?></p>
