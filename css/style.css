@@ -875,8 +875,12 @@
     }
     
     #unit {
-        margin-left: 15px;
+        float: right;
+        margin-right: 30px;
+        margin-left:10px;
         margin-top: 1px;
+
+        width: 35%;
     }
 
     #kolom-file {
@@ -899,8 +903,7 @@
         display: flex;
         width: 78%;
         margin-left: 10%;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 55px;
     }
 
     .form-control {
@@ -929,12 +932,16 @@
 
         border: none;
 
+        margin-top: 15px;
+
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
     #description {
         height: 100px;
+        
+        margin-top: 30px;
 
         border: none;
 
@@ -944,10 +951,9 @@
 
 
     #quantity {
-
-
         border: none;
 
+        width: 100%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -961,6 +967,8 @@
     #price {
 
         border: none;
+
+        width: 180px;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -991,12 +999,11 @@
         border: none;
     }
 
-    
-
     #hoeveelheid {
         display: flex;
-        width: 50%;
-        margin-top: 5%;
+        width: 100%;
+        margin-top: 95px;
+        margin-left: -17px;
     }
 
     #item_image.button {
@@ -1984,10 +1991,7 @@ margin-left: -40px;
         margin-left: 5%;
         margin-top: 15px;
         margin-bottom: 15px;
-    }
-    
-
-    
+    }    
 
     .form-control {
         width: 100%;

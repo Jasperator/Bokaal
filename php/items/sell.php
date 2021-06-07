@@ -137,7 +137,7 @@ if (!empty($_POST['upload'])) {
 
 					<div id="unit" class="form-sell-item">
 
-						<select type="text" name="unit" id="unit" class="form-control"
+						<select type="text" name="unit" class="form-control"
 							placeholder="Kies soort hoeveelheid" required>
 							<option value="" selected disabled hidden>Kies soort hoeveelheid</option>
 
@@ -147,8 +147,8 @@ if (!empty($_POST['upload'])) {
 								<option value="Kg">Kg</option>
 								<option value="Stuks">Stuks</option>
 						</select>
-						<div>
-							<input type="number" name="price" id="unit" class="form-control" placeholder="Prijs" step=".01" required>
+						<div >
+							<input type="number" id="price"  name="price"  class="form-control" placeholder="Prijs" step=".01" required>
 						</div>
 						<div>
 							<input type="text" name="currency" id="unit" class="form-control" Value="Euro" required>
