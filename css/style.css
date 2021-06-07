@@ -455,11 +455,11 @@
 
 
     .new-profile-image {
-        width: 250px;
-        height: 250px;
-
+        width: 150px;
+        height: 200px;
         object-fit: cover;
 
+        margin-left: 3%;
     }
 
     .spacing-bottom {
@@ -529,10 +529,8 @@
 
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 5%;
         padding-right: 5%;
 
-        margin-left: 5%;
         margin-bottom: 20px;
     }
 
@@ -1069,19 +1067,25 @@
     }
 
    /*-----cart/winkelkar-----*/
-#cartPlaceholder{
 
+#cartPlaceholder{
     width: 50%;
     margin-left: 25%;
-
 }
+
+#expiry-date{
+    font-family: "Josefin Sans";
+}
+
+.label{
+    font-family: "Josefin Sans";
+}
+
 .head-calc{
     margin-top: -15px;
 }
 
-#total-box{
-    border-radius: 25px;
-}
+
 
 .container-box {
     border-radius: 25px;
@@ -1098,9 +1102,14 @@
     border: none;
 }
 
+#expiry-date{
+    margin-left: 15px;
+}
+
 .cardholdername{
     float: right;
     margin: 0;
+    font-family: "Josefin Sans";
 }
 
 .right{
@@ -1115,6 +1124,7 @@
 .cardnumber{
     float: right;
     margin: 0;
+    font-family: "Josefin Sans";
 }
 
 .small-cardIcon {
@@ -1131,7 +1141,8 @@
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 1px;
-    width: 500px;
+    width: 50%;
+    margin-left: 25%;
     background-color: orangered;
     border: none;
     color: #fff;
@@ -1146,8 +1157,27 @@
 }
 
 .radio{
-    margin-right: 15px;
+    position: absolute;
+    top: -2px;
+    left: -20px;
+    border: 3px solid #414365;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #292B52;
 }
+
+.radio::before{
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    width: 9px;
+    height: 9px;
+    background-color: transparent;
+}
+
 
     /*-----favor-----*/
 
@@ -1178,14 +1208,7 @@
 
     /*-----bought-----*/
 
-    /*#bought-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
-    }*/
-
+   
     /*-----settings-----*/
 
     .instel {
@@ -1198,9 +1221,6 @@
         font-style: normal;
         font-variant: normal;
         font-weight: 400;
-
-
-
     }
 
     .all_item {
