@@ -1075,6 +1075,10 @@
     margin-top: -15px;
 }
 
+#total-box{
+    border-radius: 25px;
+}
+
 .container-box {
     border-radius: 25px;
     display: flex;
@@ -1123,19 +1127,22 @@
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 1px;
-    width: 520px;
+    width: 500px;
     background-color: orangered;
     border: none;
     color: #fff;
     padding: 18px;
     border-radius: 5px;
     outline: none;
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info{
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.radio{
+    margin-right: 15px;
 }
 
     /*-----favor-----*/

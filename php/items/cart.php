@@ -162,7 +162,7 @@ if(!empty($_POST['start_chat'])){
     <!-- buy thingy-->
 
     <div id="buy-all-items-modal" class="modal">
-        <div class="modalContent">
+        <div class="modalContent" id="total-box">
             <span class="close">&times;</span>
 
             
@@ -204,20 +204,20 @@ if(!empty($_POST['start_chat'])){
                         </div>
                         <div>
                             <div class="info">
-                                <label for="cardholdername">Name</label>
-                                <input class="cardholdername" placeholder="e.g. Richard Bovell" id="cardholdername" type="text" />
+                                <label for="cardholdername">Naam</label>
+                                <input class="cardholdername" placeholder="Naam" id="cardholdername" type="text" />
                             </div>
                         </div>
                         <div>
                             <div class="info">
-                                <label for="cardnumber">Card number</label>
+                                <label for="cardnumber">Kaart nummer</label>
                                 <input class="cardnumber" id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19"
                                     placeholder="8888-8888-8888-8888" />
                             </div>
                         </div>
                         <div class="row details">
                             <div class="left">
-                                <label class="label" for="expiry-date">Expiry</label>
+                                <label class="label" for="expiry-date">Verval datum</label>
                                 <select class="select" id="expiry-date">
                                     <option>MM</option>
                                     <option value="1">01</option>
