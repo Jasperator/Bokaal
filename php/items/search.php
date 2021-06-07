@@ -5,17 +5,28 @@ require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/Item.php");
 require_once(__DIR__ . "/../../classes/User.php");
 $user = new classes\User($_SESSION['user']);
-$item = new classes\Item();
+$itemClass = new classes\Item();
 
 if($user->getStatus() == "seller"){
-$items = $item->getAllItemsExceptSeller($user);
+$items = $itemClass->getAllItemsExceptSeller($user);
 
 
 } else{
-    $items = $item->getAllItems();
+    $items = $itemClass->getAllItems();
 }
+$maxPrice = $itemClass->maxPrice();
 
-$maxPrice = $item->maxPrice();
+foreach ($items as $item) {
+    $user = new classes\User($_SESSION['user']);
+    $seller = $user->getUserById($item->seller_id);
+    $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($seller->address), urlencode($seller->postal_code));
+    $item->distance = $distance->text;
+    $item->distanceValue = $distance->value;
+}
+usort($items,function($first,$second){
+    return $first->distanceValue > $second->distanceValue;
+});
+
 
 if(!empty($_POST['searchCategory'])){
     $priceRange = $_POST['priceRange'];
@@ -29,7 +40,18 @@ if(!empty($_POST['searchCategory'])){
     }
     $searchName = urlencode($_POST['searchName']);
     $searchName = '%' . $searchName . '%';
-    $items = $item->searchItemCategoryAndName($searchName, $category, $user, $priceRange);
+    $items = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange);
+    foreach ($items as $item) {
+        $user = new classes\User($_SESSION['user']);
+        $seller = $user->getUserById($item->seller_id);
+        $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($seller->address), urlencode($seller->postal_code));
+        $item->distance = $distance->text;
+        $item->distanceValue = $distance->value;
+    }
+    usort($items,function($first,$second){
+        return $first->distanceValue > $second->distanceValue;
+    });
+
 
 }
 
@@ -102,6 +124,7 @@ if(!empty($_POST['searchCategory'])){
 
                 <br><br><br>
 
+
             <label class="priceLabel" for="priceRange">Max. prijs</label>
 
             <div class="slidecontainer">
@@ -115,9 +138,7 @@ if(!empty($_POST['searchCategory'])){
         <ul  id="all-detail" class="row col-md-12">
 
             <?php foreach ($items as $item) :
-                $user = new classes\User($_SESSION['user']);
-                $seller = $user->getUserById($item->seller_id);
-                $item->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($seller->address), urlencode($seller->postal_code), "K");
+
             ?>
                 
                 <div id="list-decoration" class="col-md-4">
@@ -169,8 +190,10 @@ if(!empty($_POST['searchCategory'])){
     </script>
 
     <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/search.js"></script>
 
-<?php include_once("../includes/footer.php");?>
+
+    <?php include_once("../includes/footer.php");?>
 
 </body>
 

@@ -14,21 +14,25 @@ $favorites = $favorite->getAllFavorites($user);
 $sellers = $user->getSellersExceptUser();
 
 foreach ($favorites as $favor) {
-    $favor->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code));
+    $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code));
+    $favor->distance = $distance->text;
+    $favor->distanceValue = $distance->value;
+
 }
 
 foreach ($sellers as $sell) {
-    $sell->distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code));
+    $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code));
+    $sell->distance = $distance->text;
+    $sell->distanceValue = $distance->value;
+
 }
 
-usort($favorites, function($a, $b)
-{
-    return strcmp($a->distance, $b->distance);
+usort($favorites,function($first,$second){
+    return $first->distanceValue > $second->distanceValue;
 });
 
-usort($sellers, function($a, $b)
-{
-    return strcmp($a->distance, $b->distance);
+usort($sellers,function($first,$second){
+    return $first->distanceValue > $second->distanceValue;
 });
 
 if (!empty($_POST['favorite-person'])) {

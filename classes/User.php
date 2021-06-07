@@ -734,7 +734,7 @@ class User
         // Geocoding API request with start address
         $calculateDistanceMatrix = file_get_contents('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$formattedAddrFrom.','. $postalcodeoFrom .'&destinations='.$formattedAddrTo .'+'. $postalcodeoTo . '&key=' .$apiKey);
         $calculateDistance = json_decode($calculateDistanceMatrix);
-        $calculeteDistanceKm = $calculateDistance->rows[0]->elements[0]->distance->text;
+        $calculeteDistanceKm = $calculateDistance->rows[0]->elements[0]->distance;
         return($calculeteDistanceKm);
 
 

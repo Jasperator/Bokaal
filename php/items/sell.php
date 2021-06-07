@@ -69,8 +69,12 @@ if (!empty($_POST['upload'])) {
 	<div >
             <h2 class="hoofdtitel">Verkoop</h2>
         </div>
+
+		<img id="sell-img" src="../../images/setting-img.jpg" alt="">
     
 	<div>
+
+	
 		
 		<form class="registerForm" enctype="multipart/form-data" action="" method="post">
 
@@ -124,14 +128,14 @@ if (!empty($_POST['upload'])) {
 
 			</div>
 
-			<div class="form-sell">
+			<div class="form-sell-item">
 				<div id="hoeveelheid">
 					<div>
 						<input type="number" name="quantity" id="quantity" class="form-control"
 							placeholder="Hoeveelheid" required>
 					</div>
 
-					<div id="unit" class="form-sell">
+					<div id="unit" class="form-sell-item">
 
 						<select type="text" name="unit" id="unit" class="form-control"
 							placeholder="Kies soort hoeveelheid" required>
@@ -142,8 +146,15 @@ if (!empty($_POST['upload'])) {
 								<option value="Gram">Gram</option>
 								<option value="Kg">Kg</option>
 								<option value="Stuks">Stuks</option>
-
 						</select>
+						<div>
+							<input type="number" name="price" id="unit" class="form-control" placeholder="Prijs" step=".01" required>
+						</div>
+						<div>
+							<input type="text" name="currency" id="unit" class="form-control" Value="Euro" required>
+						</div>
+
+						
 
 					</div>
 
@@ -156,12 +167,7 @@ if (!empty($_POST['upload'])) {
 
 	<div  class="form-sell">
 		<div id="bedrag">
-			<div>
-				<input type="number" name="price" id="price" class="form-control" placeholder="Prijs" step=".01" required>
-			</div>
-			<div>
-				<input type="text" name="currency" id="currency" class="form-control" Value="Euro" required>
-			</div>
+			
 
 			
 		</div>
@@ -171,23 +177,15 @@ if (!empty($_POST['upload'])) {
 	<div><?php echo $error; ?></div>
 	<?php endif; ?>
 
-    <div class="form-group">
-        <input class="button" type="file" id="item_image" name="item_image" capture="camera" />
+    <div id="linker" class="form-group">
+        <input class="button" type="file" name="item_image" capture="camera" />
     </div>
     <div class="form-group">
-        <input id="button_or" type="submit" class="register" value="Upload" name="upload">
+        <input id="button_orange" type="submit" class="register" value="Upload" name="upload">
     </div>
     <div id="result"> </div>
 
-	<!--<div class="input-group">
-  <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile04">
-    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-  </div>
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button">Button</button>
-  </div>
-</div>
+	
 
 
 	<div id="result"> </div>
@@ -198,8 +196,6 @@ if (!empty($_POST['upload'])) {
 
 	<div id="space"></div>
 	<div id="space"></div>
-
-	<!-- <div>style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px; margin-top:10px;"</div> -->
 
 	<script src="../../js/jquery.min.js"></script>
 	<script src="../../js/bootstrap.js"></script>

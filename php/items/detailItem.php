@@ -11,6 +11,7 @@ $itemId = $_GET["data-id"];
 $seller = $item->getUserFromItem($itemId);
 $detailItem = $item->getItem($itemId);
 $allItemsSeller = $item->getAllItemsBySellerId($itemId);
+$distance =$user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code));
 
 if (!empty($_POST['buy-item'])) {
     $id = $_POST['buy-item'];
@@ -69,7 +70,8 @@ if(!empty($_POST['start_chat'])){
                                 <p class="card-text"><?= htmlspecialchars($seller->location); ?></p>
                                 <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
                                 <p class="card-text"> Afstand:
-                                    <?= $user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code), "K");  ?></p>
+                                    <?=
+                                    $distance->text;?></p>
 
                                     <form  id="start_chat" class="chat-button" action="" method="post">
                                         <div class="form-group">
@@ -120,6 +122,8 @@ if(!empty($_POST['start_chat'])){
             </div>
     </ul>
 </div>
+
+<?php if(count($allItemsSeller) > 0){ ?>
             <div class="titel">
                 <h2 class="subtitel">Other items</h2>
             </div>
@@ -153,6 +157,7 @@ if(!empty($_POST['start_chat'])){
                     </div>
                 <?php endforeach ?>
             </ul>
+<?php } ?>
 
             <div id="space"></div>
 

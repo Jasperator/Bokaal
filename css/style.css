@@ -831,6 +831,21 @@
 
     /*-----sell menu-----*/
 
+    #linker{
+        margin-left: 10%;
+    }
+
+
+
+    #sell-img{
+        height: 75%;
+        right: 10%;
+        top: 25%;
+        z-index: 15;
+
+        position: absolute;
+    }
+    
     #unit {
         margin-left: 15px;
         margin-top: 1px;
@@ -850,6 +865,14 @@
 
         float: left;
 
+    }
+
+    .form-sell-item {
+        display: flex;
+        width: 78%;
+        margin-left: 10%;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     .form-control {
@@ -985,16 +1008,32 @@
         margin-top: 2%;
     }
 
+    #button_orange {
+        width: 40%;
+
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
+
+        border: none;
+        border-radius: 1px;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        margin-left: 10%;
+        margin-top: 2%;
+    }
+
     /*-----cart/winkelkar-----*/
 
-    /* #cart-body {
-        background-image: url("/images/background/field-dark.png");
-        background-repeat: no-repeat;
-        background-size: 100% 22%;
-        top: 0;
-        background-position: top;
-    }*/
-
+   
 
     /*-----favor-----*/
 
@@ -1150,7 +1189,25 @@
         padding-top: 2%;
     }
 
-    .messagebox {
+.subNavNotification{
+
+    color: #fff;
+    font-family: "Josefin Sans";
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 15px;
+    background-color: #d5d962;
+    width: 25px;
+    height: 25px;
+    margin-left: 40%;
+    margin-top: -13%;
+    position: absolute;
+
+}
+
+
+.messagebox {
         max-height: 600px;
         overflow-y: scroll;
         margin-bottom: 20px;
@@ -1814,6 +1871,7 @@ margin-left: -40px;
     #unit {
         margin-left: 25px;
         margin-top: 1px;
+        display: flex;
     }
 
     .registerForm {
@@ -1826,6 +1884,8 @@ margin-left: -40px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    
+
     
 
     .form-control {
