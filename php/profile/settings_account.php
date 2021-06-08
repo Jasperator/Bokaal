@@ -227,7 +227,7 @@ if (!empty($_POST['updateProfile'])) {
         </p>
         <div class="form-group">
           <!--<label for="emailpassword">Current password</label>-->
-          <input placeholder="email" type="email" name="emailpassword" id="emailpassword" class="form-control-settings">
+          <input placeholder="email" type="email" name="emailpassword" value="<?= htmlspecialchars($user->getEmail()) ?>" id="emailpassword" class="form-control-settings">
         </div>
 
         <div class="form-group">
