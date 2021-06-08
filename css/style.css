@@ -1570,14 +1570,86 @@ input[type="range"].slider:hover {
     box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 }
 
-#space {
-    height: 10vh;
+<<<<<<< HEAD
+/*-----Chat----- */
+
+.chatbox {
+    
+
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+    padding: 20px;
+
+    width: 80%;
+
+    font-family: "Josefin Sans";
+
+    
+}
+
+.messagebox {
+    max-height: 100px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+.messageContent {
+    display: block;
+    clear: both;
+}
+
+.messageElement .container {
+    margin-bottom: 20px;
+}
+
+.messageElement p {
+    margin-top: 10px;
+    max-width: 250px;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.messageContent small {
+    position: relative;
+    top: 3px;
+}
+
+.messageText{
+
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+
+    height: 50px;
+    padding: 5px;
+    width: 70%;
+    
+    border: none;
+    border-bottom: 3px solid black;
+}
+
+.sendMessage{
+
+    background-color: orangered;
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+    font-weight: 400;
+    color: white;
+    padding: 10px;
+    width: 10%;
+    border: none;
+    height: 50px;
 }
 
 
 /*-----Chat----- */
 
-#chatnaam {
+#chatnaam{
     color: #000;
     font-size: 1.5em;
     background-color: none;
@@ -1711,6 +1783,7 @@ input[type="range"].slider:hover {
 
     width: 70%;
 }
+
 
 
 /*-----footer-----*/
