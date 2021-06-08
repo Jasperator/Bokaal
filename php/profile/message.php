@@ -68,6 +68,7 @@ if(isset($_GET['chat_id'])){
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/reaction.css" />
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
 
 
 
@@ -150,8 +151,8 @@ if(isset($_GET['chat_id'])){
                 <?php endif; ?>
             </div>
             <div id="reply">
-            <textarea id="messageText" class="messageText float-left" ></textarea>
-            <button id="sendMessage" class="sendMessage btn btn-danger btn-s rounded">Send</button>
+            <input type="text" id="messageText" class="messageText" value="Type hier...">
+            <button id="sendMessage" class="sendMessage">Stuur</button>
             </div>
         <?php else : ?>
             <h2 class="d-inline-block">You have no body to chat with!</h2>
