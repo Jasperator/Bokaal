@@ -48,6 +48,12 @@ if(!empty($_POST['start_chat'])){
         
 <?php include_once("../includes/subNav.php");?>
 
+<?php if(count($items) <= 0){ ?>
+
+
+<img class="Placeholder" src="../../images/boughtPlaceholder.png" alt="cart placeholder">
+<?php } else { ?>
+
 <ul id='all'>
             <?php foreach ($items as $item) :
                 $seller = $itemClass->getUserFromItem($item->id);
@@ -89,6 +95,7 @@ if(!empty($_POST['start_chat'])){
                 </div>
             <?php endforeach ?>                                    
 </ul>
+<?php } ?>
 
 <?php include_once("../includes/footer.php");?>
 

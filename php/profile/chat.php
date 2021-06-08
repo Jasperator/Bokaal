@@ -43,6 +43,13 @@ function message() {
         <h2 class="hoofdtitel">Berichten</h2>
 
     <?php include_once("../includes/subNav.php");?>
+
+
+
+
+    <img class="Placeholder" src="../../images/chatPlaceholder.png" alt="cart placeholder">
+    
+
         <ul id="all-chats" class="row col-md-12">
 
     <?php

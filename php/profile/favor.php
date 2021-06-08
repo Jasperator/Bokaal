@@ -39,14 +39,20 @@ if (!empty($_POST['delete-favorite-person'])) {
 
 <body>
     <?php include_once("../includes/nav.include.php") ?>
-    <div>
 
 
-        <div>
+        
             <h2 class="hoofdtitel">Favorieten</h2>
-        </div>
+
+
 
         <?php include_once("../includes/subNav.php");?>
+
+        <?php if(count($favorites) <= 0){ ?>
+
+
+<img class="Placeholder" src="../../images/favoritePlaceholder.png" alt="cart placeholder">
+<?php } else { ?>
 
         <ul id="all-detail" class="row col-md-12">
 
@@ -79,8 +85,10 @@ if (!empty($_POST['delete-favorite-person'])) {
                 </div>
             </div>
             <?php endforeach ?>
-        </ul>      
-    </div>
+        </ul>   
+        
+        <?php } ?>
+
    
 
 

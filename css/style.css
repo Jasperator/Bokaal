@@ -1282,9 +1282,10 @@ input[type="range"].slider:hover {
 
 /*-----cart/winkelkar-----*/
 
-#cartPlaceholder {
+.Placeholder {
     width: 50%;
     margin-left: 25%;
+    margin-top: 5%;
 }
 
 #expiry-date {
@@ -1651,6 +1652,7 @@ input[type="range"].slider:hover {
     width: 80%;
 
     font-family: "Josefin Sans";
+    
 }
 
 .messagebox {
@@ -1660,6 +1662,7 @@ input[type="range"].slider:hover {
     padding-left: 10%;
     padding-right: 10%;
 
+    
 }
 
 .messageContent {
@@ -1888,8 +1891,8 @@ footer {
 .footerMenu ul li a {
     color: #fff;
     float: left;
-    margin-right: 4%;
-    font-size: 1.2em;
+    margin-right: 3.5%;
+    font-size: 1.1em;
 }
 
 .footerMenu ul li:first-child {
