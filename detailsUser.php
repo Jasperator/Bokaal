@@ -46,35 +46,43 @@ if(!empty($_POST['start_chat'])){
 <?php include_once("php/includes/nav.include.php");?>
 
 
-    <h2 class="hoofdtitel"><?= htmlspecialchars($seller->fullname); ?></h2>
+    <h2 class="hoofdtitel"> <?= htmlspecialchars($seller->company);?></h2>
 
-    <div class="card mb-3 boer-detail" style="max-width: 50%; max-height:;" >
-        <div class="row g-0">
-            <div class="col-md-4">
-                <form action="" method="post">
-                    <img class="boer-img" id="picture" style="height:250px; width:250px;" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
-                        </div>    
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
-                                <p class="card-text"><?= htmlspecialchars($seller->location); ?></p>
-                                <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
-                                <p class="card-text"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand:
-                                    <?=
-                                    $seller->distance;?></p>
-                                <form  id="start_chat" class="chat-button" action="" method="post">
-                                    <div class="form-group">
-                                        <button type="submit" name="start_chat" class="btn btn chatColor"
-                                        value="Chat" >Chat</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+    <div class="container-boer">
+            <h2 class="verkoper"><?= htmlspecialchars($seller->fullname);  ?></h2>
+            <div class="locatie-boer">
+                <p><?= htmlspecialchars($seller->location); ?></p>
+                <p class="text-muted afstand"> Afstand: <?=$seller->distance;?></p>
             </div>
+
+            <div>
+                <div>
+                    <div>
+                        <div class="img-text">
+                            <form class="boer-profile-pic-user" action="" method="post">
+                                <img class="boer-profile-pic-img"
+                                    src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>" />
+                                <div>
+                                    <h5 class="full-name-boer"><?= htmlspecialchars($seller->fullname); ?></h5>
+                                    <p class="bio-boer">"<?= htmlspecialchars($seller->bio); ?>"</p>
+                                    <form action="" method="post">
+                                        <div>
+                                            <input type="hidden" name="chat_id"
+                                                value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
+                                            <input id="chatnaam" type="submit" name="start_chat"
+                                                value="Stuur een bericht" />
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 <?php if(count($allItemsSeller) > 0){ ?>
-                <h2 class="hoofdtitel">Items</h2>
+                <h2 class="items-header" >Items</h2>
 
             <ul id="all-detail" class="row col-md-12">
 
@@ -89,9 +97,9 @@ if(!empty($_POST['start_chat'])){
 
                                             <div class="card-body">
                                                 <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
-                                                <p class="card-title"><?= htmlspecialchars($item->category); ?></p>
-                                                <p class="card-title"><?= htmlspecialchars($item->description); ?></p>
-                                                <p class="card-title"> <img class="zoekertje" src="/images/icon/coin-green.svg" alt="">
+                                                <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
+                                                <!--<p class="card-text"><?= htmlspecialchars($item->description); ?></p>-->
+                                                <p class="card-text"> <img class="zoekertje" src="/images/icon/coin-green.svg" alt="">
                                                     <?= htmlspecialchars($item->quantity); ?> <?= htmlspecialchars($item->unit); ?></p>
                                                 <p class="card-text"> <img class="zoekertje" src="/images/icon/kg-green.svg" alt="">
                                                     <?= htmlspecialchars($item->price); ?> <?= htmlspecialchars($item->currency); ?></p>
