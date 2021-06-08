@@ -1,11 +1,11 @@
-
 /* ---------------DESKTOP VERSIE ---------------- */
 
 @media only screen and (min-width: 900px) {
 
     /*----- algemeen -----*/
 
-    html,body{
+    html,
+    body {
         height: 100%;
         margin: 0;
     }
@@ -24,7 +24,7 @@
 
     /*-----SUB NAVIGATIE----- */
 
-    .subMenu{
+    .subMenu {
         width: 30%;
         margin-left: 35%;
         margin-top: -2%;
@@ -32,7 +32,8 @@
         position: absolute;
 
     }
-    .subIcon{
+
+    .subIcon {
         opacity: 50%;
         width: 7%;
         margin-left: 8%;
@@ -41,16 +42,16 @@
         position: relative;
         vertical-align: top;
     }
-    
 
-    .subIcon:hover{
+
+    .subIcon:hover {
         opacity: 100%;
 
         border-bottom: 5px solid black;
 
     }
 
-    .activated{
+    .activated {
         opacity: 100%;
 
         border-bottom: 5px solid black;
@@ -71,7 +72,8 @@
         margin-left: 2%;
         margin-right: 2%;
     }
-    .listItem a{
+
+    .listItem a {
 
         color: #fff;
         font-size: 1.3em;
@@ -109,7 +111,7 @@
         line-height: 20px;
     }
 
-    a.navActive{
+    a.navActive {
 
 
         text-decoration: none;
@@ -150,20 +152,20 @@
         width: 20%;
     }
 
-    .breed{
+    .breed {
         width: 75%;
         margin: auto;
     }
 
-    .breed:hover{
-    
+    .breed:hover {
+
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
     }
 
-    .card{
+    .card {
         background-color: #ffffff;
     }
 
@@ -189,35 +191,44 @@
 
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        background-color: #D41C1C;        
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;
 
     }
 
     /* The Modal (background) */
     .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
         left: 0;
         top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
     }
 
     /*----- Modal Content/Box -----*/
     .modalContent {
         background-color: #fefefe;
         width: 30%;
-        margin: 15% auto; /* 15% from the top and centered */
+        margin: 15% auto;
+        /* 15% from the top and centered */
         padding: 20px;
         border: 1px solid #888;
     }
 
-    .deleteButton{
+    .deleteButton {
 
         background-color: #BE1818;
         color: white;
@@ -230,14 +241,15 @@
         margin-left: 27.5%;
     }
 
-    .deleteButton:hover{
-    
+    .deleteButton:hover {
+
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        background-color: #D41C1C;   
-    
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;
+
     }
+
     /* The Close Button */
     .close {
         color: #aaa;
@@ -255,7 +267,7 @@
 
     /*------settings-----*/
 
-    .settingsButton{
+    .settingsButton {
 
         background-color: orangered;
         color: #fff;
@@ -268,11 +280,11 @@
         border: none;
     }
 
-    .settingsButton:hover{
-    
+    .settingsButton:hover {
+
         cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-                box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         background-color: #FF5419;
 
     }
@@ -283,10 +295,10 @@
         height: 100vh;
     }
 
-    .all_item_profile{
+    .all_item_profile {
         margin-top: 10%;
     }
-    
+
 
     .item_profile {
 
@@ -297,7 +309,7 @@
         margin-bottom: 15px;
     }
 
-    .custom{
+    .custom {
         width: 20% !important;
 
         border: none !important;
@@ -309,12 +321,12 @@
         background-color: orangered !important;
     }
 
-    .custom:hover{
+    .custom:hover {
         color: black !important;
         background-color: #d5d962 !important;
     }
 
-    .instel:link{
+    .instel:link {
         color: #ffffff;
     }
 
@@ -331,7 +343,7 @@
         font-variant: normal;
         font-weight: 400;
     }
-    
+
 
 
     /*-----Fonts-----*/
@@ -397,10 +409,10 @@
 
         background-color: #ffffff;
 
-        box-shadow: 0px 0px 65px 20px rgba(0,0,0,0.1);
-        -webkit-box-shadow: 0px 0px 65px 20px rgba(0,0,0,0.1);
-        -moz-box-shadow: 0px 0px 65px 20px rgba(0,0,0,0.1);
-        }
+        box-shadow: 0px 0px 65px 20px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 0px 65px 20px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 0px 65px 20px rgba(0, 0, 0, 0.1);
+    }
 
     /*-----profiel instellingen-----*/
 
@@ -411,758 +423,811 @@
         margin-left: calc(17.5% - 125px + 5%);
     }
 
-    .setImg{
+    .setImg {
         float: right;
 
         z-index: 15;
         margin-right: 10%;
         object-fit: cover;
 
-        -webkit-box-shadow: inset 0px 0px 15px 17px #FFFFFF; 
-                box-shadow: inset 0px 0px 15px 17px #FFFFFF;
-        
+        -webkit-box-shadow: inset 0px 0px 15px 17px #FFFFFF;
+        box-shadow: inset 0px 0px 15px 17px #FFFFFF;
+
     }
 
-    .setImage{
+    .setImage {
         z-index: 14;
-        position: relative;   
-    }
-
-    }
-
-    .form-control-settings {
-        width: 35%;
-        height: 50px;
-
-        margin-left: 5%;
-        margin-top: 15px;
-
-        padding-left: 15px;
-
-        border: none;
-        border-radius: 5px;
-
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        font-size: 16px;
-
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
-
-
-    .new-profile-image {
-        width: 150px;
-        height: 200px;
-        object-fit: cover;
-
-        margin-left: 3%;
-    }
-
-    .spacing-bottom {
-        height: 100px;
-    }
-
-    .button-profile-img {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-
-        border: none;
-        border-radius: 5px;
-
-        font-size: 1em;
-
-        background-color: orangered;
-        color: #ffffff;
-
-        margin-left: 0%;
-        margin-bottom: 20px;
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-        text-align: center;
-
-        width: 250px;
-
-        float: left;
-
-        
-    }
-
-
-    .button-profile {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-
-        background-color: orangered;
-        color: #ffffff;
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 0px;
-        padding-right: 0px;
-
-        text-align: center;
-        width: 10%;
-
-        margin-top: 15px;
-        margin-left: 17.5%;
-        margin-bottom: 30px;
-    }
-
-    .file-button {
-        color: #000000;
-
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        text-align: center;
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 5%;
-
-        margin-bottom: 20px;
-    }
-
-    /* -----INDEX----- */
-
-
-    #list {
-        display: inline-block;
-        text-decoration: none;
-        list-style-type: none;
-    }
-
-
-    #box {
-        display: inline-block;
-    }
-
-    #all {
-
-        display: flex;
-
-        height: auto;
-        width: 90%;
-
-        margin-bottom: 15px;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 5%;
-
-    }
-
-    #all-buurt {
-
-        display: inline-block;
-
-        height: auto;
-        width: 90%;
-
-        margin-bottom: 15px;
-        margin-left: 5%;
-
-    }
-
-    #list {
-
-        width: 255px;
-        height: auto;
-
-        border-radius: 2.5px;
-        border: 1px;
-
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-
-
-        padding-top: 15px;
-        padding-bottom: 10px;
-
-        margin-bottom: 15px;
-        margin-left: 6%;
-
-    }
-
-    #wrapper {
-        width: 100%;
-        height: 200px;
-
-        object-fit: cover;
-
-        margin-top: -10px;
-
-        float: left;
-        overflow: hidden;
-
-        border-radius: 2.5%;
-    }
-
-    #picture {
-        background-size: cover;
-        width: 100%;
-        height: 200px;
-        float: left;
-
-        object-fit: cover;
-
-    }
-
-    #splash-info {
         position: relative;
-        z-index: 2;
-        margin-bottom: 5px;
-        font-size: 15px;
-        font-weight: bold;
     }
 
-    #foto {
-        width: 150px;
-    }
-    #knop1 {
-        background-color: Transparent;
-        border: none;
-        overflow: hidden;
-        outline: none;
-        margin-left: 80%;
-        position: absolute;
-        margin-top: -30%;
-        opacity: 100%;
-    }
-    #knop1:hover{
-        opacity: 50%;
-    }
-
-    #knop2 {
-        background-color: Transparent;
-        border: none;
-        overflow: hidden;
-        outline: none;
-        margin-left: 80%;
-        position: absolute;
-        margin-top: -30%;
-        opacity: 50%;
-    }
-    #knop2:hover{
-        opacity: 100%;
-    }
-
-    .fa-star {
-        
-        color: #d5d962;    
 }
 
-    .fav-but {
-        width: 25px;
-        margin-left: 45%;
-    }
+.form-control-settings {
+    width: 35%;
+    height: 50px;
 
-    .text-primary {
-        font-family: "Josefin Sans";
-        font-size: 16px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-        line-height: 20px;
+    margin-left: 5%;
+    margin-top: 15px;
 
-        margin: 12px;
-        padding-top: 5px;
-    }
+    padding-left: 15px;
 
-    #pages a{
+    border: none;
+    border-radius: 5px;
 
-        font-family: "Josefin Sans";
-        font-size: 1.7em;
-        font-weight: 400;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    font-size: 16px;
 
-        color: #d5d962;
-        margin-left: 2%;
-        margin-right: 2%;
-        opacity: 50%;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
 
-    }
 
-    #pages a:hover{
+.new-profile-image {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
 
-        border-bottom: 5px solid  #d5d962;
-        opacity: 100%;
-    
-    }
+    margin-left: 3%;
+}
 
-    /*-----detail item/user page-----*/
+.spacing-bottom {
+    height: 100px;
+}
 
-    .container-boer{
-        margin-left: 6%;
-    }
-    
-    .verkoper{
-        color: black;
-        font-size: 2.5em;
+.button-profile-img {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
 
-        font-family: "Josefin Sans";
+    border: none;
+    border-radius: 5px;
 
-        margin-top: 3%;
-        margin-bottom: 2.5%;
-    }
-    
-    .boer-profile-pic{
-        width:40%;
-        max-height: 50%;
-        object-fit: cover;
+    font-size: 1em;
 
-        display: flex;
-    }
+    background-color: orangered;
+    color: #ffffff;
 
+    margin-left: 0%;
+    margin-bottom: 20px;
 
-    .detail{
-        width: 90% !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-        border: none !important;
+    text-align: center;
 
-        font-family: "Josefin Sans";
-        font-size: 16px !important;
+    width: 250px;
 
-        color: #ffffff !important;
-        background-color: orangered !important;
-    }
+    float: left;
 
-    .detail:hover{
-        color: black !important;
-        background-color: #d5d962 !important;
-    }
-    
-    
-    .chatColor{
-        width: 20% !important;
 
-        border: none !important;
+}
 
-        font-family: "Josefin Sans";
-        font-size: 16px !important;
 
-        color: #ffffff !important;
-        background-color: orangered !important;
-    }
+.button-profile {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
 
-    .chatColor:hover{
-        color: black !important;
-        background-color: #d5d962 !important;
-    }
+    background-color: orangered;
+    color: #ffffff;
 
-    /*-----search / items pagina-----*/
-    .search-bar:hover{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
 
-        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+    text-align: center;
+    width: 10%;
 
-    }
+    margin-top: 15px;
+    margin-left: 17.5%;
+    margin-bottom: 30px;
+}
 
-    .form-control-search:hover{
+.file-button {
+    color: #000000;
 
-        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    text-align: center;
 
-        cursor: pointer;
-    }
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5%;
 
-    #button_or_search:hover{
-        cursor: pointer;
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        background-color: #FF5419;
+    margin-bottom: 20px;
+}
 
+/* -----INDEX----- */
 
-    }
 
+#list {
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+}
 
 
+#box {
+    display: inline-block;
+}
 
-    .search-bar {
-        width: 20%;
-        height: 50px;
+#all {
 
-        margin-left: 17.5%;
-        margin-top: 15px;
+    display: flex;
 
-        padding-left: 25px;
+    height: auto;
+    width: 90%;
 
-        font-family: "Josefin Sans";
-        font-size: 1.3em;
-        font-weight: 400;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
 
-        float: left;
+}
 
-        border: none;
+#all-buurt {
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
+    display: inline-block;
 
-    .form-control-search {
-        width: 20%;
-        height: 50px;
+    height: auto;
+    width: 90%;
 
-        border: none;
+    margin-bottom: 15px;
+    margin-left: 5%;
 
-        margin-top: 15px;
-        margin-left: 50px;
-        padding-left: 25px;
+}
 
-        font-family: "Josefin Sans";
-        font-size: 1.3em;
-        font-weight: 400;
+#list {
 
-        float: left;
+    width: 255px;
+    height: auto;
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
+    border-radius: 2.5px;
+    border: 1px;
 
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
 
-    .zoekertje {
-        width: 20px;
-        height: auto;
-    }
+    padding-top: 15px;
+    padding-bottom: 10px;
 
+    margin-bottom: 15px;
+    margin-left: 6%;
 
-    #button_or_search {
+}
 
-        float: left;
+#wrapper {
+    width: 100%;
+    height: 200px;
 
-        font-family: "Josefin Sans";
-        font-size: 1.3em;
-        font-weight: 400;
+    object-fit: cover;
 
-        border: none;
+    margin-top: -10px;
 
-        background-color: orangered;
+    float: left;
+    overflow: hidden;
 
-        color: #ffffff;
+    border-radius: 2.5%;
+}
 
-        padding-left: 15px;
-        padding-right: 15px;
+#picture {
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    float: left;
 
+    object-fit: cover;
 
-        width: 7%;
-        height: 50px;
+}
 
-        margin-top: 15px;
-        margin-left: 50px;
+#splash-info {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
 
+#foto {
+    width: 150px;
+}
 
-    }
+#knop1 {
+    background-color: Transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    margin-left: 80%;
+    position: absolute;
+    margin-top: -30%;
+    opacity: 100%;
+}
 
-    .priceLabel{
+#knop1:hover {
+    opacity: 50%;
+}
 
-        margin-top: 30px;
+#knop2 {
+    background-color: Transparent;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    margin-left: 80%;
+    position: absolute;
+    margin-top: -30%;
+    opacity: 50%;
+}
 
-    }
+#knop2:hover {
+    opacity: 100%;
+}
 
-    .slidecontainer, .priceLabel{
+.fa-star {
 
-        margin-left: 17.5%;
+    color: #d5d962;
+}
 
-        font-family: "Josefin Sans";
-        font-size: 1.3em;
-        font-weight: 400;
+.fav-but {
+    width: 25px;
+    margin-left: 45%;
+}
 
-      }
+.text-primary {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
 
-      input[type="range"].slider{
+    margin: 12px;
+    padding-top: 5px;
+}
 
-        width: 24.5%;
-        color: #d5d962;
-        -webkit-appearance: none;  
-        appearance: none;
+#pages a {
 
-        height: 10px;
-        background: #FCFFB6; 
-        margin-top: 1%;
-        margin-bottom: 1%;
+    font-family: "Josefin Sans";
+    font-size: 1.7em;
+    font-weight: 400;
 
-      }
+    color: #d5d962;
+    margin-left: 2%;
+    margin-right: 2%;
+    opacity: 100%;
 
-      .slider::-webkit-slider-thumb {
-        -webkit-appearance: none; 
-        appearance: none;
-        width: 35px; 
-        height: 50px; 
-        border-radius: 20px;
-        cursor: pointer;
-        background: url('/images/icon/carrot.png');
-        background-size: cover;
+}
 
+#pages a:hover {
 
-      }
+    border-bottom: 5px solid #d5d962;
+    opacity: 50%;
 
-      input[type="range"].slider:hover{
+}
 
-        background: #f7fa9b; 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+.curPage {
 
-      }
-    /*-----sell menu-----*/
+    border-bottom: 5px solid #d5d962;
 
-    #linker{
-        margin-left: 10%;
-    }
+}
 
-    #sell-img{
-        height: 75%;
-        right: 10%;
-        top: 25%;
-        z-index: 15;
+/*-----detail item/user page-----*/
 
-        position: absolute;
-    }
-    
-    #unit {
-        float: right;
-        margin-right: 30px;
-        margin-left:10px;
-        margin-top: 1px;
+.container-boer {
+    margin-left: 6%;
+}
 
-        width: 35%;
-    }
 
-    #kolom-file {
-        margin-left: 9%;
-    }
+.verkoper {
+    color: orangered;
 
-    .registerForm {
-        padding-top: 5%;
-        width:  40%;
-        float: right;
-    }
+    font-size: 2.5em;
+    font-family: "Josefin Sans";
 
-    .form-sell {
-        width: 100%;
-        height: 50px;
+    margin-top: 3%;
+}
 
-        float: left;
+.afstand {
+    margin-left: 15px;
+}
 
-    }
+.locatie-boer {
+    display: flex;
 
-    .form-sell-item {
-        display: flex;
-        width: 78%;
-        margin-left: 10%;
-        margin-top: 55px;
-    }
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
 
-    .form-control {
-        width: 35%;
-        height: 50px;
+    margin-top: 15px;
+    margin-bottom: 2.5%;
+}
 
-        margin-left: 10%;
 
-        border: none;
+.boer-profile-pic {
+    width: 30%;
+    max-height: 50%;
+    object-fit: cover;
 
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        font-size: 16px;
+    display: flex;
+    margin-right: 35px;
+}
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
+.full-name-boer {
+    margin-top: 5px;
+    margin-bottom: 45px;
+}
 
-    #top {
-        margin-top: 0px;
-    }
+.img-text {
+    display: flex;
+    font-family: "Josefin Sans";
+}
 
-    #title {
-        height: 50px;
+.bio-boer {
+    width: 55%;
+    font-size: 1.5em;
+    font-style: italic;
+}
 
-        border: none;
+.detail {
+    width: 90% !important;
 
-        margin-top: 15px;
+    border: none !important;
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
+    font-family: "Josefin Sans";
+    font-size: 16px !important;
 
-    #description {
-        height: 100px;
-        
-        margin-top: 30px;
+    color: #ffffff !important;
+    background-color: orangered !important;
+}
 
-        border: none;
+.detail:hover {
+    color: black !important;
+    background-color: #d5d962 !important;
+}
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
+.locatie-boer {
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
 
+    margin-top: 15px;
+}
 
-    #quantity {
-        border: none;
+#chatnaam {
+    width: 20% !important;
 
-        width: 100%;
+    float: right;
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
+    margin-right: 45%;
 
-    #bedrag {
-        display: flex;
-        width: 100%;
-    }
+    border: none !important;
 
-    #price {
+    font-family: "Josefin Sans";
+    font-size: 16px !important;
 
-        border: none;
+    color: #ffffff !important;
+    background-color: orangered !important;
+}
 
-        width: 180px;
+.chatColor:hover {
+    color: black !important;
+    background-color: #d5d962 !important;
+}
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+/*-----search / items pagina-----*/
+.search-bar:hover {
 
-    }
+    box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
 
-    #currency {
+}
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
+.form-control-search:hover {
 
-    #item_image.button {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
+    box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
 
-        border: none;
+    cursor: pointer;
+}
 
-        text-align: center;
-        color: #000000;
-    }
+#button_or_search:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    background-color: #FF5419;
 
-    .button+input {
-        background-color: #d5d962;
-        color: #ffffff;
 
-        border: none;
-    }
+}
 
-    #hoeveelheid {
-        display: flex;
-        width: 100%;
-        margin-top: 95px;
-        margin-left: -17px;
-    }
 
-    #item_image.button {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
 
-        border: none;
 
-        text-align: center;
-        color: #000000;
-    }
+.search-bar {
+    width: 20%;
+    height: 50px;
 
-    .button+input {
-        background-color: #d5d962;
-        color: #ffffff;
-        border: none;
-    }
+    margin-left: 17.5%;
+    margin-top: 15px;
 
-    #button_or {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        font-size: 1.5em;
+    padding-left: 25px;
 
-        border: none;
-        border-radius: 1px;
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+    font-weight: 400;
 
-        background-color: orangered;
-        color: #ffffff;
+    float: left;
 
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
+    border: none;
 
-        margin-left: 25%;
-        margin-top: 2%;
-    }
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
 
-    #button_orange {
-        width: 35%;
+.form-control-search {
+    width: 20%;
+    height: 50px;
 
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        font-size: 1.5em;
+    border: none;
 
-        border: none;
-        border-radius: 1px;
+    margin-top: 15px;
+    margin-left: 50px;
+    padding-left: 25px;
 
-        background-color: orangered;
-        color: #ffffff;
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+    font-weight: 400;
 
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
+    float: left;
 
-        margin-left: 10%;
-        margin-top: 2%;
-    }
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
 
-   /*-----cart/winkelkar-----*/
 
-#cartPlaceholder{
+
+.zoekertje {
+    width: 20px;
+    height: auto;
+}
+
+
+#button_or_search {
+
+    float: left;
+
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+    font-weight: 400;
+
+    border: none;
+
+    background-color: orangered;
+
+    color: #ffffff;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    width: 7%;
+    height: 50px;
+
+    margin-top: 15px;
+    margin-left: 50px;
+
+
+}
+
+.priceLabel {
+
+    margin-top: 30px;
+
+}
+
+.slidecontainer,
+.priceLabel {
+
+    margin-left: 17.5%;
+
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+    font-weight: 400;
+
+}
+
+input[type="range"].slider {
+
+    width: 24.5%;
+    color: #d5d962;
+    -webkit-appearance: none;
+    appearance: none;
+
+    height: 10px;
+    background: #FCFFB6;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: url('/images/icon/carrot.png');
+    background-size: cover;
+
+
+}
+
+input[type="range"].slider:hover {
+
+    background: #f7fa9b;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+}
+
+/*-----sell menu-----*/
+
+#linker {
+    margin-left: 10%;
+}
+
+#sell-img {
+    height: 75%;
+    right: 10%;
+    top: 25%;
+    z-index: 15;
+
+    position: absolute;
+}
+
+#unit {
+    float: right;
+    margin-right: 30px;
+    margin-left: 10px;
+    margin-top: 1px;
+
+    width: 35%;
+}
+
+#kolom-file {
+    margin-left: 9%;
+}
+
+.registerForm {
+    padding-top: 5%;
+    width: 40%;
+    float: right;
+}
+
+.form-sell {
+    width: 100%;
+    height: 50px;
+
+    float: left;
+
+}
+
+.form-sell-item {
+    display: flex;
+    width: 78%;
+    margin-left: 10%;
+    margin-top: 55px;
+}
+
+.form-control {
+    width: 35%;
+    height: 50px;
+
+    margin-left: 10%;
+
+    border: none;
+
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    font-size: 16px;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
+
+#top {
+    margin-top: 0px;
+}
+
+#title {
+    height: 50px;
+
+    border: none;
+
+    margin-top: 15px;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
+
+#description {
+    height: 100px;
+
+    margin-top: 30px;
+
+    border: none;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
+
+
+#quantity {
+    border: none;
+
+    width: 100%;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
+
+#bedrag {
+    display: flex;
+    width: 100%;
+}
+
+#price {
+
+    border: none;
+
+    width: 180px;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+}
+
+#currency {
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
+
+#item_image.button {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+
+    border: none;
+
+    text-align: center;
+    color: #000000;
+}
+
+.button+input {
+    background-color: #d5d962;
+    color: #ffffff;
+
+    border: none;
+}
+
+#hoeveelheid {
+    display: flex;
+    width: 100%;
+    margin-top: 95px;
+    margin-left: -17px;
+}
+
+#item_image.button {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+
+    border: none;
+
+    text-align: center;
+    color: #000000;
+}
+
+.button+input {
+    background-color: #d5d962;
+    color: #ffffff;
+    border: none;
+}
+
+#button_or {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    font-size: 1.5em;
+
+    border: none;
+    border-radius: 1px;
+
+    background-color: orangered;
+    color: #ffffff;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+#button_orange {
+    width: 35%;
+
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    font-size: 1.5em;
+
+    border: none;
+    border-radius: 1px;
+
+    background-color: orangered;
+    color: #ffffff;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+/*-----cart/winkelkar-----*/
+
+#cartPlaceholder {
     width: 50%;
     margin-left: 25%;
 }
 
-#expiry-date{
+#expiry-date {
     font-family: "Josefin Sans";
-    width:75px;
+    width: 75px;
     margin-top: 5px;
     border: none;
 }
 
-.paypal{
+.paypal {
     display: flex;
 }
 
-#pp, #cd{
+#pp,
+#cd {
     margin-right: 15px;
     margin-left: 15px;
 }
 
-#expiry-date:hover{
+#expiry-date:hover {
     cursor: pointer;
     box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
 }
 
 
-.label-expiry{
+.label-expiry {
     margin-left: 15px;
     margin-right: 12px;
 }
 
-.label{
+.label {
     font-family: "Josefin Sans";
     margin-right: 15px;
 }
 
-#label{
+#label {
     margin-right: 15px !important;
 }
 
-.head-calc{
+.head-calc {
     margin-top: -15px;
 }
 
@@ -1183,11 +1248,11 @@
     border: none;
 }
 
-#expiry-date{
+#expiry-date {
     margin-left: 35px;
 }
 
-.cardholdername{
+.cardholdername {
     float: right;
     margin: 0;
     font-family: "Josefin Sans";
@@ -1199,21 +1264,21 @@
 
 }
 
-.cardholdername:hover{
+.cardholdername:hover {
     cursor: pointer;
     box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
 }
 
-.right{
+.right {
     float: right;
     display: flex;
 }
 
-.left{
+.left {
     display: flex;
 }
 
-.cardnumber{
+.cardnumber {
     float: right;
     margin: 0;
     font-family: "Josefin Sans";
@@ -1224,7 +1289,7 @@
     border-right: none;
 }
 
-.cardnumber:hover{
+.cardnumber:hover {
     cursor: pointer;
     box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
 }
@@ -1266,19 +1331,19 @@
     outline: none;
 }
 
-.left{
+.left {
     margin-right: 50px;
 }
 
 
-.info{
+.info {
     margin-bottom: 5px;
     margin-top: 15px;
 }
 
 
 
-#buy-all{
+#buy-all {
     font-family: "Josefin Sans";
     font-style: normal;
     font-variant: normal;
@@ -1301,7 +1366,7 @@
     margin-bottom: 5px;
 }
 
-.total_price{
+.total_price {
     border: solid 1px lightgrey;
     width: 88%;
 
@@ -1312,8 +1377,8 @@
     font-size: 1.2em;
 }
 
-.total_price_titel{
-    font-family: "Josefin Sans";    
+.total_price_titel {
+    font-family: "Josefin Sans";
 
     font-style: normal;
     font-variant: normal;
@@ -1331,205 +1396,206 @@
     background-color: lightgrey;
 }
 
-#prijs-start{
+#prijs-start {
     display: flex;
     margin-left: 15px;
 }
 
-.prijs_een{
+.prijs_een {
     padding-left: 15px;
 }
 
-.line-rechts{
+.line-rechts {
     margin-left: 65%;
 }
 
-.prijs{
+.prijs {
     padding-left: 15px;
 }
 
-#prijs-twee{
+#prijs-twee {
     display: flex;
     margin-left: 15px;
 }
 
-.prijs_twee{
+.prijs_twee {
     padding-left: 15px;
 }
 
-.line-rechts-twee{
+.line-rechts-twee {
     margin-left: 61.5%;
 }
 
-#prijs-alles{
+#prijs-alles {
     display: flex;
-    font-family: "Josefin Sans";    
+    font-family: "Josefin Sans";
     font-size: 1.2em;
 
     font-style: normal;
     font-variant: normal;
-    border: none;    
+    border: none;
 }
 
-.prijs-tott{
-    
+.prijs-tott {
+
     padding-left: 5%;
 }
 
-.bedrag-eind{
+.bedrag-eind {
     margin-left: 57.5%;
 }
 
-    /*-----favor-----*/
+/*-----favor-----*/
 
 
-    #del-fav {
-        font-family: "Josefin Sans";
-        font-style: normal;
-        font-variant: normal;
-        border: none;
-        border-radius: 5px;
-        font-size: 0.8em;
+#del-fav {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8em;
 
-        background-color: red;
-        color: #ffffff;
+    background-color: red;
+    color: #ffffff;
 
-        padding-top: 5px;
-        padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
-        text-align: center;
+    text-align: center;
 
-        width: 100%;
+    width: 100%;
 
-        margin-top: 5px;
-        margin-left: 5%;
-        margin-bottom: 5px;
-    }
-
-
-    /*-----bought-----*/
-
-   
-    /*-----settings-----*/
-
-    .instel {
-        text-decoration: none;
-
-        color: #000000;
-
-        font-family: "Josefin Sans";
-        font-size: 25px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-    }
-
-    .all_item {
-        margin-top: 10%;
-
-    }
-
-    .item {
-        width: 35%;
-
-        text-align: center;
-
-        border-radius: 5px;
-
-        background-color: #ffffff;
-
-        margin-top: 15px;
-        margin-bottom: 15px;
-        margin-left: 32%;
-
-        padding-top: 15px;
-        padding-bottom: 15px;
-
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
-
-    #space {
-        height: 10vh;
-    }
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-bottom: 5px;
+}
 
 
-    /*-----Chat----- */
-
-    #chatnaam{
-        color: #000;
-        font-size: 1.5em;
-        background-color: none;
-        font-family: "Josefin Sans";
-        font-weight: 400;
-        text-align: center;
-        vertical-align: middle;
-        margin-top: 4%;
-    }
-
-    .chatImg{
-
-        width: 110%;
-        height: 300px;
-        object-fit: cover;
-        margin-left: -5%;
-
-    }
-
-    .chatPreview{
-
-        background-color: white;
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        width: 12%;
-        height: 370px;
-        float: left;
-        margin: 100px;
-    }
-
-    .chatPreview:hover{
-
-        cursor: pointer;
-        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+/*-----bought-----*/
 
 
-    }
-    .notification{
+/*-----settings-----*/
 
-        color: #fff;
-        font-family: "Josefin Sans";
-        font-size: 1.3em;
-        text-align: center;
-        vertical-align: middle;
+.instel {
+    text-decoration: none;
 
-        border-radius: 30px;
-        padding: 10px;
-        background-color: #d5d962;
-        width: 50px;
-        height: 50px;
-        margin-left: 87%;
-        position: absolute;
-    }
+    color: #000000;
 
-    .navNotification{
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+}
 
-        color: #fff;
-        font-family: "Josefin Sans";
-        font-size: 0.8em;
-        text-align: center;
-        vertical-align: middle;
+.all_item {
+    margin-top: 10%;
 
-        border-radius: 15px;
-        background-color: #d5d962;
-        width: 25px;
-        height: 25px;
-        margin-left: 97%;
-        margin-top: -5%;
-        position: absolute;
-        padding-left: 4%;
-        padding-top: 2%;
-    }
+}
 
-.subNavNotification{
+.item {
+    width: 35%;
+
+    text-align: center;
+
+    border-radius: 5px;
+
+    background-color: #ffffff;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 32%;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+}
+
+#space {
+    height: 10vh;
+}
+
+
+/*-----Chat----- */
+
+#chatnaam {
+    color: #000;
+    font-size: 1.5em;
+    background-color: none;
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 4%;
+}
+
+.chatImg {
+
+    width: 110%;
+    height: 300px;
+    object-fit: cover;
+    margin-left: -5%;
+
+}
+
+.chatPreview {
+
+    background-color: white;
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    width: 12%;
+    height: 370px;
+    float: left;
+    margin: 100px;
+}
+
+.chatPreview:hover {
+
+    cursor: pointer;
+    box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+
+
+}
+
+.notification {
+
+    color: #fff;
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #d5d962;
+    width: 50px;
+    height: 50px;
+    margin-left: 87%;
+    position: absolute;
+}
+
+.navNotification {
+
+    color: #fff;
+    font-family: "Josefin Sans";
+    font-size: 0.8em;
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 15px;
+    background-color: #d5d962;
+    width: 25px;
+    height: 25px;
+    margin-left: 97%;
+    margin-top: -5%;
+    position: absolute;
+    padding-left: 4%;
+    padding-top: 2%;
+}
+
+.subNavNotification {
 
     color: #fff;
     font-family: "Josefin Sans";
@@ -1548,52 +1614,52 @@
 
 
 .messagebox {
-        max-height: 600px;
-        overflow-y: scroll;
-        margin-bottom: 20px;
-    }
+    max-height: 600px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
 
-    .messageContent {
-        display: block;
-        clear: both;
-    }
+.messageContent {
+    display: block;
+    clear: both;
+}
 
-    .messageElement .container {
-        margin-bottom: 20px;
-    }
+.messageElement .container {
+    margin-bottom: 20px;
+}
 
-    .messageElement p {
-        margin-top: 10px;
-        max-width: 250px;
-        word-wrap: break-word;
-        border-radius: 10px;
-        padding: 10px;
-    }
+.messageElement p {
+    margin-top: 10px;
+    max-width: 250px;
+    word-wrap: break-word;
+    border-radius: 10px;
+    padding: 10px;
+}
 
-    .messageContent small {
-        position: relative;
-        top: 3px;
-    }
+.messageContent small {
+    position: relative;
+    top: 3px;
+}
 
-    #messageText{
-        border-radius: 5px;
+#messageText {
+    border-radius: 5px;
 
-        margin-top: 35px;
-        margin-left: auto;
-        margin-right: auto;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
 
-        padding: 5px;
+    padding: 5px;
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-        width: 70%;        
-    }
+    width: 70%;
+}
 
 
-    /*-----footer-----*/
+/*-----footer-----*/
 
-footer{
+footer {
 
     background-color: #d5d962;
     padding: 30px;
@@ -1601,55 +1667,60 @@ footer{
     height: 200px;
     color: #fff;
     font-family: "Josefin Sans";
-    margin-top: 100px; 
+    margin-top: 100px;
     bottom: 0;
     position: relative;
 }
 
-.footerCenter{
+.footerCenter {
     width: 23.333333%;
     float: left;
     margin-left: 5%;
     margin-right: 5%;
     height: 150px;
-    
+
 
 }
-.footerLogo{
+
+.footerLogo {
     width: 20%;
     margin-left: 40%;
 }
 
-.footerMenu{
+.footerMenu {
     float: left;
     width: 23.333333%;
     margin-left: 5%;
     margin-right: 5%;
     height: 150px;
     padding-top: 2%;
-    
-}
-.footerMenu ul{
 
-list-style-type: none;
 }
-.footerMenu ul li a{
+
+.footerMenu ul {
+
+    list-style-type: none;
+}
+
+.footerMenu ul li a {
     color: #fff;
     float: left;
     margin-right: 4%;
     font-size: 1.2em;
 }
-.footerMenu ul li:first-child{
 
-margin-left: -40px;
+.footerMenu ul li:first-child {
+
+    margin-left: -40px;
 
 }
-.footerMenu ul li a:hover{
+
+.footerMenu ul li a:hover {
     color: orangered;
     text-decoration: none;
 }
 
-.footerContact{
+.footerContact {
     float: left;
     width: 23.333333%;
     margin-left: 5%;
@@ -1659,21 +1730,22 @@ margin-left: -40px;
     right: 0;
     padding-top: 0.8%;
 }
-.footerContact a{
+
+.footerContact a {
 
     color: #fff;
     font-size: 1.2em;
 
 }
 
-.footerContact a:hover{
+.footerContact a:hover {
 
     color: orangered;
     text-decoration: none;
 
 }
 
-.footerContact i{
+.footerContact i {
 
     font-size: 2em;
     margin-left: 5%;
@@ -2223,7 +2295,7 @@ margin-left: -40px;
         margin-left: 5%;
         margin-top: 15px;
         margin-bottom: 15px;
-    }    
+    }
 
     .form-control {
         width: 100%;
@@ -2390,7 +2462,7 @@ margin-left: -40px;
         top: 3px;
     }
 
-    #messageText{
+    #messageText {
         border-radius: 5px;
 
         margin-top: 5%;
@@ -2402,10 +2474,10 @@ margin-left: -40px;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
-        width: 70%;        
+        width: 70%;
     }
 
-    
 
 
-} 
+
+}
