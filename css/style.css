@@ -1514,7 +1514,6 @@ input[type="range"].slider:hover {
     box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 }
 
-<<<<<<< HEAD
 /*-----Chat----- */
 
 .chatbox {
@@ -1522,7 +1521,7 @@ input[type="range"].slider:hover {
 
     margin-right: 5%;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: -70px;
 
     padding: 20px;
 
@@ -1534,9 +1533,12 @@ input[type="range"].slider:hover {
 }
 
 .messagebox {
-    max-height: 100px;
+    max-height: 600px;
     overflow-y: scroll;
     margin-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+
 }
 
 .messageContent {
@@ -1544,15 +1546,20 @@ input[type="range"].slider:hover {
     clear: both;
 }
 
-.messageElement .container {
-    margin-bottom: 20px;
+.reaction-btn-text{
+
+    margin-left: 10%;
+
 }
 
 .messageElement p {
     margin-top: 10px;
     max-width: 250px;
+    min-width: 50px;
     word-wrap: break-word;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    
 }
 
 .messageContent small {
@@ -1562,19 +1569,20 @@ input[type="range"].slider:hover {
 
 .messageText{
 
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 5%;
 
     font-family: "Josefin Sans";
     font-size: 1.3em;
 
     height: 50px;
     padding: 5px;
-    width: 70%;
+    width: 65%;
     
     border: none;
     border-bottom: 3px solid black;
+
+
 }
 
 .sendMessage{
@@ -1590,6 +1598,18 @@ input[type="range"].slider:hover {
     height: 50px;
 }
 
+.backArrow{
+    position: absolute;
+    margin-left: 3%;
+    width: 3%;
+    margin-top: 0%;
+}
+
+.backArrow:hover{
+
+    opacity: 70%;
+
+}
 
 /*-----Chat----- */
 
@@ -1685,48 +1705,6 @@ input[type="range"].slider:hover {
 }
 
 
-.messagebox {
-    max-height: 600px;
-    overflow-y: scroll;
-    margin-bottom: 20px;
-}
-
-.messageContent {
-    display: block;
-    clear: both;
-}
-
-.messageElement .container {
-    margin-bottom: 20px;
-}
-
-.messageElement p {
-    margin-top: 10px;
-    max-width: 250px;
-    word-wrap: break-word;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.messageContent small {
-    position: relative;
-    top: 3px;
-}
-
-#messageText {
-    border-radius: 5px;
-
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: auto;
-
-    padding: 5px;
-
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-
-    width: 70%;
-}
 
 
 
