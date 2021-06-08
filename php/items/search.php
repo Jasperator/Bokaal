@@ -145,6 +145,12 @@ if(!empty($_GET['searchCategory'])){
 
         </form>
 
+        <?php if(count($items) <= 0){ ?>
+
+
+            <img class="Placeholder" src="../../images/searchPlaceholder.png" alt="cart placeholder">
+        <?php } else { ?>
+
         <ul  id="all-detail" class="row col-md-12">
 
             <?php foreach ($items as $item) :
@@ -181,6 +187,8 @@ if(!empty($_GET['searchCategory'])){
                 </div>
             <?php endforeach ?>
         </ul>
+
+        <?php } ?>
 
     <div id="space"></div>
 
