@@ -102,9 +102,9 @@ if(isset($_GET['chat_id'])){
                                 } ?>> <?= $message->timestamp; ?> </small>
                                 <br>
                                 <p <?php if ($message->sender_id == $user->getId()) {
-                                    echo 'style="background-color:#d5d962; color:white; float:right; margin-bottom: -5px"';
+                                    echo 'style="background-color:#d5d962; color:white; float:right; margin-bottom: -5px; padding: 12px 20px 12px 30px; border-radius: 25px 25px 5px 25px;"';
                                 } else {
-                                    echo 'style="background-color:#E1E3E2; float:left; margin-bottom: -5px "';
+                                    echo 'style="background-color:#EEFFC8; float:left; margin-bottom: -5px; padding: 12px 30px 12px 20px; border-radius: 25px 25px 25px 5px;"';
                                 } ?>>
                                     <?= htmlspecialchars($message->content) ?>
                                 </p> <br><br><br>
