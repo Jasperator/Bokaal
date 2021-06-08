@@ -19,7 +19,7 @@
         top: 0;
         background-position: top;
 
-
+        margin-bottom: 3%;
     }
 
     /*-----SUB NAVIGATIE----- */
@@ -354,14 +354,15 @@
 
         color: #fff;
 
-        margin-top: -120px;
-        margin-bottom: 7%;
+        margin-top: -170px;
         font-family: "Josefin Sans";
         font-style: normal;
         font-size: 3em;
         font-variant: normal;
         font-weight: 500;
 
+        position: absolute;
+        display: inline-block;
     }
 
     .subtitel {
@@ -1547,6 +1548,33 @@ input[type="range"].slider:hover {
 }
 
 /*-----Chat----- */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+
+
+#chatTitel:hover{
+
+    cursor: pointer;
+    border-bottom: 3px solid white;
+
+}
 
 .chatbox {
     
@@ -1562,7 +1590,7 @@ input[type="range"].slider:hover {
 }
 
 .messagebox {
-    max-height: 600px;
+    max-height: 500px;
     overflow-y: scroll;
     margin-bottom: 20px;
     padding-left: 10%;
@@ -1629,11 +1657,20 @@ input[type="range"].slider:hover {
     height: 50px;
 }
 
+.sendMessage:hover{
+
+    cursor: pointer;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    background-color: #FF5419;
+
+}
+
 .backArrow{
     position: absolute;
     margin-left: 3%;
     width: 3%;
-    margin-top: 0%;
+    margin-top: -8.5%;
 }
 
 .backArrow:hover{

@@ -111,9 +111,7 @@ if (!empty($_POST['updateProfile'])) {
   <?php include_once("../includes/nav.include.php") ?>
   <!-- Hier moet de profile.php nav komen -->
 
-  <div>
      <h2 class="hoofdtitel">Profiel instellingen</h2>
-    <div>
       <div class="profile-settings-image">
         
         <div id="wrapper">
