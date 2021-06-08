@@ -320,20 +320,17 @@ class User
         return $this;
     }
 
-    public static function getAll()
+
+    public function getAllUsers()
     {
-        //Database connection
+        //Prepared \PDO statement that fetches the password corresponding to the inputted email
         $conn = Db::getConnection();
-
-        //Prepare and executestatement
-        $statement = $conn->prepare("SELECT email, fullname, profile_img from users");
+        $statement = $conn->prepare("SELECT * FROM users WHERE id <> :id");
+        $statement->bindValue(':id', $this->getId());
         $statement->execute();
-
-        //Fetch all rows as an array indexed by column name
         $users = $statement->fetchAll(\PDO::FETCH_OBJ);
-
-        //Return the result from the query
         return $users;
+
     }
 
     //Function that inserts users into the database
@@ -562,7 +559,7 @@ class User
         if (isset($_GET["page"])) { $page = $_GET["page"]; } else { $page=1; };
         $start_from = ($page-1) * $results_per_page;
         //<> is the same as !=
-        $statement = $conn->prepare("SELECT * FROM users WHERE email <> :email AND status = 'seller' AND  id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id) LIMIT  $start_from, $results_per_page");
+        $statement = $conn->prepare("SELECT * FROM users INNER JOIN distance ON (distance.user_1 = users.id  AND distance.user_2 = :user_id) OR (distance.user_1 = :user_id  AND distance.user_2 = users.id) WHERE email <> :email AND status = 'seller' AND  users.id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id) ORDER BY distanceValue  ASC LIMIT  $start_from, $results_per_page");
         $statement->bindValue(':email', $this->getEmail());
         $statement->bindValue(':user_id', $this->getId());
 
@@ -727,14 +724,16 @@ class User
 
     }
 
-    public function getUserFromId($userId)
+    public function getUserFromId($seller_id)
     {
         $conn = Db::getConnection();
 
-        $statement = $conn->prepare("SELECT * FROM users WHERE id = :userId");
+        $statement = $conn->prepare("SELECT * FROM users INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = :seller_id) OR (distance.user_1 = :seller_id AND distance.user_2 = :user_id) WHERE id = :seller_id");
 
         //Bind values to parameters from prepared query
-        $statement->bindValue(":userId", $userId);
+        $statement->bindValue(":user_id", $this->getId());
+        $statement->bindValue(":seller_id", $seller_id);
+
         //Execute query
         $statement->execute();
 

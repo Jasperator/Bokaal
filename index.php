@@ -5,8 +5,12 @@ include_once(__DIR__ . "/php/includes/bootstrap.include.php");
 require_once(__DIR__ . "/classes/Db.php");
 require_once(__DIR__ . "/classes/Favorite.php");
 require_once(__DIR__ . "/classes/User.php");
+require_once(__DIR__ . "/classes/Distance.php");
+
 $user = new classes\User($_SESSION['user']);
 $favorite = new classes\Favorite();
+$distanceClass = new classes\Distance();
+
 
 
 
@@ -16,27 +20,9 @@ $page = $pageAndUsers[0];
 $totalPages = $user->countPages();
 $sellers = $pageAndUsers[1];
 
-foreach ($favorites as $favor) {
-    $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($favor->address), urlencode($favor->postal_code));
-    $favor->distance = $distance->text;
-    $favor->distanceValue = $distance->value;
 
-}
 
-foreach ($sellers as $sell) {
-    $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($sell->address), urlencode($sell->postal_code));
-    $sell->distance = $distance->text;
-    $sell->distanceValue = $distance->value;
 
-}
-
-usort($favorites,function($first,$second){
-    return $first->distanceValue > $second->distanceValue;
-});
-
-usort($sellers,function($first,$second){
-    return $first->distanceValue > $second->distanceValue;
-});
 
 if (!empty($_POST['favorite-person'])) {
     $favorite_id = $_POST['favorite-person'];
@@ -76,10 +62,15 @@ if (!empty($_POST['delete-favorite-person'])) {
         <div>
             <h2 class="hoofdtitel">Bokaal</h2>
         </div>
+        <?php
+        $page = $pageAndUsers[0];
+        if($page == 1){
+            ?>
         <h3 class="titel-index">FAVORIETEN</h3>
         <ul id="all-detail" class="row col-md-12"  >
 
-            <?php foreach ($favorites as $fav) : ?>
+            <?php
+            foreach ($favorites as $fav) : ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId users" data-id="<?= htmlspecialchars($fav->id); ?>">
                         <div class="container" >
@@ -113,6 +104,9 @@ if (!empty($_POST['delete-favorite-person'])) {
             <?php endforeach ?>
                             
         </ul>
+
+        <?php } ?>
+
         <div class="space-favor"></div>
         <h3 class="titel-index"> VERKOPERS</h3>
 
@@ -138,7 +132,7 @@ if (!empty($_POST['delete-favorite-person'])) {
                                     <form  action="" method="post">
                                         
                                             <button id="knop2" type="submit" class="fav" name="favorite-person"
-                                                value="<?= htmlspecialchars($seller->id); ?>" name="fav"> 
+                                                value="<?= htmlspecialchars($seller->id); ?>" name="fav">
                                                 <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
                                             </button>
                                         
@@ -159,14 +153,16 @@ if (!empty($_POST['delete-favorite-person'])) {
 
         <div id="space"></div>
 
-        <div id="pages" style="text-align: center">
-        <?php for ($i=1; $i<$totalPages; $i++) {  // print links for all pages
-            echo "<a href='index.php?page=".$i."'";
-            if ($i==$page)  echo " class='curPage'";
-            echo ">".$i."</a> ";
-        };
-        ?>
-        </div>
+
+<div id="pages" style="text-align: center">
+<?php for ($i=1; $i<$totalPages; $i++) {  // print links for all pages
+    echo "<a href='index.php?page=".$i."'";
+    if ($i==$page)  echo " class='curPage'";
+    echo ">".$i."</a> ";
+
+};
+?>
+</div>
 
         <script>
             document.querySelectorAll('.users').forEach(item => {

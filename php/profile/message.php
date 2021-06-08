@@ -7,7 +7,8 @@ require_once(__DIR__ . "/../../classes/Message.php");
 
 $user = new classes\User($_SESSION['user']);
 if(isset($_GET['chat_id'])){
-    $active_conversation = $_GET['chat_id'];
+    $_SESSION['chat_id'] = $_GET['chat_id'];
+    $active_conversation =  $_SESSION['chat_id'];
 
 }else {
     $active_conversation = $_SESSION['chat_id'];
@@ -27,7 +28,15 @@ if(isset($_GET['chat_id'])){
  if (!empty($_POST['content'])) {
      $time = date('Y-m-d H:i:s');
 
-     $active_conversation = $_SESSION['chat_id'];
+     if(isset($_GET['chat_id'])){
+         $_SESSION['chat_id'] = $_GET['chat_id'];
+         $active_conversation =$_SESSION['chat_id'];
+
+     }else {
+         $active_conversation = $_SESSION['chat_id'];
+
+     }
+
 
      $message = new classes\Message();
      $message->setConversation_id($active_conversation);

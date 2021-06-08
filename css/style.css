@@ -83,8 +83,6 @@
 
     }
 
-
-
     .home-logo {
         display: none;
     }
@@ -701,14 +699,26 @@
 
     /*-----detail item/user page-----*/
 
-    .boer-detail{
-        margin-left: 25%;
-        border: none;
-        border-radius: 125px 5px 5px 125px !important;
-
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    .container-boer{
+        margin-left: 6%;
     }
+    
+    .verkoper{
+        color: black;
+        font-size: 2.5em;
+
+        font-family: "Josefin Sans";
+
+        margin-top: 3%;
+        margin-bottom: 2.5%;
+    }
+    
+    .boer-profile-pic{
+        width:40%;
+        height: auto;
+        object-fit: cover;
+    }
+
 
     .detail{
         width: 90% !important;
@@ -727,12 +737,7 @@
         background-color: #d5d962 !important;
     }
     
-    .boer-img{
-        border-radius: 50%;
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    }
-
+    
     .chatColor{
         width: 20% !important;
 
@@ -1121,10 +1126,38 @@
 
 #expiry-date{
     font-family: "Josefin Sans";
+    width:75px;
+    margin-top: 5px;
+    border: none;
+}
+
+.paypal{
+    display: flex;
+}
+
+#pp, #cd{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#expiry-date:hover{
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+}
+
+
+.label-expiry{
+    margin-left: 15px;
+    margin-right: 12px;
 }
 
 .label{
     font-family: "Josefin Sans";
+    margin-right: 15px;
+}
+
+#label{
+    margin-right: 15px !important;
 }
 
 .head-calc{
@@ -1138,7 +1171,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35vh;
+    height: 50vh;
     flex-direction: column;
 
     border: none;
@@ -1149,13 +1182,24 @@
 }
 
 #expiry-date{
-    margin-left: 15px;
+    margin-left: 35px;
 }
 
 .cardholdername{
     float: right;
     margin: 0;
     font-family: "Josefin Sans";
+
+    border-bottom: solid 1px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+.cardholdername:hover{
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
 }
 
 .right{
@@ -1171,14 +1215,32 @@
     float: right;
     margin: 0;
     font-family: "Josefin Sans";
+    border: none;
+    border-bottom: solid 1px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.cardnumber:hover{
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+}
+
+.small-cardIcon-pp {
+    margin-left: 15%;
+    width: 42px;
+    height: 30px;
+    margin-left: 165px;
+    margin-bottom: 35px;
+
+    object-fit: cover;
 }
 
 .small-cardIcon {
-    float: right;
-    margin-right: 15px;
+    margin-left: 15%;
     width: 42px;
     height: 30px;
-    margin-left: 10px;
 
     object-fit: cover;
 }
@@ -1188,42 +1250,133 @@
     font-weight: 400;
     letter-spacing: 1px;
     width: 50%;
+
+    margin-top: 15px;
     margin-left: 25%;
     background-color: orangered;
     border: none;
     color: #fff;
-    padding: 18px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
     border-radius: 5px;
     outline: none;
 }
 
+.left{
+    margin-right: 50px;
+}
+
+
 .info{
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+
+
+#buy-all{
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+
+    background-color: orangered;
+    color: #ffffff;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    text-align: center;
+
+    width: 25%;
+
     margin-top: 5px;
+    margin-left: calc(75%/2);
     margin-bottom: 5px;
 }
 
-.radio{
-    position: absolute;
-    top: -2px;
-    left: -20px;
-    border: 3px solid #414365;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #292B52;
+.total_price{
+    border: solid 1px lightgrey;
+    width: 88%;
+
+    margin-left: calc(12%/2);
+    margin-bottom: 15px;
+
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
 }
 
-.radio::before{
-    position: absolute;
-    content: '';
-    border-radius: 50%;
-    top: 5px;
-    left: 5px;
-    width: 9px;
-    height: 9px;
-    background-color: transparent;
+.total_price_titel{
+    font-family: "Josefin Sans";    
+
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    font-size: 1.8em;
+
+    text-align: left;
+
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    color: white;
+
+    background-color: lightgrey;
 }
 
+#prijs-start{
+    display: flex;
+    margin-left: 15px;
+}
+
+.prijs_een{
+    padding-left: 15px;
+}
+
+.line-rechts{
+    margin-left: 65%;
+}
+
+.prijs{
+    padding-left: 15px;
+}
+
+#prijs-twee{
+    display: flex;
+    margin-left: 15px;
+}
+
+.prijs_twee{
+    padding-left: 15px;
+}
+
+.line-rechts-twee{
+    margin-left: 61.5%;
+}
+
+#prijs-alles{
+    display: flex;
+    font-family: "Josefin Sans";    
+    font-size: 1.2em;
+
+    font-style: normal;
+    font-variant: normal;
+    border: none;    
+}
+
+.prijs-tott{
+    
+    padding-left: 5%;
+}
+
+.bedrag-eind{
+    margin-left: 57.5%;
+}
 
     /*-----favor-----*/
 
