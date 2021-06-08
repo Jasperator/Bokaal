@@ -70,7 +70,7 @@ if(!empty($_POST['start_chat'])){
                                 <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
                                 <p class="card-text"> Afstand:
                                     <?=
-                                    $seller->distance;?></p>
+                                    $distance->text;?></p>
 
                                     <form  id="start_chat" class="chat-button" action="" method="post">
                                         <div class="form-group">
