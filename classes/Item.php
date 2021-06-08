@@ -308,19 +308,56 @@ class Item
 }
 
     }
+    public function countPagesAllItemsExceptSeller($user)
+    {
+
+        $conn = Db::getConnection();
+        $results_per_page = 12;
+
+        $statement = $conn->prepare("SELECT COUNT(id) FROM items WHERE seller_id <> :user_id AND status = :status");
+        $statement->bindValue(':user_id', $user->getId());
+        $statement->bindValue(':status', '');
+
+        $statement->execute();
+        $row = $statement->fetch(\PDO::FETCH_COLUMN);
+        $total_pages = ceil($row / $results_per_page); // calculate total pages with results
+
+        return $total_pages;
+
+    }
+    public function countPagesAllItems($user)
+    {
+
+        $conn = Db::getConnection();
+        $results_per_page = 12;
+
+        $statement = $conn->prepare("SELECT COUNT(id) FROM items WHERE status = :status");
+        $statement->bindValue(':user_id', $user->getId());
+        $statement->bindValue(':status', '');
+
+        $statement->execute();
+        $row = $statement->fetch(\PDO::FETCH_COLUMN);
+        $total_pages = ceil($row / $results_per_page); // calculate total pages with results
+
+        return $total_pages;
+
+    }
     public function getAllItemsExceptSeller($user)
     {
         $conn = Db::getConnection();
 
-        //<> is the same as !=
-        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id)  WHERE seller_id <> :user_id AND status = :status");
+        $results_per_page = 12; // number of results per page
+        if (isset($_GET["page"])) { $page = $_GET["page"]; } else { $page=1; };
+        $start_from = ($page-1) * $results_per_page;
+
+        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id)  WHERE seller_id <> :user_id AND status = :status  ORDER BY distanceValue ASC LIMIT  $start_from, $results_per_page");
         $statement->bindValue(':user_id', $user->getId());
         $statement->bindValue(':status', '');
 
         $statement->execute();
         $items = $statement->fetchAll(\PDO::FETCH_OBJ);
 
-        return $items;
+        return array($page, $items);
     }
     public function getAvailableItemsFromSeller($user)
     {
@@ -341,7 +378,12 @@ class Item
     public function getAllItems($user)
     {
         $conn = Db::getConnection();
-        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id) WHERE status = :status ORDER BY distanceValue ASC");
+
+        $results_per_page = 12; // number of results per page
+        if (isset($_GET["page"])) { $page = $_GET["page"]; } else { $page=1; };
+        $start_from = ($page-1) * $results_per_page;
+
+        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id) WHERE status = :status ORDER BY distanceValue ASC LIMIT  $start_from, $results_per_page");
         $statement->bindValue(':status', "");
         $statement->bindValue(':user_id', $user->getId());
 
@@ -349,7 +391,7 @@ class Item
         $statement->execute();
         $items = $statement->fetchAll(\PDO::FETCH_OBJ);
 
-        return $items;
+        return array($page, $items);
     }
 
     public function getAllItemsCart($user){
@@ -492,9 +534,12 @@ class Item
     public function searchItemCategoryAndName($name, $category, $user, $maxPrice)
     {
         $conn = Db::getConnection();
+        $results_per_page = 12; // number of results per page
+        if (isset($_GET["page"])) { $page = $_GET["page"]; } else { $page=1; };
+        $start_from = ($page-1) * $results_per_page;
 
 
-        $statement = $conn->prepare("SELECT * FROM items WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id AND price <= :maxPrice");
+        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id) WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id AND price <= :maxPrice  ORDER BY distanceValue ASC LIMIT  $start_from, $results_per_page");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":name", $name);
@@ -511,7 +556,7 @@ class Item
         $result = $statement->fetchAll(\PDO::FETCH_OBJ);
 
         //Return the results from the query
-        return $result;
+        return array($page, $result);
 
     }
 

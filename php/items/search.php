@@ -8,13 +8,20 @@ $user = new classes\User($_SESSION['user']);
 $itemClass = new classes\Item();
 
 if($user->getStatus() == "seller"){
-$items = $itemClass->getAllItemsExceptSeller($user);
+    $pageAndUsers = $itemClass->getAllItemsExceptSeller($user);
+    $totalPages = $itemClass->countPagesAllItemsExceptSeller($user);
 
 
 } else{
-    $items = $itemClass->getAllItems($user);
+    $pageAndUsers = $itemClass->getAllItems($user);
+    $totalPages = $itemClass->countPagesAllItems($user);
+
 }
 $maxPrice = $itemClass->maxPrice();
+
+$page = $pageAndUsers[0];
+$items = $pageAndUsers[1];
+
 
 
 if(!empty($_POST['searchCategory'])){
@@ -29,17 +36,9 @@ if(!empty($_POST['searchCategory'])){
     }
     $searchName = urlencode($_POST['searchName']);
     $searchName = '%' . $searchName . '%';
-    $items = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange);
-    foreach ($items as $item) {
-        $user = new classes\User($_SESSION['user']);
-        $seller = $user->getUserById($item->seller_id);
-        $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($seller->address), urlencode($seller->postal_code));
-        $item->distance = $distance->text;
-        $item->distanceValue = $distance->value;
-    }
-    usort($items,function($first,$second){
-        return $first->distanceValue > $second->distanceValue;
-    });
+    $pageAndItems = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange);
+    $page = $pageAndItems[0];
+    $items = $pageAndItems[1];
 
 
 }
@@ -65,8 +64,6 @@ if(!empty($_POST['searchCategory'])){
 <body id="search-body">
     <?php include_once("../includes/nav.include.php");?>
 
-
-    <div>
 
             <h2 class="hoofdtitel"> Zoeken </h2>
 
@@ -160,8 +157,20 @@ if(!empty($_POST['searchCategory'])){
                 </div>
             <?php endforeach ?>
         </ul>
-    </div>
-    <script>
+
+    <div id="space"></div>
+
+    <div id="pages" style="text-align: center">
+            <?php
+            $page = $pageAndUsers[0];
+            for ($i=1; $i<=$totalPages; $i++) {  // print links for all pages
+                echo "<a href='search.php?page=".$i."'";
+                if ($i==$page)  echo " class='curPage'";
+                echo ">".$i."</a> ";
+
+            };
+            ?>
+        </div>    <script>
         var slider = document.getElementById("priceRange");
 
         var output = document.getElementById("priceVal");
