@@ -1529,7 +1529,7 @@ input[type="range"].slider:hover {
 
     font-family: "Josefin Sans";
 
-    
+    visibility: ;
 }
 
 .messagebox {
@@ -1546,11 +1546,7 @@ input[type="range"].slider:hover {
     clear: both;
 }
 
-.reaction-btn-text{
 
-    margin-left: 10%;
-
-}
 
 .messageElement p {
     margin-top: 10px;
@@ -1560,6 +1556,12 @@ input[type="range"].slider:hover {
     padding: 15px;
     border-radius: 5px;
     
+}
+
+.messageElement .container{
+
+    margin-top: 10px;
+
 }
 
 .messageContent small {
