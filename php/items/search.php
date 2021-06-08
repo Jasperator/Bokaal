@@ -4,8 +4,12 @@ include_once(__DIR__ . "/../includes/bootstrap.include.php");
 require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/Item.php");
 require_once(__DIR__ . "/../../classes/User.php");
+require_once(__DIR__ . "/../../classes/Distance.php");
+
 $user = new classes\User($_SESSION['user']);
 $itemClass = new classes\Item();
+$distanceClass = new classes\Distance();
+
 
 if($user->getStatus() == "seller"){
     $pageAndUsers = $itemClass->getAllItemsExceptSeller($user);
@@ -14,10 +18,14 @@ if($user->getStatus() == "seller"){
 
 } else{
     $pageAndUsers = $itemClass->getAllItems($user);
-    $totalPages = $itemClass->countPagesAllItems($user);
+    $totalPages = $itemClass->countPagesAllItems();
 
 }
 $maxPrice = $itemClass->maxPrice();
+$maxDistance = $distanceClass->maxDistanceItems($user);
+$minDistance = $distanceClass->minDistanceItems($user);
+
+
 
 $page = $pageAndUsers[0];
 $items = $pageAndUsers[1];
@@ -26,6 +34,8 @@ $items = $pageAndUsers[1];
 
 if(!empty($_POST['searchCategory'])){
     $priceRange = $_POST['priceRange'];
+    $distanceRange = $_POST['distanceRange'];
+
 
     $user = new classes\User($_SESSION['user']);
 
@@ -36,7 +46,7 @@ if(!empty($_POST['searchCategory'])){
     }
     $searchName = urlencode($_POST['searchName']);
     $searchName = '%' . $searchName . '%';
-    $pageAndItems = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange);
+    $pageAndItems = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange, $distanceRange);
     $page = $pageAndItems[0];
     $items = $pageAndItems[1];
 
@@ -117,6 +127,12 @@ if(!empty($_POST['searchCategory'])){
                 <input type="range" min="1.00" max="<?=$maxPrice?>" value="<?=$maxPrice?>" class="slider" name="priceRange" id="priceRange">
                 <p> <span id="priceVal"></span> Euro </p>
             </div>
+            <label class="priceLabel" for="priceRange">Max. afstand</label>
+            <div class="slidecontainer">
+                <input type="range" min="<?=$minDistance?>" max="<?=$maxDistance?>" value="<?=$maxDistance?>" class="slider" name="distanceRange" id="distanceRange">
+                <p> <span id="distanceVal"></span>  </p>
+            </div>
+
 
 
         </form>
@@ -179,12 +195,23 @@ if(!empty($_POST['searchCategory'])){
         slider.oninput = function() {
             output.innerHTML = this.value;
         }
+
+        var sliderDist = document.getElementById("distanceRange");
+
+        var outputDist = document.getElementById("distanceVal");
+        outputDist.innerHTML = sliderDist.value;
+
+        sliderDist.oninput = function() {
+            outputDist.innerHTML = this.value;
+        }
+
         document.querySelectorAll('.itemId').forEach(item => {
             item.addEventListener('click', function () {
 
                 window.location.href = `detailItem.php?data-id=${this.getAttribute('data-id')}`
             })
         })
+
     </script>
 
     <script src="../../js/jquery.min.js"></script>

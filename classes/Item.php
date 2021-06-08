@@ -325,14 +325,13 @@ class Item
         return $total_pages;
 
     }
-    public function countPagesAllItems($user)
+    public function countPagesAllItems()
     {
 
         $conn = Db::getConnection();
         $results_per_page = 12;
 
         $statement = $conn->prepare("SELECT COUNT(id) FROM items WHERE status = :status");
-        $statement->bindValue(':user_id', $user->getId());
         $statement->bindValue(':status', '');
 
         $statement->execute();
@@ -531,7 +530,7 @@ class Item
         return $result;
 
     }
-    public function searchItemCategoryAndName($name, $category, $user, $maxPrice)
+    public function searchItemCategoryAndName($name, $category, $user, $maxPrice,$distanceRange)
     {
         $conn = Db::getConnection();
         $results_per_page = 12; // number of results per page
@@ -539,13 +538,15 @@ class Item
         $start_from = ($page-1) * $results_per_page;
 
 
-        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id) WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id AND price <= :maxPrice  ORDER BY distanceValue ASC LIMIT  $start_from, $results_per_page");
+        $statement = $conn->prepare("SELECT * FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id) WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id AND price <= :maxPrice AND distanceValue <= :distance ORDER BY distanceValue ASC LIMIT  $start_from, $results_per_page");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":name", $name);
         $statement->bindValue(":status", '');
         $statement->bindValue(":user_id", $user->getId());
         $statement->bindValue(":maxPrice",$maxPrice);
+        $statement->bindValue(":distance",$distanceRange);
+
 
 
 
