@@ -149,6 +149,7 @@ if(!empty($_GET['searchCategory'])){
 
 
             <img class="Placeholder" src="../../images/searchPlaceholder.png" alt="cart placeholder">
+
         <?php } else { ?>
 
         <ul  id="all-detail" class="row col-md-12">
