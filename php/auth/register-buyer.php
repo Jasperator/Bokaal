@@ -66,12 +66,11 @@ if (!empty($_POST['register'])) {
 
 	<?php // include_once("nav.include.php") ?>
 
-	<img src="../../images/background/OGbackground.png" class="loginImage"></div>
+	<img src="../../images/background/OGbackground.png" class="loginImage">
 
 
-	<div class="d-flex justify-content-center">
 		<form class="registerForm" action="" method="post">
-			<img class="logo" src="../../images/logo/LogoBlack.svg" alt="login logo Bokaal">
+			<img class="logo" src="../../images/logo/LogoBlack.svg" alt="logo Bokaal">
 			<h2>Registreer kopers <br> <br> account</h2>
 			<?php if (!empty($error)) : ?>
 			<div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
@@ -83,47 +82,46 @@ if (!empty($_POST['register'])) {
 				<?php echo $succesfull; ?></div>
 			<?php endif; ?>
 			<br>
-			<div class="form-group">
-				<input type="text" name="fullname" id="fullname" class="form-control" placeholder="Volledige naam"
+
+			<div class="">
+				<input type="text" name="fullname" id="fullname" class="" placeholder="Volledige naam"
 					required>
 				<i class="fas fa-user"></i>
 			</div>
 
 			<div>
-				<input type="number" name="postal_code" class="form-control" placeholder="Postcode" required>
+				<input type="number" name="postal_code" class="" placeholder="Postcode" required>
 
 			</div>
 
 			<div>
-				<input type="text" name="location" class="form-control" placeholder="Stad" required>
+				<input type="text" name="location" class="" placeholder="Stad" required>
 
 			</div>
 
-			<div class="form-group">
+			<div class="">
 				<!--<label for="price">Price</label>-->
-				<input type="text" name="address" class="form-control" placeholder="Straat, nr en bus" required>
+				<input type="text" name="address" class="" placeholder="Straat, nr en bus" required>
 
 			</div>
-			<div class="form-group">
-				<input type="email" name="email" class="form-control email" placeholder="Email"
+			<div class="">
+				<input type="email" name="email" class="email" placeholder="Email"
 					pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
 				<span id="availability"></span>
 				<i class="fas fa-envelope"></i>
 			</div>
-			<div class="form-group">
-				<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord"
+			<div class="">
+				<input type="password" name="password" id="password" class="" placeholder="Wachtwoord"
 					required>
 				<i class="fas fa-lock"></i>
 			</div>
-			<div class="form-group">
+			<div class="">
 				<input id="register" type="submit" class="register" value="Registreer" name="register">
 			</div>
 			<div id="result"> </div>
 			<p>Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
 		</form>
 
-	</div>
-	</div>
 
 	<script src="../../js/jquery.min.js"></script>
 	<script src="../../js/bootstrap.js"></script>

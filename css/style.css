@@ -679,6 +679,26 @@
         padding-top: 5px;
     }
 
+    #pages a{
+
+        font-family: "Josefin Sans";
+        font-size: 1.7em;
+        font-weight: 400;
+
+        color: #d5d962;
+        margin-left: 2%;
+        margin-right: 2%;
+        opacity: 50%;
+
+    }
+
+    #pages a:hover{
+
+        border-bottom: 5px solid  #d5d962;
+        opacity: 100%;
+    
+    }
+
     /*-----detail item/user page-----*/
 
     .boer-detail{
@@ -912,6 +932,8 @@
 
     .registerForm {
         padding-top: 5%;
+        width:  40%;
+        float: right;
     }
 
     .form-sell {
