@@ -719,11 +719,11 @@
 }
 
 /*-----detail item/user page-----*/
+/*Boer*/
 
 .container-boer {
     margin-left: 6%;
 }
-
 
 .verkoper {
     color: orangered;
@@ -799,25 +799,81 @@
 }
 
 #chatnaam {
-    width: 20% !important;
+    width: auto;
 
-    float: right;
+    float: left;
 
     margin-right: 45%;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-top: 5px;
 
     border: none !important;
 
     font-family: "Josefin Sans";
-    font-size: 16px !important;
+    font-size: 20px !important;
 
     color: #ffffff !important;
     background-color: orangered !important;
 }
 
-.chatColor:hover {
-    color: black !important;
-    background-color: #d5d962 !important;
+#chatnaam:hover {
+
+    cursor: pointer;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    background-color: #FF5419;
+
 }
+
+
+/*gekozen product*/
+
+.container-item {
+    margin-left: 6%;
+    width: 100%;
+}
+
+.item-img-text {
+    font-family: "Josefin Sans";
+}
+
+.gekozen-product{
+    color: orangered;
+
+    font-size: 2.5em;
+    font-family: "Josefin Sans";
+
+    margin-top: 3%;
+}
+
+.gekozen-product-pic {
+    width: 70%;
+    max-height: 50%;
+    object-fit: cover;
+
+    display: flex;
+    margin-right: 35px;
+}
+
+.full-name-item {
+    margin-top: 5px;
+    margin-bottom: 45px;
+}
+.bio-item {
+    width: 75%;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.payment-info-product{
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+
+
 
 /*-----search / items pagina-----*/
 .search-bar:hover {
@@ -1514,14 +1570,86 @@ input[type="range"].slider:hover {
     box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 }
 
-#space {
-    height: 10vh;
+
+/*-----Chat----- */
+
+.chatbox {
+    
+
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+    padding: 20px;
+
+    width: 80%;
+
+    font-family: "Josefin Sans";
+
+    
+}
+
+.messagebox {
+    max-height: 100px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+.messageContent {
+    display: block;
+    clear: both;
+}
+
+.messageElement .container {
+    margin-bottom: 20px;
+}
+
+.messageElement p {
+    margin-top: 10px;
+    max-width: 250px;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.messageContent small {
+    position: relative;
+    top: 3px;
+}
+
+.messageText{
+
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+
+    height: 50px;
+    padding: 5px;
+    width: 70%;
+    
+    border: none;
+    border-bottom: 3px solid black;
+}
+
+.sendMessage{
+
+    background-color: orangered;
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+    font-weight: 400;
+    color: white;
+    padding: 10px;
+    width: 10%;
+    border: none;
+    height: 50px;
 }
 
 
 /*-----Chat----- */
 
-#chatnaam {
+#chatnaam{
     color: #000;
     font-size: 1.5em;
     background-color: none;
@@ -1655,6 +1783,7 @@ input[type="range"].slider:hover {
 
     width: 70%;
 }
+
 
 
 /*-----footer-----*/

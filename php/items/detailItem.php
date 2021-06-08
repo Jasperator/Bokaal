@@ -53,49 +53,42 @@ if(!empty($_POST['start_chat'])){
 <body id="search-body">
     <?php include_once("../includes/nav.include.php");?>
 
+        <div class="container-item">
+            <h2 class="gekozen-product"><?= htmlspecialchars($detailItem->title); ?> </h2>
+            <div class="locatie-boer">
+                <p><?= htmlspecialchars($seller->location); ?></p>
+                <p class="text-muted afstand"> Afstand: <?=$seller->distance;?></p>
+            </div>
 
-    <div>
-
-        <div class="titel">
-            <h2 class="subtitel">Gokozen item</h2>
-
-
-            <ul id="all-detail" class="row col-md-12">
-                <div id="list-decoration" class="col-md-4">
-                    <div class="itemId">
-                        <div class="container">
-                            <div class="card h-100 breed">
-                                <form action="" method="post">
-                                    <img class="card-img-top" id="picture"
-                                        src="/uploads/<?= htmlspecialchars($detailItem->item_image); ?> "
-                                        class="img-thumbnail border-0" />
-
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?= htmlspecialchars($detailItem->title); ?></h5>
-                                        <p class="card-text"><?= htmlspecialchars($detailItem->description); ?></p>
-                                        <p class="card-text"> <img class="zoekertje"
-                                                src="../../images/icon/coin-green.svg" alt="">
-                                            <?= htmlspecialchars($detailItem->quantity); ?> :
-                                            <?= htmlspecialchars($detailItem->unit); ?></p>
-                                        <p class="card-text"> <img class="zoekertje"
-                                                src="../../images/icon/kg-green.svg" alt="">
-                                            <?= htmlspecialchars($detailItem->price); ?> :
-                                            <?= htmlspecialchars($detailItem->currency); ?></p>
-
-                                        <form action="" method="post">
-                                            <div class="item_profile">
-                                                <button type="submit" name="buy-item" class="btn btn detail"
+            <div>
+                <div>
+                    <div>
+                        <div class="item-img-text">
+                            <form class="gekozen-product-pic" action="" method="post">
+                                <img class="gekozen-product-pic" 
+                                    src="/uploads/<?= htmlspecialchars($detailItem->item_image); ?> "/>
+                                <div>
+                                    <h5 class="full-name-item"><?= htmlspecialchars($detailItem->title); ?></h5>
+                                    <p class="bio-item">"<?= htmlspecialchars($detailItem->description); ?>"</p>
+                                    <p class="payment-info-product"><?= htmlspecialchars($detailItem->quantity); ?> : <?= htmlspecialchars($detailItem->unit); ?></p>
+                                    <p class="payment-info-product"><?= htmlspecialchars($detailItem->price); ?> : <?= htmlspecialchars($detailItem->currency); ?></p>
+                                    <form action="" method="post">
+                                        <div>
+                                            <button id="chatnaam" type="submit" name="buy-item"
                                                     value="<?= htmlspecialchars($detailItem->id); ?>" name="buy"
-                                                    placeholder="Koop">Toevoegen aan winkelmandje</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                            </div>
+                                                    placeholder="Koop">Voeg toe aan winkelmandje
+                                            </button>
+                                        </div>                                
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </ul>
+            </div>
         </div>
+
+        
+
 
         <?php if(count($allItemsSeller) > 0){ ?>
         <div class="titel">
@@ -116,7 +109,6 @@ if(!empty($_POST['start_chat'])){
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
                                     <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
-                                    <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg"
                                             alt="">
                                         <?= htmlspecialchars($item->quantity); ?> :
@@ -154,12 +146,12 @@ if(!empty($_POST['start_chat'])){
                                 <div>
                                     <h5 class="full-name-boer"><?= htmlspecialchars($seller->fullname); ?></h5>
                                     <p class="bio-boer">"<?= htmlspecialchars($seller->bio); ?>"</p>
-                                    <formaction="" method="post">
+                                    <form action="" method="post">
                                         <div>
                                             <input type="hidden" name="chat_id"
                                                 value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
-                                            <input id="chatnaam" class="btn" type="submit" name="start_chat"
-                                                value="chat met deze boer(in)" />
+                                            <input id="chatnaam" type="submit" name="start_chat"
+                                                value="Stuur een bericht" />
                                         </div>
                                 </div>
                             </form>
