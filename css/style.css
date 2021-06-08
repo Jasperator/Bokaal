@@ -769,7 +769,7 @@
 }
 
 .boer-profile-pic-img {
-    width: 70%;
+    width: 73%;
     max-height: 50%;
     object-fit: cover;
 
@@ -786,7 +786,19 @@
 
     margin-right: 35px;
 
-    margin-bottom: -10%;
+    margin-bottom: -15%;
+}
+
+.boer-profile-pic-user-middle{
+    width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+
+    display: flex;
+
+    margin-right: 35px;
+
+    margin-bottom: -25%;
 }
 
 

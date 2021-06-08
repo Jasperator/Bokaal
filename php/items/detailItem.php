@@ -87,7 +87,39 @@ if(!empty($_POST['start_chat'])){
             </div>
         </div>
 
-        
+        <div class="container-boer">
+            <h2 class="verkoper"><?= htmlspecialchars($seller->fullname);  ?></h2>
+            <div class="locatie-boer">
+                <p><?= htmlspecialchars($seller->location); ?></p>
+                <p class="text-muted afstand"> Afstand: <?=$seller->distance;?></p>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <div class="img-text">
+                            <form class="boer-profile-pic-user-middle" action="" method="post">
+                                <img class="boer-profile-pic-img"
+                                    src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>" />
+                                <div>
+                                    <h5 class="full-name-boer"><?= htmlspecialchars($seller->fullname); ?></h5>
+                                    <p class="bio-boer">"<?= htmlspecialchars($seller->bio); ?>"</p>
+                                    <form action="" method="post">
+                                        <div>
+                                            <input type="hidden" name="chat_id"
+                                                value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
+                                            <input id="chatnaam" type="submit" name="start_chat"
+                                                value="Stuur een bericht" />
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
 
 
         <?php if(count($allItemsSeller) > 0){ ?>
@@ -129,7 +161,7 @@ if(!empty($_POST['start_chat'])){
         </ul>
         <?php } ?>
 
-        <div class="container-boer">
+        <!--<div class="container-boer">
             <h2 class="verkoper">Boerderij - <?= htmlspecialchars($seller->company);  ?></h2>
             <div class="locatie-boer">
                 <p><?= htmlspecialchars($seller->location); ?></p>
