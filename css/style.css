@@ -770,7 +770,7 @@
 }
 
 .boer-profile-pic-img {
-    width: 70%;
+    width: 73%;
     max-height: 50%;
     object-fit: cover;
 
@@ -787,7 +787,19 @@
 
     margin-right: 35px;
 
-    margin-bottom: -10%;
+    margin-bottom: -15%;
+}
+
+.boer-profile-pic-user-middle{
+    width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+
+    display: flex;
+
+    margin-right: 35px;
+
+    margin-bottom: -25%;
 }
 
 
@@ -832,24 +844,76 @@
 }
 
 #chatnaam {
-    width: 20% !important;
+    width: auto;
 
-    float: right;
+    float: left;
 
     margin-right: 45%;
 
     border: none !important;
 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-top: 5px;
+
     font-family: "Josefin Sans";
-    font-size: 16px !important;
+    font-size: 20px !important;
 
     color: #ffffff !important;
     background-color: orangered !important;
 }
+#chatnaam:hover {
 
-.chatColor:hover {
-    color: black !important;
-    background-color: #d5d962 !important;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    background-color: #FF5419;
+
+}
+
+/*gekozen product*/
+
+.container-item {
+    margin-left: 6%;
+    width: 100%;
+}
+
+.item-img-text {
+    font-family: "Josefin Sans";
+}
+
+.gekozen-product{
+    color: orangered;
+
+    font-size: 2.5em;
+    font-family: "Josefin Sans";
+
+    margin-top: 3%;
+}
+
+.gekozen-product-pic {
+    width: 70%;
+    max-height: 50%;
+    object-fit: cover;
+
+    display: flex;
+    margin-right: 35px;
+}
+
+.full-name-item {
+    margin-top: 5px;
+    margin-bottom: 45px;
+}
+.bio-item {
+    width: 75%;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.payment-info-product{
+    margin-top: 5px;
+    font-size: 1.2em;
 }
 
 /*-----search / items pagina-----*/
@@ -2405,7 +2469,7 @@ footer {
         display: flex;
     }
 
-    .registerForm {
+    .registerForm-sell {
         padding-top: 5%;
     }
 
