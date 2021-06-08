@@ -114,6 +114,41 @@ class Distance
         //Return the results from the query
 
     }
+
+    public function maxDistanceItems($user)
+    {
+        $conn = Db::getConnection();
+
+
+        $statement = $conn->prepare("SELECT MAX(distanceValue)  FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id)");
+        $statement->bindValue(":user_id", $user->getId());
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetch(\PDO::FETCH_COLUMN);
+
+        //Return the results from the query
+        return $result;
+
+    }
+    public function minDistanceItems($user)
+    {
+        $conn = Db::getConnection();
+
+
+        $statement = $conn->prepare("SELECT MIN(distanceValue)  FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id)");
+        $statement->bindValue(":user_id", $user->getId());
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetch(\PDO::FETCH_COLUMN);
+
+        //Return the results from the query
+        return $result;
+
+    }
     function getDistanceById($user, $userID){
         $conn = Db::getConnection();
         $statement = $conn->prepare("SELECT * FROM distance WHERE (user_1 = :id AND user_2 = :user_id) OR  (user_1 = :user_id AND user_2 = :id)");
