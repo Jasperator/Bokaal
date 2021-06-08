@@ -1585,7 +1585,7 @@ input[type="range"].slider:hover {
     word-wrap: break-word;
     padding: 15px;
     border-radius: 5px;
-    
+    margin-bottom: 5px;
 }
 
 .messageElement .container{

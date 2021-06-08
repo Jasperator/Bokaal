@@ -94,17 +94,17 @@ if(isset($_GET['chat_id'])){
                                     echo 'style="float:right"';
                                 } else {
                                     echo 'style="float:left"';
-                                } ?>><?= htmlspecialchars($message->fullname) ?></strong>
+                                } ?>> &nbsp; <?= htmlspecialchars($message->fullname) ?> &nbsp; </strong>
                                 <small <?php if ($message->sender_id == $user->getId()) {
-                                    echo 'style="float:left"';
-                                } else {
                                     echo 'style="float:right"';
-                                } ?>><?= $message->timestamp; ?></small>
+                                } else {
+                                    echo 'style="float:left"';
+                                } ?>> <?= $message->timestamp; ?> </small>
                                 <br>
                                 <p <?php if ($message->sender_id == $user->getId()) {
-                                    echo 'style="background-color:#d5d962; color:white; float:right"';
+                                    echo 'style="background-color:#d5d962; color:white; float:right; margin-bottom: -5px"';
                                 } else {
-                                    echo 'style="background-color:#E1E3E2; float:left"';
+                                    echo 'style="background-color:#E1E3E2; float:left; margin-bottom: -5px "';
                                 } ?>>
                                     <?= htmlspecialchars($message->content) ?>
                                 </p>
