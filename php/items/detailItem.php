@@ -55,36 +55,7 @@ if(!empty($_POST['start_chat'])){
 
 
 <div>
-    <h2 class="hoofdtitel">Verkoper</h2>
-
-    <div class="card mb-3 boer-detail" style="max-width: 50%; max-height:250px;" >
-        <div class="row g-0">
-            <div class="col-md-4">
-                <form action="" method="post">
-                    <img class="boer-img" id="picture" style="height:250px; width:250px;" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
-                        </div>    
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
-                                <p class="card-text"><?= htmlspecialchars($seller->location); ?></p>
-                                <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
-                                <p class="card-text"> Afstand:
-                                    <?=
-                                    $seller->distance;?></p>
-
-                                    <form  id="start_chat" class="chat-button" action="" method="post">
-                                        <div class="form-group">
-
-                                            <input type="hidden" name="chat_id" value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
-                                            <input id="chatnaam"  class="btn" type="submit" name="start_chat" value="chat" />
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>            
-                        </div>
-            </div>
-        </div>
-    </div>            
+               
     
     <div class="titel">
         <h2 class="subtitel" >Items</h2>
@@ -157,6 +128,36 @@ if(!empty($_POST['start_chat'])){
                 <?php endforeach ?>
             </ul>
 <?php } ?>
+
+<div class="container-boer">
+    <h2 class="verkoper"><?= htmlspecialchars($seller->company);  ?></h2>
+        <div class="locatie-boer">
+            <p ><?= htmlspecialchars($seller->location); ?></p> 
+            <p class="text-muted afstand"> Afstand: <?=$seller->distance;?></p>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <div class="img-text">
+                        <form action="" method="post">
+                            <img class="boer-profile-pic"src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
+                            <div>                          
+                                <h5 class="full-name-boer"><?= htmlspecialchars($seller->fullname); ?></h5>                                
+                                <p class="bio-boer">"<?= htmlspecialchars($seller->bio); ?>"</p>
+                                <formaction="" method="post">
+                                    <div >
+                                        <input type="hidden" name="chat_id" value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
+                                        <input id="chatnaam"  class="btn" type="submit" name="start_chat" value="chat met deze boer(in)" />
+                                    </div>
+                            </div>                                         
+                        </form>
+                    </div>                                                  
+                </div>
+            </div>
+         </div>
+        
+</div>
 
             <div id="space"></div>
 
