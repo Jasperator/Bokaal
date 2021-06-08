@@ -686,15 +686,21 @@
         color: #d5d962;
         margin-left: 2%;
         margin-right: 2%;
-        opacity: 50%;
+        opacity: 100%;
 
     }
 
     #pages a:hover{
 
         border-bottom: 5px solid  #d5d962;
-        opacity: 100%;
+        opacity: 50%;
     
+    }
+
+    .curPage{
+
+        border-bottom: 5px solid  #d5d962;
+
     }
 
     /*-----detail item/user page-----*/
