@@ -107,7 +107,7 @@ if(isset($_GET['chat_id'])){
                                     echo 'style="background-color:#E1E3E2; float:left; margin-bottom: -5px "';
                                 } ?>>
                                     <?= htmlspecialchars($message->content) ?>
-                                </p>
+                                </p> <br><br><br>
                                 <div class="container float-left" <?php if ($message->sender_id == $user->getId()) {
                                     echo 'style="visibility:hidden"';
                                 } else {
