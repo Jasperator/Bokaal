@@ -36,17 +36,9 @@ if(!empty($_POST['searchCategory'])){
     }
     $searchName = urlencode($_POST['searchName']);
     $searchName = '%' . $searchName . '%';
-    $items = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange);
-    foreach ($items as $item) {
-        $user = new classes\User($_SESSION['user']);
-        $seller = $user->getUserById($item->seller_id);
-        $distance =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($seller->address), urlencode($seller->postal_code));
-        $item->distance = $distance->text;
-        $item->distanceValue = $distance->value;
-    }
-    usort($items,function($first,$second){
-        return $first->distanceValue > $second->distanceValue;
-    });
+    $pageAndItems = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange);
+    $page = $pageAndItems[0];
+    $items = $pageAndItems[1];
 
 
 }
@@ -169,7 +161,9 @@ if(!empty($_POST['searchCategory'])){
     <div id="space"></div>
 
     <div id="pages" style="text-align: center">
-            <?php for ($i=1; $i<=$totalPages; $i++) {  // print links for all pages
+            <?php
+            $page = $pageAndUsers[0];
+            for ($i=1; $i<=$totalPages; $i++) {  // print links for all pages
                 echo "<a href='search.php?page=".$i."'";
                 if ($i==$page)  echo " class='curPage'";
                 echo ">".$i."</a> ";
