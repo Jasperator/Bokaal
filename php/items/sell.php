@@ -8,18 +8,21 @@ require_once(__DIR__ . "/../../classes/User.php");
 
 
 
+
 if (!empty($_POST['upload'])) {
 
-    $user = new classes\User($_SESSION['user']);
+
+        $user = new classes\User($_SESSION['user']);
     $item = new classes\Item();
 
-    //Put $_POST variables into variables
+    for($i = 0; $i < $_POST['aantalPlaatsingen']; $i++){
+        //Put $_POST variables into variables
     //Convert the email string to lowercase, case sensitivity does not matter here
-    $seller_id = $user -> getId();
+    $seller_id = $user->getId();
     $title = $_POST['title'];
     $description = $_POST['description'];
     $category = $_POST['category'];
-	$quantity = $_POST['quantity'];
+    $quantity = $_POST['quantity'];
     $unit = $_POST['unit'];
     $price = $_POST['price'];
     $currency = $_POST['currency'];
@@ -29,20 +32,20 @@ if (!empty($_POST['upload'])) {
     $item->setTitle($title);
     $item->setCategory($category);
     $item->setDescription($description);
-	$item->setQuantity($quantity);
+    $item->setQuantity($quantity);
     $item->setUnit($unit);
     $item->setPrice($price);
     $item->setCurrency($currency);
 
-	try {
-		$item->save_item();
+    try {
+        $item->save_item();
         header('Location: ../profile/settings_items.php');
 
     } catch (\Throwable $th) {
-		$error = $th->getMessage();
-	  }
+        $error = $th->getMessage();
+    }
 
-
+}
 
 }
 ?>
@@ -154,9 +157,12 @@ if (!empty($_POST['upload'])) {
 							<input type="text" name="currency" id="unit" class="form-control" Value="Euro" required>
 						</div>
 
-						
 
-					</div>
+
+
+
+
+                        </div>
 
 				</div>
 
@@ -176,6 +182,14 @@ if (!empty($_POST['upload'])) {
 	<?php if (isset($error)) : ?>
 	<div><?php echo $error; ?></div>
 	<?php endif; ?>
+
+    <label for="aantalPlaatsingen">Aantal keer plaatsen</label>
+    <div id="aantalPlaatsingen">
+        <div>
+            <input type="number" name="aantalPlaatsingen" id="aantalPlaatsingen" class="form-control"
+                   placeholder="Hoeveel keer plaatsen" value="1" required>
+        </div>
+    </div>
 
     <div id="linker" class="form-group">
         <input class="button" type="file" name="item_image" capture="camera" />
