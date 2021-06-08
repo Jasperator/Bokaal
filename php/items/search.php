@@ -95,20 +95,12 @@ if(!empty($_GET['searchCategory'])){
                         <option value="Koolsoorten">Koolsoorten</option>
                         <option value="Stengelgewassen">Stengelgewassen (prei, selder,...)</option>
                         <option value="Uien">Uien</option>
-                        <option value="Vruchtgroenten">Vruchtgroenten</option>
-                        <option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
                         <option value="Vruchtgroenten">Vruchtgroenten (tomaat, aubergine, courgette,...)</option>
                         <option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
                         <option value="Overige groenten">Overige groenten</option>
 
                     <optgroup label="Fruit">
 
-                        <option value="Citrusfruit">Vruchtgroenten</option>
-                        <option value="Pitfruit">Pitfruit</option>
-                        <option value="Steenvruchten">Steenvruchten</option>
-                        <option value="Zacht fruit">Zacht fruit</option>
-                        <option value="Exotisch fruit">Exotisch fruit</option>
-                        <option value="overig fruit">overig fruit</option>
                         <option value="Citrusfruit">Citrusfruit (citroen, limoen,...</option>
                         <option value="Pitfruit">Pitfruit (appel, peer,...)</option>
                         <option value="Steenvruchten">Steenvruchten (pruim, perzik, kers,...)</option>
@@ -131,7 +123,7 @@ if(!empty($_GET['searchCategory'])){
                 <input type="range" min="1.00" max="<?=$maxPrice?>" value="<?=$maxPrice?>" class="slider" name="priceRange" id="priceRange">
                 <p> <span id="priceVal"></span> Euro </p>
             </div>
-                <select type="text" name="distanceRange" id="" class="form-control-search">
+                <select type="text" name="distanceRange" id="distanceDropdown" class="form-control-search">
                     <option value="" selected disabled hidden>Maximum Afstand</option>
                     <optgroup label="Maximum Afstand">
 
