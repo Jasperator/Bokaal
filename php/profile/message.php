@@ -79,7 +79,7 @@ if(isset($_GET['chat_id'])){
     <?php include_once("../includes/nav.include.php");?>
 <form action="" method="POST" class="chat">
 <a class="backArrow" href="/php/profile/chat.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
-<h2 class="hoofdtitel" id="chatNaam" data-id="<?php echo htmlspecialchars($chat_partner->id); ?>"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
+<h2 class="hoofdtitel" id="chatTitel" data-id="<?php echo htmlspecialchars($chat_partner->id); ?>"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
     <div class="chatbox">
         <?php if (!empty($active_conversation)) : ?>
             
@@ -179,7 +179,7 @@ if(isset($_GET['chat_id'])){
 <script src="../../js/bootstrap.js"></script>
 
     <script>
-        document.getElementById('chatNaam').addEventListener('click',function (){
+        document.getElementById('chatTitel').addEventListener('click',function (){
             window.location.href = `../../detailsUser.php?data-id=${this.getAttribute('data-id')}`
 
         })
