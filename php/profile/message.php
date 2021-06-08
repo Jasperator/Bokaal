@@ -78,7 +78,7 @@ if(isset($_GET['chat_id'])){
 <body onload="updateScroll()">
     <?php include_once("../includes/nav.include.php");?>
 <form action="" method="POST" class="chat">
-<h2 class="hoofdtitel"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
+<h2 class="hoofdtitel" id="chatNaam" data-id="<?php echo htmlspecialchars($chat_partner->id); ?>"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
     <div class="chatbox">
         <?php if (!empty($active_conversation)) : ?>
             
@@ -165,6 +165,14 @@ if(isset($_GET['chat_id'])){
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/chat.js"></script>
 <script src="../../js/bootstrap.js"></script>
+
+    <script>
+        document.getElementById('chatNaam').addEventListener('click',function (){
+            window.location.href = `../../detailsUser.php?data-id=${this.getAttribute('data-id')}`
+
+        })
+    </script>
+
 </body>
 
 </html>
