@@ -26,29 +26,33 @@ $maxDistance = $distanceClass->maxDistanceItems($user);
 $minDistance = $distanceClass->minDistanceItems($user);
 
 
-
 $page = $pageAndUsers[0];
 $items = $pageAndUsers[1];
 
 
 
-if(!empty($_POST['searchCategory'])){
-    $priceRange = $_POST['priceRange'];
-    $distanceRange = $_POST['distanceRange'];
+if(!empty($_GET['searchCategory'])){
+    $priceRange = $_GET['priceRange'];
+    if(isset($_GET['distanceRange'])) {
+        $distanceRange = $_GET['distanceRange'];
+    } else {
+        $distanceRange = $maxDistance;
+    }
 
 
     $user = new classes\User($_SESSION['user']);
 
-    if(!empty($_POST['category'])) {
-        $category =  "'". $_POST['category'] . "'";
+    if(!empty($_GET['category'])) {
+        $category =  "'". $_GET['category'] . "'";
     } else {
         $category = "category";
     }
-    $searchName = urlencode($_POST['searchName']);
+    $searchName = urlencode($_GET['searchName']);
     $searchName = '%' . $searchName . '%';
     $pageAndItems = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange, $distanceRange);
     $page = $pageAndItems[0];
     $items = $pageAndItems[1];
+    $totalPages = $itemClass->searchItemCategoryAndNameCount($searchName, $category, $user, $priceRange, $distanceRange);
 
 
 }
@@ -77,7 +81,7 @@ if(!empty($_POST['searchCategory'])){
 
             <h2 class="hoofdtitel"> Zoeken </h2>
 
-        <form class="" enctype="multipart/form-data" action="" method="post">
+        <form class="" enctype="multipart/form-data" action="" method="GET">
                 <!--<label  for="searchName">Search</label>-->
                 <input class="search-bar" placeholder="Zoek" type="text" name="searchName" value="" />
 
@@ -127,11 +131,23 @@ if(!empty($_POST['searchCategory'])){
                 <input type="range" min="1.00" max="<?=$maxPrice?>" value="<?=$maxPrice?>" class="slider" name="priceRange" id="priceRange">
                 <p> <span id="priceVal"></span> Euro </p>
             </div>
-            <label class="priceLabel" for="priceRange">Max. afstand</label>
-            <div class="slidecontainer">
-                <input type="range" min="<?=$minDistance?>" max="<?=$maxDistance?>" value="<?=$maxDistance?>" class="slider" name="distanceRange" id="distanceRange">
-                <p> <span id="distanceVal"></span>  </p>
-            </div>
+                <select type="text" name="distanceRange" id="" class="form-control-search">
+                    <option value="" selected disabled hidden>Maximum Afstand</option>
+                    <optgroup label="Maximum Afstand">
+
+                        <option value="5000">< 5 km</option>
+                        <option value="10000">< 10 km</option>
+                        <option value="15000">< 15 km</option>
+                        <option value="20000">< 10 km</option>
+                        <option value="25000">< 25 km</option>
+                        <option value="30000">< 30 km</option>
+                        <option value="35000">< 35 km</option>
+                        <option value="40000">< 40 km</option>
+                        <option value="45000">< 45 km</option>
+                        <option value="50000">< 50 km</option>
+                        <option value="10000000">> 50 km</option>
+
+                </select>
 
 
 
@@ -196,14 +212,6 @@ if(!empty($_POST['searchCategory'])){
             output.innerHTML = this.value;
         }
 
-        var sliderDist = document.getElementById("distanceRange");
-
-        var outputDist = document.getElementById("distanceVal");
-        outputDist.innerHTML = sliderDist.value;
-
-        sliderDist.oninput = function() {
-            outputDist.innerHTML = this.value;
-        }
 
         document.querySelectorAll('.itemId').forEach(item => {
             item.addEventListener('click', function () {
@@ -215,7 +223,6 @@ if(!empty($_POST['searchCategory'])){
     </script>
 
     <script src="../../js/jquery.min.js"></script>
-    <script src="../../js/search.js"></script>
 
 
     <?php include_once("../includes/footer.php");?>

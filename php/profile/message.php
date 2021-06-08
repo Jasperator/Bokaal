@@ -78,29 +78,41 @@ if(isset($_GET['chat_id'])){
 <body onload="updateScroll()">
     <?php include_once("../includes/nav.include.php");?>
 <form action="" method="POST" class="chat">
-<h2 class="hoofdtitel"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
+<a class="backArrow" href="/php/profile/chat.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
+<h2 class="hoofdtitel" id="chatNaam" data-id="<?php echo htmlspecialchars($chat_partner->id); ?>"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
     <div class="chatbox">
         <?php if (!empty($active_conversation)) : ?>
             
-            <h3 class="float-right d-inline-block"><?php echo htmlspecialchars($chat_partner->fullname); ?></h3>
-            <div class="messagebox" style="min-height: 350px; padding-right:10px;">
+            <div class="messagebox" style="min-height: 350px;">
                 <?php
                 if (!empty($active_conversation)) :
                     //Print out all messages
                     foreach ($messages as $message) : ?>
                         <div class="messageElement">
                             <div class="messageContent">
-                                <strong class="float-left"><?= htmlspecialchars($message->fullname) ?></strong>
-                                <small class="float-right"><?= $message->timestamp; ?></small>
-                                <br>
-                                <p class="float-left" <?php if ($message->sender_id == $user->getId()) {
-                                    echo 'style="background-color:#009CE6; color:white"';
+                                <strong <?php if ($message->sender_id == $user->getId()) {
+                                    echo 'style="float:right"';
                                 } else {
-                                    echo 'style="background-color:#E1E3E2"';
+                                    echo 'style="float:left"';
+                                } ?>><?= htmlspecialchars($message->fullname) ?></strong>
+                                <small <?php if ($message->sender_id == $user->getId()) {
+                                    echo 'style="float:left"';
+                                } else {
+                                    echo 'style="float:right"';
+                                } ?>><?= $message->timestamp; ?></small>
+                                <br>
+                                <p <?php if ($message->sender_id == $user->getId()) {
+                                    echo 'style="background-color:#d5d962; color:white; float:right"';
+                                } else {
+                                    echo 'style="background-color:#E1E3E2; float:left"';
                                 } ?>>
                                     <?= htmlspecialchars($message->content) ?>
                                 </p>
-                                <div class="container float-left">
+                                <div class="container float-left" <?php if ($message->sender_id == $user->getId()) {
+                                    echo 'style="visibility:hidden"';
+                                } else {
+                                    echo 'style="visibility:visible"';
+                                } ?>>
                                     <div class="main">
                                         <!-- Reaction system start -->
                                         <div class="reaction-container">
@@ -151,7 +163,7 @@ if(isset($_GET['chat_id'])){
                 <?php endif; ?>
             </div>
             <div id="reply">
-            <input type="text" id="messageText" class="messageText" value="Type hier...">
+            <input type="text" id="messageText" class="messageText" placeholder="Type hier...">
             <button id="sendMessage" class="sendMessage">Stuur</button>
             </div>
         <?php else : ?>
@@ -165,6 +177,14 @@ if(isset($_GET['chat_id'])){
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/chat.js"></script>
 <script src="../../js/bootstrap.js"></script>
+
+    <script>
+        document.getElementById('chatNaam').addEventListener('click',function (){
+            window.location.href = `../../detailsUser.php?data-id=${this.getAttribute('data-id')}`
+
+        })
+    </script>
+
 </body>
 
 </html>
