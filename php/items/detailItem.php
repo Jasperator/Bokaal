@@ -129,15 +129,17 @@ if(!empty($_POST['start_chat'])){
                 <?php endforeach ?>
             </ul>
 <?php } ?>
+
+
 <!-- -----verkoper----- -->
 
 
-    <div>
+    <div class="container-boer">
         <div>
-            <div>
-                <h2 class="verk">Verkoper</h2>
+            <div >
+                <h2 class="verkoper"><?= htmlspecialchars($seller->fullname); ?></h2>
                 <form action="" method="post">
-                    <img class="boer-img" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
+                    <img class="boer-profile-pic" src="/uploads/<?= htmlspecialchars($seller->profile_img); ?>"/>
                         </div>    
                             <div>
                                 <div>
