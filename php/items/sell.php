@@ -79,7 +79,7 @@ if (!empty($_POST['upload'])) {
 
 	
 		
-		<form class="registerForm" enctype="multipart/form-data" action="" method="post">
+		<form class="registerForm-sell" enctype="multipart/form-data" action="" method="post">
 
 
 			<div id="category" class="form-sell">
@@ -183,7 +183,7 @@ if (!empty($_POST['upload'])) {
 	<div><?php echo $error; ?></div>
 	<?php endif; ?>
 
-    <label for="aantalPlaatsingen">Aantal keer plaatsen</label>
+    <label class="" for="aantalPlaatsingen">Aantal keer plaatsen</label>
     <div id="aantalPlaatsingen">
         <div>
             <input type="number" name="aantalPlaatsingen" id="aantalPlaatsingen" class="form-control"
