@@ -573,7 +573,7 @@ class User
     {
 
         $conn = Db::getConnection();
-        $results_per_page = 3;
+        $results_per_page = 12;
 
         $statement = $conn->prepare("SELECT COUNT(id) FROM users WHERE email <> :email AND status = 'seller' AND  id NOT IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
         $statement->bindValue(':email', $this->getEmail());
