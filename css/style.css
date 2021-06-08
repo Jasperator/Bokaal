@@ -695,8 +695,10 @@
     
     .boer-profile-pic{
         width:40%;
-        height: auto;
+        max-height: 50%;
         object-fit: cover;
+
+        display: flex;
     }
 
 
