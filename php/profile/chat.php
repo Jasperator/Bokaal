@@ -45,10 +45,12 @@ function message() {
     <?php include_once("../includes/subNav.php");?>
 
 
+        <?php if(count($getPartnerConversations) <= 0){ ?>
 
 
     <img class="Placeholder" src="../../images/chatPlaceholder.png" alt="cart placeholder">
-    
+        <?php } else { ?>
+
 
         <ul id="all-chats" class="row col-md-12">
 
@@ -77,6 +79,7 @@ function message() {
         <?php endforeach ?>
         </ul>
 
+        <?php } ?>
 
 
         <?php include_once("../includes/footer.php");?>
