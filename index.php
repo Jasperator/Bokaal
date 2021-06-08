@@ -62,10 +62,15 @@ if (!empty($_POST['delete-favorite-person'])) {
         <div>
             <h2 class="hoofdtitel">Bokaal</h2>
         </div>
+        <?php
+        $page = $pageAndUsers[0];
+        if($page == 1){
+            ?>
         <h3 class="titel-index">FAVORIETEN</h3>
         <ul id="all-detail" class="row col-md-12"  >
 
-            <?php foreach ($favorites as $fav) : ?>
+            <?php
+            foreach ($favorites as $fav) : ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId users" data-id="<?= htmlspecialchars($fav->id); ?>">
                         <div class="container" >
@@ -99,6 +104,9 @@ if (!empty($_POST['delete-favorite-person'])) {
             <?php endforeach ?>
                             
         </ul>
+
+        <?php } ?>
+
         <div class="space-favor"></div>
         <h3 class="titel-index"> VERKOPERS</h3>
 
@@ -150,6 +158,7 @@ if (!empty($_POST['delete-favorite-person'])) {
     echo "<a href='index.php?page=".$i."'";
     if ($i==$page)  echo " class='curPage'";
     echo ">".$i."</a> ";
+
 };
 ?>
 </div>

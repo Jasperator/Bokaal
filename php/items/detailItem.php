@@ -8,10 +8,9 @@ $user = new classes\User($_SESSION['user']);
 $item = new classes\Item();
 
 $itemId = $_GET["data-id"];
-$seller = $item->getUserFromItem($itemId);
+$seller = $item->getUserFromItem($user, $itemId);
 $detailItem = $item->getItem($itemId);
 $allItemsSeller = $item->getAllItemsBySellerId($itemId);
-$distance =$user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code));
 
 if (!empty($_POST['buy-item'])) {
     $id = $_POST['buy-item'];
@@ -71,7 +70,7 @@ if(!empty($_POST['start_chat'])){
                                 <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
                                 <p class="card-text"> Afstand:
                                     <?=
-                                    $distance->text;?></p>
+                                    $seller->distance;?></p>
 
                                     <form  id="start_chat" class="chat-button" action="" method="post">
                                         <div class="form-group">

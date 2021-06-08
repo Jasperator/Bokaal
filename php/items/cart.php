@@ -102,7 +102,7 @@ if(!empty($_POST['start_chat'])){
 
         <?php $price = 0;
             foreach ($items as $item) :
-                $seller = $itemClass->getUserFromItem($item->id);
+                $seller = $itemClass->getUserFromItem($user, $item->id);
                 $price += $item->price;
                 ?>
         <div id="list-decoration" class="col-md-4">

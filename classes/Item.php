@@ -516,13 +516,14 @@ class Item
     }
 
 
-    public function getUserFromItem($id)
+    public function getUserFromItem($user, $id)
     {
         $conn = Db::getConnection();
 
-        $statement = $conn->prepare("SELECT * FROM users WHERE id = (SELECT seller_id FROM items WHERE id = :id)");
+        $statement = $conn->prepare("SELECT * FROM users INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = (SELECT seller_id FROM items WHERE id = :id)) OR (distance.user_1 = (SELECT seller_id FROM items WHERE id = :id) AND distance.user_2 = :user_id) WHERE id = (SELECT seller_id FROM items WHERE id = :id)");
 
         //Bind values to parameters from prepared query
+        $statement->bindValue(":user_id", $user->getId());
         $statement->bindValue(":id", $id);
 
         //Execute query

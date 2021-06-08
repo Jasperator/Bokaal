@@ -74,7 +74,7 @@ class Favorite
                     $conn = Db::getConnection();
 
                     //Prepare the SELECT query
-                    $statement = $conn->prepare("SELECT * FROM users INNER JOIN distance ON (distance.user_1 = users.id  AND distance.user_2 = :user_id) OR (distance.user_1 = :user_id  AND distance.user_2 = users.id) WHERE users.id IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)");
+                    $statement = $conn->prepare("SELECT * FROM users INNER JOIN distance ON (distance.user_1 = users.id  AND distance.user_2 = :user_id) OR (distance.user_1 = :user_id  AND distance.user_2 = users.id) WHERE users.id IN (SELECT favorite_id FROM favorites WHERE user_id = :user_id)  ORDER BY distanceValue ");
             
                     //Bind values to parameters from prepared query
                     $statement->bindValue(":user_id", $user->getId());

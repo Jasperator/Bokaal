@@ -10,7 +10,6 @@ $item = new classes\Item();
 $userId = $_GET["data-id"];
 $seller = $user->getUserFromId($userId);
 $allItemsSeller = $user->getAllItemsById($userId);
-$distance =$user->getDistance($user->getAddress(),$user->getPostal_code(), htmlspecialchars($seller->address), htmlspecialchars($seller->postal_code));
 
 
 if(!empty($_POST['start_chat'])){
@@ -62,7 +61,7 @@ if(!empty($_POST['start_chat'])){
                                 <p class="card-text"><?= htmlspecialchars($seller->company);  ?></p>
                                 <p class="card-text"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place"> Afstand:
                                     <?=
-                                    $distance->text;?></p>
+                                    $seller->distance;?></p>
                                 <form  id="start_chat" class="chat-button" action="" method="post">
                                     <div class="form-group">
                                         <button type="submit" name="start_chat" class="btn btn chatColor"
