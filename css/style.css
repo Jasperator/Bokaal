@@ -708,25 +708,56 @@
     .container-boer{
         margin-left: 6%;
     }
+
     
     .verkoper{
-        color: black;
-        font-size: 2.5em;
+        color: orangered;
 
+        font-size: 2.5em;
         font-family: "Josefin Sans";
 
         margin-top: 3%;
+    }
+
+    .afstand{
+        margin-left: 15px;
+    }
+
+    .locatie-boer{
+        display: flex;
+
+        font-family: "Josefin Sans";
+        font-size: 1.2em ;
+
+        margin-top: 15px;
         margin-bottom: 2.5%;
     }
     
+    
     .boer-profile-pic{
-        width:40%;
+        width:30%;
         max-height: 50%;
         object-fit: cover;
 
         display: flex;
+        margin-right: 35px;
     }
 
+    .full-name-boer{
+        margin-top: 5px;
+        margin-bottom: 45px;
+    }
+
+    .img-text{
+        display: flex;
+        font-family: "Josefin Sans";
+    }
+
+    .bio-boer{
+        width: 55%;
+        font-size: 1.5em;
+        font-style: italic;
+    }
 
     .detail{
         width: 90% !important;
@@ -745,9 +776,19 @@
         background-color: #d5d962 !important;
     }
     
+    .locatie-boer{
+        font-family: "Josefin Sans";
+        font-size: 1.2em ;
+
+        margin-top: 15px;
+    }
     
-    .chatColor{
+    #chatnaam{
         width: 20% !important;
+
+        float: right;
+
+        margin-right: 45%;
 
         border: none !important;
 
