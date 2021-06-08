@@ -69,7 +69,7 @@ if (!empty($_POST['upload'])) {
 
 	<?php include_once("../includes/nav.include.php") ?>
 
-	<div >
+		<div >
             <h2 class="hoofdtitel">Verkoop</h2>
         </div>
 
@@ -113,12 +113,8 @@ if (!empty($_POST['upload'])) {
 						<option value="Zacht fruit">Zacht fruit (aardbei, bessen,...)</option>
 						<option value="Exotisch fruit">Exotisch fruit (passievrucht, papaja,...</option>
 						<option value="overig fruit">overig Fruit</option>
-
-
 				</select>
-
 			</div>
-
 
 			<div id="top" class="form-sell">
 				<input type="text" name="title" id="title" class="form-control" placeholder="Titel" required>
@@ -127,65 +123,38 @@ if (!empty($_POST['upload'])) {
 
 			<div class="form-sell">
 				<input type="text" name="description" id="description" class="form-control" placeholder="Beschrijving"
-					required>
-
+					required>							
 			</div>
 
 			<div class="form-sell-item">
 				<div id="hoeveelheid">
-					<div>
-						<input type="number" name="quantity" id="quantity" class="form-control"
+					<div class="select-items-selectItems">
+						<input class="select-items-nr" type="number" name="quantity"
 							placeholder="Hoeveelheid" required>
-					</div>
 
-					<div id="unit" class="form-sell-item">
-
-						<select type="text" name="unit" class="form-control"
+						<select class="select-items-select-unit" type="text" name="unit"
 							placeholder="Kies soort hoeveelheid" required>
-							<option value="" selected disabled hidden>Kies soort hoeveelheid</option>
-
-							<optgroup label="Hoeveelheid">
-
-								<option value="Gram">Gram</option>
-								<option value="Kg">Kg</option>
-								<option value="Stuks">Stuks</option>
+								<option  value="" selected disabled hidden>hoeveelheid</option>
+									<optgroup label="Hoeveelheid">
+										<option value="Gram">Gram</option>
+										<option value="Kg">Kg</option>
+										<option value="Stuks">Stuks</option>
 						</select>
-						<div >
-							<input type="number" id="price"  name="price"  class="form-control" placeholder="Prijs" step=".01" required>
-						</div>
-						<div>
-							<input type="text" name="currency" id="unit" class="form-control" Value="Euro" required>
-						</div>
-
-
-
-
-
-
-                        </div>
-
+							<input type="number" class="select-items-select-price"  name="price"  placeholder="Prijs" step=".01" required>
+							<input type="text" class="select-items-select-value" name="currency" Value="Euro" required>												
+                    </div>
 				</div>
-
-
 			</div>
 	</div>
 
-
-	<div  class="form-sell">
-		<div id="bedrag">
-			
-
-			
-		</div>
-	</div>
 
 	<?php if (isset($error)) : ?>
 	<div><?php echo $error; ?></div>
 	<?php endif; ?>
 
-    <label class="" for="aantalPlaatsingen">Aantal keer plaatsen</label>
+    <label class="aantal-plaatsingen-label" for="aantalPlaatsingen">Aantal keer plaatsen</label>
     <div id="aantalPlaatsingen">
-        <div>
+        <div class="aantal-plaatsingen">
             <input type="number" name="aantalPlaatsingen" id="aantalPlaatsingen" class="form-control"
                    placeholder="Hoeveel keer plaatsen" value="1" required>
         </div>
@@ -198,8 +167,6 @@ if (!empty($_POST['upload'])) {
         <input id="button_orange" type="submit" class="register" value="Upload" name="upload">
     </div>
     <div id="result"> </div>
-
-	
 
 
 	<div id="result"> </div>
