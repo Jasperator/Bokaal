@@ -415,16 +415,16 @@
         -moz-box-shadow: 0px 0px 65px 20px rgba(0, 0, 0, 0.1);
     }
 
-    /*-----profiel instellingen-----*/
+/*-----profiel instellingen-----*/
 
 
-    .profile-settings-image {
-        margin-bottom: 5%;
-        margin-top: 5%;
-        margin-left: calc(17.5% - 125px + 5%);
-    }
+.profile-settings-image {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 25% /*calc(17.5% - 125px + 5%)*/;
+}
 
-    .setImg {
+    /*.setImg {
         float: right;
 
         z-index: 15;
@@ -434,20 +434,20 @@
         -webkit-box-shadow: inset 0px 0px 15px 17px #FFFFFF;
         box-shadow: inset 0px 0px 15px 17px #FFFFFF;
 
-    }
+    }*/
 
-    .setImage {
-        z-index: 14;
-        position: relative;
-    }
+.setImage {
+    z-index: 14;
+    position: relative;
+}
 
 }
 
 .form-control-settings {
-    width: 35%;
+    width: 50%;
     height: 50px;
 
-    margin-left: 5%;
+    margin-left: 25%;
     margin-top: 15px;
 
     padding-left: 15px;
@@ -464,13 +464,17 @@
     box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 }
 
+#bio{
+    height: 100px;
+}
+
 
 .new-profile-image {
-    width: 150px;
-    height: 200px;
+    width: 25%;
+    height: 25%;
     object-fit: cover;
 
-    margin-left: 3%;
+    border-radius: 0 !important;
 }
 
 .spacing-bottom {
@@ -523,10 +527,10 @@
     padding-right: 0px;
 
     text-align: center;
-    width: 10%;
+    width: 15%;
 
     margin-top: 15px;
-    margin-left: 17.5%;
+    margin-left: 25%;
     margin-bottom: 30px;
 }
 
