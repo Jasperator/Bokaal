@@ -87,9 +87,10 @@ if(isset($_GET['chat_id'])){
                 <?php
                 if (!empty($active_conversation)) :
                     //Print out all messages
-                    foreach ($messages as $message) : ?>
-                        <div class="messageElement">
+                    foreach ($messages as $key =>$message) : ?>
+                        <div class="messageElement" id="">
                             <div class="messageContent">
+                                <?php if($key ==0 or ($messages[$key-1]->sender_id != $message->sender_id and $key >= 1)){ ?>
                                 <strong <?php if ($message->sender_id == $user->getId()) {
                                     echo 'style="float:right"';
                                 } else {
@@ -101,6 +102,7 @@ if(isset($_GET['chat_id'])){
                                     echo 'style="float:left"';
                                 } ?>> <?= $message->timestamp; ?> </small>
                                 <br>
+                                <?php } ?>
                                 <p <?php if ($message->sender_id == $user->getId()) {
                                     echo 'style="background-color:#d5d962; color:white; float:right; margin-bottom: -5px; padding: 12px 20px 12px 30px; border-radius: 25px 25px 5px 25px;"';
                                 } else {
