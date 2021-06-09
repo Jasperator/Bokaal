@@ -983,7 +983,15 @@
     box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 }
 
+#distanceDropdown{
 
+    float: left;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -5%;
+
+
+}
 
 .zoekertje {
     width: 20px;
@@ -1379,9 +1387,10 @@ input[type="range"].slider:hover {
 
 /*-----cart/winkelkar-----*/
 
-#cartPlaceholder {
+.Placeholder {
     width: 50%;
     margin-left: 25%;
+    margin-top: 5%;
 }
 
 #expiry-date {
@@ -1729,6 +1738,12 @@ input[type="range"].slider:hover {
         background: #555; 
     }
 
+    #chatTitel{
+
+        margin-top: -6%;
+
+    }
+
 
 #chatTitel:hover{
 
@@ -1739,24 +1754,30 @@ input[type="range"].slider:hover {
 
 .chatbox {
     
-
+    margin-top: -3%;
     margin-right: 5%;
     margin-left: 5%;
 
-    padding: 20px;
 
     width: 80%;
 
     font-family: "Josefin Sans";
+    
 }
 
 .messagebox {
-    max-height: 500px;
+    max-height: 600px;
     overflow-y: scroll;
     margin-bottom: 20px;
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 4%;
 
+    margin-left: 10%;
+
+    background-image: url(/images/background/chatBackground.png);
+    background-size: cover;
 }
 
 .messageContent {
@@ -1771,8 +1792,7 @@ input[type="range"].slider:hover {
     max-width: 250px;
     min-width: 50px;
     word-wrap: break-word;
-    padding: 15px;
-    border-radius: 5px;
+    
     margin-bottom: 5px;
 }
 
@@ -1797,7 +1817,7 @@ input[type="range"].slider:hover {
 
     height: 50px;
     padding: 5px;
-    width: 65%;
+    width: 70%;
     
     border: none;
     border-bottom: 3px solid black;
@@ -1813,7 +1833,7 @@ input[type="range"].slider:hover {
     font-weight: 400;
     color: white;
     padding: 10px;
-    width: 10%;
+    width: 14%;
     border: none;
     height: 50px;
 }
@@ -1831,7 +1851,7 @@ input[type="range"].slider:hover {
     position: absolute;
     margin-left: 3%;
     width: 3%;
-    margin-top: -8.5%;
+    margin-top: -6%;
 }
 
 .backArrow:hover{
@@ -1842,7 +1862,7 @@ input[type="range"].slider:hover {
 
 /*-----Chat----- */
 
-#chatnaam{
+#chatName{
     color: #000;
     font-size: 1.5em;
     background-color: none;
@@ -1888,12 +1908,13 @@ input[type="range"].slider:hover {
     text-align: center;
     vertical-align: middle;
 
-    border-radius: 30px;
+    border-radius: 30px 30px 30px 5px;
     padding: 10px;
     background-color: #d5d962;
     width: 50px;
     height: 50px;
     margin-left: 87%;
+    margin-top: -5%;
     position: absolute;
 }
 
@@ -1905,12 +1926,12 @@ input[type="range"].slider:hover {
     text-align: center;
     vertical-align: middle;
 
-    border-radius: 15px;
+    border-radius: 30px 30px 30px 5px;
     background-color: #d5d962;
     width: 25px;
     height: 25px;
-    margin-left: 97%;
-    margin-top: -5%;
+    margin-left: 98%;
+    margin-top: -9%;
     position: absolute;
     padding-left: 4%;
     padding-top: 2%;
@@ -1923,12 +1944,12 @@ input[type="range"].slider:hover {
     text-align: center;
     vertical-align: middle;
 
-    border-radius: 15px;
+    border-radius: 30px 30px 30px 5px;
     background-color: #d5d962;
     width: 25px;
     height: 25px;
-    margin-left: 40%;
-    margin-top: -13%;
+    margin-left: 39%;
+    margin-top: -12%;
     position: absolute;
 
 }
@@ -1985,8 +2006,8 @@ footer {
 .footerMenu ul li a {
     color: #fff;
     float: left;
-    margin-right: 4%;
-    font-size: 1.2em;
+    margin-right: 3.5%;
+    font-size: 1.1em;
 }
 
 .footerMenu ul li:first-child {
@@ -2718,6 +2739,7 @@ footer {
         max-height: 100px;
         overflow-y: scroll;
         margin-bottom: 20px;
+        
     }
 
     .messageContent {

@@ -96,7 +96,7 @@ if(!empty($_POST['start_chat'])){
 <?php if(count($items) <= 0){ ?>
 
 
-            <img id="cartPlaceholder" src="../../images/cartPlaceholder.png" alt="cart placeholder">
+            <img class="Placeholder" src="../../images/cartPlaceholder.png" alt="cart placeholder">
 <?php } else { ?>
         <ul id="all-detail" class="row col-md-12">
 

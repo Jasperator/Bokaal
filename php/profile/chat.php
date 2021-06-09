@@ -43,6 +43,15 @@ function message() {
         <h2 class="hoofdtitel">Berichten</h2>
 
     <?php include_once("../includes/subNav.php");?>
+
+
+        <?php if(count($getPartnerConversations) <= 0){ ?>
+
+
+    <img class="Placeholder" src="../../images/chatPlaceholder.png" alt="cart placeholder">
+        <?php } else { ?>
+
+
         <ul id="all-chats" class="row col-md-12">
 
     <?php
@@ -53,7 +62,7 @@ function message() {
 
         ?>
 
-            <div class="chatPreview col-md-2" id="chat" ">
+            <div class="chatPreview col-md-2" id="chat">
 
                 <?php if($unreadMessages> 0){  ?> <div class="notification"> <?php print_r($unreadMessages); ?>  </div> <?php } ?>
 
@@ -62,7 +71,7 @@ function message() {
 
                 <form action="" method="POST" class="chat">
                         <input type="hidden" name="chat_id" class="convoId" value="<?= htmlspecialchars($getPartnerConversation);?>" placeholder="naam" />
-                        <input id="chatnaam"  class="btn" type="submit" name="chat_name" value="<?= htmlspecialchars($getPartnerName->fullname); ?>" />
+                        <p id="chatName"><?= htmlspecialchars($getPartnerName->fullname); ?> </p>
                 </form>
 
 
@@ -70,6 +79,7 @@ function message() {
         <?php endforeach ?>
         </ul>
 
+        <?php } ?>
 
 
         <?php include_once("../includes/footer.php");?>
