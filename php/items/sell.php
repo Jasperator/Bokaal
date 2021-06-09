@@ -73,8 +73,16 @@ if (!empty($_POST['upload'])) {
             <h2 class="hoofdtitel">Verkoop</h2>
         </div>
 
-		<img id="sell-img" src="../../images/setting-img.jpg" alt="">
-    
+		<!--<div id="sell-img">
+			<h1>Bokaal</h1>
+			<p>Op deze pagina kan je, je items te koop zetten
+			deze items kunnen de groentjes of fruit vanuit je serres of velden zijn.
+			Melk en dierlijke producten worden op dit platform niet verkocht momenteel
+			moesten jullie dit graag als optie hebben kunnen jullie ons contacteren en dan kijken we verder</p>
+
+			<img id="sell-img" src="../../images/setting-img.jpg" alt="">
+		</div>
+    -->
 	<div>
 
 	
