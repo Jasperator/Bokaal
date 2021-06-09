@@ -41,9 +41,11 @@ if(isset($_GET['priceRange'])) {
 if(isset($_GET['searchName'])) {
     $searchName = urlencode($_GET['searchName']);
     $searchName = '%' . $searchName . '%';
+    $name = urlencode($_GET['searchName']);
 
 }else{
     $searchName = '%';
+    $name = '';
 }
     $pageAndItems = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange, $distanceRange);
     $page = $pageAndItems[0];
@@ -192,8 +194,8 @@ if(isset($_GET['searchName'])) {
     <div id="pages" style="text-align: center">
             <?php
             $page = $pageAndItems[0];
-            for ($i=1; $i<=$totalPages; $i++) {  // print links for all pages
-                echo "<a href='search.php?page=".$i."'";
+            for ($i=1; $i<=4; $i++) {  // print links for all pages
+                echo "<a href='search.php?page=".$i . '&searchName=' . $name . '&searchCategory=' .$categoryJs . '&priceRange=' .$priceRange . '&distanceRange=' . $distanceRange ."'"; ;
                 if ($i==$page)  echo " class='curPage'";
                 echo ">".$i."</a> ";
 
@@ -203,12 +205,7 @@ if(isset($_GET['searchName'])) {
 
         let distanceRange = '<?= $distanceRange  ?>';
         let category = '<?= $categoryJs ?>';
-        let name = '<?php if(isset($_GET['searchName'])) {
-            echo $_GET['searchName'];
-
-        }else{
-            echo '';
-        } ?>';
+        let name = '<?= $name ?>';
         let priceRange = '<?= $priceRange ?>';
 
         document.getElementById('priceRange').value = priceRange;
