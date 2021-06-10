@@ -18,6 +18,24 @@ class User
     private $btw;
     private $company;
     private $telephone;
+    private $popup;
+
+    /**
+     * @return mixed
+     */
+    public function getPopup()
+    {
+        return $this->popup;
+    }
+
+    /**
+     * @param mixed $popup
+     */
+    public function setPopup($popup): void
+    {
+        $this->popup = $popup;
+    }
+
 
 
 
@@ -417,8 +435,32 @@ class User
             $this->company = $user->company;
             $this->telephone = $user->telephone;
             $this->status = $user->status;
+            $this->popup = $user->popup;
+
 
         }
+    }
+
+    public function popupSeen()
+    {
+        $conn = Db::getConnection();
+
+        //Make email case insensitive
+
+        $insert = $conn->prepare("UPDATE users SET popup = 'true' WHERE id = :id");
+        $insert->bindValue(':id', $this->getId());
+        $insert->execute();
+    }
+    public function selectPopupSeen()
+    {
+        //Prepared \PDO statement that fetches the password corresponding to the inputted email
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT popup FROM users  WHERE id = :id");
+        $statement->bindValue(':id', $this->getId());
+        $statement->execute();
+        $result = $statement->fetch(\PDO::FETCH_COLUMN);
+        return $result;
+
     }
 
     //Function that changes the password

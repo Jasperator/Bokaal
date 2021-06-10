@@ -6,6 +6,7 @@ require_once(__DIR__ . "/../../classes/User.php");
 //Create a new user based on the active user's email
 $user = new classes\User($_SESSION['user']);
 
+$pop = $user->selectPopupSeen();
 
 //Detect a submit to change the password
 if (!empty($_POST['changePassword'])) {
@@ -104,7 +105,6 @@ if (!empty($_POST['updateProfile'])) {
     <link rel="stylesheet" href="/css/bootstrap.css">
 
     <!--slider links en scripts-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
     <link href="../../css/popup-slider.css" rel="stylesheet">
 
@@ -272,7 +272,7 @@ if (!empty($_POST['updateProfile'])) {
     </div>
   </div>
 
-  <?php if(!isset($_SESSION['seen_popup'])){
+  <?php if(empty($pop)){
 ?>
  <!-- slider menu -->
   <div class="sliderPop" id="sliderPop">
@@ -310,8 +310,8 @@ if (!empty($_POST['updateProfile'])) {
     </div>
 </div>
   <!--einde slider menu-->
-<?php }
-  $_SESSION['seen_popup'] = true;
+<?php
+      $user->popupSeen(); }
   ?>
 
   
