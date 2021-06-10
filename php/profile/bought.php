@@ -56,7 +56,7 @@ if(!empty($_POST['start_chat'])){
 
 <ul id='all'>
             <?php foreach ($items as $item) :
-                $seller = $itemClass->getUserFromItem($item->id);
+                $seller = $itemClass->getUserFromItem($user, $item->id);
                 ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId users" >
