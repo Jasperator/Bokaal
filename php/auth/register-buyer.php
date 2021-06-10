@@ -74,6 +74,7 @@ if (!empty($_POST['register'])) {
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<link rel="stylesheet" href="../../css/register-seller.css">
     <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
 
@@ -84,8 +85,8 @@ if (!empty($_POST['register'])) {
 	<img src="../../images/background/OGbackground.png" class="loginImage"></div>
 
 
-	<div class="d-flex justify-content-center">
-		<form class="registerForm" action="" method="post">
+	<div class="register ">
+		<form action="" method="post">
 			<img class="logo" src="../../images/logo/LogoBlack.svg" alt="login logo Bokaal">
 			<h2>Registreer kopers <br> <br> account</h2>
 			<?php if (!empty($error)) : ?>
@@ -99,17 +100,37 @@ if (!empty($_POST['register'])) {
 			<?php endif; ?>
 			<br>
 			<div class="form-group">
+			
 				<input type="text" name="fullname" id="fullname" class="form-control" placeholder="Volledige naam"
 					required>
-				<i class="fas fa-user"></i>
+					<i class="fa fa-user" aria-hidden="true"></i>
+
 			</div>
 
-			<div>
+			<div class="form-group">
+				<input type="email" name="email" class="form-control email" placeholder="Email"
+					pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
+				<span id="availability"></span>
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+			</div>
+			<div class="form-group">
+				<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord"
+					required>
+					<i class="fa fa-lock" aria-hidden="true"></i>
+			</div>
+
+			<div class="form-group">
+				<input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="Wachtwoord bevestigen"
+					required>
+					<i class="fa fa-lock" aria-hidden="true"></i>
+			</div>
+
+			<div class="form-group">
 				<input type="number" name="postal_code" class="form-control" placeholder="Postcode" required>
 
 			</div>
 
-			<div>
+			<div class="form-group">
 				<input type="text" name="location" class="form-control" placeholder="Stad" required>
 
 			</div>
@@ -119,19 +140,9 @@ if (!empty($_POST['register'])) {
 				<input type="text" name="address" class="form-control" placeholder="Straat, nr en bus" required>
 
 			</div>
+			
 			<div class="form-group">
-				<input type="email" name="email" class="form-control email" placeholder="Email"
-					pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
-				<span id="availability"></span>
-				<i class="fas fa-envelope"></i>
-			</div>
-			<div class="form-group">
-				<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord"
-					required>
-				<i class="fas fa-lock"></i>
-			</div>
-			<div class="form-group">
-				<input id="register" type="submit" class="register" value="Registreer" name="register">
+				<input id="register" type="submit" class="" value="Registreer" name="register">
 			</div>
 			<div id="result"> </div>
 			<p>Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
