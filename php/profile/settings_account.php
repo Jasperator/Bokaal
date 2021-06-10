@@ -103,13 +103,61 @@ if (!empty($_POST['updateProfile'])) {
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
 
+    <!--slider links en scripts-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
+    <link href="../../css/popup-slider.css" rel="stylesheet">
+
+
+    <!--slider links en scripts einde-->
+
 
 
 </head>
 
 <body id="Profiel-instellingen-body">
-  <?php include_once("../includes/nav.include.php") ?>
+  <?php include_once("../includes/nav.include.php") ?>  
+  
+  <!-- slider menu -->
+  <div class="sliderPop" style="display:none;">
+    <div class="ct-sliderPop-container">
+        <div class="ct-sliderPop ct-sliderPop-slide1 open">
+            <div class="inner">
+                <h1 class="head-title-slider">Verspilling</h1>
+                <a class="close-button" href="/php/profile/settings_account.php">
+                    <img id="img-close-button" alt="close" src="../../images/icon/cross-black.svg"></a>
+                <img id="img-vedgy" src="../../images/sla.jpg" alt="">
+                <div class="map-white-border"></div>
+                <h2 class="htwee">907 miljoen kg verspilling in Vlaanderen</h2>
+                <p class="paragraaf">Elk jaar wordt er in Vlaanderen alleen al 907 miljoen kilogram voedsel weggegooid
+                    . Van de 907 miljoen kilogram voedsel dat weggegooid wordt,
+                    is 20% groenten en 29% fruit, dus een groot deel van de verspilling komt vanuit
+                    de landbouw (330 miljoen kilogram).
+                </p>                
+            </div>
+        </div>
+
+        <div class="ct-sliderPop ct-sliderPop-slide1">
+            <div class="inner">
+                <h1 class="head-title-slider">Hoe pakken we dit aan</h1>
+                <a class="close-button" href="#">
+                    <img id="img-close-button" alt="close" src="../../images/icon/cross-black.svg"></a>
+                <img id="img-vedgy" src="../../images/selder.jpg" alt="">
+                <h2 class="htwee">SAMEN</h2>
+                <p class="paragraaf">Via dit portaal willen wij boeren de optie
+                    geven om hun groenten en fruit die er iets minder mooi uitzien
+                    lokaal te verkopen. En deze kunnen dan door iedereen gekocht worden.
+                </p>
+            </div>        
+        </div>   
+            
+    </div>
+</div>
+  <!--einde slider menu-->
+
   <!-- Hier moet de profile.php nav komen -->
+
+
 
      <h2 class="hoofdtitel">Profiel instellingen</h2>
       <div class="profile-settings-image">
@@ -260,13 +308,20 @@ if (!empty($_POST['updateProfile'])) {
     </div>
   </div>
 
+
+
   
 
-<?php include_once("../includes/footer.php");?>
+  <?php include_once("../includes/footer.php");?>
 
 
   <script src="../../js/jquery.min.js"></script>
   <script src="../../js/bootstrap.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider-min.js"></script>
+    <script src="../../js/popup-slider.js"></script>
 
 </body>
 
