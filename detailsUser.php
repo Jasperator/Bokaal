@@ -46,7 +46,7 @@ if(!empty($_POST['start_chat'])){
 <?php include_once("php/includes/nav.include.php");?>
 
 
-    <h2 class="hoofdtitel"> <?= htmlspecialchars($seller->company);?></h2>
+    <h2 class="hoofdtitel"> Verkoper </h2>
 
     <div class="container-boer">
             <h2 class="verkoper"><?= htmlspecialchars($seller->fullname);  ?></h2>
@@ -82,7 +82,7 @@ if(!empty($_POST['start_chat'])){
         </div>
 
 <?php if(count($allItemsSeller) > 0){ ?>
-                <h2 class="items-header" >Items</h2>
+                <h2 class="items-header" >Aanbiedingen</h2>
 
             <ul id="all-detail" class="row col-md-12">
 

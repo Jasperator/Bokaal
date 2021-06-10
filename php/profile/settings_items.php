@@ -41,7 +41,7 @@ if(!empty($_POST['edit_item'])){
 
 
         <div>
-            <h2 class="hoofdtitel">Items for sale</h2>
+            <h2 class="hoofdtitel">Aanbiedingen</h2>
         </div>
         <ul id="all-detail" class="row col-md-12">    
             
@@ -56,17 +56,18 @@ if(!empty($_POST['edit_item'])){
                         
                                         <div id="card-body" style="padding:15px;">
                                             <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
-                                            <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
+                                            <p class="card-text"> <img class="zoekertje" src="../../images/icon/vegetables.png" alt="">
+                                            <?= htmlspecialchars($item->category); ?></p>
                                             <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
                                             <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
-                                                <?= htmlspecialchars($item->quantity); ?> : <?= htmlspecialchars($item->unit); ?></p>
+                                                <?= htmlspecialchars($item->quantity); ?>  <?= htmlspecialchars($item->unit); ?></p>
                                             <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
-                                                <?= htmlspecialchars($item->price); ?> : <?= htmlspecialchars($item->currency); ?></p>
+                                                <?= htmlspecialchars($item->price); ?>  <?= htmlspecialchars($item->currency); ?></p>
                                         </div>
 
                                     <form action="" method="POST" class="edit">
                                         <div class="col text-center" style="margin-bottom:15px;">
-                                            <input type="submit" class="btn btn-dark rounded" value="Edit">
+                                            <input type="submit" class="btn btn detail" id="editButton" value="Edit">
                                             <input type="hidden" class="btn btn-primary"  name="edit_item" value="<?= htmlspecialchars($item->id); ?>" name="deleteHidden">
 
                                         </div>
