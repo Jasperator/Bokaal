@@ -423,7 +423,7 @@
 .profile-settings-image {
     margin-bottom: 5%;
     margin-top: 5%;
-    margin-left: 25% /*calc(17.5% - 125px + 5%)*/;
+    /*margin-left: 25% calc(17.5% - 125px + 5%)*/;
 }
 
     /*.setImg {
@@ -472,12 +472,11 @@
 
 
 .new-profile-image {
-    width: 25%;
+    width: 20%;
     height: 25%;
     object-fit: cover;
-
-    margin-left: 20%;
     border-radius: 0 !important;
+    margin-left:40%;
 }
 
 .spacing-bottom {
@@ -497,7 +496,7 @@
     background-color: orangered;
     color: #ffffff;
 
-    margin-left: calc(50%/2);
+    margin-left:calc(85%/2);
     margin-bottom: 20px;
 
     padding-top: 10px;
@@ -505,11 +504,9 @@
 
     text-align: center;
 
-    width: 250px;
+    width:15%;
 
     float: left;
-
-
 }
 
 
@@ -551,7 +548,7 @@
 
     margin-bottom: 20px;
     margin-top: 15px;
-    margin-left: 27%;
+    margin-left: 45%;
 }
 
 /* -----INDEX----- */
@@ -2379,7 +2376,6 @@ footer {
 
 
     .profile-settings-image {
-        margin-left: 30%;
         margin-top: 5%;
     }
 
