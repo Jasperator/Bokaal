@@ -118,43 +118,7 @@ if (!empty($_POST['updateProfile'])) {
 <body id="Profiel-instellingen-body">
   <?php include_once("../includes/nav.include.php") ?>  
   
-  <!-- slider menu -->
-  <div class="sliderPop" style="display:none;">
-    <div class="ct-sliderPop-container">
-        <div class="ct-sliderPop ct-sliderPop-slide1 open">
-            <div class="inner">
-                <h1 class="head-title-slider">Verspilling</h1>
-                <a class="close-button" href="/php/profile/settings_account.php">
-                    <img id="img-close-button" alt="close" src="../../images/icon/cross-black.svg"></a>
-                <img id="img-vedgy" src="../../images/sla.jpg" alt="">
-                <div class="map-white-border"></div>
-                <h2 class="htwee">907 miljoen kg verspilling in Vlaanderen</h2>
-                <p class="paragraaf">Elk jaar wordt er in Vlaanderen alleen al 907 miljoen kilogram voedsel weggegooid
-                    . Van de 907 miljoen kilogram voedsel dat weggegooid wordt,
-                    is 20% groenten en 29% fruit, dus een groot deel van de verspilling komt vanuit
-                    de landbouw (330 miljoen kilogram).
-                </p>                
-            </div>
-        </div>
-
-        <div class="ct-sliderPop ct-sliderPop-slide1">
-            <div class="inner">
-                <h1 class="head-title-slider">Hoe pakken we dit aan</h1>
-                <a class="close-button" href="#">
-                    <img id="img-close-button" alt="close" src="../../images/icon/cross-black.svg"></a>
-                <img id="img-vedgy" src="../../images/selder.jpg" alt="">
-                <h2 class="htwee">SAMEN</h2>
-                <p class="paragraaf">Via dit portaal willen wij boeren de optie
-                    geven om hun groenten en fruit die er iets minder mooi uitzien
-                    lokaal te verkopen. En deze kunnen dan door iedereen gekocht worden.
-                </p>
-            </div>        
-        </div>   
-            
-    </div>
-</div>
-  <!--einde slider menu-->
-
+ 
   <!-- Hier moet de profile.php nav komen -->
 
 
@@ -308,6 +272,42 @@ if (!empty($_POST['updateProfile'])) {
     </div>
   </div>
 
+ <!-- slider menu -->
+  <div class="sliderPop" style="display:none;">
+    <div class="ct-sliderPop-container">
+        <div class="ct-sliderPop ct-sliderPop-slide1 open">
+            <div class="inner">
+                <h1 class="head-title-slider">Verspilling</h1>
+                <a class="close-button" href="/php/profile/settings_account.php">
+                    <img id="img-close-button" alt="close" src="../../images/icon/cross-black.svg"></a>
+                <img id="img-vedgy" src="../../images/sla.jpg" alt="">
+                <div class="map-white-border"></div>
+                <h2 class="htwee">907 miljoen kg verspilling in Vlaanderen</h2>
+                <p class="paragraaf">Elk jaar wordt er in Vlaanderen alleen al 907 miljoen kilogram voedsel weggegooid
+                    . Van de 907 miljoen kilogram voedsel dat weggegooid wordt,
+                    is 20% groenten en 29% fruit, dus een groot deel van de verspilling komt vanuit
+                    de landbouw (330 miljoen kilogram).
+                </p>                
+            </div>
+        </div>
+
+        <div class="ct-sliderPop ct-sliderPop-slide1">
+            <div class="inner">
+                <h1 class="head-title-slider">Hoe pakken we dit aan</h1>
+                <a class="close-button" href="#">
+                    <img id="img-close-button" alt="close" src="../../images/icon/cross-black.svg"></a>
+                <img id="img-vedgy" src="../../images/selder.jpg" alt="">
+                <h2 class="htwee">SAMEN</h2>
+                <p class="paragraaf">Via dit portaal willen wij boeren de optie
+                    geven om hun groenten en fruit die er iets minder mooi uitzien
+                    lokaal te verkopen. En deze kunnen dan door iedereen gekocht worden.
+                </p>
+            </div>        
+        </div>   
+            
+    </div>
+</div>
+  <!--einde slider menu-->
 
 
   
