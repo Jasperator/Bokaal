@@ -87,7 +87,7 @@ if (!empty($_POST['register'])) {
 
 	<div class="register ">
 		<form action="" method="post">
-			<img class="logo" src="../../images/logo/LogoBlack.svg" alt="login logo Bokaal">
+			<img class="logo" src="../../images/logo/LogoBlack.svg" alt="logo Bokaal">
 			<h2>Registreer kopers <br> <br> account</h2>
 			<?php if (!empty($error)) : ?>
 			<div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
