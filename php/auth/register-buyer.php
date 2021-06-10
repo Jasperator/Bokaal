@@ -57,8 +57,7 @@ if (!empty($_POST['register'])) {
         session_start();
             $_SESSION['user'] = $email;
             $_SESSION['user_status'] = "buyer";
-			header("Location: /../php/items/intro-popup.html");
-            // header("Location: /index.php"); dit stond er origineel
+            header("Location: /index.php");
         
     }
 }

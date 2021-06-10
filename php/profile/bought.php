@@ -41,11 +41,9 @@ if(!empty($_POST['start_chat'])){
 <body id="bought-body">
 <?php include_once("../includes/nav.include.php") ?>
 
-<div>
-        <div>
+
             <h2 class="hoofdtitel" >Bestellingen</h2>
-        </div>
-        
+
 <?php include_once("../includes/subNav.php");?>
 
 <?php if(count($items) <= 0){ ?>
@@ -56,7 +54,7 @@ if(!empty($_POST['start_chat'])){
 
 <ul id='all'>
             <?php foreach ($items as $item) :
-                $seller = $itemClass->getUserFromItem($item->id);
+                $seller = $itemClass->getUserFromItem($user, $item->id);
                 ?>
                 <div id="list-decoration" class="col-md-4">
                     <div class="itemId users" >
@@ -93,7 +91,7 @@ if(!empty($_POST['start_chat'])){
                         </div>
                     </div>
                 </div>
-            <?php endforeach ?>                                    
+            <?php endforeach ?>
 </ul>
 <?php } ?>
 

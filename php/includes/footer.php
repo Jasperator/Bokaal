@@ -1,5 +1,5 @@
 
-     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
      <footer>
                      <div class="footerMenu">
@@ -13,7 +13,7 @@
                          </ul>
                      </div>
                          <div class="footerCenter">
-                <img class="footerLogo" src="../../images/Logo/LogoWhite.svg">
+                <img class="footerLogo" src="../../images/logo/LogoWhite.svg">
                      </div>
 
                      <div class="footerContact">
