@@ -70,8 +70,8 @@ if(!empty($_POST['start_chat'])){
                                 <div>
                                     <h5 class="full-name-item"><?= htmlspecialchars($detailItem->title); ?></h5>
                                     <p class="bio-item">"<?= htmlspecialchars($detailItem->description); ?>"</p>
-                                    <p class="payment-info-product"><?= htmlspecialchars($detailItem->quantity); ?> : <?= htmlspecialchars($detailItem->unit); ?></p>
-                                    <p class="payment-info-product"><?= htmlspecialchars($detailItem->price); ?> : <?= htmlspecialchars($detailItem->currency); ?></p>
+                                    <p class="payment-info-product"><?= htmlspecialchars($detailItem->quantity); ?> <?= htmlspecialchars($detailItem->unit); ?></p>
+                                    <p class="payment-info-product"><?= htmlspecialchars($detailItem->price); ?> <?= htmlspecialchars($detailItem->currency); ?></p>
                                     <form action="" method="post">
                                         <div>
                                             <button id="chatnaam" type="submit" name="buy-item"
@@ -192,7 +192,7 @@ if(!empty($_POST['start_chat'])){
                 </div>
             </div>
 
-        </div>
+        </div>-->
 
         <div id="space"></div>
 
