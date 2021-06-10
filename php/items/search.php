@@ -195,7 +195,12 @@ if(isset($_GET['searchName'])) {
             <?php
             $page = $pageAndItems[0];
             for ($i=1; $i<=$totalPages; $i++) {  // print links for all pages
-                echo "<a href='search.php?page=".$i . '&searchName=' . $name . '&category=' .$categoryJs . '&priceRange=' .$priceRange . '&distanceRange=' . $distanceRange ."'"; ;
+                if(isset($_GET['category'])) {
+                    echo "<a href='search.php?page=" . $i . '&searchName=' . $name . '&category=' . $categoryJs . '&priceRange=' . $priceRange . '&distanceRange=' . $distanceRange . "'";;
+                } else {
+                    echo "<a href='search.php?page=" . $i . '&searchName=' . $name . '&priceRange=' . $priceRange . '&distanceRange=' . $distanceRange . "'";;
+
+                }
                 if ($i==$page)  echo " class='curPage'";
                 echo ">".$i."</a> ";
 

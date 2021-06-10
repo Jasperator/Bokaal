@@ -272,7 +272,7 @@ if (!empty($_POST['updateProfile'])) {
     </div>
   </div>
 
-  <?php if(!isset($_COOKIE['seen_popup'])){
+  <?php if(!isset($_SESSION['seen_popup'])){
 ?>
  <!-- slider menu -->
   <div class="sliderPop" id="sliderPop">
@@ -311,7 +311,7 @@ if (!empty($_POST['updateProfile'])) {
 </div>
   <!--einde slider menu-->
 <?php }
-  setcookie('seen_popup', true);
+  $_SESSION['seen_popup'] = true;
   ?>
 
   
