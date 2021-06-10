@@ -10,29 +10,16 @@ $user = new classes\User($_SESSION['user']);
 $itemClass = new classes\Item();
 $distanceClass = new classes\Distance();
 
-
-if($user->getStatus() == "seller"){
-    $pageAndUsers = $itemClass->getAllItemsExceptSeller($user);
-    $totalPages = $itemClass->countPagesAllItemsExceptSeller($user);
-
-
-} else{
-    $pageAndUsers = $itemClass->getAllItems($user);
-    $totalPages = $itemClass->countPagesAllItems();
-
-}
 $maxPrice = $itemClass->maxPrice();
 $maxDistance = $distanceClass->maxDistanceItems($user);
 $minDistance = $distanceClass->minDistanceItems($user);
 
-
-$page = $pageAndUsers[0];
-$items = $pageAndUsers[1];
-
-
-
-if(!empty($_GET['searchCategory'])){
+if(isset($_GET['priceRange'])) {
     $priceRange = $_GET['priceRange'];
+    }else {
+        $priceRange = $maxPrice;
+    }
+
     if(isset($_GET['distanceRange'])) {
         $distanceRange = $_GET['distanceRange'];
     } else {
@@ -42,20 +29,31 @@ if(!empty($_GET['searchCategory'])){
 
     $user = new classes\User($_SESSION['user']);
 
-    if(!empty($_GET['category'])) {
+    if(isset($_GET['category'])) {
         $category =  "'". $_GET['category'] . "'";
+        $categoryJs = $_GET['category'];
     } else {
         $category = "category";
+        $categoryJs = "category";
+
     }
+
+if(isset($_GET['searchName'])) {
     $searchName = urlencode($_GET['searchName']);
     $searchName = '%' . $searchName . '%';
+    $name = urlencode($_GET['searchName']);
+
+}else{
+    $searchName = '%';
+    $name = '';
+}
     $pageAndItems = $itemClass->searchItemCategoryAndName($searchName, $category, $user, $priceRange, $distanceRange);
     $page = $pageAndItems[0];
     $items = $pageAndItems[1];
     $totalPages = $itemClass->searchItemCategoryAndNameCount($searchName, $category, $user, $priceRange, $distanceRange);
 
 
-}
+
 
 
 
@@ -83,10 +81,10 @@ if(!empty($_GET['searchCategory'])){
 
         <form class="" enctype="multipart/form-data" action="" method="GET">
                 <!--<label  for="searchName">Search</label>-->
-                <input class="search-bar" placeholder="Zoek" type="text" name="searchName" value="" />
+                <input class="search-bar" placeholder="Zoek" type="text" id="searchName" name="searchName" value="" />
 
             <div id="categorie-item">
-                <select type="text" name="category" id="" class="form-control-search" placeholder="Geef de categorie in">
+                <select type="text" name="category" id="category" class="form-control-search" placeholder="Geef de categorie in">
                     <option value="" selected disabled hidden>Categorie</option>
                     <optgroup label="Groenten">
 
@@ -195,15 +193,26 @@ if(!empty($_GET['searchCategory'])){
 
     <div id="pages" style="text-align: center">
             <?php
-            $page = $pageAndUsers[0];
-            for ($i=1; $i<=$totalPages; $i++) {  // print links for all pages
-                echo "<a href='search.php?page=".$i."'";
+            $page = $pageAndItems[0];
+            for ($i=1; $i<=4; $i++) {  // print links for all pages
+                echo "<a href='search.php?page=".$i . '&searchName=' . $name . '&searchCategory=' .$categoryJs . '&priceRange=' .$priceRange . '&distanceRange=' . $distanceRange ."'"; ;
                 if ($i==$page)  echo " class='curPage'";
                 echo ">".$i."</a> ";
 
             };
             ?>
         </div>    <script>
+
+        let distanceRange = '<?= $distanceRange  ?>';
+        let category = '<?= $categoryJs ?>';
+        let name = '<?= $name ?>';
+        let priceRange = '<?= $priceRange ?>';
+
+        document.getElementById('priceRange').value = priceRange;
+        document.getElementById('searchName').value = name;
+        document.getElementById('distanceDropdown').querySelectorAll("option").forEach(item => {if(item.value == distanceRange) {document.getElementById('distanceDropdown').value = distanceRange;}});
+            document.getElementById('category').querySelectorAll("option").forEach(item => {if(item.value == category) {document.getElementById('category').value = category}});
+
         var slider = document.getElementById("priceRange");
 
         var output = document.getElementById("priceVal");

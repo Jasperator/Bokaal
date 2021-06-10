@@ -114,8 +114,8 @@ if (!empty($_POST['updateProfile'])) {
      <h2 class="hoofdtitel">Profiel instellingen</h2>
       <div class="profile-settings-image">
         
-        <div id="wrapper">
-          <div id="splash-info">
+        <div>
+          <div >
             <img class="new-profile-image" src="/uploads/<?= htmlspecialchars($user->getProfile_img()) ?>" />
             <?php if (isset($error)) : ?>
             <div><?php echo $error; ?></div>
@@ -123,9 +123,9 @@ if (!empty($_POST['updateProfile'])) {
           </div>
         </div>
         
-        <div class="setImg">
+        <!--<div class="setImg">
           <img class="setImage" src="../../images/setting-img.jpg" alt="">
-        </div>
+        </div>-->
 
         <form enctype="multipart/form-data" action="" method="POST">
           <div>
@@ -149,7 +149,7 @@ if (!empty($_POST['updateProfile'])) {
         <div class="form-group">
           <!-- <label for="bio">Biography</label>-->
           <textarea placeholder="Biografie" name="bio" id="bio" class="form-control-settings" rows="3"
-            cols="50"><?= htmlspecialchars($user->getBio()) ?></textarea>
+            cols="100"><?= htmlspecialchars($user->getBio()) ?></textarea>
         </div>
 
         

@@ -560,11 +560,7 @@ class Item
     {
         $conn = Db::getConnection();
         $results_per_page = 12; // number of results per page
-        if (isset($_GET["page"])) { $page = $_GET["page"]; } else { $page=1; };
-        $start_from = ($page-1) * $results_per_page;
-
-
-        $statement = $conn->prepare("SELECT COUNT(id) FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id) WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id AND price <= :maxPrice AND distanceValue <= :distance ORDER BY distanceValue ASC LIMIT  $start_from, $results_per_page");
+      $statement = $conn->prepare("SELECT COUNT(id) FROM items INNER JOIN distance ON (distance.user_1 = :user_id  AND distance.user_2 = items.seller_id) OR (distance.user_1 = items.seller_id AND distance.user_2 = :user_id) WHERE category = $category AND (title LIKE :name OR description LIKE  :name) AND status = :status AND seller_id <> :user_id AND price <= :maxPrice AND distanceValue <= :distance ORDER BY distanceValue");
 
         //Bind values to parameters from prepared query
         $statement->bindValue(":name", $name);
@@ -575,8 +571,8 @@ class Item
 
         //Execute query
         $statement->execute();
-
         $row = $statement->fetch(\PDO::FETCH_COLUMN);
+
         $total_pages = ceil($row / $results_per_page); // calculate total pages with results
 
         return $total_pages;

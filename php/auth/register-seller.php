@@ -68,7 +68,8 @@ if (!empty($_POST['register'])) {
             session_start();
             $_SESSION['user'] = $email;
             $_SESSION['user_status'] = "seller";
-            header("Location: /index.php");
+			header("Location: /../php/items/intro-popup.html");
+            /*header("Location: /index.php");*/
         
     }
 }
