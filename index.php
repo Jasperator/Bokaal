@@ -124,8 +124,8 @@ if (!empty($_POST['delete-favorite-person'])) {
 
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($seller->fullname); ?></h5>
-                                    <p class="card-text p-0"><?= htmlspecialchars($seller->location); ?></p>
                                     <p class="card-text p-0"><?= htmlspecialchars($seller->company);  ?></p>
+                                    <p class="card-text p-0"><?= htmlspecialchars($seller->location); ?></p>
                                     <p class="card-text p-0"><small class="text-muted"><img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place">
                                             <?= htmlspecialchars($seller->distance);  ?></small>
                                     </p>

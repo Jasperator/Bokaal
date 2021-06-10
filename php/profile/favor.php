@@ -68,18 +68,18 @@ if (!empty($_POST['delete-favorite-person'])) {
 
                                 <div id="card-body" style="padding:15px;">
                                     <h5 class="card-title"><?= htmlspecialchars($fav->fullname); ?></h5>
-                                    <p class="card-text"><?= htmlspecialchars($fav->location); ?></p>
                                     <p class="card-text"><?= htmlspecialchars($fav->company);  ?></p>
-                                    
+                                    <p class="card-text"><?= htmlspecialchars($fav->location); ?></p>
+                                    <p class="card-text"><small class="text-muted"> <img class="zoekertje" src="../../images/icon/place-green.png" alt="icon place">
+                                                <?= htmlspecialchars($fav->distance);  ?></small>
+                                    </p>
+                                    <button id="knop1" type="submit" class="fav-delete" name="delete-favorite-person"
+                                                value="<?= htmlspecialchars($fav->id); ?>">
+                                                <i class="fa fa-star fa-2x" aria-hidden="true" id="favor-img"></i>
+                                    </button>
                                 </div>
 
-                                <form id="favor" action="" method="post">
-                                    <div class="col text-center">
-                                        <button class="btn btn-danger btn-s rounded" style="margin-bottom:15px;" type="submit" name="delete-favorite-person"
-                                            value="<?= htmlspecialchars($fav->id); ?>" name="fav"
-                                            placeholder="Favoriet">Verwijder favoriet</button>
-                                    </div>
-                                </form>
+                                
                         </div>
                     </div>
                 </div>
