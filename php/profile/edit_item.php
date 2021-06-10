@@ -47,6 +47,8 @@ if (!empty($_POST['updateItem'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
 
     <title>Bokaal | Sell</title>
 
@@ -56,11 +58,10 @@ if (!empty($_POST['updateItem'])) {
 
 <?php include_once("../includes/nav.include.php") ?>
 
-<div >
-    <h2 class="hoofdtitel">Verkoop</h2>
-</div>
 
-<div>
+    <h2 class="hoofdtitel">Verkoop</h2>
+
+
     <form class="registerForm" enctype="multipart/form-data" action="" method="post">
 
 
@@ -74,20 +75,12 @@ if (!empty($_POST['updateItem'])) {
                     <option value="Koolsoorten">Koolsoorten</option>
                     <option value="Stengelgewassen">Stengelgewassen (prei, selder,...)</option>
                     <option value="Uien">Uien</option>
-                    <option value="Vruchtgroenten">Vruchtgroenten</option>
-                    <option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
                     <option value="Vruchtgroenten">Vruchtgroenten (tomaat, aubergine, courgette,...)</option>
                     <option value="Wortel- knolgewassen">Wortel- knolgewassen</option>
                     <option value="Overige groenten">Overige groenten</option>
 
                     <optgroup label="Fruit">
 
-                        <option value="Citrusfruit">Vruchtgroenten</option>
-                        <option value="Pitfruit">Pitfruit</option>
-                        <option value="Steenvruchten">Steenvruchten</option>
-                        <option value="Zacht fruit">Zacht fruit</option>
-                        <option value="Exotisch fruit">Exotisch fruit</option>
-                        <option value="overig fruit">overig fruit</option>
                         <option value="Citrusfruit">Citrusfruit (citroen, limoen,...</option>
                         <option value="Pitfruit">Pitfruit (appel, peer,...)</option>
                         <option value="Steenvruchten">Steenvruchten (pruim, perzik, kers,...)</option>
@@ -114,11 +107,11 @@ if (!empty($_POST['updateItem'])) {
 
         <div class="form-sell">
             <div id="hoeveelheid">
-                <div>
-                    <input type="number" name="quantity" id="quantity" class="form-control" value=" <?= htmlspecialchars($detailItem->quantity); ?>"
+                
+                <input type="number" name="quantity" id="quantity" class="form-control" value=" <?= htmlspecialchars($detailItem->quantity); ?>"
                            placeholder=" <?= htmlspecialchars($detailItem->quantity); ?>" required>
 
-                </div>
+                
 
                 <div class="form-sell">
 
@@ -142,18 +135,16 @@ if (!empty($_POST['updateItem'])) {
 
 <div  class="form-sell">
     <div id="bedrag">
-        <div>
-            <!--<label for="price">Price</label>-->
-            <input type="number" name="price" id="price" class="form-control" placeholder="Prijs" step=".01" value="<?= htmlspecialchars($detailItem->price); ?>" required>
+      
+        <!--<label for="price">Price</label>-->
+        <input type="number" name="price" id="price" class="form-control" placeholder="Prijs" step=".01" value="<?= htmlspecialchars($detailItem->price); ?>" required>
 
-        </div>
-        <div>
-            <!--<label for="currency">Currency</label>-->
+    
+     
+        <!--<label for="currency">Currency</label>-->
 
-            <input type="text" name="currency" id="currency" class="form-control" Value="Euro" required>
-
-
-        </div>
+        <input type="text" name="currency" id="currency" class="form-control" Value="Euro" required>
+       
     </div>
 </div>
 
@@ -170,7 +161,7 @@ if (!empty($_POST['updateItem'])) {
 
     </form>
 
-</div>
+
 
 <div id="space"></div>
 <div id="space"></div>
