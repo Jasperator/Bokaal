@@ -53,6 +53,8 @@ if(!empty($_POST['start_chat'])){
 <body id="search-body">
     <?php include_once("../includes/nav.include.php");?>
 
+    <h2 class="hoofdtitel">Product</h2>
+
         <div class="container-item">
             <h2 class="gekozen-product"><?= htmlspecialchars($detailItem->title); ?> </h2>
             <div class="locatie-boer">
@@ -70,8 +72,10 @@ if(!empty($_POST['start_chat'])){
                                 <div>
                                     <h5 class="full-name-item"><?= htmlspecialchars($detailItem->title); ?></h5>
                                     <p class="bio-item">"<?= htmlspecialchars($detailItem->description); ?>"</p>
-                                    <p class="payment-info-product"><?= htmlspecialchars($detailItem->quantity); ?> <?= htmlspecialchars($detailItem->unit); ?></p>
-                                    <p class="payment-info-product"><?= htmlspecialchars($detailItem->price); ?> <?= htmlspecialchars($detailItem->currency); ?></p>
+                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="icon stock">
+                                    <?= htmlspecialchars($detailItem->quantity); ?> <?= htmlspecialchars($detailItem->unit); ?></p>
+                                    <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="icon price">
+                                    <?= htmlspecialchars($detailItem->price); ?> <?= htmlspecialchars($detailItem->currency); ?></p>
                                     <form action="" method="post">
                                         <div>
                                             <button id="chatnaam" type="submit" name="buy-item"
@@ -124,7 +128,7 @@ if(!empty($_POST['start_chat'])){
 
         <?php if(count($allItemsSeller) > 0){ ?>
         <div class="titel">
-            <h2 class="subtitel">Andere items</h2>
+            <h2 class="subtitel">Andere aanbiedingen</h2>
         </div>
 
         <ul id="all-detail" class="row col-md-12">
@@ -143,11 +147,11 @@ if(!empty($_POST['start_chat'])){
                                     <p class="card-text"><?= htmlspecialchars($item->category); ?></p>
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg"
                                             alt="">
-                                        <?= htmlspecialchars($item->quantity); ?> :
+                                        <?= htmlspecialchars($item->quantity); ?>
                                         <?= htmlspecialchars($item->unit); ?></p>
                                     <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg"
                                             alt="">
-                                        <?= htmlspecialchars($item->price); ?> :
+                                        <?= htmlspecialchars($item->price); ?>
                                         <?= htmlspecialchars($item->currency); ?></p>
 
                                     <form action="" method="post">

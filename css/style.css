@@ -296,7 +296,7 @@
     }
 
     .all_item_profile {
-        margin-top: 10%;
+        margin-top: 7%;
     }
 
 
@@ -731,7 +731,6 @@
     font-size: 2.5em;
     font-family: "Josefin Sans";
 
-    margin-top: -3%;
     margin-left: 6%;
 }
 
@@ -1548,7 +1547,11 @@ input[type="range"].slider:hover {
     margin-top: 15px;
 }
 
+#editButton{
 
+    width: 10%;
+
+}
 
 #buy-all {
     font-family: "Josefin Sans";
