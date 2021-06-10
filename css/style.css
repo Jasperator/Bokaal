@@ -474,6 +474,7 @@
     height: 25%;
     object-fit: cover;
 
+    margin-left: 20%;
     border-radius: 0 !important;
 }
 
@@ -494,7 +495,7 @@
     background-color: orangered;
     color: #ffffff;
 
-    margin-left: 0%;
+    margin-left: calc(50%/2);
     margin-bottom: 20px;
 
     padding-top: 10px;
@@ -547,6 +548,8 @@
     padding-right: 5%;
 
     margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 27%;
 }
 
 /* -----INDEX----- */
