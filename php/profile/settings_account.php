@@ -272,13 +272,15 @@ if (!empty($_POST['updateProfile'])) {
     </div>
   </div>
 
+  <?php if(!isset($_COOKIE['seen_popup'])){
+?>
  <!-- slider menu -->
-  <div class="sliderPop" style="display:none;">
+  <div class="sliderPop" id="sliderPop">
     <div class="ct-sliderPop-container">
         <div class="ct-sliderPop ct-sliderPop-slide1 open">
             <div class="inner">
                 <h1 class="head-title-slider">Verspilling</h1>
-                <a class="close-button" href="/php/profile/settings_account.php">
+                <a class="close-button">
                     <img id="img-close-button" alt="close" src="../../images/icon/cross-black.svg"></a>
                 <img id="img-vedgy" src="../../images/sla.jpg" alt="">
                 <div class="map-white-border"></div>
@@ -294,7 +296,7 @@ if (!empty($_POST['updateProfile'])) {
         <div class="ct-sliderPop ct-sliderPop-slide1">
             <div class="inner">
                 <h1 class="head-title-slider">Hoe pakken we dit aan</h1>
-                <a class="close-button" href="#">
+                <a class="close-button">
                     <img id="img-close-button" alt="close" src="../../images/icon/cross-black.svg"></a>
                 <img id="img-vedgy" src="../../images/selder.jpg" alt="">
                 <h2 class="htwee">SAMEN</h2>
@@ -308,7 +310,9 @@ if (!empty($_POST['updateProfile'])) {
     </div>
 </div>
   <!--einde slider menu-->
-
+<?php }
+  setcookie('seen_popup', true);
+  ?>
 
   
 
@@ -322,6 +326,23 @@ if (!empty($_POST['updateProfile'])) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider-min.js"></script>
     <script src="../../js/popup-slider.js"></script>
+
+
+  <script>
+
+      // Get the modal
+      var modal = document.getElementById("sliderPop");
+
+
+      // Get the <span> element that closes the modal
+    document.querySelectorAll(".close-button").forEach(item => {
+          item.addEventListener('click', function () {
+              modal.style.display = "none";
+
+          })
+      });
+
+  </script>
 
 </body>
 
