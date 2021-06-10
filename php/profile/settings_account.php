@@ -118,7 +118,7 @@ if (!empty($_POST['updateProfile'])) {
 <body id="Profiel-instellingen-body">
   <?php include_once("../includes/nav.include.php") ?>  
   
-  <!-- slider menu
+  <!-- slider menu -->
   <div class="sliderPop" style="display:none;">
     <div class="ct-sliderPop-container">
         <div class="ct-sliderPop ct-sliderPop-slide1 open">
