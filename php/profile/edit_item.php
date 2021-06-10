@@ -67,7 +67,9 @@ if (!empty($_POST['updateItem'])) {
 
 
         <div id="category" class="form-sell">
-            <select style="padding-left:15px;" type="text" name="category" id="categorie" class="form-control" placeholder="  Geef de categorie in"
+        <label class="tag-name-edit" for="">Soort groente/fruit</label>
+
+            <select type="text" name="category" id="categorie" class="form-control" placeholder="  Geef de categorie in"
                     required>
                 <optgroup label="Groenten" >
 
@@ -99,20 +101,23 @@ if (!empty($_POST['updateItem'])) {
             </select>
         </div>
 
-
         <div id="top" class="form-sell">
-            <input type="text" name="title" id="title" class="form-control" value="<?= htmlspecialchars($detailItem->title); ?>" placeholder="Titel" required>
+        <label class="tag-name-edit" for="">titel</label>
+            <input type="text" name="title" id="title-edit" class="form-control" value="<?= htmlspecialchars($detailItem->title); ?>" placeholder="Titel" required>
         </div>
 
         <div class="form-sell">
-            <input type="text" name="description" id="description" class="form-control" value="<?= htmlspecialchars($detailItem->description); ?>" placeholder="Beschrijving"
+        <label class="tag-name-edit" for="">Beschrijving</label>
+            <input type="text" name="description" id="description-edit" class="form-control" value="<?= htmlspecialchars($detailItem->description); ?>" placeholder="Beschrijving"
                    required>
+        <label class="tag-name-edit" for="">Hoeveelheid en prijs</label>
         </div>
 
         <div class="form-sell-item-edit">
+        
             <div id="hoeveelheid">
                 <div class="select-items-selectItems">
-                    <input class="select-items-nr" type="number" name="quantity"  value=" <?= htmlspecialchars($detailItem->quantity); ?>"
+                    <input class="select-items-nr" type="number" name="quantity"  value="<?= htmlspecialchars($detailItem->quantity); ?>"
                            placeholder=" <?= htmlspecialchars($detailItem->quantity); ?>" required>
 
                     <select class="select-items-select-unit" type="text" name="unit"
@@ -138,7 +143,7 @@ if (!empty($_POST['updateItem'])) {
 
 <div id="result"> </div>
         <div class="form-group">
-            <input class="button-profile" type="submit" value="Opslaan" name="updateItem">
+            <input id="button_orange" type="submit" value="Opslaan" name="updateItem">
         </div>
 
 
