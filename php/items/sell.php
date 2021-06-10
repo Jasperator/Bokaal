@@ -73,16 +73,6 @@ if (!empty($_POST['upload'])) {
             <h2 class="hoofdtitel">Verkoop</h2>
         </div>
 
-		<!--<div id="sell-img">
-			<h1>Bokaal</h1>
-			<p>Op deze pagina kan je, je items te koop zetten
-			deze items kunnen de groentjes of fruit vanuit je serres of velden zijn.
-			Melk en dierlijke producten worden op dit platform niet verkocht momenteel
-			moesten jullie dit graag als optie hebben kunnen jullie ons contacteren en dan kijken we verder</p>
-
-			<img id="sell-img" src="../../images/setting-img.jpg" alt="">
-		</div>
-    -->
 	<div>
 
 	
@@ -142,7 +132,7 @@ if (!empty($_POST['upload'])) {
 
 						<select class="select-items-select-unit" type="text" name="unit"
 							placeholder="Kies soort hoeveelheid" required>
-								<option  value="" selected disabled hidden>hoeveelheid</option>
+								<option  value="" selected disabled hidden>Eenheid</option>
 									<optgroup label="Hoeveelheid">
 										<option value="Gram">Gram</option>
 										<option value="Kg">Kg</option>

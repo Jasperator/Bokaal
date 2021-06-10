@@ -1133,9 +1133,18 @@ input[type="range"].slider:hover {
     margin-top: 55px;
 }
 
+.form-sell-item-edit {
+    display: flex;
+    width: 74.2%;
+    margin-left: 10.8%;
+    margin-top: 55px;
+}
+
 .form-control {
     width: 50%;
     height: 50px;
+
+    background-color: #ffffff;
 
     margin-left: calc(50%/2);
 
@@ -1160,6 +1169,7 @@ input[type="range"].slider:hover {
     border: none;
 
     margin-top: 15px;
+
 
     -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -1255,6 +1265,8 @@ input[type="range"].slider:hover {
     font-family: "Josefin Sans";
     font-style: normal;
     font-variant: normal;
+
+    background-color: #ffffff;
 
     border: none;
 
