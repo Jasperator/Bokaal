@@ -2094,101 +2094,101 @@
 
 
 
-/*-----footer-----*/
+    /*-----footer-----*/
 
-footer {
+    footer {
 
-    background-color: #d5d962;
-    padding: 30px;
-    width: 100%;
-    height: 200px;
-    color: #fff;
-    font-family: "Josefin Sans";
-    margin-top: 100px;
-    bottom: 0;
-    position: relative;
-}
+        background-color: #d5d962;
+        padding: 30px;
+        width: 100%;
+        height: 200px;
+        color: #fff;
+        font-family: "Josefin Sans";
+        margin-top: 100px;
+        bottom: 0;
+        position: relative;
+    }
 
-.footerCenter {
-    width: 23.333333%;
-    float: left;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 150px;
+    .footerCenter {
+        width: 23.333333%;
+        float: left;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 150px;
 
 
-}
+    }
 
-.footerLogo {
-    width: 20%;
-    margin-left: 40%;
-}
+    .footerLogo {
+        width: 20%;
+        margin-left: 40%;
+    }
 
-.footerMenu {
-    float: left;
-    width: 23.333333%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 150px;
-    padding-top: 2%;
+    .footerMenu {
+        float: left;
+        width: 23.333333%;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 150px;
+        padding-top: 2%;
 
-}
+    }
 
-.footerMenu ul {
+    .footerMenu ul {
 
-    list-style-type: none;
-}
+        list-style-type: none;
+    }
 
-.footerMenu ul li a {
-    color: #fff;
-    float: left;
-    margin-right: 3.5%;
-    font-size: 1.1em;
-}
+    .footerMenu ul li a {
+        color: #fff;
+        float: left;
+        margin-right: 3.5%;
+        font-size: 1.1em;
+    }
 
-.footerMenu ul li:first-child {
+    .footerMenu ul li:first-child {
 
-    margin-left: -40px;
+        margin-left: -40px;
 
-}
+    }
 
-.footerMenu ul li a:hover {
-    color: orangered;
-    text-decoration: none;
-}
+    .footerMenu ul li a:hover {
+        color: orangered;
+        text-decoration: none;
+    }
 
-.footerContact {
-    float: left;
-    width: 23.333333%;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: right;
-    height: 150px;
-    right: 0;
-    padding-top: 0.8%;
-}
+    .footerContact {
+        float: left;
+        width: 23.333333%;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: right;
+        height: 150px;
+        right: 0;
+        padding-top: 0.8%;
+    }
 
-.footerContact a {
+    .footerContact a {
 
-    color: #fff;
-    font-size: 1.2em;
+        color: #fff;
+        font-size: 1.2em;
 
-}
+    }
 
-.footerContact a:hover {
+    .footerContact a:hover {
 
-    color: orangered;
-    text-decoration: none;
+        color: orangered;
+        text-decoration: none;
 
-}
+    }
 
-.footerContact i {
+    .footerContact i {
 
-    font-size: 2em;
-    margin-left: 5%;
-    margin-top: 10px;
+        font-size: 2em;
+        margin-left: 5%;
+        margin-top: 10px;
 
-}
+    }
 }
 
 
@@ -2396,8 +2396,13 @@ footer {
 
     /*-----FONTS-----*/
 
+    #hoofdtitel {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 2em;
+    }
+
     .hoofdtitel {
-        margin-top: 15%;
         margin-bottom: 10%;
         font-size: 2em;
     }
@@ -2860,7 +2865,7 @@ footer {
         color: #000000;
     }
 
-    #linker{
+    #linker {
         margin-left: 5%;
     }
 
@@ -2889,7 +2894,6 @@ footer {
 
     .aantal-plaatsingen-label {
         margin-left: 5%;
-        margin-top: 7px;
         padding-left: 15px;
 
         font-family: "Josefin Sans";
@@ -2990,11 +2994,42 @@ footer {
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
+    /*-----edit-----*/
+    #select-items-selectItems {
+        width: 90%;
+
+        margin-left: 5%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .editButton {
+
+        display: inline-block;
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1em;
+
+        border: none;
+
+        background-color: orangered;
+
+        color: #ffffff;
+
+        text-align: center;
+
+        width: 60%;
+        height: 40px;
+    }
+
     /*-----Chat----- */
 
     #space-chat {
         height: 100vh;
     }
+
     /* width */
     ::-webkit-scrollbar {
         width: 10px;
@@ -3033,7 +3068,7 @@ footer {
 
         margin-top: 130%;
         margin-left: 35%;
-        margin-bottom:500px;
+        margin-bottom: 500px;
 
     }
 
@@ -3072,15 +3107,15 @@ footer {
         width: 100%;
 
         overflow-y: scroll;
-        
-        margin-bottom: 20px; 
+
+        margin-bottom: 20px;
         margin-left: 5%;
         margin-top: 10%;
 
         padding-left: 10%;
         padding-right: 10%;
         padding-top: 10%;
-        padding-bottom: 4%;       
+        padding-bottom: 4%;
 
         background-image: url(/images/background/chatBackground.png);
         background-size: cover;
@@ -3115,7 +3150,7 @@ footer {
         margin-right: 5%;
 
         font-family: "Josefin Sans";
-        font-size:1em;
+        font-size: 1em;
 
         height: 50px;
         padding: 5px;
@@ -3990,99 +4025,99 @@ footer {
 
     /*-----footer-----*/
 
-footer {
+    footer {
 
-    background-color: #d5d962;
-    padding: 30px;
-    width: 100%;
-    height: 200px;
-    color: #fff;
-    font-family: "Josefin Sans";
-    margin-top: 100px;
-    bottom: 0;
-    position: relative;
-}
+        background-color: #d5d962;
+        padding: 30px;
+        width: 100%;
+        height: 200px;
+        color: #fff;
+        font-family: "Josefin Sans";
+        margin-top: 100px;
+        bottom: 0;
+        position: relative;
+    }
 
-.footerCenter {
-    width: 23.333333%;
-    float: left;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 150px;
+    .footerCenter {
+        width: 23.333333%;
+        float: left;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 150px;
 
 
-}
+    }
 
-.footerLogo {
-    width: 20%;
-    margin-left: 40%;
-}
+    .footerLogo {
+        width: 20%;
+        margin-left: 40%;
+    }
 
-.footerMenu {
-    float: left;
-    width: 23.333333%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 150px;
-    padding-top: 2%;
+    .footerMenu {
+        float: left;
+        width: 23.333333%;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 150px;
+        padding-top: 2%;
 
-}
+    }
 
-.footerMenu ul {
+    .footerMenu ul {
 
-    list-style-type: none;
-}
+        list-style-type: none;
+    }
 
-.footerMenu ul li a {
-    color: #fff;
-    float: left;
-    margin-right: 3.5%;
-    font-size: 1.1em;
-}
+    .footerMenu ul li a {
+        color: #fff;
+        float: left;
+        margin-right: 3.5%;
+        font-size: 1.1em;
+    }
 
-.footerMenu ul li:first-child {
+    .footerMenu ul li:first-child {
 
-    margin-left: -40px;
+        margin-left: -40px;
 
-}
+    }
 
-.footerMenu ul li a:hover {
-    color: orangered;
-    text-decoration: none;
-}
+    .footerMenu ul li a:hover {
+        color: orangered;
+        text-decoration: none;
+    }
 
-.footerContact {
-    float: left;
-    width: 23.333333%;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: right;
-    height: 150px;
-    right: 0;
-    padding-top: 0.8%;
-}
+    .footerContact {
+        float: left;
+        width: 23.333333%;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: right;
+        height: 150px;
+        right: 0;
+        padding-top: 0.8%;
+    }
 
-.footerContact a {
+    .footerContact a {
 
-    color: #fff;
-    font-size: 1.2em;
+        color: #fff;
+        font-size: 1.2em;
 
-}
+    }
 
-.footerContact a:hover {
+    .footerContact a:hover {
 
-    color: orangered;
-    text-decoration: none;
+        color: orangered;
+        text-decoration: none;
 
-}
+    }
 
-.footerContact i {
+    .footerContact i {
 
-    font-size: 2em;
-    margin-left: 5%;
-    margin-top: 10px;
+        font-size: 2em;
+        margin-left: 5%;
+        margin-top: 10px;
 
-}
+    }
 
 
 }
