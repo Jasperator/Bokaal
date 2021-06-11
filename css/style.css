@@ -4036,6 +4036,8 @@
         margin-top: 100px;
         bottom: 0;
         position: relative;
+
+        z-index: 9999;
     }
 
     .footerCenter {
@@ -4049,14 +4051,14 @@
     }
 
     .footerLogo {
-        width: 20%;
-        margin-left: 40%;
+        width: 50%;
+        margin-left: 25%;
     }
 
     .footerMenu {
         float: left;
         width: 23.333333%;
-        margin-left: 5%;
+        margin-left: 2.5%;
         margin-right: 5%;
         height: 150px;
         padding-top: 2%;
@@ -4064,22 +4066,18 @@
     }
 
     .footerMenu ul {
-
         list-style-type: none;
+        padding-left: 0 !important;
+
     }
 
     .footerMenu ul li a {
         color: #fff;
         float: left;
         margin-right: 3.5%;
-        font-size: 1.1em;
+        font-size:0.8em;
     }
 
-    .footerMenu ul li:first-child {
-
-        margin-left: -40px;
-
-    }
 
     .footerMenu ul li a:hover {
         color: orangered;
@@ -4100,7 +4098,7 @@
     .footerContact a {
 
         color: #fff;
-        font-size: 1.2em;
+        font-size: 0.8em;
 
     }
 
