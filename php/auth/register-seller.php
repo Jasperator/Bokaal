@@ -12,67 +12,70 @@ if (!empty($_POST['register'])) {
     //Put $_POST variables into variables
     //Convert the email string to lowercase, case sensitivity does not matter here
     $fullname = $_POST['fullname'];
-	$postal_code = $_POST['postal_code'];
+    $postal_code = $_POST['postal_code'];
     $address = $_POST['address'];
     $location = $_POST['location'];
 
     $password = $_POST['password'];
-	$btw = $_POST['btw'];
+    $btw = $_POST['btw'];
     $company = $_POST['company'];
     $telephone = $_POST['telephone'];
 
     $email = strtolower($_POST['email']);
     $user = new classes\User($email);
 
-    //Set the user's properties
-    //setEmail returns an error message if the email is not a valid email or if it's not unique
-    $valid_email = $user->setEmail($email);
-    $user->setFullname($fullname);
-	$user->setPostal_code($postal_code);
-    $user->setAddress($address);
-    $user->setLocation($location);
-    $user->setPassword($password);
-	$user->setBtw($btw);
-    $user->setCompany($company);
-    $user->setTelephone($telephone);
+    $confirmPassword = $_POST['confirmPassword'];
+    if ($password == $confirmPassword) {
+        //Set the user's properties
+        //setEmail returns an error message if the email is not a valid email or if it's not unique
+        $valid_email = $user->setEmail($email);
+        $user->setFullname($fullname);
+        $user->setPostal_code($postal_code);
+        $user->setAddress($address);
+        $user->setLocation($location);
+        $user->setPassword($password);
+        $user->setBtw($btw);
+        $user->setCompany($company);
+        $user->setTelephone($telephone);
 
 
-	
-    //If setEmail returns a string, show the error message
-    if (gettype($valid_email) == "string") {
-        $error = $valid_email;
-    } else {
+        //If setEmail returns a string, show the error message
+        if (gettype($valid_email) == "string") {
+            $error = $valid_email;
+        } else {
 
-        //Save the user
-        $user->save_seller();
-        $user->standardProfilePicture();
+            //Save the user
+            $user->save_seller();
+            $user->standardProfilePicture();
 
 
-        $user = new classes\User($email);
-        $distance = new classes\Distance();
-        $otherUsers = $user->getAllUsers();
-        foreach ($otherUsers as $otherUser){
             $user = new classes\User($email);
             $distance = new classes\Distance();
+            $otherUsers = $user->getAllUsers();
+            foreach ($otherUsers as $otherUser) {
+                $user = new classes\User($email);
+                $distance = new classes\Distance();
 
-            $distanceCalculation =$user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($otherUser->address), urlencode($otherUser->postal_code));
+                $distanceCalculation = $user->getDistance($user->getAddress(), $user->getPostal_code(), urlencode($otherUser->address), urlencode($otherUser->postal_code));
 
-            if(isset($distanceCalculation)) {
-                $distance->insertDistance($user->getId(), $otherUser->id, $distanceCalculation->text, $distanceCalculation->value);
+                if (isset($distanceCalculation)) {
+                    $distance->insertDistance($user->getId(), $otherUser->id, $distanceCalculation->text, $distanceCalculation->value);
+                }
             }
-        }
 
 
-        $user = new classes\User($email);
-		
+            $user = new classes\User($email);
+
             session_start();
             $_SESSION['user'] = $email;
             $_SESSION['user_status'] = "seller";
             header("Location: /index.php");
-        
-    }
-}
 
+        }
+    }
+    $error = 'Wachtwoorden komen niet overeen';
+
+}
 ?>
 
 <!DOCTYPE html>

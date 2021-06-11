@@ -14,6 +14,21 @@ $conversation = new classes\Conversation();
 
 $active_conversations = $user->getConversations();
 $getPartnerConversations = $user->getPartnerConversations();
+
+$partners = [];
+foreach($getPartnerConversations as $getPartnerConversation){
+$getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
+$unreadMessages = $conversation->countUnreadMessages($user, $getPartnerName->id);
+    $getPartnerName->unreadMes = $unreadMessages;
+    array_push($partners, $getPartnerName);
+
+}
+
+function cmp($a, $b) {
+    return strcmp($b->unreadMes, $a->unreadMes);
+}
+
+usort($partners, "cmp");
 function message() {
     session_status();
     $_SESSION['chat_id'] = $_POST['chat_id'];
@@ -55,23 +70,22 @@ function message() {
         <ul id="all-chats" class="row col-md-12">
 
     <?php
-    foreach($getPartnerConversations as $getPartnerConversation):
-        $getPartnerName = $conversation->getUserByConversationId($user->getId(), $getPartnerConversation);
-        $unreadMessages = $conversation->countUnreadMessages($user, $getPartnerName->id);
+    foreach($partners as $partner):
+        $getPartnerConvo = $user->getPartnerConvo($partner->id);
 
 
         ?>
 
             <div class="chatPreview col-md-2" id="chat">
 
-                <?php if($unreadMessages> 0){  ?> <div class="notification"> <?php print_r($unreadMessages); ?>  </div> <?php } ?>
+                <?php if($partner->unreadMes> 0){  ?> <div class="notification"> <?php print_r($partner->unreadMes); ?>  </div> <?php } ?>
 
 
-                <img src="/uploads/<?= htmlspecialchars($getPartnerName->profile_img); ?>" alt="Chat placeholder" class="chatImg">
+                <img src="/uploads/<?= htmlspecialchars($partner->profile_img); ?>" alt="Chat placeholder" class="chatImg">
 
                 <form action="" method="POST" class="chat">
-                        <input type="hidden" name="chat_id" class="convoId" value="<?= htmlspecialchars($getPartnerConversation);?>" placeholder="naam" />
-                        <p id="chatName"><?= htmlspecialchars($getPartnerName->fullname); ?> </p>
+                        <input type="hidden" name="chat_id" class="convoId" value="<?= htmlspecialchars($getPartnerConvo);?>" placeholder="naam" />
+                        <p id="chatName"><?= htmlspecialchars($partner->fullname); ?> </p>
                 </form>
 
 

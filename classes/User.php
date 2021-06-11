@@ -682,6 +682,20 @@ class User
         return $result;
     }
 
+    public function getPartnerConvo($partner_id)
+    {
+        $conn = Db::getConnection();
+
+        //<> is the same as !=
+        $statement = $conn->prepare("SELECT id FROM conversations WHERE (user_1 = :user_id AND user_2 = :partner_id) OR (user_1 = :partner_id AND user_2 = :user_id) AND active = 1");
+        $statement->bindValue(':user_id', $this->getId());
+        $statement->bindValue(':partner_id', $partner_id);
+
+
+        $statement->execute();
+        $result = $statement->fetch(\PDO::FETCH_COLUMN);
+        return $result;
+    }
     public function getUserById($user_id)
     {
         $conn = Db::getConnection();
