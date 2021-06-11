@@ -89,10 +89,10 @@ function message() {
                 </form>
 
 
+                <div id="space-chat"></div>
             </div>
         <?php endforeach ?>
         </ul>
-
         <?php } ?>
 
 
@@ -112,7 +112,7 @@ function message() {
                 })})
         </script>
     
-
+    
 </body>
 
 </html>

@@ -2397,7 +2397,7 @@ footer {
     /*-----FONTS-----*/
 
     .hoofdtitel {
-        margin-top: 10%;
+        margin-top: 15%;
         margin-bottom: 10%;
         font-size: 2em;
     }
@@ -2875,6 +2875,10 @@ footer {
     }
 
     /*-----Chat----- */
+
+    #space-chat {
+        height: 100vh;
+    }
     /* width */
     ::-webkit-scrollbar {
         width: 10px;
@@ -2897,9 +2901,11 @@ footer {
 
     #chatTitel {
         margin-top: 7%;
+        margin-bottom: 20%;
     }
 
     #deleteChat {
+        visibility: hidden;
         position: absolute;
 
         background-color: #BE1818;
@@ -2911,7 +2917,7 @@ footer {
 
         margin-top: 130%;
         margin-left: 35%;
-        margin-bottom:50%;
+        margin-bottom:500px;
 
     }
 
@@ -2947,14 +2953,18 @@ footer {
 
     .messagebox {
         max-height: 600px;
+        width: 100%;
+
         overflow-y: scroll;
-        margin-bottom: 20px;
+        
+        margin-bottom: 20px; 
+        margin-left: 5%;
+        margin-top: 10%;
+
         padding-left: 10%;
         padding-right: 10%;
-        padding-top: 2%;
-        padding-bottom: 4%;
-
-        margin-left: 10%;
+        padding-top: 10%;
+        padding-bottom: 4%;       
 
         background-image: url(/images/background/chatBackground.png);
         background-size: cover;
@@ -2964,8 +2974,6 @@ footer {
         display: block;
         clear: both;
     }
-
-
 
     .messageElement p {
         margin-top: 10px;
@@ -2977,9 +2985,7 @@ footer {
     }
 
     .messageElement .container {
-
         margin-top: 10px;
-
     }
 
     .messageContent small {
@@ -2993,28 +2999,36 @@ footer {
         margin-right: 5%;
 
         font-family: "Josefin Sans";
-        font-size: 1.3em;
+        font-size:1em;
 
         height: 50px;
         padding: 5px;
         width: 70%;
 
         border: none;
-        border-bottom: 3px solid black;
-
-
+        border-bottom: 1px solid black;
     }
 
     .sendMessage {
         background-color: orangered;
+
         font-family: "Josefin Sans";
-        font-size: 1.3em;
+        font-size: 0.8em;
         font-weight: 400;
+
         color: white;
-        padding: 10px;
-        width: 14%;
+
+        padding: 8px;
+
+        margin-top: -40px;
+
+        width: auto;
+
         border: none;
-        height: 50px;
+
+        height: auto;
+
+        float: right;
     }
 
     .sendMessage:hover {
