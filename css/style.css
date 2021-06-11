@@ -2222,7 +2222,7 @@ footer {
 
     .card-body {
         background-color: white;
-        padding: 0;
+        padding-left: 15px;
     }
 
     .container {
@@ -2395,13 +2395,18 @@ footer {
 
     }
 
+    .all_item_profile{
+        margin-top: 22%;
+    }
+
 
     /*-----FONTS-----*/
-   
-    .settingWoord{
-        margin-top: 11%;
+    
+    .hoofdtitel{
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
-   
+
     h2 {
         text-align: center;
 
@@ -2960,7 +2965,7 @@ footer {
         font-size: 1.8em;
         font-family: "Josefin Sans";
 
-        margin-top: 125px;
+        margin-top:60px;
     }
 
     .afstand {
@@ -3291,11 +3296,17 @@ footer {
     color: white;
     font-family: "Josefin Sans";
     font-size: 1.2em;
-    width: 13%;
-    padding: 15px;
+
+    width: 70%;
+    
     border: none;
+
+    padding: 15px;
+
     margin: 10px;
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-left: 15%;
+
     outline: none;
 
 }
@@ -3334,8 +3345,8 @@ footer {
 /*----- Modal Content/Box -----*/
 .modalContent {
     background-color: #fefefe;
-    width: 30%;
-    margin: 15% auto;
+    width: 80%;
+    margin: 50% auto;
     /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
@@ -3346,12 +3357,12 @@ footer {
     background-color: #BE1818;
     color: white;
     font-family: "Josefin Sans";
-    font-size: 1.2em;
-    width: 45%;
+    font-size: 1em;
+    width: 60%;
     margin-top: 20px;
     padding: 12px;
     border: none;
-    margin-left: 27.5%;
+    margin-left: 20%;
 }
 
 .deleteButton:hover {
@@ -3378,6 +3389,108 @@ footer {
     cursor: pointer;
 }
 
+/*-----cart------*/
+.total_price {
+    border: solid 1px lightgrey;
+    width: 88%;
+
+    margin-left: calc(12%/2);
+    margin-bottom: 15px;
+
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
+}
+
+.total_price_titel {
+    font-family: "Josefin Sans";
+
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    font-size: 1.8em;
+
+    text-align: left;
+
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    color: white;
+
+    background-color: lightgrey;
+}
+
+#prijs-start {
+    display: flex;
+    margin-left: 15px;
+}
+
+.prijs_een {
+    padding-left: 0px;
+}
+
+.line-rechts {
+    margin-left: 50%;
+}
+
+.prijs {
+    padding-left: 0px;
+}
+
+#prijs-twee {
+    display: flex;
+    margin-left: 0px;
+}
+
+.prijs_twee {
+    padding-left: 15px;
+}
+
+.line-rechts-twee {
+    margin-left:30%;
+}
+
+#prijs-alles {
+    display: flex;
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
+
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+}
+
+.prijs-tott {
+
+    padding-left: 5%;
+}
+
+.bedrag-eind {
+    margin-left: 27%;
+}
+
+#buy-all {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-variant: normal;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+
+    background-color: orangered;
+    color: #ffffff;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    text-align: center;
+
+    width: 50%;
+
+    margin-top: 5px;
+    margin-left: calc(50%/2);
+    margin-bottom: 5px;
+}
 
 
 }
