@@ -41,7 +41,7 @@ if(!empty($_POST['edit_item'])){
 
 
         <div>
-            <h2 class="hoofdtitel">Aanbiedingen</h2>
+            <h2 id="hoofdtitel" class="hoofdtitel">Aanbiedingen</h2>
         </div>
         <ul id="all-detail" class="row col-md-12">    
             
@@ -58,7 +58,8 @@ if(!empty($_POST['edit_item'])){
                                             <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
                                             <p class="card-text"> <img class="zoekertje" src="../../images/icon/vegetables.png" alt="">
                                             <?= htmlspecialchars($item->category); ?></p>
-                                            <p class="card-text"><?= htmlspecialchars($item->description); ?></p>
+                                            <p class="card-text"><img class="zoekertje" src="../../images/icon/description.png"
+                                                 alt="icon place"> <?= htmlspecialchars($item->description); ?></p>
                                             <p class="card-text"> <img class="zoekertje" src="../../images/icon/coin-green.svg" alt="">
                                                 <?= htmlspecialchars($item->quantity); ?>  <?= htmlspecialchars($item->unit); ?></p>
                                             <p class="card-text"> <img class="zoekertje" src="../../images/icon/kg-green.svg" alt="">
