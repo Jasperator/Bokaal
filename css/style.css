@@ -1858,6 +1858,31 @@
 
     }
 
+#deleteChat{
+
+    position: absolute;
+    background-color: #BE1818;
+    color: white;
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
+    width: 10%;
+    padding: 15px;
+    border: none;
+
+    margin-top: 2%;
+    margin-left: 87.5%;
+
+}
+
+#deleteChat:hover{
+
+    cursor: pointer;
+    background-color: #d62c2c;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+
+}
 
     #chatTitel:hover {
 
