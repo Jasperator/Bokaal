@@ -53,8 +53,8 @@ $page = basename($_SERVER['PHP_SELF']);
         </div>
 
         <div class="item_profile">
-            <button onclick="window.location.href='../profile/meldingen.php'" type="button" 
-            class="settingsButton">Meldingen</button>
+            <button onclick="window.location.href='../profile/privacy.php'" type="button" 
+            class="settingsButton">Machtigingen</button>
         </div>
 
         <div class="item_profile">
