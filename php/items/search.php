@@ -55,8 +55,6 @@ if(isset($_GET['searchName'])) {
 
 
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -138,12 +136,10 @@ if(isset($_GET['searchName'])) {
                         <option value="10000000">> 50 km</option>
 
                 </select>
-
-
-
         </form>
 
-        <?php if(count($items) <= 0){ ?>
+        <?php
+        if(count($items) <= 0){ ?>
 
 
             <img class="Placeholder" src="../../images/searchPlaceholder.png" alt="cart placeholder">
@@ -152,7 +148,9 @@ if(isset($_GET['searchName'])) {
 
         <ul  id="all-detail" class="row col-md-12">
 
-            <?php foreach ($items as $item) :
+            <?php
+
+            foreach ($items as $item) :
 
             ?>
                 

@@ -5,6 +5,8 @@ include_once(__DIR__ . "/../../classes/Conversation.php");
 include_once(__DIR__ . "/../../classes/User.php");
 require_once(__DIR__ . "/../../classes/Db.php");
 require_once(__DIR__ . "/../../classes/Message.php");
+require_once(__DIR__ . "/../../classes/Item.php");
+
 
 
 
@@ -23,8 +25,12 @@ $page = basename($_SERVER['PHP_SELF']);
     <?php if (!empty($_SESSION['user'])) :
         $user = new classes\User($_SESSION['user']);
         $conversation = new classes\Conversation();
+    $itemClass = new classes\Item();
+
 
     $AllunreadMessages = $conversation->countAllUnreadMessages($user);
+    $allItemsCart = $itemClass->countAllItems($user);
+
 
     ?>
     
@@ -46,8 +52,10 @@ $page = basename($_SERVER['PHP_SELF']);
             </li>
 
         <?php endif;?>
-        <li class="listItem mobNav" >
-            <a  href="/php/items/cart.php" <?php if ($page == "cart.php") : echo "active"; ?> class="navActive" <?php endif; ?>> <img class="nav-img" src="/images/icon/cart.png" alt="winkelmandje icon">WINKELMANDJE</a>
+        <li class="listItem" >
+            <a  href="/php/items/cart.php" <?php if ($page == "cart.php") : echo "active"; ?> class="navActive" <?php endif; ?>> <img class="nav-img" src="/images/icon/cart.png" alt="winkelmandje icon">  <?php if ($page != "cart.php") {
+                    if($allItemsCart> 0){  ?> <div class="navNotification"><?php print_r($allItemsCart); ?></div>
+                    <?php } }?>WINKELMANDJE</a>
         </li>
 
         <li class="listItem mobNav">

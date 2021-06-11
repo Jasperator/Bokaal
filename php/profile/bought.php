@@ -52,7 +52,7 @@ if(!empty($_POST['start_chat'])){
 <img class="Placeholder" src="../../images/boughtPlaceholder.png" alt="cart placeholder">
 <?php } else { ?>
 
-<ul id='all'>
+<ul id='all' class="row col-md-12">
             <?php foreach ($items as $item) :
                 $seller = $itemClass->getUserFromItem($user, $item->id);
                 ?>
