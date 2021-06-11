@@ -14,23 +14,38 @@
 <body>
     <?php include_once("../includes/nav.include.php");?>
    
-    <!-- Hier moet de profile.php nav komen -->
-   <div class="locationRadio">
+    <a class="backArrow" href="/php/profile/settings.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
+<h2 class="hoofdtitel" id="privacyTitel" >Machtigingen</h2>  
+
+<div class="locationRadio">
 
     <p id="locationAccept">Locatie toestaan:</p>
 
     <div class="radioButton">
     <input type="radio" class="locationOption" id="always" name="location" value="always">
-    <label for="always">Altijd</label><br>
+    <label for="always">Altijd</label>
+    </div>
+    <div class="radioButton">
+    <input type="radio" class="locationOption" id="onlyUse" name="location" value="onlyUse">
+    <label for="onlyUse">Bij gebruik van Bokaal</label><br>
+    </div>
+    <div class="radioButton">
+    <input type="radio" class="locationOption" id="never" name="location" value="never">
+    <label for="never">Nooit</label>
     </div>
 
 
-    <input type="radio" class="locationOption" id="onlyUse" name="location" value="onlyUse">
-    <label for="onlyUse">Bij gebruik van Bokaal</label><br>
-    <input type="radio" class="locationOption" id="never" name="location" value="never">
-    <label for="never">Nooit</label>
+</div>
 
-  </div>
+<div class="meldingen">
+
+    <p class="switchLabel">Meldingen ontvangen voor berichten</p>
+    <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+</div>
 
 
 
