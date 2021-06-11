@@ -77,7 +77,7 @@ if(isset($_GET['searchName'])) {
 
             <h2 class="hoofdtitel"> Zoeken </h2>
 
-        <form class="" enctype="multipart/form-data" action="" method="GET">
+        <form class="searchForm" enctype="multipart/form-data" action="" method="GET">
                 <!--<label  for="searchName">Search</label>-->
                 <input class="search-bar" placeholder="Zoek" type="text" id="searchName" name="searchName" value="" />
 
