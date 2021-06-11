@@ -1856,13 +1856,10 @@
     }
 
     #chatTitel {
-
         margin-top: -6%;
-
     }
 
     #deleteChat {
-
         position: absolute;
         background-color: #BE1818;
         color: white;
@@ -1874,7 +1871,6 @@
 
         margin-top: 2%;
         margin-left: 87.5%;
-
     }
 
     #deleteChat:hover {
@@ -2403,6 +2399,7 @@ footer {
     .hoofdtitel {
         margin-top: 10%;
         margin-bottom: 10%;
+        font-size: 2em;
     }
 
     h2 {
@@ -2903,18 +2900,18 @@ footer {
     }
 
     #deleteChat {
-
         position: absolute;
+
         background-color: #BE1818;
         color: white;
         font-family: "Josefin Sans";
-        font-size: 1.2em;
-        width: 10%;
-        padding: 15px;
+        font-size: 0.8em;
+        width: 30%;
         border: none;
 
-        margin-top: 2%;
-        margin-left: 87.5%;
+        margin-top: 130%;
+        margin-left: 35%;
+        margin-bottom:50%;
 
     }
 
