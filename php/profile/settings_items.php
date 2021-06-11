@@ -41,7 +41,7 @@ if(!empty($_POST['edit_item'])){
 
 
         <div>
-            <h2 class="hoofdtitel">Aanbiedingen</h2>
+            <h2 id="hoofdtitel" class="hoofdtitel">Aanbiedingen</h2>
         </div>
         <ul id="all-detail" class="row col-md-12">    
             
