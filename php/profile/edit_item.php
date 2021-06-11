@@ -49,7 +49,6 @@ if (!empty($_POST['updateItem'])) {
 	<link rel="icon" type="image/svg" href=images/logo/favicon.png>
     <link rel="stylesheet" href="/css/bootstrap.css">    
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
 
 
     <title>Bokaal | Sell</title>
