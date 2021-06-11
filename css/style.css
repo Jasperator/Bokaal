@@ -92,9 +92,10 @@
     .alles {
         width: 50%;
         margin-top: 4.5%;
-        margin-left: 50%;
+        margin-left: 51%;
         display: inline-block;
         float: right;
+        position: absolute;
     }
 
 
@@ -3604,6 +3605,7 @@ input[type="radio"]:checked{
         width: 90%;
         text-align: center;
         padding-left: 15px;
+        position: absolute;
     }
 
     .listItem {
