@@ -1495,6 +1495,9 @@
 
 
     /*-----cart/winkelkar-----*/
+    .calc-heen{
+        font-size: 2em;
+    }
 
     .Placeholder {
         width: 50%;
@@ -3490,6 +3493,183 @@ footer {
     margin-top: 5px;
     margin-left: calc(50%/2);
     margin-bottom: 5px;
+}
+
+.calc-heen{
+    font-size: 1.5em;
+}
+
+/*paybox*/
+
+.calc-heen{
+    font-size: 1em;
+}
+
+.Placeholder {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+#expiry-date {
+    font-family: "Josefin Sans";
+    width: 75px;
+    margin-top: 5px;
+    border: none;
+}
+
+.paypal {
+    display: flex;
+}
+
+#pp,
+#cd {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#expiry-date:hover {
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+}
+
+
+.label-expiry {
+    margin-left: 15px;
+    margin-right: 12px;
+}
+
+.label {
+    font-family: "Josefin Sans";
+    font-size: 0.8em;
+}
+
+#label {
+    margin-right: 15px !important;
+}
+
+.head-calc {
+    margin-top: -15px;
+}
+
+
+
+.container-box {
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    flex-direction: column;
+
+    border: none;
+}
+
+.card-deco {
+    border: none;
+}
+
+#expiry-date {
+    margin-left: 35px;
+}
+
+.cardholdername {
+    float: right;
+    margin: 0;
+
+    font-size: 0.8em;
+    font-family: "Josefin Sans";
+
+    border-bottom: solid 1px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+.cardholdername:hover {
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+}
+
+.right {
+    float: right;
+    display: flex;
+    font-size: 0.8em;
+}
+
+.left {
+    display: flex;
+    font-size: 0.8em;
+}
+
+.cardnumber {
+    float: right;
+    margin: 0;
+
+    font-family: "Josefin Sans";
+    font-size: 0.8em;
+
+    border: none;
+    border-bottom: solid 1px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.cardnumber:hover {
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+}
+
+.small-cardIcon-pp {
+    margin-left: 0%;
+    width: 30px;
+    height: 20px;
+    margin-left: 165px;
+    margin-bottom: 35px;
+
+    object-fit: cover;
+}
+
+.small-cardIcon {
+    margin-left: 33.5%;
+
+    width:30px;
+    height: 20px;
+
+
+    object-fit: cover;
+}
+
+.buy-all-items {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 50%;
+
+    margin-top: 15px;
+    margin-left: 25%;
+    background-color: orangered;
+    border: none;
+    color: #fff;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 5px;
+    outline: none;
+}
+
+.info {
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+#editButton {
+
+    width: 10%;
+
 }
 
 
