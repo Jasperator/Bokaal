@@ -91,8 +91,6 @@ if (!empty($_POST['upload'])) {
 						<option value="Koolsoorten">Koolsoorten</option>
 						<option value="Stengelgewassen">Stengelgewassen (prei, selder,...)</option>
 						<option value="Uien">Uien</option>
-						<option value="Vruchtgroenten">Vruchtgroenten</option>
-						<option value="Wortel en knolgewassen">Wortel- knolgewassen</option>
 						<option value="Vruchtgroenten">Vruchtgroenten (tomaat, aubergine, courgette,...)</option>
 						<option value="Wortel- knolgewassen">Wortel- knolgewassen</option>
 						<option value="Overige groenten">Overige groenten</option>
@@ -100,11 +98,6 @@ if (!empty($_POST['upload'])) {
 					<optgroup label="Fruit">
 
 						<option value="Citrusfruit">Vruchtgroenten</option>
-						<option value="Pitfruit">Pitfruit</option>
-						<option value="Steenvruchten">Steenvruchten</option>
-						<option value="Zacht fruit">Zacht fruit</option>
-						<option value="Exotisch fruit">Exotisch fruit</option>
-						<option value="overig fruit">overig fruit</option>
 						<option value="Citrusfruit">Citrusfruit (citroen, limoen,...</option>
 						<option value="Pitfruit">Pitfruit (appel, peer,...)</option>
 						<option value="Steenvruchten">Steenvruchten (pruim, perzik, kers,...)</option>
