@@ -209,5 +209,22 @@ class Conversation
         //Return the results from the query
         return $result;
     }
+    public function deleteConversationAndMessages($user, $partner){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("DELETE FROM conversations WHERE (user_1 = :id AND user_2 = :partner) OR (user_1 = :partner AND user_2 = :id); DELETE FROM messages WHERE (sender_id = :id AND receiver_id = :partner) OR (sender_id = :partner AND receiver_id = :id)");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":id", $user->getId());
+        $statement->bindValue(":partner", $partner);
+
+        //Execute query
+        $result = $statement->execute();
+
+        //Return the results from the query
+        return $result;
+    }
 
 }

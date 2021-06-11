@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log( $(".sendMessage"))
   $(".sendMessage").on("click", function () {
     //Get the text from the input field
     var messageText = $(".messageText").val();
@@ -55,6 +54,27 @@ $(document).ready(function () {
   });
 });
 
+
+function poll(){
+  $("message.php", function(data){
+    var nodes = document.querySelectorAll('.messageContent');
+    var first = nodes[0];
+    var last = nodes[nodes.length- 1];
+    var test = 'test';
+    $.ajax({
+      data: { content: test },
+      type: "POST",
+      url: "message.php",
+      success: function (response) {
+
+        console.log();
+
+      },
+    })
+  });
+}
+
+setInterval(function(){ poll(); }, 5000);
 //Force the chatbox to scroll to the bottom so the newest messages get displayed
 function updateScroll() {
   var messagebox = document.querySelector(".messagebox");

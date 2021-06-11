@@ -763,6 +763,19 @@ class Item
         return $result;
     }
 
+    public function countAllItems($user)
+    {
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT COUNT(id) FROM `items` WHERE buyer_id = :user_id AND status = 'pending'");
+        $statement->bindValue(":user_id", $user->getId());
+
+        $statement->execute();
+        $result = $statement->fetch(\PDO::FETCH_COLUMN);
+
+        return $result;
+
+    }
+
 
 
 }

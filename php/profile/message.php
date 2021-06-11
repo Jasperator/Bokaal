@@ -23,8 +23,6 @@ if(isset($_GET['chat_id'])){
      $chat_partner = $conversation->getPartner($user->getId());
 
 
-
-
  if (!empty($_POST['content'])) {
      $time = date('Y-m-d H:i:s');
 
@@ -55,7 +53,18 @@ if(isset($_GET['chat_id'])){
      if ($_POST['like'] == 0) {
          classes\Message::undoReaction();
      }
-}}
+}
+
+     if(!empty($_POST['deleteChat'])){
+
+         print_r($chat_partner->id);
+
+       $conversation->deleteConversationAndMessages($user,$chat_partner->id);
+        header("Location: chat.php");
+
+     }
+ }
+
 
 ?>
 
@@ -81,7 +90,7 @@ if(isset($_GET['chat_id'])){
 <a class="backArrow" href="/php/profile/chat.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
 <h2 class="hoofdtitel" id="chatTitel" data-id="<?php echo htmlspecialchars($chat_partner->id); ?>"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
     
-<input id="deleteChat" type="submit" value="Verwijder chat" name="register">
+<input id="deleteChat" type="submit" value="Verwijder chat" name="deleteChat">
 
 
 <div class="chatbox">
@@ -172,9 +181,6 @@ if(isset($_GET['chat_id'])){
             <input type="text" id="messageText" class="messageText" placeholder="Type hier...">
             <button id="sendMessage" class="sendMessage">Stuur</button>
             </div>
-        <?php else : ?>
-            <h2 class="d-inline-block">You have no body to chat with!</h2>
-            <h6>Send a request to someone or wait for someone else to ask you.</h6>
         <?php endif; ?>
     </div>
 </form>
