@@ -37,13 +37,17 @@
 
 </div>
 
-<div class="meldingen">
+<div class="switchButtons">
 
-    <p class="switchLabel">Meldingen ontvangen voor berichten</p>
-    <label class="switch">
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label>
+    <label class="switchLabel">Meldingen ontvangen voor berichten
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    </label>
+
+    <label class="switchLabel">Straat en nummer openbaar
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    </label>
 
 </div>
 
