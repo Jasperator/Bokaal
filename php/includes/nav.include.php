@@ -34,7 +34,7 @@ $page = basename($_SERVER['PHP_SELF']);
 
     ?>
     
-        <ul class="alles" >
+        <ul class="alles" <?php if($user->getStatus() == 'buyer') { ?> style="margin-right: -10%" <?php }?>>
 
         <!-- Mark a link as "active" according to the current page -->
 
