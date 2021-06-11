@@ -169,7 +169,42 @@
         background-color: #ffffff;
     }
 
+    /*------settings - privacy-----*/
 
+    #locationAccept{
+
+        margin-bottom: 10%;
+
+    }
+
+    .locationRadio{
+
+        background-color: white;
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+        width: 30%;
+        height: 30%;
+        padding: 20px;
+        margin-left: 10%;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .locationOption{
+
+        width: 20%;
+        margin-left: -7%;
+        margin-right: 20%;
+        margin-bottom: 5%;
+    }
+
+    .radioButton{
+
+        width: 100%;
+        background-color: lightgray;
+
+    }
 
     /*------settings - verwijder-modal-----*/
     .delete_account {
