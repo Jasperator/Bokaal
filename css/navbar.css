@@ -24,15 +24,12 @@
 
     margin-left: 50%;
     margin-top: 50px;
-
-    /*padding: 0px;
-        padding-left: 10px;*/
   }
 
   .listItem {
     display: inline-block;
     opacity: 50%;
-    font-size: 2em;
+    font-size: 1.5em;
     padding-left: 10px;
     padding-right: 10px;
 
@@ -52,12 +49,7 @@
   .home-logo {
     display: none;
   }
-}
 
-  
-
-
-@media only screen and (max-width: 900px) {
   nav {
     width: 90%;
     height: 65px;
@@ -107,4 +99,8 @@
   .home-logo {
     display: none;
   }
+
+
 }
+
+  

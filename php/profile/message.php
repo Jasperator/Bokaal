@@ -86,9 +86,12 @@ if(isset($_GET['chat_id'])){
 
 <body onload="updateScroll()">
     <?php include_once("../includes/nav.include.php");?>
-<form action="" method="POST" class="chat">
-<a class="backArrow" href="/php/profile/chat.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
+
+    <a class="backArrow" href="/php/profile/chat.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
 <h2 class="hoofdtitel" id="chatTitel" data-id="<?php echo htmlspecialchars($chat_partner->id); ?>"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
+
+    <form action="" method="POST" class="chat">
+
     
 <input id="deleteChat" type="submit" value="Verwijder chat" name="deleteChat">
 

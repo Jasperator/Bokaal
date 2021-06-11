@@ -187,7 +187,7 @@ if(!empty($_POST['start_chat'])){
             <div class="container-box">
                 <h4 class="head-calc">Afrekenen</h4>
                 <div class="price">
-                    <h1>Totale prijs <?= $price+(($price/100)*10) ?> Euro !</h1><br>
+                    <h1 class="calc-heen">Totale prijs <?= $price+(($price/100)*10) ?> Euro !</h1><br>
                 </div>
 
                 <div class="card__container">
