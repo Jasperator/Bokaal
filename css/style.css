@@ -1495,7 +1495,7 @@
 
 
     /*-----cart/winkelkar-----*/
-    .calc-heen{
+    .calc-heen {
         font-size: 2em;
     }
 
@@ -1861,31 +1861,31 @@
 
     }
 
-#deleteChat{
+    #deleteChat {
 
-    position: absolute;
-    background-color: #BE1818;
-    color: white;
-    font-family: "Josefin Sans";
-    font-size: 1.2em;
-    width: 10%;
-    padding: 15px;
-    border: none;
+        position: absolute;
+        background-color: #BE1818;
+        color: white;
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+        width: 10%;
+        padding: 15px;
+        border: none;
 
-    margin-top: 2%;
-    margin-left: 87.5%;
+        margin-top: 2%;
+        margin-left: 87.5%;
 
-}
+    }
 
-#deleteChat:hover{
+    #deleteChat:hover {
 
-    cursor: pointer;
-    background-color: #d62c2c;
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        cursor: pointer;
+        background-color: #d62c2c;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
 
-}
+    }
 
     #chatTitel:hover {
 
@@ -2096,11 +2096,6 @@
 
     }
 
-}
-
-/*-----pop up slider*/
-
-
 
 
 /*-----footer-----*/
@@ -2198,7 +2193,7 @@ footer {
     margin-top: 10px;
 
 }
-
+}
 
 
 
@@ -2398,16 +2393,16 @@ footer {
 
     }
 
-    .all_item_profile{
-        margin-top: 22%;
+    .all_item_profile {
+        margin-top: 25%;
     }
 
 
     /*-----FONTS-----*/
-    
-    .hoofdtitel{
+
+    .hoofdtitel {
         margin-top: 10%;
-        margin-bottom: 5%;
+        margin-bottom: 10%;
     }
 
     h2 {
@@ -2450,7 +2445,7 @@ footer {
 
         line-height: 20px;
 
-        width:80%;
+        width: 80%;
 
         margin-bottom: 2%;
         margin-top: 3%;
@@ -2482,6 +2477,8 @@ footer {
         margin-left: 5%;
         margin-top: 15px;
 
+        padding-left: 10px;
+
         border: none;
 
         font-family: "Josefin Sans";
@@ -2495,7 +2492,7 @@ footer {
 
 
     .new-profile-image {
-        width:90%;
+        width: 90%;
         height: auto;
 
         margin-left: 5%;
@@ -2881,31 +2878,89 @@ footer {
     }
 
     /*-----Chat----- */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    #chatTitel {
+        margin-top: 7%;
+    }
+
+    #deleteChat {
+
+        position: absolute;
+        background-color: #BE1818;
+        color: white;
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+        width: 10%;
+        padding: 15px;
+        border: none;
+
+        margin-top: 2%;
+        margin-left: 87.5%;
+
+    }
+
+    #deleteChat:hover {
+
+        cursor: pointer;
+        background-color: #d62c2c;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+
+
+    }
+
+    #chatTitel:hover {
+
+        cursor: pointer;
+        border-bottom: 3px solid white;
+
+    }
 
     .chatbox {
-        border-radius: 15px;
 
+        margin-top: -3%;
         margin-right: 5%;
         margin-left: 5%;
-        margin-top: 5%;
 
-        padding: 20px;
 
-        max-width: 80%;
-
-        height: 60vh;
+        width: 80%;
 
         font-family: "Josefin Sans";
 
-        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
     .messagebox {
-        max-height: 100px;
+        max-height: 600px;
         overflow-y: scroll;
         margin-bottom: 20px;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 2%;
+        padding-bottom: 4%;
 
+        margin-left: 10%;
+
+        background-image: url(/images/background/chatBackground.png);
+        background-size: cover;
     }
 
     .messageContent {
@@ -2913,16 +2968,21 @@ footer {
         clear: both;
     }
 
-    .messageElement .container {
-        margin-bottom: 20px;
-    }
+
 
     .messageElement p {
         margin-top: 10px;
         max-width: 250px;
+        min-width: 50px;
         word-wrap: break-word;
-        border-radius: 10px;
-        padding: 10px;
+
+        margin-bottom: 5px;
+    }
+
+    .messageElement .container {
+
+        margin-top: 10px;
+
     }
 
     .messageContent small {
@@ -2930,19 +2990,149 @@ footer {
         top: 3px;
     }
 
-    #messageText {
-        border-radius: 5px;
+    .messageText {
 
-        margin-top: 5%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 10%;
+        margin-right: 5%;
 
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+
+        height: 50px;
         padding: 5px;
+        width: 70%;
 
+        border: none;
+        border-bottom: 3px solid black;
+
+
+    }
+
+    .sendMessage {
+        background-color: orangered;
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+        font-weight: 400;
+        color: white;
+        padding: 10px;
+        width: 14%;
+        border: none;
+        height: 50px;
+    }
+
+    .sendMessage:hover {
+        cursor: pointer;
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #FF5419;
+    }
 
-        width: 70%;
+    .backArrow {
+        position: absolute;
+        margin-left: 3%;
+        margin-top: 2%;
+        width: 6%;
+    }
+
+    .backArrow:hover {
+        opacity: 70%;
+    }
+
+
+    /*-----Chat----- */
+
+    #chatName {
+        color: #000;
+        font-size: 1.5em;
+        background-color: none;
+        font-family: "Josefin Sans";
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 4%;
+    }
+
+    .chatImg {
+
+        width: 110%;
+        height: 300px;
+        object-fit: cover;
+        margin-left: -5%;
+
+    }
+
+    .chatPreview {
+
+        background-color: white;
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        width: 80%;
+        height: 370px;
+        float: left;
+
+        margin-left: 13%;
+        margin-top: 20%;
+    }
+
+    .chatPreview:hover {
+
+        cursor: pointer;
+        box-shadow: 1px 0px 25px 0px rgba(31, 31, 31, 0.5);
+
+
+    }
+
+    .notification {
+
+        color: #fff;
+        font-family: "Josefin Sans";
+        font-size: 1.3em;
+        text-align: center;
+        vertical-align: middle;
+
+        border-radius: 30px 30px 30px 5px;
+        padding: 10px;
+        background-color: #d5d962;
+        width: 50px;
+        height: 50px;
+        margin-left: 87%;
+        margin-top: -5%;
+        position: absolute;
+    }
+
+    .navNotification {
+
+        color: #fff;
+        font-family: "Josefin Sans";
+        font-size: 0.8em;
+        text-align: center;
+        vertical-align: middle;
+
+        border-radius: 30px 30px 30px 5px;
+        background-color: #d5d962;
+        width: 25px;
+        height: 25px;
+        margin-left: 98%;
+        margin-top: -9%;
+        position: absolute;
+        padding-left: 4%;
+        padding-top: 2%;
+    }
+
+    .subNavNotification {
+
+        color: #fff;
+        font-family: "Josefin Sans";
+        text-align: center;
+        vertical-align: middle;
+
+        border-radius: 30px 30px 30px 5px;
+        background-color: #d5d962;
+        width: 25px;
+        height: 25px;
+        margin-left: 39%;
+        margin-top: -12%;
+        position: absolute;
+
     }
 
     /*-----detail item/user page-----*/
@@ -2968,7 +3158,7 @@ footer {
         font-size: 1.8em;
         font-family: "Josefin Sans";
 
-        margin-top:60px;
+        margin-top: 60px;
     }
 
     .afstand {
@@ -3128,7 +3318,7 @@ footer {
         font-size: 1.2em;
     }
 
-/*-----navbar mobile-----*/
+    /*-----navbar mobile-----*/
 
     .navbar-volledig {
         width: 90%;
@@ -3138,7 +3328,7 @@ footer {
         display: flex;
         position: fixed;
         margin-left: 3%;
-        background-color: #d5d962;        
+        background-color: #d5d962;
     }
 
     .nav-img {
@@ -3160,7 +3350,7 @@ footer {
 
     }
 
-    .mobNav a{
+    .mobNav a {
         color: transparent;
         font-size: 0;
         line-height: 0;
@@ -3175,500 +3365,595 @@ footer {
         display: none;
     }
 
-/*-----favor-button-----*/
-#knop1 {
-    background-color: Transparent;
-    border: none;
-    overflow: hidden;
-    outline: none;
-    margin-left: 75%;
-    position: absolute;
-    margin-top: -30%;
-    opacity: 100%;
-}
+    /*-----favor-button-----*/
+    #knop1 {
+        background-color: Transparent;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        margin-left: 75%;
+        position: absolute;
+        margin-top: -30%;
+        opacity: 100%;
+    }
 
-#knop1:hover {
-    opacity: 50%;
-}
+    #knop1:hover {
+        opacity: 50%;
+    }
 
-#knop2 {
-    background-color: Transparent;
-    border: none;
-    overflow: hidden;
-    outline: none;
-    margin-left: 80%;
-    position: absolute;
-    margin-top: -30%;
-    opacity: 50%;
-}
+    #knop2 {
+        background-color: Transparent;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        margin-left: 80%;
+        position: absolute;
+        margin-top: -30%;
+        opacity: 50%;
+    }
 
-#knop2:hover {
-    opacity: 100%;
-}
+    #knop2:hover {
+        opacity: 100%;
+    }
 
-.fa-star {
+    .fa-star {
 
-    color: #d5d962;
-}
+        color: #d5d962;
+    }
 
-.fav-but {
-    width: 25px;
-    margin-left: 45%;
-}
+    .fav-but {
+        width: 25px;
+        margin-left: 45%;
+    }
 
-.text-primary {
-    font-family: "Josefin Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    line-height: 20px;
+    .text-primary {
+        font-family: "Josefin Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+        line-height: 20px;
 
-    margin: 12px;
-    padding-top: 5px;
-}
+        margin: 12px;
+        padding-top: 5px;
+    }
 
-#pages a {
+    #pages a {
 
-    font-family: "Josefin Sans";
-    font-size: 1.7em;
-    font-weight: 400;
+        font-family: "Josefin Sans";
+        font-size: 1.7em;
+        font-weight: 400;
 
-    color: #d5d962;
-    margin-left: 2%;
-    margin-right: 2%;
-    opacity: 100%;
+        color: #d5d962;
+        margin-left: 2%;
+        margin-right: 2%;
+        opacity: 100%;
 
-}
+    }
 
-#pages a:hover {
+    #pages a:hover {
 
-    border-bottom: 5px solid #d5d962;
-    opacity: 50%;
+        border-bottom: 5px solid #d5d962;
+        opacity: 50%;
 
-}
+    }
 
-.curPage {
+    .curPage {
 
-    border-bottom: 5px solid #d5d962;
+        border-bottom: 5px solid #d5d962;
 
-}
+    }
 
-/*-----sub menu-----*/
+    /*-----sub menu-----*/
 
-.subMenu {
-    width: 90%;
+    .subMenu {
+        width: 90%;
 
-    margin-left: 5%;
-    margin-bottom: 3%;
-    margin-top: 15px;
-    position: absolute;
+        margin-left: 5%;
+        margin-bottom: 3%;
+        position: absolute;
 
-    z-index: 999;
+        z-index: 999;
 
-}
+    }
 
-.subIcon {
-    opacity: 50%;
-    width: 7%;
-    margin-left: 8%;
-    margin-right: 8%;
-    padding-bottom: 10px;
-    position: relative;
-    vertical-align: top;
-}
+    .subIcon {
+        opacity: 50%;
+        width: 7%;
+        margin-left: 8%;
+        margin-right: 8%;
+        padding-bottom: 10px;
+        position: relative;
+        vertical-align: top;
+    }
 
 
-.subIcon:hover {
-    opacity: 100%;
+    .subIcon:hover {
+        opacity: 100%;
 
-    border-bottom: 5px solid black;
+        border-bottom: 5px solid black;
 
-}
+    }
 
-.activated {
-    opacity: 100%;
+    .activated {
+        opacity: 100%;
 
-    border-bottom: 5px solid black;
-}
+        border-bottom: 5px solid black;
+    }
 
-   /*------settings - verwijder-modal-----*/
-   .delete_account {
+    /*------settings - verwijder-modal-----*/
+    .delete_account {
 
-    background-color: #BE1818;
-    color: white;
-    font-family: "Josefin Sans";
-    font-size: 1.2em;
+        background-color: #BE1818;
+        color: white;
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
 
-    width: 70%;
-    
-    border: none;
+        width: 70%;
 
-    padding: 15px;
+        border: none;
 
-    margin: 10px;
-    margin-top: 15px;
-    margin-left: 15%;
+        padding: 15px;
 
-    outline: none;
+        margin: 10px;
+        margin-top: 15px;
+        margin-left: 15%;
 
-}
+        outline: none;
 
-.delete_account:hover {
+    }
 
-    cursor: pointer;
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    background-color: #D41C1C;
+    .delete_account:hover {
 
-}
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;
 
-/* The Modal (background) */
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /*----- Modal Content/Box -----*/
+    .modalContent {
+        background-color: #fefefe;
+        width: 80%;
+        margin: 50% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+    }
+
+    .deleteButton {
+
+        background-color: #BE1818;
+        color: white;
+        font-family: "Josefin Sans";
+        font-size: 1em;
+        width: 60%;
+        margin-top: 20px;
+        padding: 12px;
+        border: none;
+        margin-left: 20%;
+    }
+
+    .deleteButton:hover {
+
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;
+
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /*-----cart------*/
+    .total_price {
+        border: solid 1px lightgrey;
+        width: 88%;
+
+        margin-left: calc(12%/2);
+        margin-bottom: 15px;
+
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+    }
+
+    .total_price_titel {
+        font-family: "Josefin Sans";
+
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        font-size: 1.8em;
+
+        text-align: left;
+
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        color: white;
+
+        background-color: lightgrey;
+    }
+
+    #prijs-start {
+        display: flex;
+        margin-left: 15px;
+    }
+
+    .prijs_een {
+        padding-left: 0px;
+    }
+
+    .line-rechts {
+        margin-left: 50%;
+    }
+
+    .prijs {
+        padding-left: 0px;
+    }
+
+    #prijs-twee {
+        display: flex;
+        margin-left: 0px;
+    }
+
+    .prijs_twee {
+        padding-left: 15px;
+    }
+
+    .line-rechts-twee {
+        margin-left: 30%;
+    }
+
+    #prijs-alles {
+        display: flex;
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+    }
+
+    .prijs-tott {
+
+        padding-left: 5%;
+    }
+
+    .bedrag-eind {
+        margin-left: 27%;
+    }
+
+    #buy-all {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.5em;
+
+        background-color: orangered;
+        color: #ffffff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        text-align: center;
+
+        width: 50%;
+
+        margin-top: 5px;
+        margin-left: calc(50%/2);
+        margin-bottom: 5px;
+    }
+
+    .calc-heen {
+        font-size: 1.5em;
+    }
+
+    /*paybox*/
+
+    .calc-heen {
+        font-size: 1em;
+    }
+
+    .Placeholder {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+
+    #expiry-date {
+        font-family: "Josefin Sans";
+        width: 75px;
+        margin-top: 5px;
+        border: none;
+    }
+
+    .paypal {
+        display: flex;
+    }
+
+    #pp,
+    #cd {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    #expiry-date:hover {
+        cursor: pointer;
+        box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+    }
+
+
+    .label-expiry {
+        margin-left: 15px;
+        margin-right: 12px;
+    }
+
+    .label {
+        font-family: "Josefin Sans";
+        font-size: 0.8em;
+    }
+
+    #label {
+        margin-right: 15px !important;
+    }
+
+    .head-calc {
+        margin-top: -15px;
+    }
+
+
+
+    .container-box {
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        flex-direction: column;
+
+        border: none;
+    }
+
+    .card-deco {
+        border: none;
+    }
+
+    #expiry-date {
+        margin-left: 35px;
+    }
+
+    .cardholdername {
+        float: right;
+        margin: 0;
+
+        font-size: 0.8em;
+        font-family: "Josefin Sans";
+
+        border-bottom: solid 1px black;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+
+    }
+
+    .cardholdername:hover {
+        cursor: pointer;
+        box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+    }
+
+    .right {
+        float: right;
+        display: flex;
+        font-size: 0.8em;
+    }
+
+    .left {
+        display: flex;
+        font-size: 0.8em;
+    }
+
+    .cardnumber {
+        float: right;
+        margin: 0;
+
+        font-family: "Josefin Sans";
+        font-size: 0.8em;
+
+        border: none;
+        border-bottom: solid 1px black;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .cardnumber:hover {
+        cursor: pointer;
+        box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
+    }
+
+    .small-cardIcon-pp {
+        margin-left: 0%;
+        width: 30px;
+        height: 20px;
+        margin-left: 165px;
+        margin-bottom: 35px;
+
+        object-fit: cover;
+    }
+
+    .small-cardIcon {
+        margin-left: 33.5%;
+
+        width: 30px;
+        height: 20px;
+
+
+        object-fit: cover;
+    }
+
+    .buy-all-items {
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        width: 50%;
+
+        margin-top: 15px;
+        margin-left: 25%;
+        background-color: orangered;
+        border: none;
+        color: #fff;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .info {
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    #editButton {
+
+        width: 10%;
+
+    }
+
+    /*-----footer-----*/
+
+footer {
+
+    background-color: #d5d962;
+    padding: 30px;
     width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-}
-
-/*----- Modal Content/Box -----*/
-.modalContent {
-    background-color: #fefefe;
-    width: 80%;
-    margin: 50% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-}
-
-.deleteButton {
-
-    background-color: #BE1818;
-    color: white;
-    font-family: "Josefin Sans";
-    font-size: 1em;
-    width: 60%;
-    margin-top: 20px;
-    padding: 12px;
-    border: none;
-    margin-left: 20%;
-}
-
-.deleteButton:hover {
-
-    cursor: pointer;
-    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    background-color: #D41C1C;
-
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/*-----cart------*/
-.total_price {
-    border: solid 1px lightgrey;
-    width: 88%;
-
-    margin-left: calc(12%/2);
-    margin-bottom: 15px;
-
-    font-family: "Josefin Sans";
-    font-size: 1.2em;
-}
-
-.total_price_titel {
-    font-family: "Josefin Sans";
-
-    font-style: normal;
-    font-variant: normal;
-    border: none;
-    font-size: 1.8em;
-
-    text-align: left;
-
-    padding-left: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    color: white;
-
-    background-color: lightgrey;
-}
-
-#prijs-start {
-    display: flex;
-    margin-left: 15px;
-}
-
-.prijs_een {
-    padding-left: 0px;
-}
-
-.line-rechts {
-    margin-left: 50%;
-}
-
-.prijs {
-    padding-left: 0px;
-}
-
-#prijs-twee {
-    display: flex;
-    margin-left: 0px;
-}
-
-.prijs_twee {
-    padding-left: 15px;
-}
-
-.line-rechts-twee {
-    margin-left:30%;
-}
-
-#prijs-alles {
-    display: flex;
-    font-family: "Josefin Sans";
-    font-size: 1.2em;
-
-    font-style: normal;
-    font-variant: normal;
-    border: none;
-}
-
-.prijs-tott {
-
-    padding-left: 5%;
-}
-
-.bedrag-eind {
-    margin-left: 27%;
-}
-
-#buy-all {
-    font-family: "Josefin Sans";
-    font-style: normal;
-    font-variant: normal;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.5em;
-
-    background-color: orangered;
-    color: #ffffff;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    text-align: center;
-
-    width: 50%;
-
-    margin-top: 5px;
-    margin-left: calc(50%/2);
-    margin-bottom: 5px;
-}
-
-.calc-heen{
-    font-size: 1.5em;
-}
-
-/*paybox*/
-
-.calc-heen{
-    font-size: 1em;
-}
-
-.Placeholder {
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 5%;
-}
-
-#expiry-date {
-    font-family: "Josefin Sans";
-    width: 75px;
-    margin-top: 5px;
-    border: none;
-}
-
-.paypal {
-    display: flex;
-}
-
-#pp,
-#cd {
-    margin-right: 15px;
-    margin-left: 15px;
-}
-
-#expiry-date:hover {
-    cursor: pointer;
-    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
-}
-
-
-.label-expiry {
-    margin-left: 15px;
-    margin-right: 12px;
-}
-
-.label {
-    font-family: "Josefin Sans";
-    font-size: 0.8em;
-}
-
-#label {
-    margin-right: 15px !important;
-}
-
-.head-calc {
-    margin-top: -15px;
-}
-
-
-
-.container-box {
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    flex-direction: column;
-
-    border: none;
-}
-
-.card-deco {
-    border: none;
-}
-
-#expiry-date {
-    margin-left: 35px;
-}
-
-.cardholdername {
-    float: right;
-    margin: 0;
-
-    font-size: 0.8em;
-    font-family: "Josefin Sans";
-
-    border-bottom: solid 1px black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-
-}
-
-.cardholdername:hover {
-    cursor: pointer;
-    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
-}
-
-.right {
-    float: right;
-    display: flex;
-    font-size: 0.8em;
-}
-
-.left {
-    display: flex;
-    font-size: 0.8em;
-}
-
-.cardnumber {
-    float: right;
-    margin: 0;
-
-    font-family: "Josefin Sans";
-    font-size: 0.8em;
-
-    border: none;
-    border-bottom: solid 1px black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-
-.cardnumber:hover {
-    cursor: pointer;
-    box-shadow: 1px 0px 10px 0px rgba(31, 31, 31, 0.2);
-}
-
-.small-cardIcon-pp {
-    margin-left: 0%;
-    width: 30px;
-    height: 20px;
-    margin-left: 165px;
-    margin-bottom: 35px;
-
-    object-fit: cover;
-}
-
-.small-cardIcon {
-    margin-left: 33.5%;
-
-    width:30px;
-    height: 20px;
-
-
-    object-fit: cover;
-}
-
-.buy-all-items {
-    font-size: 1.2rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    width: 50%;
-
-    margin-top: 15px;
-    margin-left: 25%;
-    background-color: orangered;
-    border: none;
+    height: 200px;
     color: #fff;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    border-radius: 5px;
-    outline: none;
+    font-family: "Josefin Sans";
+    margin-top: 100px;
+    bottom: 0;
+    position: relative;
 }
 
-.info {
-    margin-bottom: 5px;
-    margin-top: 15px;
+.footerCenter {
+    width: 23.333333%;
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 150px;
+
+
 }
 
-#editButton {
+.footerLogo {
+    width: 20%;
+    margin-left: 40%;
+}
 
-    width: 10%;
+.footerMenu {
+    float: left;
+    width: 23.333333%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 150px;
+    padding-top: 2%;
+
+}
+
+.footerMenu ul {
+
+    list-style-type: none;
+}
+
+.footerMenu ul li a {
+    color: #fff;
+    float: left;
+    margin-right: 3.5%;
+    font-size: 1.1em;
+}
+
+.footerMenu ul li:first-child {
+
+    margin-left: -40px;
+
+}
+
+.footerMenu ul li a:hover {
+    color: orangered;
+    text-decoration: none;
+}
+
+.footerContact {
+    float: left;
+    width: 23.333333%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: right;
+    height: 150px;
+    right: 0;
+    padding-top: 0.8%;
+}
+
+.footerContact a {
+
+    color: #fff;
+    font-size: 1.2em;
+
+}
+
+.footerContact a:hover {
+
+    color: orangered;
+    text-decoration: none;
+
+}
+
+.footerContact i {
+
+    font-size: 2em;
+    margin-left: 5%;
+    margin-top: 10px;
 
 }
 
