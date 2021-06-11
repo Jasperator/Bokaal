@@ -51,8 +51,11 @@ if(!empty($_POST['start_chat'])){
     <div class="container-boer">
             <h2 class="verkoper"><?= htmlspecialchars($seller->fullname);  ?></h2>
             <div class="locatie-boer">
-                <p><?= htmlspecialchars($seller->location); ?></p>
-                <p class="text-muted afstand"> Afstand: <?=$seller->distance;?></p>
+                <p><?= htmlspecialchars($seller->location); ?>,</p>
+                <p class="afstand"> <?= htmlspecialchars($seller->address); ?></p>
+            </div>
+            <div class="locatie-boer">
+                <p class="text-muted"> Afstand: <?=$seller->distance;?></p>
             </div>
 
             <div>

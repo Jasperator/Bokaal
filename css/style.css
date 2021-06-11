@@ -452,7 +452,7 @@
 
 
 
-/*-----profiel instellingen-----*/
+    /*-----profiel instellingen-----*/
 
 
 .profile-settings-image {
@@ -461,23 +461,9 @@
     /*margin-left: 25% calc(17.5% - 125px + 5%)*/;
 }
 
-    /*.setImg {
-        float: right;
-
-        z-index: 15;
-        margin-right: 10%;
-        object-fit: cover;
-
-        -webkit-box-shadow: inset 0px 0px 15px 17px #FFFFFF;
-        box-shadow: inset 0px 0px 15px 17px #FFFFFF;
-
-    }*/
-
 .setImage {
     z-index: 14;
     position: relative;
-}
-
 }
 
 .form-control-settings {
@@ -2110,6 +2096,8 @@ input[type="range"].slider:hover {
 
 }
 
+}
+
 /*-----pop up slider*/
 
 
@@ -2422,10 +2410,9 @@ footer {
         text-align: left;
 
         margin-left: 10%;
+        margin-top: 150px;
 
         color: orangered;
-
-        margin-top: 10%;
 
         font-family: "Josefin Sans";
         font-style: normal;
@@ -2934,6 +2921,294 @@ footer {
 
         width: 70%;
     }
+
+    /*-----detail item/user page-----*/
+
+.items-header{
+    color: orangered;
+
+    font-size: 2.5em;
+    font-family: "Josefin Sans";
+
+    margin-left: 6%;
+    margin-top: 150px;
+}
+
+.container-boer {
+    margin-left: 6%;
+}
+
+
+.verkoper {
+    color: orangered;
+
+    font-size: 1.8em;
+    font-family: "Josefin Sans";
+
+    margin-top:125px;
+}
+
+.afstand {
+    margin-left: 15px;
+}
+
+.locatie-boer {
+    display: flex;
+
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
+
+    margin-top: 15px;
+    margin-bottom: 2.5%;
+}
+
+
+.boer-profile-pic {
+    width: 30%;
+    max-height: 50%;
+    object-fit: cover;
+    margin-right: 35px;
+}
+
+.boer-profile-pic-img {
+    width: 90%;
+    max-height: 50%;
+    object-fit: cover;
+    margin-left: 5%;
+}
+
+.boer-profile-pic-user-middle{
+    width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+
+    display: flex;
+
+    margin-right: 35px;
+
+    margin-bottom: -25%;
+}
+
+
+.full-name-boer {
+    visibility: hidden;
+}
+
+.img-text {
+    font-family: "Josefin Sans";
+}
+
+.bio-boer {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.detail {
+    width: 90% !important;
+
+    border: none !important;
+
+    font-family: "Josefin Sans";
+    font-size: 16px !important;
+
+    color: #ffffff !important;
+    background-color: orangered !important;
+}
+
+.detail:hover {
+    color: black !important;
+    background-color: #d5d962 !important;
+}
+
+.locatie-boer {
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
+
+    margin-top: 15px;
+    margin-left: 5%;
+}
+
+#chatnaam {
+    width:90%;
+
+    margin-left: 5%;
+
+    float: left;
+
+    border: none !important;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-top: 5px;
+
+    font-family: "Josefin Sans";
+    font-size: 20px !important;
+
+    color: #ffffff !important;
+    background-color: orangered !important;
+}
+#chatnaam:hover {
+
+    cursor: pointer;
+    -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    background-color: #FF5419;
+
+}
+
+/*gekozen product*/
+
+.container-item {
+    margin-left: 6%;
+    width: 90%;
+}
+
+.item-img-text {
+    font-family: "Josefin Sans";
+}
+
+.gekozen-product{
+    color: orangered;
+
+    font-size: 1.8em;
+    font-family: "Josefin Sans";
+
+    margin-top: 3%;
+}
+
+.gekozen-product-pic {
+    width: 95%;
+    max-height: 50%;
+    object-fit: cover;
+
+    margin-left: 2.5%;
+}
+
+.full-name-item {
+    visibility: hidden;
+}
+.bio-item {
+    width: 90%;
+    font-size: 1.2em;
+    font-style: italic;
+
+    margin-left: 2.5%;
+}
+
+.payment-info-product{
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+
+  nav {
+    width: 20%;
+    height: 40px;
+    top: 88%;
+    margin-left: 38%;
+    z-index: 100;
+  }
+
+  .nav-img {
+    width: 30px;
+  }
+
+  .alles {
+    width: 100%;
+
+    display: inline-block;
+
+    text-align: center;
+
+    padding-left: 15px;
+
+    margin-left: 50%;
+    margin-top: 50px;
+
+    /*padding: 0px;
+        padding-left: 10px;*/
+  }
+
+  .listItem {
+    display: inline-block;
+    opacity: 50%;
+    font-size: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+.listItem a{
+
+  color: #fff;
+
+}
+
+  .active {
+    opacity: 100%;
+    background-color: #d5d962;
+  }
+
+  .home-logo {
+    display: none;
+  }
+}
+
+  
+
+
+@media only screen and (max-width: 900px) {
+  nav {
+    width: 90%;
+    height: 65px;
+    position: fixed;
+    background-color: #d5d962;
+    top: 88%;
+    margin: auto;
+    margin-left: 3%;
+    border-radius: 5px;
+
+    z-index: 100;
+  }
+
+  .nav-img {
+    width: 40px;
+  }
+
+  .alles {
+    width: 100%;
+
+    display: inline-block;
+
+    text-align: center;
+
+    padding-left: 15px;
+
+    margin-left: -5%;
+    margin-top: 12px;
+
+    /*padding: 0px;
+        padding-left: 10px;*/
+  }
+
+  .listItem {
+    display: inline-block;
+    opacity: 50%;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .active {
+    opacity: 100%;
+    background-color: #d5d962;
+  }
+
+  .home-logo {
+    display: none;
+  }
 
 
 }
