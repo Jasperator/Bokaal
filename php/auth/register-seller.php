@@ -102,7 +102,7 @@ if (!empty($_POST['register'])) {
 
 	<div class="register">
 		<form class="registerForm" action="" method="post">
-			<img class="logo-reg-buy" src="../../images/logo/LogoBlack.svg" alt="login logo Bokaal">
+			<img class="logoSeller logo-reg-buy" src="../../images/logo/LogoBlack.svg" alt="login logo Bokaal">
 			<h2 class="reg-buy-title">Registreer verkopers <br></h2>
 			<?php if (!empty($error)) : ?>
 			<div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
@@ -117,14 +117,12 @@ if (!empty($_POST['register'])) {
 			<br>
 
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Volledige naam</label>
 				<input type="text" name="fullname" id="fullname" class="form-control" placeholder="Volledige naam"
 					required>
 					<i class="fa fa-user icon-img" aria-hidden="true"></i>
 			</div>
 
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Email adres</label>
 				<input type="email" name="email" class="form-control email" placeholder="Email adres"
 					pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
 				<span id="availability"></span>
@@ -132,7 +130,6 @@ if (!empty($_POST['register'])) {
 			</div>
 
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Telefoon nummer</label>
 				<input type="tel" name="telephone" id="telephone" class="form-control" placeholder="Telefoon nummer"
 					required>
 					<i class="fa fa-phone icon-img" aria-hidden="true"></i>
@@ -140,51 +137,44 @@ if (!empty($_POST['register'])) {
 			</div>
 
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Wachtwoord</label>
 				<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord"
 					required>
 					<i class="fa fa-lock icon-img" aria-hidden="true"></i>
 			</div>
 
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Wachtwoord bevestigen</label>
 				<input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Wachtwoord bevestigen"
 					required>
 					<i class="fa fa-lock icon-img" aria-hidden="true"></i>
 			</div>
 			
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Postcode</label>
 				<input type="number" name="postal_code" class="form-control" placeholder="Postcode"
 					required>
 
 			</div>
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Stad</label>
 				<input type="text" name="location" class="form-control" placeholder="Stad "
 					required>
 
 			</div>
 
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Straat, huisnummer, bus</label>
 				<input type="text" name="address" class="form-control" placeholder="Straat, nr en bus" required>
 
 			</div>
 			
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">BTW nummer</label>
 				<input type="text" name="btw" id="btw" class="form-control" placeholder="Btw nummer" required>
 			</div>
 			<div class="form-group"  id="reg-form-buyer-flex" >
-			<label class="tags-form-reg-buy" for="price">Naam bedrijf</label>
 				<input type="text" name="company" id="company" class="form-control" placeholder="Naam bedrijf" required>
 			</div>
 
 
 
 			<div class="form-group"  id="reg-form-buyer-flex" >
-				<input id="loginBTN-reg-buy" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" value="Register" name="register">
+				<input id="register"  type="submit" value="Register" name="register">
 			</div>
 			<div id="result"> </div>
 			<p class="login-p-reg-buy">Heb je al een account? <a href="login.php">Log</a> dan hier in</p>

@@ -91,7 +91,7 @@ if (!empty($_POST['register'])) {
 
 	<div class="register ">
 		<form action="" method="post">
-			<img class="logo-reg-buy" src="../../images/logo/LogoBlack.svg" alt="logo Bokaal">
+			<img class="logo logo-reg-buy" src="../../images/logo/LogoBlack.svg" alt="logo Bokaal">
 			<h2 class="reg-buy-title">Registreer kopers</h2>
 			<?php if (!empty($error)) : ?>
 			<div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
@@ -105,14 +105,12 @@ if (!empty($_POST['register'])) {
 			<br>
 
 			<div id="reg-form-buyer-flex"  class="form-group">
-				<label class="tags-form-reg-buy" for="price">Volledige naam</label>
 					<input id="label-fill" type="text" name="fullname" id="fullname" class="form-control" placeholder="Volledige naam"
 						required>
 					<i class="fa fa-user icon-img" aria-hidden="true"></i>
 			</div>
 
 			<div id="reg-form-buyer-flex" class="form-group">
-				<label class="tags-form-reg-buy" for="price">E-mail</label>
 					<input id="label-fill" type="email" name="email" class="form-control email" placeholder="Email"
 						pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
 					<span id="availability"></span>
@@ -120,36 +118,31 @@ if (!empty($_POST['register'])) {
 			</div>
 
 			<div id="reg-form-buyer-flex" class="form-group">
-				<label class="tags-form-reg-buy" for="price">Wachtwoord</label>
 					<input id="label-fill" type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord"
 						required>
 					<i class="fa fa-lock icon-img" aria-hidden="true"></i>
 			</div>
 
 			<div id="reg-form-buyer-flex" class="form-group">
-				<label class="tags-form-reg-buy" for="price">Wachtwoord bevestigen</label>
 					<input id="label-fill" type="password" name="confirmPassword" id="confirmPassword" class="form-control"
 						placeholder="Wachtwoord bevestigen" required>
 					<i class="fa fa-lock icon-img" aria-hidden="true"></i>
 			</div>
 
 			<div id="reg-form-buyer-flex" class="form-group">
-				<label class="tags-form-reg-buy" for="price">Postcode</label>
 					<input id="label-fill" type="number" name="postal_code" class="form-control" placeholder="Postcode" required>
 			</div>
 
 			<div id="reg-form-buyer-flex" class="form-group">
-				<label class="tags-form-reg-buy" for="price">Stad</label>
 				<input id="label-fill" type="text" name="location" class="form-control" placeholder="Stad" required>
 			</div>
 
 			<div id="reg-form-buyer-flex-flex" class="form-group">
-				<label class="tags-form-reg-buy" for="price">Straat, huisnummer, bus</label>
 				<input id="label-fill" type="text" name="address" class="form-control" placeholder="Straat, nr en bus" required>
 			</div>
 
 			<div id="reg-form-buyer-flex" class="form-group">
-				<input id="loginBTN-reg-buy" id="register" type="submit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" value="Registreer" name="register">
+				<input id="register" id="register" type="submit"  value="Registreer" name="register">
 			</div>
 
 			<div id="result"> </div>
