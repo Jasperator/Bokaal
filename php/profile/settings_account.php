@@ -101,8 +101,8 @@ if (!empty($_POST['updateProfile'])) {
   <title>Profiel instellingen</title>
 
   <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
-    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     <!--slider links en scripts-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
