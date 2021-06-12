@@ -58,15 +58,10 @@ array = [];
 number = 0;
 function poll(){
   $("message.php", function(data){
-    var nodes = document.querySelectorAll('.messageContent');
-    var first = nodes[0];
-    var last = nodes[nodes.length- 1];
-    var message = $('.messageContent p').text();
 
     $.ajax({
       type: "POST",
       url: "message.php",
-      data: {message: message},
       success: function (response) {
         number++;
         array.push(response.length);

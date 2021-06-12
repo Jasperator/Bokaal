@@ -28,24 +28,26 @@ if (!empty($_POST['Koper'])) {
 
 </head>
 
-<body>
+<body class="body-login">
 
 	<?php //include_once("nav.include.php") ?>
 
-	<img src="../../images/background/OGbackground.png" class="loginImage"></div>
+	<img id="img-log" src="../../images/background/OGbackground.png" class="loginImage"></div>
 
 
 	<div class="d-flex justify-content-center">
 			<form  action="" method="post">
-				<h2>Ik ben een</h2>
+				<h2 class="titel-choose-reg">Ik ben een</h2>
 
 				<div class="form-group">
-					<input type="submit" class="buyer" value="Koper" name="Koper">
+					<input class="choose-reg-knop" type="submit" class="buyer" value="Koper" name="Koper">
 				</div>
+
 				<div class="form-group">
-					<input type="submit" class="seller" value="Verkoper" name="Verkoper">
+					<input class="choose-reg-knop" type="submit" class="seller" value="Verkoper" name="Verkoper">
 				</div>
-				<p>Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
+
+				<p class="login-p">Heb je al een account? <a class='login-link' href="login.php">Log</a> dan hier in</p>
 			</form>
 
 		</div>
