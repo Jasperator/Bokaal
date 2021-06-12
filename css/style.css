@@ -3388,9 +3388,7 @@
 
     /*-----Chat----- */
 
-    #space-chat {
-        height: 100vh;
-    }
+    
 
     /* width */
     ::-webkit-scrollbar {
@@ -3881,6 +3879,13 @@
         display: none;
     }
 
+    /*-----bought------*/
+
+    #list-decoration-bought:first-child {
+        margin-top: 60px;
+    }
+
+
     /*-----favor-button-----*/
     #knop1 {
         background-color: Transparent;
@@ -4137,7 +4142,8 @@
     }
 
     .line-rechts {
-        margin-left: 50%;
+        margin-left: 80%;
+        margin-top: -45px;
     }
 
     .prijs {
