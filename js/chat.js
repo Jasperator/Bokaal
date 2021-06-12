@@ -54,25 +54,32 @@ $(document).ready(function () {
   });
 });
 
-
+array = [];
+number = 0;
 function poll(){
   $("message.php", function(data){
     var nodes = document.querySelectorAll('.messageContent');
     var first = nodes[0];
     var last = nodes[nodes.length- 1];
-    var test = 'test';
+    var message = $('.messageContent p').text();
+
     $.ajax({
-      data: { content: test },
       type: "POST",
       url: "message.php",
+      data: {message: message},
       success: function (response) {
+        number++;
+        array.push(response.length);
 
-        console.log();
-
+        if(number > 1 && (array[number-1] !== array[number-2])){
+         window.location.reload();
+        }
       },
     })
   });
 }
+
+
 
 setInterval(function(){ poll(); }, 5000);
 //Force the chatbox to scroll to the bottom so the newest messages get displayed

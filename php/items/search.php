@@ -126,7 +126,7 @@ if(isset($_GET['searchName'])) {
                         <option value="5000">< 5 km</option>
                         <option value="10000">< 10 km</option>
                         <option value="15000">< 15 km</option>
-                        <option value="20000">< 10 km</option>
+                        <option value="20000">< 20 km</option>
                         <option value="25000">< 25 km</option>
                         <option value="30000">< 30 km</option>
                         <option value="35000">< 35 km</option>
