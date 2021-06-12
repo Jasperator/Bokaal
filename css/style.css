@@ -2020,7 +2020,7 @@ margin-left: -14%;
     }
 
     .messagebox {
-        max-height: 600px;
+        max-height: 70vh;
         overflow-y: scroll;
         margin-bottom: 20px;
         padding-left: 10%;

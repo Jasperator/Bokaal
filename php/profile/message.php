@@ -99,7 +99,7 @@ if(isset($_GET['chat_id'])){
 <div class="chatbox">
         <?php if (!empty($active_conversation)) : ?>
             
-            <div class="messagebox" style="min-height: 350px;">
+            <div class="messagebox" style="min-height: 70vh;">
                 <?php
                 if (!empty($active_conversation)) :
                     //Print out all messages
