@@ -156,19 +156,19 @@ if(!empty($_POST['start_chat'])){
 
         <div id="prijs-start">
             <p class="prijs_een">Prijs item: </p> 
-            <p class="line-rechts" ><?= $price ?></p>
+            
         </div>
-
+        <p class="line-rechts" ><?= $price ?></p>
         <div id="prijs-twee" >
             <p class="prijs_twee" > Kopers garantie </p>
-            <p class="line-rechts-twee"><?= ($price/100)*10 ?></p>
+            
         </div>
-
+        <p class="line-rechts"><?= ($price/100)*10 ?></p>
         <div id="prijs-alles">
             <p class="prijs-tott">Totaal bedrag </p>
-            <p class="bedrag-eind"><?= $price+(($price/100))*10 ?></p>
+            
         </div>
-
+        <p class="line-rechts"><?= $price+(($price/100))*10 ?></p>
     </div>
 
     <button type="button" id="buy-all" class="buy-all">

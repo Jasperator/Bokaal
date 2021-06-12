@@ -19,9 +19,9 @@
                      <div class="footerContact">
                          <h5><b>CONTACT</b></h5><a HREF="mailto:info@bokaal.be">info@bokaal.be</a>
                          <br>
-                         <a href="https://www.facebook.com/Bokaal-school-project-100946261967222"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                         <a href="https://www.instagram.com/bokaal.schoolproject/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                         <a href="https://twitter.com/BokaalS"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                         <a href="https://www.linkedin.com/in/bokaal-lab-3-4a8086203/%22%3E"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                         <a href="https://www.facebook.com/Bokaal-school-project-100946261967222"><i class="fa fa-facebook-square" style="font-size: 30px;" aria-hidden="true"></i></a>
+                         <a href="https://www.instagram.com/bokaal.schoolproject/"><i class="fa fa-instagram" style="font-size: 30px;" aria-hidden="true"></i></a>
+                         <a href="https://twitter.com/BokaalS"><i class="fa fa-twitter" style="font-size: 30px;" aria-hidden="true"></i></a>
+                         <a href="https://www.linkedin.com/in/bokaal-lab-3-4a8086203/%22%3E"><i class="fa fa-linkedin" style="font-size: 30px;" aria-hidden="true"></i></a>
                         </div>
      </footer>
