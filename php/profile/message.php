@@ -90,16 +90,16 @@ if(isset($_GET['chat_id'])){
     <a class="backArrow" href="/php/profile/chat.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
 <h2 class="hoofdtitel" id="chatTitel" data-id="<?php echo htmlspecialchars($chat_partner->id); ?>"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
 
+    <form action=""  method="POST" class="deleteChat">
+        <input id="deleteChat" type="submit" value="Verwijder chat" name="deleteChat">
+    </form>
+
     <form action="" method="POST" class="chat">
-
-    
-<input id="deleteChat" type="submit" value="Verwijder chat" name="deleteChat">
-
 
 <div class="chatbox">
         <?php if (!empty($active_conversation)) : ?>
             
-            <div class="messagebox" style="min-height: 350px;">
+            <div class="messagebox" style="min-height: 70vh;">
                 <?php
                 if (!empty($active_conversation)) :
                     //Print out all messages

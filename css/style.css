@@ -2020,7 +2020,7 @@
     }
 
     .messagebox {
-        max-height: 600px;
+        max-height: 70vh;
         overflow-y: scroll;
         margin-bottom: 20px;
         padding-left: 10%;
@@ -2090,6 +2090,15 @@
         width: 14%;
         border: none;
         height: 50px;
+    }
+
+    .sendMessage:hover {
+
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #FF5419;
+
     }
 
     .backArrow {
@@ -2412,70 +2421,70 @@
     }
 
     /*----login-----*/
-    #img-log{
-    visibility: hidden;
-    height: 0px;
-    width: 0px;
-  }
+    #img-log {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
 
-  .body-login {
-    background-image: url("../images/background/potato-op40.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: cornsilk;
-  }
+    .body-login {
+        background-image: url("../images/background/potato-op40.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: cornsilk;
+    }
 
-  .titel-login {
-    font-family: "Josefin Sans";
-    font-size: 2.3em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    line-height: 15.4px;
+    .titel-login {
+        font-family: "Josefin Sans";
+        font-size: 2.3em;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 700;
+        line-height: 15.4px;
 
-    padding-left: 30px;
-  }
+        padding-left: 30px;
+    }
 
-  .input.login {
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #151e3d;
-  }
+    .input.login {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #151e3d;
+    }
 
-  .login-link {
-    color: orangered;
-    text-decoration: none;
-  }
+    .login-link {
+        color: orangered;
+        text-decoration: none;
+    }
 
-  .login-p {
-    font-family: "Josefin Sans";
-  }
+    .login-p {
+        font-family: "Josefin Sans";
+    }
 
-  label {
-    opacity: 0;
-  }
+    label {
+        opacity: 0;
+    }
 
-  #email,
-  #password {
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #151e3d;
-    border-radius: 0px;
-  }
+    #email,
+    #password {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #151e3d;
+        border-radius: 0px;
+    }
 
-  #loginBTN {
-    background-color: orangered;
-    border: none;
-    width: 75%;
-    margin-left: 12.5%;
-  }
+    #loginBTN {
+        background-color: orangered;
+        border: none;
+        width: 75%;
+        margin-left: 12.5%;
+    }
 
-  .logo {
-    height: 20%;
-    margin-bottom: 20px;
-    padding-left: 30%;
-    padding-right: 40%;
-  }
+    .logo {
+        height: 20%;
+        margin-bottom: 20px;
+        padding-left: 30%;
+        padding-right: 40%;
+    }
 
 
     /*----search/item menu----*/
