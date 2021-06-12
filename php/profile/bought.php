@@ -82,7 +82,7 @@ if(!empty($_POST['start_chat'])){
                                             <div class="form-group">
 
                                                 <input type="hidden" name="chat_id" value="<?= htmlspecialchars($seller->id);?>" placeholder="naam" />
-                                                <input id="chatnaam"  class="btn" type="submit" name="start_chat" value="chat" />
+                                                <input id="chatnaam"  class="editButton" type="submit" name="start_chat" value="chat" style="margin-top: 20px; margin-bottom: 20px;"/>
                                             </div>
                                         </form> <?php } ?>
                                     </div>
