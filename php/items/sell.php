@@ -136,7 +136,7 @@ if (!empty($_POST['upload'])) {
 										<option value="Stuks">Stuks</option>
 						</select>
 							<input type="number" class="select-items-select-price"  name="price"  placeholder="Prijs" step=".01" required>
-							<input type="text" class="select-items-select-value" name="currency" Value="Euro" required>												
+							<input type="text" class="select-items-select-value" name="currency" Value="Euro" disabled>
                     </div>
 				</div>
 			</div>
