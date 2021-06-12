@@ -2323,17 +2323,18 @@
 
     /*----- algemeen -----*/
 
-    html,
     body {
-        margin: 0;
-        background-image: url("/images/background/header-mobile.png");
+        height: 20vh;
+
+        background-image: url("/images/background/header-mobile-test.png");
         background-repeat: no-repeat;
+        background-size: 100%;
         top: 0;
         background-position: top;
-        background-color: transparent;
-        height: 1%;
 
-        margin-bottom: 3%;
+        margin-top: 1%;
+
+        margin-bottom: 4%;
     }
 
     /*-----bootsdtrap instel -----*/
