@@ -144,6 +144,7 @@
 
   .captcha{
     margin-top: 25px;
+    width: 100%;
   }
 
   #log-form{
@@ -177,5 +178,47 @@
     margin-left: 35%;
     margin-bottom: 15px;
 
+  }
+
+  /*----reg-choose----*/
+
+  #img-log{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+
+  .titel-choose-reg {
+    font-family: "Josefin Sans";
+    font-size: 2.3em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+
+    line-height: 15.4px;
+
+    text-align: center;
+
+    padding-top: 175px;
+    padding-bottom: 25px;
+  }
+
+  .choose-reg-knop {
+    background-color: orangered;
+
+    font-family: "Josefin Sans";
+    font-size: 1.5em;
+
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    width: 90%;
+
+    padding: 10px, 10px, 10px, 10px;
+
+    margin-top: 15px;
+    margin-left: 5%;
   }
 }

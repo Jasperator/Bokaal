@@ -101,11 +101,19 @@
 }
 
 @media only screen and (max-width: 900px) {
-  body {
+  .body-login {
     background-image: url("../images/background/potato-op40.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: cornsilk;
+
+    object-fit: cover;
+  }
+
+  #img-log{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
   }
 
   h3 {
@@ -120,9 +128,9 @@
     padding-left: 30px;
   }
 
-  h2 {
+  .reg-buy-title {
     font-family: "Josefin Sans";
-    font-size: 2.3em;
+    font-size: 2em;
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
@@ -139,21 +147,20 @@
     opacity: 0;
   }
 
-  p {
-    font-family: "Josefin Sans";
-
-    text-align: center;
-  }
+  .login-p {
+        font-family: "Josefin Sans";
+    }
 
   a {
     color: orangered;
     text-decoration: none;
   }
 
-  .logo {
-    height: 15%;
-    padding-left: 30%;
-    padding-right: 40%;
+  .logo-reg-buy {
+    width: 15%;
+    margin-left: calc(85%/2);
+    margin-bottom: 15px;
+
   }
 
   .form-control {
