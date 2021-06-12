@@ -83,13 +83,13 @@ if (!empty($_POST)) {
 
                 <form id=log-form action="" method="post">
                   <div id="label-fill" class="form-label-group">
-                    <label class="label" for="inputEmail">Email</label>
+                    <label for="inputEmail">Email</label>
                     <input class=input-login type="text" name="email" id="email" placeholder="Email">                   
                    <br>
                   </div>
 
                   <div class="form-label-group">
-                    <label id="label-fill" class="label" for="inputPassword">Password</label>
+                    <label class="label" for="inputPassword">Password</label>
                     <input  class=input-login type="password" name="password" id="password" placeholder="Wachtwoord">
                     
                     <br>
