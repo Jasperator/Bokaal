@@ -11,7 +11,7 @@
 
     <title>Meldingen</title>
 </head>
-<body>
+<body class="body-privacy">
     <?php include_once("../includes/nav.include.php");?>
    
     <a class="backArrow" href="/php/profile/settings.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
@@ -22,16 +22,16 @@
     <p id="locationAccept">Locatie toestaan:</p>
 
     <div class="radioButton">
-    <input type="radio" class="locationOption" id="always" name="location" value="always">
-    <label for="always">Altijd</label>
-    </div>
-    <div class="radioButton">
-    <input type="radio" class="locationOption" id="onlyUse" name="location" value="onlyUse">
-    <label for="onlyUse">Bij gebruik van Bokaal</label><br>
-    </div>
-    <div class="radioButton">
-    <input type="radio" class="locationOption" id="never" name="location" value="never">
-    <label for="never">Nooit</label>
+        <input type="radio" class="locationOption" id="always" name="location" value="always">
+        <label for="always">Altijd</label>
+        </div>
+        <div class="radioButton">
+        <input type="radio" class="locationOption" id="onlyUse" name="location" value="onlyUse">
+        <label for="onlyUse">Bij gebruik van Bokaal</label><br>
+        </div>
+        <div class="radioButton">
+        <input type="radio" class="locationOption" id="never" name="location" value="never">
+        <label for="never">Nooit</label>
     </div>
 
 
@@ -40,12 +40,12 @@
 <div class="switchButtons">
 
     <label class="switchLabel">Meldingen ontvangen voor berichten
-    <input type="checkbox">
+    <input class="checkbox-macht" type="checkbox">
     <span class="checkmark"></span>
     </label>
 
-    <label class="switchLabel">Straat en nummer openbaar
-    <input type="checkbox">
+    <label class="switchLabel label2">Straat en nummer openbaar
+    <input class="checkbox-macht-onder" type="checkbox">
     <span class="checkmark"></span>
     </label>
 
