@@ -2369,11 +2369,13 @@ margin-left: -14%;
         background-color: #d5d962;
         top: 88%;
         margin: auto;
-        margin-left: 3%;
-        border-radius: 35px;
+        margin-left: 5%;
+
+        
 
         z-index: 100;
     }
+
 
     .nav-img {
         width: 30px;
@@ -2384,7 +2386,6 @@ margin-left: -14%;
         opacity: 80%;
         padding-left: 2.5%;
         padding-right: 2.5%;
-
     }
 
     .active {

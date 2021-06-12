@@ -34,7 +34,7 @@ $page = basename($_SERVER['PHP_SELF']);
 
     ?>
     
-        <ul class="alles" <?php if($user->getStatus() == 'buyer') { ?> style="margin-left: 60%;width: 40%" <?php }?>>
+        <ul id="navbar-full" class="alles" <?php if($user->getStatus() == 'buyer') { ?> style="margin-left: 60%;width: 40%" <?php }?>>
 
         <!-- Mark a link as "active" according to the current page -->
 
@@ -52,7 +52,7 @@ $page = basename($_SERVER['PHP_SELF']);
             </li>
 
         <?php endif;?>
-        <li class="listItem" >
+        <li class="listItem mobNav" >
             <a  href="/php/items/cart.php" <?php if ($page == "cart.php") : echo "active"; ?> class="navActive" <?php endif; ?>> <img class="nav-img" src="/images/icon/cart.png" alt="winkelmandje icon">  <?php if ($page != "cart.php") {
                     if($allItemsCart> 0){  ?> <div class="navNotification"><?php print_r($allItemsCart); ?></div>
                     <?php } }?>WINKELMANDJE</a>
