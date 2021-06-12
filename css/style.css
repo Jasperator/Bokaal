@@ -2428,20 +2428,27 @@ margin-left: -14%;
         font-variant: normal;
         font-weight: 400;
 
-        border: none;
-
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
+    #list-decoration-search:first-child{
+        margin-top: 150px;
+    }
+
+    #container-search{
+        margin-left: 5% !important;        
+    }
+
+
     .form-control-search {
-        width: 260px;
+        width: 90%;
         height: 30px;
 
         border: none;
         border-radius: 2px;
 
-        margin-left: 8%;
+        margin-left: 5%;
 
         font-family: "Josefin Sans";
         font-style: normal;
@@ -2456,6 +2463,7 @@ margin-left: -14%;
 
     #button_or_search {
         display: inline-block;
+
         font-family: "Josefin Sans";
         font-style: normal;
         font-variant: normal;
@@ -2468,10 +2476,153 @@ margin-left: -14%;
 
         color: #ffffff;
 
-
         text-align: center;
 
-        width: 10%;
+        width: 90%;
+
+    }
+
+    /*slider op search*/
+
+    .search-bar {
+        width: 90%;
+        height: 50px;
+
+        margin-left: 5%;
+        margin-top: 15px;
+
+        padding-left: 15px;
+
+        font-family: "Josefin Sans";
+        font-size: 1em;
+        font-weight: 400;
+
+        float: left;
+
+        border: none;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .form-control-search {
+        width: 90%;
+        height: 50px;
+
+        border: none;
+
+        margin-top: 15px;
+        margin-left: 5%;
+        padding-left: 15px;
+
+        font-family: "Josefin Sans";
+        font-size: 1em;
+        font-weight: 400;
+
+        float: left;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    #distanceDropdown {
+
+        float: left;
+        position: absolute;
+        margin-left: 5%;
+        width: 90%;
+        margin-top: -2.5%;
+
+
+    }
+
+    .zoekertje {
+        width: 20px;
+        height: auto;
+    }
+
+
+    #button_or_search {
+
+        float: left;
+
+        position: absolute;
+
+        font-family: "Josefin Sans";
+        font-size: 1em;
+        font-weight: 400;
+
+        border: none;
+
+        background-color: orangered;
+
+        color: #ffffff;
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+        width: 90%;
+        height: 50px;
+
+        margin-top: 325px;
+        margin-left:-90%;
+
+        z-index: 150;
+
+
+    }
+
+    .priceLabel {
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+    }
+
+    .slidecontainer,
+    .priceLabel {
+
+        margin-left: 5%;
+
+        font-family: "Josefin Sans";
+        font-size: 1em;
+        font-weight: 400;
+
+    }
+
+    input[type="range"].slider {
+
+        width: 90%;
+        color: #d5d962;
+        -webkit-appearance: none;
+        appearance: none;
+
+        height: 10px;
+        background: #FCFFB6;
+
+        margin-bottom: 15px;
+        margin-left: 5%;
+
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 35px;
+        height: 50px;
+        border-radius: 20px;
+        cursor: pointer;
+        background: url('/images/icon/carrot.png');
+        background-size: cover;
+
+
+    }
+
+    input[type="range"].slider:hover {
+
+        background: #f7fa9b;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
 
     }
 
@@ -2515,6 +2666,7 @@ margin-left: -14%;
 
     .hoofdtitel {
         margin-bottom: 10%;
+        margin-top:10%;
         font-size: 2em;
     }
 
@@ -3563,7 +3715,7 @@ margin-left: -14%;
         font-size: 1.8em;
         font-family: "Josefin Sans";
 
-        margin-top: 3%;
+        margin-top: 5%;
     }
 
     .gekozen-product-pic {

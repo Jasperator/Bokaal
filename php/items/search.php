@@ -146,7 +146,7 @@ if(isset($_GET['searchName'])) {
 
         <?php } else { ?>
 
-        <ul  id="all-detail" class="row col-md-12">
+        <ul  id="all-detail " class="row col-md-12">
 
             <?php
 
@@ -154,9 +154,9 @@ if(isset($_GET['searchName'])) {
 
             ?>
                 
-                <div id="list-decoration" class="col-md-4">
+                <div id="list-decoration-search" class="col-md-4">
                     <div class="itemId" data-id="<?= htmlspecialchars($item->id); ?> ">
-                        <div class="container">
+                        <div id="container-search" class="container">
                             <div class="card h-100 breed">
                                 <form action="" method="post">
                                     <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?> " 
