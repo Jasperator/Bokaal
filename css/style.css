@@ -2308,9 +2308,10 @@
         margin-top: 10px;
 
     }
-    .footerContact fa{
 
-font-size: 10px;
+    .footerContact fa {
+
+        font-size: 10px;
 
     }
 
@@ -2325,17 +2326,18 @@ font-size: 10px;
 
     /*----- algemeen -----*/
 
-    html,
     body {
-        margin: 0;
-        background-image: url("/images/background/header-mobile.png");
+        height: 20vh;
+
+        background-image: url("/images/background/header-mobile-test.png");
         background-repeat: no-repeat;
+        background-size: 100%;
         top: 0;
         background-position: top;
-        background-color: transparent;
-        height: 1%;
 
-        margin-bottom: 3%;
+        margin-top: 1%;
+
+        margin-bottom: 4%;
     }
 
     /*-----bootsdtrap instel -----*/
@@ -3390,9 +3392,7 @@ font-size: 10px;
 
     /*-----Chat----- */
 
-    #space-chat {
-        height: 100vh;
-    }
+    
 
     /* width */
     ::-webkit-scrollbar {
@@ -3883,6 +3883,13 @@ font-size: 10px;
         display: none;
     }
 
+    /*-----bought------*/
+
+    #list-decoration-bought:first-child {
+        margin-top: 60px;
+    }
+
+
     /*-----favor-button-----*/
     #knop1 {
         background-color: Transparent;
@@ -4139,7 +4146,8 @@ font-size: 10px;
     }
 
     .line-rechts {
-        margin-left: 50%;
+        margin-left: 80%;
+        margin-top: -45px;
     }
 
     .prijs {
@@ -4472,5 +4480,48 @@ font-size: 10px;
 
     }
 
+    /*-----privacy page*-----*/
+
+
+
+    #locationRadio{
+        font-family: "Josefin Sans";
+        margin-left: 5%;
+
+        height: 100vh;
+        
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    
+    }
+
+    #locationAccept {
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+        margin-left: 5%;
+    }
+
+    .radioButton, .switchButtons{
+        margin-left: 5%;
+
+        margin-bottom: 25px;
+
+        width: 90%;
+
+        
+    }
+
+    .checkbox-macht{
+        margin-left: 15px;
+    }
+
+    .checkbox-macht-onder{
+        margin-left:80px;
+    }
+
+    .label2{
+        margin-bottom: 300px;
+        padding-bottom: 15px;
+    }
 
 }

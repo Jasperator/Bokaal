@@ -52,16 +52,16 @@ if(!empty($_POST['start_chat'])){
 <img class="Placeholder" src="../../images/boughtPlaceholder.png" alt="cart placeholder">
 <?php } else { ?>
 
-<ul  class="row col-md-12">
+<ul id="all-detail" class="row col-md-12">
             <?php foreach ($items as $item) :
-                $seller = $itemClass->getUserFromItem($user, $item->id);
-                ?>
-                <div id="list-decoration" class="col-md-4">
+                $seller = $itemClass->getUserFromItem($user, $item->id);?>
+                <div id="list-decoration-bought" class="col-md-4">
                     <div class="itemId users" >
                         <div class="container">
                             <div class="card h-100 breed">
                                 <form  action="" method="post">
-                                    <img id="picture" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" />
+                                    <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?>" class="img-thumbnail border-0" 
+                                    class="img-thumbnail border-0"/>
                                                             
                                     <div id="card-body" style="padding:15px;">
                                         <h5 class="card-title"><?= htmlspecialchars($item->title); ?></h5>
