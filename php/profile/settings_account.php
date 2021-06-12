@@ -140,12 +140,8 @@ if (!empty($_POST['updateProfile'])) {
         </div>-->
 
         <form enctype="multipart/form-data" action="" method="POST">
-          <div>
             <input class="file-button" type="file" id="profile_img" name="profile_img" capture="camera" required />
-          </div>
-          <div>
             <input class="button-profile-img" type="submit" value="Upload" name="uploadPicture" />
-          </div>
         </form>
       </div>
     </div>
@@ -159,55 +155,52 @@ if (!empty($_POST['updateProfile'])) {
         <!-- Fill in the input fields with the data from the database -->
         <br>
         <div class="form-group">
-          <!-- <label for="bio">Biography</label>-->
+          <label class="profileSettingLabel"  for="bio">Biografie</label><br>
+
           <textarea placeholder="Biografie" name="bio" id="bio" class="form-control-settings" rows="3"
             cols="100"><?= htmlspecialchars($user->getBio()) ?></textarea>
         </div>
 
         
-        <div>
-				<div >
 
-        <div>
-						<!--<label for="currency">Currency</label>-->
+
+        <div class="form-group">
+						<label  class="profileSettingLabel" for="Locatie">Locatie</label><br>
 						
-						<input type="text" name="location"  class="form-control-settings" placeholder="Location" value="<?= htmlspecialchars($user->getLocation()) ?>"
+						<input type="text" name="location"  class="form-control-settings" placeholder="Locatie" value="<?= htmlspecialchars($user->getLocation()) ?>"
 							required>
 		
 					</div>
-          <div>
-						<!--<label for="currency">Currency</label>-->
-						
+          <div class="form-group">
+          <label class="profileSettingLabel"  for="postal_code">Postcode</label><br>						
 						<input type="number" name="postal_code"  class="form-control-settings" placeholder="Postcode" value="<?= htmlspecialchars($user->getPostal_code()) ?>"
 							required>
 		
 					</div>
 
 					<div class="form-group">
-						<!--<label for="price">Price</label>-->
+          <label class="profileSettingLabel"  for="adress">Straat, nr en bus</label><br>						
 						<input type="text" name="address" class="form-control-settings" placeholder="Straat, nr en bus" value="<?= htmlspecialchars($user->getAddress()) ?>" required>
             </input>
 			
 					</div>
 				
-				</div>
-			</div>
 
       
         <?php if($_SESSION['user_status'] == "seller") : ?>
 
         <div class="form-group">
-          <!--<label for="btw">Btw number</label>-->
+        <label class="profileSettingLabel"  for="btw">BTW nummer</label><br>						
           <input placeholder="BTW nummer" name="btw" id="btw" class="form-control-settings" value="<?= htmlspecialchars($user->getBtw()) ?>">
         </div>
 
         <div class="form-group">
-          <!--<label for="company">Company name</label>-->
+        <label class="profileSettingLabel"  for="company">Bedrijfsnaam</label><br>						
           <input placeholder="Bedrijfs naam" name="company" id="company" class="form-control-settings" value="<?= htmlspecialchars($user->getCompany()) ?>">
         </div>
 
         <div class="form-group">
-          <!--<label for="number">Telephone number</label>-->
+        <label class="profileSettingLabel"  for="number">Telefoonnummer</label><br>						
           <input placeholder="Telefoon nummer" name="number" id="number" class="form-control-settings" value="<?= htmlspecialchars($user->getTelephone()) ?>">
         </div>
 
@@ -236,12 +229,12 @@ if (!empty($_POST['updateProfile'])) {
 
         </p>
         <div class="form-group">
-          <!--<label for="emailpassword">Current password</label>-->
-          <input placeholder="email" type="email" name="emailpassword" value="<?= htmlspecialchars($user->getEmail()) ?>" id="emailpassword" class="form-control-settings">
+        <label class="profileSettingLabel"  for="email">Oud e-mail adres</label><br>						
+          <input placeholder="Email" type="email" name="emailpassword" value="<?= htmlspecialchars($user->getEmail()) ?>" id="emailpassword" class="form-control-settings">
         </div>
 
         <div class="form-group">
-          <!--<label for="new_email">New email</label>-->
+        <label class="profileSettingLabel"  for="new_email">Nieuw e-mail adres</label><br>						
           <input placeholder="Nieuw email adres" type="email" name="new_email" id="new_email" class="form-control-settings">
         </div>
         <input class="button-profile" type="submit" value="Verander Email" name="changeEmail">
@@ -257,11 +250,11 @@ if (!empty($_POST['updateProfile'])) {
               <?php endif; ?>
             </p>
 
-            <!--<label for="old_password">Current password</label>-->
+            <label class="profileSettingLabel" for="old_password">Oud wachtwoord</label><br>						
             <input placeholder="Oud wachtwoord" type="password" name="old_password" id="old_password" class="form-control-settings">
           </div>
           <div class="form-group">
-            <!--<label for="new_password">New password</label>-->
+          <label class="profileSettingLabel"  for="new_password">Nieuw wachtwoord</label><br>						
             <input placeholder="Nieuw wachtwoord" type="password" name="new_password" id="new_password" class="form-control-settings">
           </div>
           <input class="button-profile" type="submit" value="Verander Wachtwoord" name="changePassword">

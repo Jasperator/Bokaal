@@ -421,9 +421,7 @@
         height: 100vh;
     }
 
-    .all_item_profile {
-        margin-top: 7%;
-    }
+
 
 
     .item_profile {
@@ -543,6 +541,16 @@
 
     /*-----profiel instellingen-----*/
 
+    .profileSettingLabel{
+
+        margin-left: 25%;
+        margin-top: 5px;
+        margin-bottom: -3px;
+
+        font-family: "Josefin Sans";
+        font-size: 0.70;
+
+    }
 
     .profile-settings-image {
         margin-bottom: 5%;
@@ -652,14 +660,13 @@
         font-style: normal;
         font-variant: normal;
         text-align: center;
+        width: 22%;
 
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 5%;
+ 
 
         margin-bottom: 20px;
         margin-top: 15px;
-        margin-left: 45%;
+        margin-left: 42%;
     }
 
     /* -----INDEX----- */
@@ -1154,16 +1161,11 @@
 
     }
 
-    .priceLabel {
-
-        margin-top: 30px;
-
-    }
-
     .slidecontainer,
     .priceLabel {
 
         margin-left: 17.5%;
+        margin-top: 30px;
 
         font-family: "Josefin Sans";
         font-size: 1.3em;
@@ -1912,7 +1914,7 @@
     }
 
     .all_item_profile {
-        margin-top: 15%;
+        margin-top: 9%;
     }
 
     .item {
@@ -2235,6 +2237,7 @@
         margin-left: 5%;
         margin-right: 5%;
         height: 150px;
+        padding-top: 0.8%;
 
 
     }
@@ -2281,7 +2284,7 @@
         text-align: right;
         height: 150px;
         right: 0;
-        padding-top: 0.8%;
+        padding-top: 1%;
     }
 
     .footerContact a {
