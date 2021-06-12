@@ -41,14 +41,28 @@
 
     <label class="switchLabel">Meldingen ontvangen voor berichten
     <input class="checkbox-macht" type="checkbox">
-    <span class="checkmark"></span>
+    <span id="buttonMeldingen" class="checkmark"></span>
     </label>
 
-    <label class="switchLabel label2">Straat en nummer openbaar
+    <label class="switchLabel">Straat en nummer openbaar
     <input class="checkbox-macht-onder" type="checkbox">
-    <span class="checkmark"></span>
+    <span id="buttonStraat" class="checkmark"></span>
     </label>
 
+    <label class="switchLabel">Stad en postcode openbaar
+    <input class="checkbox-macht-onder" type="checkbox">
+    <span id="buttonStad" class="checkmark"></span>
+    </label>
+
+    <label class="switchLabel">Telefoonnummer openbaar
+    <input class="checkbox-macht-onder" type="checkbox">
+    <span id="buttonTelefoon" class="checkmark"></span>
+    </label>
+
+    <label class="switchLabel">BTW nummer openbaar
+    <input class="checkbox-macht-onder" type="checkbox">
+    <span id="buttonBtw" class="checkmark"></span>
+    </label>
 </div>
 
 
