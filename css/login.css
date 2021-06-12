@@ -1,7 +1,7 @@
 @media only screen and (min-width: 900px) {
 
 
-  .loginImage{
+  .loginImage {
     object-fit: cover;
     width: 50%;
     height: 100%;
@@ -37,12 +37,13 @@
     border: none;
     border-bottom: 2px solid #151e3d;
     margin-top: 7%;
-    
+
   }
-  input:focus{
+
+  input:focus {
     outline-style: none;
-	box-shadow: none;
-	border-color: transparent;
+    box-shadow: none;
+    border-color: transparent;
 
   }
 
@@ -83,7 +84,8 @@
     font-size: 1.3em;
     width: 100%;
   }
-  input[name="captcha"]{
+
+  input[name="captcha"] {
     width: 30%;
     margin-left: 30px;
   }
@@ -91,14 +93,30 @@
 }
 
 @media only screen and (max-width: 900px) {
-  body {
+
+  #img-log{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+
+  .login{
+    max-height: 100vh !important;
+  }
+
+  .body-login {
     background-image: url("../images/background/potato-op40.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: cornsilk;
+
+    object-fit: cover;
+
+    max-height: 100vh !important;
+
   }
 
-  h3 {
+  .titel-login {
     font-family: "Josefin Sans";
     font-size: 2.3em;
     font-style: normal;
@@ -109,23 +127,34 @@
     padding-left: 30px;
   }
 
-  input {
+  .input.login {
     background: transparent;
     border: none;
     border-bottom: 2px solid #151e3d;
   }
 
-  a {
+  .login-link {
     color: orangered;
     text-decoration: none;
   }
 
-  p {
+  .login-p {
     font-family: "Josefin Sans";
   }
 
-  label {
-    opacity: 0;
+  .captcha{
+    margin-top: 25px;
+  }
+
+  #log-form{
+    margin-top: 25px;
+  }
+
+  #label-fill {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Josefin Sans";
   }
 
   #email,
@@ -133,20 +162,20 @@
     background: transparent;
     border: none;
     border-bottom: 2px solid #151e3d;
-    border-radius: 0px;
+    width: 100%;
   }
 
   #loginBTN {
     background-color: orangered;
     border: none;
-    width: 75%;
-    margin-left: 12.5%;
+    width: 90%;
+    margin-left: 5%;
   }
 
   .logo {
-    height: 20%;
-    margin-bottom: 20px;
-    padding-left: 30%;
-    padding-right: 40%;
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 15px;
+
   }
 }

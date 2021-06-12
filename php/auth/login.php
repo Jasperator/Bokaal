@@ -57,22 +57,22 @@ if (!empty($_POST)) {
   <title>Bokaal | login</title>
 </head>
 
-<body>
+<body class="body-login">
 
   <?php // include_once("nav.include.php"); ?>
 
-  <img src="../../images/background/OGbackground.png" class="loginImage"></div>
+  <img id="img-log" src="../../images/background/OGbackground.png" class="loginImage"></div>
 
   <div class="container-fluid">
     <div class="row no-gutter">
       <div id="frame" class="col-md-8 col-lg-6">
-        <div class="login d-flex align-items-center py-5">
+        <div class="login d-flex align-items-center">
           <div class="container">
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
 
                 <img class="logo" src="../../images/logo/LogoBlack.svg" alt="login logo Bokaal">
-                <h3>Welcome back!</h3>
+                <h3 class="titel-login">Welcome back!</h3>
 
 
                 <?php if (isset($error)) : ?>
@@ -81,29 +81,30 @@ if (!empty($_POST)) {
                   </div>
                 <?php endif; ?>
 
-                <form action="" method="post">
-                  <div class="form-label-group">
-                    <input type="text" name="email" id="email" placeholder="Email">
-                   <!-- <label for="inputEmail">Email</label>-->
+                <form id=log-form action="" method="post">
+                  <div id="label-fill" class="form-label-group">
+                    <label class="label" for="inputEmail">Email</label>
+                    <input class=input-login type="text" name="email" id="email" placeholder="Email">                   
                    <br>
                   </div>
 
                   <div class="form-label-group">
-                    <input type="password" name="password" id="password" placeholder="Wachtwoord">
-                    <!-- <label for="inputPassword">Password</label> -->
+                    <label id="label-fill" class="label" for="inputPassword">Password</label>
+                    <input  class=input-login type="password" name="password" id="password" placeholder="Wachtwoord">
+                    
                     <br>
                   </div>
 
 
-                  <p><img src="captcha.php" width="120" height="30" alt="CAPTCHA">
-                    <input type="text" size="6" maxlength="5" name="captcha" value=""></p>
-                  <p><small>Copy the digits from the image into the box</small></p>
+                  <p class="login-p captcha"><img src="captcha.php" width="120" height="30" alt="CAPTCHA">
+                    <input  class=input-login type="text" size="6" maxlength="5" name="captcha" value=""></p>
+                  <p class="login-p"><small>Copy the digits from the image into the box</small></p>
 
                   <input id="loginBTN" type="submit" value="LOGIN" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">
 
                   <div class="text-center">
                 </form>
-                <p>Nog geen account? <a href="register.php">Registreer</a> dan hier</p>
+                <p class="login-p">Nog geen account? <a class="login-link" href="register.php">Registreer</a> dan hier</p>
               </div>
             </div>
           </div>
