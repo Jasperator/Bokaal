@@ -67,19 +67,13 @@
     background-color: cornsilk;
   }
 
-  h3 {
-    font-family: "Josefin Sans";
-    font-size: 2.3em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-
-    line-height: 15.4px;
-
-    padding-left: 30px;
+  #img-log{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
   }
 
-  h2 {
+  .titel-choose-reg {
     font-family: "Josefin Sans";
     font-size: 2.3em;
     font-style: normal;
@@ -94,7 +88,7 @@
     padding-bottom: 25px;
   }
 
-  input {
+  .choose-reg-knop {
     background-color: orangered;
 
     font-family: "Josefin Sans";
@@ -105,12 +99,12 @@
     border: none;
     border-radius: 5px;
 
-    width: 50%;
+    width: 90%;
 
     padding: 10px, 10px, 10px, 10px;
 
-    margin-top: 15%;
-    margin-left: 25%;
+    margin-top: 15px;
+    margin-left: 5%;
   }
 
   .logo {
@@ -120,13 +114,11 @@
     padding-right: 40%;
   }
 
-  p {
+  .login-p {
     font-family: "Josefin Sans";
-
-    text-align: center;
   }
 
-  a {
+  .login-link {
     color: orangered;
     text-decoration: none;
   }

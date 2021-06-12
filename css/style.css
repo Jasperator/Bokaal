@@ -2427,11 +2427,18 @@
         width: 0px;
     }
 
+    .login {
+        max-height: 100vh !important;
+    }
+
     .body-login {
         background-image: url("../images/background/potato-op40.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-color: cornsilk;
+
+        object-fit: cover;
+
     }
 
     .titel-login {
@@ -2460,8 +2467,20 @@
         font-family: "Josefin Sans";
     }
 
-    label {
-        opacity: 0;
+    .captcha {
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    #log-form {
+        margin-top: 25px;
+    }
+
+    #label-fill {
+        display: flex;
+        flex-direction: column;
+
+        font-family: "Josefin Sans";
     }
 
     #email,
@@ -2469,21 +2488,21 @@
         background: transparent;
         border: none;
         border-bottom: 2px solid #151e3d;
-        border-radius: 0px;
+        width: 100%;
     }
 
     #loginBTN {
         background-color: orangered;
         border: none;
-        width: 75%;
-        margin-left: 12.5%;
+        width: 90%;
+        margin-left: 5%;
     }
 
     .logo {
-        height: 20%;
-        margin-bottom: 20px;
-        padding-left: 30%;
-        padding-right: 40%;
+        width: 30%;
+        margin-left: 35%;
+        margin-bottom: 15px;
+
     }
 
 

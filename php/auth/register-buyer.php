@@ -82,20 +82,20 @@ if (!empty($_POST['register'])) {
 
 </head>
 
-<body>
+<body class="body-login">
 
 	<?php // include_once("nav.include.php") ?>
 
-	<img src="../../images/background/OGbackground.png" class="loginImage"></div>
+	<img id="img-log" src="../../images/background/OGbackground.png" class="loginImage"></div>
 
 
 	<div class="register ">
 		<form action="" method="post">
-			<img class="logo" src="../../images/logo/LogoBlack.svg" alt="logo Bokaal">
-			<h2>Registreer kopers <br> <br> account</h2>
+			<img class="logo-reg-buy" src="../../images/logo/LogoBlack.svg" alt="logo Bokaal">
+			<h2 class="reg-buy-title">Registreer kopers</h2>
 			<?php if (!empty($error)) : ?>
 			<div style="font-size: 15px; background-color:#F8D7DA; padding:10px; border-radius:10px;">
-				<p><?= $error ?></p>
+				<p class="login-p"><?= $error ?></p>
 			</div>
 			<?php endif; ?>
 			<?php if (isset($succesfull)) : ?>
@@ -111,45 +111,46 @@ if (!empty($_POST['register'])) {
 
 			</div>
 
-			<div class="form-group">
+			<div id="reg-form-buyer" class="form-group">
 				<input type="email" name="email" class="form-control email" placeholder="Email"
 					pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
 				<span id="availability"></span>
 				<i class="fa fa-envelope" aria-hidden="true"></i>
 			</div>
-			<div class="form-group">
+
+			<div id="reg-form-buyer" class="form-group">
 				<input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord"
 					required>
 					<i class="fa fa-lock" aria-hidden="true"></i>
 			</div>
 
-			<div class="form-group">
+			<div id="reg-form-buyer" class="form-group">
 				<input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Wachtwoord bevestigen"
 					required>
 					<i class="fa fa-lock" aria-hidden="true"></i>
 			</div>
 
-			<div class="form-group">
+			<div id="reg-form-buyer" class="form-group">
 				<input type="number" name="postal_code" class="form-control" placeholder="Postcode" required>
 
 			</div>
 
-			<div class="form-group">
+			<div id="reg-form-buyer" class="form-group">
 				<input type="text" name="location" class="form-control" placeholder="Stad" required>
 
 			</div>
 
-			<div class="form-group">
+			<div id="reg-form-buyer" class="form-group">
 				<!--<label for="price">Price</label>-->
 				<input type="text" name="address" class="form-control" placeholder="Straat, nr en bus" required>
 
 			</div>
 			
-			<div class="form-group">
+			<div id="reg-form-buyer" class="form-group">
 				<input id="register" type="submit" class="" value="Registreer" name="register">
 			</div>
 			<div id="result"> </div>
-			<p>Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
+			<p class="login-p">Heb je al een account? <a href="login.php">Log</a> dan hier in</p>
 		</form>
 
 	</div>
