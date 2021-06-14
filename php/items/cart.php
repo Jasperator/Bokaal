@@ -49,7 +49,7 @@ if(!empty($_POST['start_chat'])){
             $conversation->readMessages($user->getId());
             $messages = $conversation->getMessages();
             $chat_partner = $conversation->getPartner($user->getId());
-            $standard_message= 'Hello ' . $chat_partner->fullname. ', ik heb een item van jou gekocht. Wanneer past het voor jou om deze op te halen?';
+            $standard_message= 'Hallo ' . $chat_partner->fullname. ', ik heb een product van jou gekocht. Wanneer past het voor jou om deze op te halen?';
 
             $time = date('Y-m-d H:i:s');
             $message = new classes\Message();

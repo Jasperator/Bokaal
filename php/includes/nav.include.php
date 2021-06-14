@@ -33,8 +33,14 @@ $page = basename($_SERVER['PHP_SELF']);
 
 
     ?>
-    
-        <ul id="navbar-full" class="alles" <?php if($user->getStatus() == 'buyer') { ?> style="margin-left: 60%;width: 40%" <?php }?>>
+    <?php if($user->getStatus() == 'buyer') { ?>
+        <style>
+           .alles {
+                margin-left: 60%;
+                width: 40%
+            }
+        </style> <?php }?>
+        <ul id="navbar-full" class="alles" >
 
         <!-- Mark a link as "active" according to the current page -->
 
