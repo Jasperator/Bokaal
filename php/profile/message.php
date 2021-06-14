@@ -57,8 +57,6 @@ if(isset($_GET['chat_id'])){
 
      if(!empty($_POST['deleteChat'])){
 
-         print_r($chat_partner->id);
-
        $conversation->deleteConversationAndMessages($user,$chat_partner->id);
         header("Location: chat.php");
 

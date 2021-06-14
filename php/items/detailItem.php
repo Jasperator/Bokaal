@@ -174,7 +174,7 @@ if(!empty($_POST['start_chat'])){
         <div id="space"></div>
 
         <script>
-            document.querySelectorAll('.others').forEach(item => {
+            document.querySelectorAll('.itemId').forEach(item => {
                 item.addEventListener('click', function () {
 
                     window.location.href = `detailItem.php?data-id=${this.getAttribute('data-id')}`

@@ -96,7 +96,7 @@ if (!empty($_POST['updateItem'])) {
         </div>
 
         <div id="top" class="form-sell">
-        <label class="tag-name-edit" for="">titel</label>
+        <label class="tag-name-edit" for="">Titel</label>
             <input type="text" name="title" id="title-edit" class="form-control" value="<?= htmlspecialchars($detailItem->title); ?>" placeholder="Titel" required>
         </div>
 
@@ -123,7 +123,7 @@ if (!empty($_POST['updateItem'])) {
                             </select>            
                             
                         <input class="select-items-select-price"  type="number" name="price" placeholder="Prijs" step=".01" value="<?= htmlspecialchars($detailItem->price); ?>" required>
-                        <input class="select-items-select-value" type="text" name="currency" Value="Euro" required>
+                        <input class="select-items-select-value" type="text" name="currency" Value="Euro" disabled>
                 </div>
             </div>
 
