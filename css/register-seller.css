@@ -2,9 +2,10 @@
   .loginImage {
     object-fit: cover;
     width: 50%;
-    height: 100%;
+    min-height: 100vh;
     position: absolute;
     top: 0;
+    bottom: 0;
   }
 
 
