@@ -120,6 +120,8 @@ if (!empty($_POST['upload'])) {
 				<input type="text" name="description" id="description" class="form-control" placeholder="Beschrijving"
 					required>							
 			</div>
+			
+			<label class="sellLabel" for="aantalPlaatsingen">Hoeveelheid en prijs</label><br>
 
 			<div class="form-sell-item">
 				<div id="hoeveelheid">

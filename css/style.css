@@ -200,11 +200,11 @@
         font-family: "Josefin Sans";
         font-size: 1.2em;
         width: 30%;
-        height: 35%;
+        height: 40%;
         padding: 20px;
         margin-left: 10%;
-        margin-top: 5.5%;
-        margin-bottom: 5.5%;
+        margin-top: 5%;
+        margin-bottom: 5%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -217,10 +217,10 @@
         font-family: "Josefin Sans";
         font-size: 1.2em;
         width: 40%;
-        height: 35%;
+        height: 40%;
         padding: 20px;
         margin-left: 45%;
-        margin-top: -22.3%;
+        margin-top: -24.6%;
         margin-bottom: 5.5%;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -285,12 +285,41 @@
     .checkmark {
         cursor: pointer;
         position: absolute;
-        margin-left: 40%;
 
         height: 30px;
         width: 30px;
-        border: 1px solid #d5d962;
+        background-color: rgb(240, 240, 240);
         border-radius: 20px;
+    }
+
+    #buttonMeldingen{
+
+        margin-left: 30%;
+
+    }
+
+    #buttonStraat{
+
+        margin-left: 41.1%;
+
+    }
+
+    #buttonStad{
+
+        margin-left: 42%;
+
+    }
+
+    #buttonTelefoon{
+
+        margin-left: 43.5%;
+
+    }
+
+    #buttonBtw{
+
+        margin-left: 47.2%;
+
     }
 
     .switchLabel input:checked~.checkmark {
@@ -1253,6 +1282,7 @@
         display: flex;
         width: 78%;
         margin-left: 10%;
+        margin-top: -1.5%;
     }
 
     .form-sell-item-edit {
@@ -1538,6 +1568,7 @@
     }
 
     .sellLabel {
+        width: 40%;
         margin-left: 25%;
         margin-top: 7px;
         padding-left: 15px;
@@ -1975,7 +2006,7 @@
 
     #privacyTitel {
 
-        margin-top: -9%;
+        margin-top: -10%;
     }
 
 
