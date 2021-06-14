@@ -3467,7 +3467,7 @@
     }
 
     .messagebox {
-        max-height: 600px;
+        min-height: 60vh !important;
         width: 100%;
 
         overflow-y: scroll;
