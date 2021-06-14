@@ -1474,6 +1474,18 @@
         border: none;
     }
 
+    #hoeveelheid-edit {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-variant: normal;
+
+        display: flex;
+
+        width: 100%;
+
+        border: none;
+    }
+
     #item_image.button {
         font-family: "Josefin Sans";
         font-style: normal;
@@ -3216,6 +3228,11 @@
     #hoeveelheid {
         display: flex;
         width: 90%;
+    }
+
+    #hoeveelheid-edit {
+        display: flex;
+        width: 87%;
     }
 
     #item_image.button {

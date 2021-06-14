@@ -109,7 +109,7 @@ if (!empty($_POST['updateItem'])) {
 
         <div class="form-sell-item-edit">
         
-            <div id="hoeveelheid">
+            <div id="hoeveelheid-edit">
                 <div id="select-items-selectItems" class="select-items-selectItems">
                     <input class="select-items-nr" type="number" name="quantity"  value="<?= htmlspecialchars($detailItem->quantity); ?>"
                            placeholder=" <?= htmlspecialchars($detailItem->quantity); ?>" required>
