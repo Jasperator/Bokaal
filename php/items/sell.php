@@ -121,9 +121,10 @@ if (!empty($_POST['upload'])) {
 					required>							
 			</div>
 			
-			<label class="sellLabel" for="aantalPlaatsingen">Hoeveelheid en prijs</label><br>
 
 			<div class="form-sell-item">
+			<label class="sellLabel" for="aantalPlaatsingen">Hoeveelheid en prijs</label><br>
+
 				<div id="hoeveelheid">
 					<div class="select-items-selectItems">
 						<input class="select-items-nr" type="number" name="quantity"
@@ -139,6 +140,7 @@ if (!empty($_POST['upload'])) {
 						</select>
 							<input type="number" class="select-items-select-price"  name="price"  placeholder="Prijs" step=".01" required>
 							<input type="text" class="select-items-select-value" name="currency" Value="Euro" disabled>
+
                     </div>
 				</div>
 			</div>
@@ -149,9 +151,11 @@ if (!empty($_POST['upload'])) {
 	<div><?php echo $error; ?></div>
 	<?php endif; ?>
 
-    <label class="sellLabel" for="aantalPlaatsingen">Aantal keer plaatsen</label>
-    <div id="aantalPlaatsingen">
+    <div id="aantalPlaatsingen" class="form-sell-item">
+
         <div class="aantal-plaatsingen">
+		<label class="sellLabel" for="aantalPlaatsingen">Aantal keer plaatsen</label>
+
             <input type="number" name="aantalPlaatsingen" id="aantalPlaatsingen" class="form-control"
                    placeholder="Hoeveel keer plaatsen" value="1" required>
         </div>
