@@ -628,6 +628,8 @@
         float: left;
     }
 
+    
+
 
     .button-profile {
         font-family: "Josefin Sans";
@@ -2870,6 +2872,9 @@
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
+    .profileSettingLabel{
+        margin-left: 5%;
+    }
 
     .new-profile-image {
         width: 90%;
