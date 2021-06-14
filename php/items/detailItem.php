@@ -92,7 +92,7 @@ if(!empty($_POST['start_chat'])){
         </div>
 
         <div class="container-boer">
-            <h2 class="verkoper"><?= htmlspecialchars($seller->fullname);  ?></h2>
+            <h2 class="verkoper-detail-item"><?= htmlspecialchars($seller->fullname);  ?></h2>
             <div class="locatie-boer">
                 <p><?= htmlspecialchars($seller->location); ?>,</p>
                 <p class="afstand"> <?= htmlspecialchars($seller->address); ?></p>
