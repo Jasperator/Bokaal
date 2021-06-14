@@ -1250,9 +1250,7 @@
     }
 
     .form-sell-item {
-        display: flex;
         width: 78%;
-        margin-left: 10%;
     }
 
     .form-sell-item-edit {
@@ -1471,7 +1469,7 @@
         display: flex;
 
         width: 100%;
-        margin-top: 30px;
+        margin-left: 13%;
 
         border: none;
     }
@@ -1549,7 +1547,9 @@
 
     .aantal-plaatsingen {
         margin-bottom: 15px;
+        width: 128%;
     }
+
 
     /*-----edit-----*/
     .tag-name-edit {
