@@ -728,6 +728,27 @@ class Item
         return $result;
     }
 
+    public function getBoughtItems($user, $seller_id){
+        //Database connection
+        $conn = Db::getConnection();
+
+        //Prepare the INSERT query
+        $statement = $conn->prepare("SELECT * FROM items WHERE status = 'pending' AND  buyer_id = :buyer_id AND seller_id = :seller_id");
+
+        //Bind values to parameters from prepared query
+        $statement->bindValue(":buyer_id", $user->getId());
+        $statement->bindValue(":seller_id", $seller_id);
+
+
+        //Execute query
+        $statement->execute();
+
+        $result = $statement->fetchAll(\PDO::FETCH_OBJ);
+
+        //Return the results from the query
+        return $result;
+    }
+
     public function startConversationSellers($user, $seller_id){
         //Database connection
         $conn = Db::getConnection();
