@@ -2436,7 +2436,6 @@
     /*----- algemeen -----*/
 
     body {
-        height: 150vh;
 
         background-image: url("/images/background/header-mobile-test.png");
         background-repeat: no-repeat;
@@ -2446,7 +2445,7 @@
 
         margin-top: 1%;
 
-        margin-bottom: 4%;
+        margin-bottom: 30%;
     }
 
     /*-----bootsdtrap instel -----*/
