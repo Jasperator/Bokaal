@@ -61,6 +61,7 @@ if (!empty($_POST['updateItem'])) {
 
     <?php include_once("../includes/nav.include.php") ?>
 
+    <a class="backArrow" href="/php/profile/settings_items.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
 
     <h2 class="hoofdtitel">Edit producten</h2>
 
