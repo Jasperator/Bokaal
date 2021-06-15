@@ -67,7 +67,7 @@ function message() {
         <?php } else { ?>
 
 
-        <ul id="all-chats" class="row col-md-12">
+        <ul id="all-detail" class="row col-md-12">
 
     <?php
     foreach($partners as $partner):
@@ -77,8 +77,8 @@ function message() {
         ?>
 
 
-                <div id="list-decoration-search" class="chats col-md-4">
-                        <div id="container-search" class="container">
+                <div id="list-decoration" class="chats col-md-4">
+                        <div class="container favorieten-afstand">
                             <div class="card h-100 breed">
 
                 <?php if($partner->unreadMes> 0){  ?> <div class="notification"> <?php print_r($partner->unreadMes); ?>  </div> <?php } ?>
