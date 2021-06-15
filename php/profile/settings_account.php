@@ -122,6 +122,7 @@ if (!empty($_POST['updateProfile'])) {
   <!-- Hier moet de profile.php nav komen -->
 
 
+  <a class="backArrow" href="/php/profile/settings.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
 
      <h2 class="hoofdtitel">Profiel instellingen</h2>
       <div class="profile-settings-image">

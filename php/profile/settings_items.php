@@ -40,9 +40,10 @@ if(!empty($_POST['edit_item'])){
     <div>
 
 
-        <div>
+    <a class="backArrow" href="/php/profile/settings.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
+
             <h2 id="hoofdtitel" class="hoofdtitel">Aanbiedingen</h2>
-        </div>
+
         <ul id="all-detail" class="row col-md-12">    
             
             <?php foreach ($itemsAvailable as $item) : ?>    
