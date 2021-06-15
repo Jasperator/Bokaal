@@ -29,36 +29,36 @@
         margin-left: 35%;
         margin-top: -2%;
         margin-bottom: 2%;
-    /*  position: absolute;*/
+        /*  position: absolute;*/
 
-  }
+    }
 
-  .subIcon {
-      opacity: 50%;
-      width: 7%;
-      margin-left: 8%;
-      margin-right: 8%;
-      padding-bottom: 10px;
-      position: relative;
-      vertical-align: top;
-  }
-
-
-  .subIcon:hover {
-      opacity: 100%;
-
-      border-bottom: 5px solid black;
-
-  }
-
-  .activated {
-      opacity: 100%;
-
-      border-bottom: 5px solid black;
-  }
+    .subIcon {
+        opacity: 50%;
+        width: 7%;
+        margin-left: 8%;
+        margin-right: 8%;
+        padding-bottom: 10px;
+        position: relative;
+        vertical-align: top;
+    }
 
 
-  /*-----NAVIGATIE BAR----- */
+    .subIcon:hover {
+        opacity: 100%;
+
+        border-bottom: 5px solid black;
+
+    }
+
+    .activated {
+        opacity: 100%;
+
+        border-bottom: 5px solid black;
+    }
+
+
+    /*-----NAVIGATIE BAR----- */
 
     .nav-img {
         display: none;
@@ -127,9 +127,9 @@
     /*-----bootstrap instel -----*/
 
 
-.col-md-4{
-    margin-bottom: 5%;
-}
+    .col-md-4 {
+        margin-bottom: 5%;
+    }
 
     #all-detail {
         height: auto;
@@ -158,7 +158,7 @@
         margin: auto;
     }
 
-    .breed-no-hover{
+    .breed-no-hover {
         width: 75%;
         margin: auto;
     }
@@ -299,31 +299,31 @@
         background-color: #d5d962;
     }
 
-    #buttonMeldingen{
+    #buttonMeldingen {
 
         margin-left: 30%;
 
     }
 
-    #buttonStraat{
+    #buttonStraat {
 
         margin-left: 41.3%;
 
     }
 
-    #buttonStad{
+    #buttonStad {
 
         margin-left: 42.2%;
 
     }
 
-    #buttonTelefoon{
+    #buttonTelefoon {
 
         margin-left: 43.6%;
 
     }
 
-    #buttonBtw{
+    #buttonBtw {
 
         margin-left: 47.5%;
 
@@ -573,7 +573,7 @@
 
     /*-----profiel instellingen-----*/
 
-    .profileSettingLabel{
+    .profileSettingLabel {
 
         margin-left: 25%;
         margin-top: 5px;
@@ -660,7 +660,7 @@
         float: left;
     }
 
-    
+
 
 
     .button-profile {
@@ -696,7 +696,7 @@
         text-align: center;
         width: 22%;
 
- 
+
 
         margin-bottom: 20px;
         margin-top: 15px;
@@ -1083,7 +1083,8 @@
     .searchForm {
 
         margin-left: -14%;
-        margin-bottom: 5%;;
+        margin-bottom: 5%;
+        ;
 
     }
 
@@ -1738,7 +1739,7 @@
     .right {
         float: right;
         display: flex;
-        
+
     }
 
     .left {
@@ -2020,7 +2021,7 @@
     }
 
     .all_item_profile {
-      /*  margin-top: 9%; */
+        /*  margin-top: 9%; */
     }
 
     .item {
@@ -2966,7 +2967,7 @@
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
-    .profileSettingLabel{
+    .profileSettingLabel {
         margin-left: 5%;
     }
 
@@ -3507,7 +3508,7 @@
 
     /*-----Chat----- */
 
-    
+
 
     /* width */
     ::-webkit-scrollbar {
@@ -4565,40 +4566,40 @@
 
     footer {
 
-display: none;
+        display: none;
     }
 
     /*-----privacy page*-----*/
 
 
 
-    #locationRadio{
+    #locationRadio {
         font-family: "Josefin Sans";
         margin-left: 5%;
 
         height: 100vh;
-        
+
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
-    
+
     }
 
-    .locationRadio{
+    .locationRadio {
 
         width: 80%;
         margin-left: 10%;
 
-        padding-top:15px;
+        padding-top: 15px;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
     }
 
-    .switchButtons{
+    .switchButtons {
         width: 80%;
         margin-left: 10%;
 
-        padding-top:15px;
+        padding-top: 15px;
 
         -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
         box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
@@ -4610,43 +4611,42 @@ display: none;
         margin-left: 5%;
     }
 
-    .switchLabel{
+    .switchLabel {
         margin-bottom: 15px;
 
         font-size: 0.8em;
         padding-left: 15px;
     }
 
-    .radioButton{
+    .radioButton {
         margin-left: 5%;
 
         font-size: 0.8em;
 
         margin-bottom: 15px;
 
-        width: 80%;        
+        width: 80%;
     }
 
-    .switchButtons{
+    .switchButtons {
         margin-left: 10%;
 
         margin-bottom: 25px;
 
-        width: 80%; 
+        width: 80%;
     }
 
-
-    .checkbox-macht{
+    .checkbox-macht {
         float: left;
         margin-right: 15px;
+
+        border-radius: 50%;
     }
 
-    .checkbox-macht-onder{
+    .checkbox-macht-onder {
         float: left;
         margin-right: 15px;
+
     }
-
-
-    
 
 }
