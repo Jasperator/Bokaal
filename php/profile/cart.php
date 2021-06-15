@@ -111,7 +111,7 @@ if(!empty($_POST['start_chat'])){
                 ?>
         <div id="list-decoration" class="col-md-4">
             <div class="container">
-                <div class="card h-100 breed-no-hover">
+                <div class="card h-100 breed">
                     <form action="" method="post">
                         <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?>"
                             class="img-thumbnail border-0" />
