@@ -1774,7 +1774,7 @@
     }
 
     .buy-all-items {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 400;
         letter-spacing: 1px;
         width: 50%;
@@ -1788,8 +1788,26 @@
         padding-top: 5px;
         padding-bottom: 5px;
 
-        border-radius: 5px;
         outline: none;
+    }
+
+    .deleteItem {
+        background-color: #BE1818;
+        color: white;
+        font-family: "Josefin Sans";
+        font-size: 1em;
+        width: 50%;
+        padding: 7px;
+        border: none;
+
+        margin-left: 25%;
+    }
+
+    .deleteItem:hover {
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #D41C1C;
     }
 
     .left {
@@ -1813,7 +1831,6 @@
         font-style: normal;
         font-variant: normal;
         border: none;
-        border-radius: 5px;
         font-size: 1.5em;
 
         background-color: orangered;
@@ -1829,6 +1846,15 @@
         margin-top: 5px;
         margin-left: calc(75%/2);
         margin-bottom: 5px;
+    }
+
+    #buy-all:hover {
+
+        cursor: pointer;
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        background-color: #FF5419;
+
     }
 
     .total_price {
