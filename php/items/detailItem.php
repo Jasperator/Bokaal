@@ -47,7 +47,7 @@ if(!empty($_POST['start_chat'])){
     <link rel="stylesheet" href="../../css/style.css">
 
 
-    <title>Bokaal | Search</title>
+    <title>Bokaal | Product</title>
 </head>
 
 <body id="search-body">

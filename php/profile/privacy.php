@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
 
 
-    <title>Machtigingen</title>
+    <title>Bokaal | Machtigingen</title>
 </head>
 <body>
     <?php include_once("../includes/nav.include.php");?>

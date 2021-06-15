@@ -98,7 +98,7 @@ if (!empty($_POST['updateProfile'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-  <title>Profiel instellingen</title>
+  <title>Bokaal | Profiel instellingen</title>
 
   <link rel="icon" type="image/svg" href=../../images/logo/favicon.png>
     <link rel="stylesheet" href="/css/bootstrap.css">

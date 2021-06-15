@@ -32,7 +32,7 @@ if(!empty($_POST['edit_item'])){
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
 
-    <title>Bokaal | Search</title>
+    <title>Bokaal | Aanbiedingen</title>
 </head>
 
 <body>

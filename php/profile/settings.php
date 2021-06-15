@@ -20,7 +20,7 @@ $page = basename($_SERVER['PHP_SELF']);
     <link rel="stylesheet" href="../../css/style.css">
 
 
-    <title>settings option</title>
+    <title>Bokaal | Instellingen</title>
 </head>
 
 <body id="settings-body">

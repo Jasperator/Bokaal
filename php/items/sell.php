@@ -61,7 +61,7 @@ if (!empty($_POST['upload'])) {
     <link rel="stylesheet" href="../../css/style.css">
 	<link rel="icon" type="image/svg" href=images/logo/favicon.png>
 
-	<title>Bokaal | Sell</title>
+	<title>Bokaal | Verkoop</title>
 
 	<link rel="icon" type="image/svg" href=../../images/logo/favicon.png> </head>
 	
