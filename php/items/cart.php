@@ -137,7 +137,7 @@ if(!empty($_POST['start_chat'])){
                             <form id="delete-cart" action="" method="post">
 
                                 <div class="form-group">
-                                    <button class="btn btn detail" type="submit" name="delete-cart-item"
+                                    <button class="deleteItem" type="submit" name="delete-cart-item"
                                         value="<?= htmlspecialchars($item->id); ?>">Verwijder item</button>
                                 </div>
                             </form>
