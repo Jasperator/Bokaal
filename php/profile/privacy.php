@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
 
 
-    <title>Meldingen</title>
+    <title>Machtigingen</title>
 </head>
-<body class="body-privacy">
+<body>
     <?php include_once("../includes/nav.include.php");?>
    
     <a class="backArrow" href="/php/profile/settings.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
