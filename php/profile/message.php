@@ -99,7 +99,7 @@ if(isset($_GET['chat_id'])){
             <span class="close">&times;</span>
             <h4>Ben je zeker dat de chat wilt verwijderen?</h4>
             <form action=""  method="POST">
-                <input type="submit" value="Verwijder chat" name="deleteChat">
+                <input type="submit" value="Verwijder chat" class="deleteButton" name="deleteChat">
 
             </form>
         </div>
