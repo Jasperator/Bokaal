@@ -44,7 +44,7 @@ if(!empty($_POST['edit_item'])){
 
             <h2 id="hoofdtitel" class="hoofdtitel">Aanbiedingen</h2>
 
-        <?php if(count($items) <= 0){ ?>
+        <?php if(count($itemsAvailable) <= 0){ ?>
 
 
             <img class="Placeholder" src="../../images/itemsPlaceholder.png" alt="cart placeholder">
