@@ -44,12 +44,18 @@ if(!empty($_POST['edit_item'])){
 
             <h2 id="hoofdtitel" class="hoofdtitel">Aanbiedingen</h2>
 
+        <?php if(count($items) <= 0){ ?>
+
+
+            <img class="Placeholder" src="../../images/itemsPlaceholder.png" alt="cart placeholder">
+        <?php } else { ?>
+
         <ul id="all-detail" class="row col-md-12">    
             
             <?php foreach ($itemsAvailable as $item) : ?>    
                 <div id="list-decoration" class="col-md-4">
                     <div class="container" >
-                        <div class="card h-100" style="width: auto;">
+                        <div class="card h-100 breed-no-hover" >
                                     <form action="" method="post">
                                         <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?> "
                                             class="img-thumbnail border-0"/>                           
@@ -88,6 +94,10 @@ if(!empty($_POST['edit_item'])){
             <?php endforeach ?>
 
         </ul>
+
+        <?php } ?>
+
+
     <div id="space"></div>
 
 <?php include_once("../includes/footer.php");?>
