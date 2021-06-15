@@ -88,9 +88,24 @@ if(isset($_GET['chat_id'])){
     <a class="backArrow" href="/php/profile/chat.php"><img src="/images/icon/back.svg" style="width: 50%;"></a>
 <h2 class="hoofdtitel" id="chatTitel" data-id="<?php echo htmlspecialchars($chat_partner->id); ?>"><?php echo htmlspecialchars($chat_partner->fullname); ?></h2>
 
-    <form action=""  method="POST" class="deleteChat">
-        <input id="deleteChat" type="submit" value="Verwijder chat" name="deleteChat">
-    </form>
+    <div  id="delete_chat">
+        <button type="button" id="deleteChat" class="deleteChat">
+            <a>Verwijder Chat</a>
+        </button>
+    </div>
+
+    <div id="delete_chat_modal" class="modal">
+        <div class="modalContent">
+            <span class="close">&times;</span>
+            <h4>Ben je zeker dat de chat wilt verwijderen?</h4>
+            <form action=""  method="POST">
+                <input type="submit" value="Verwijder chat" class="deleteButton" name="deleteChat">
+
+            </form>
+        </div>
+    </div>
+
+
 
     <form action="" method="POST" class="chat">
 
@@ -196,6 +211,31 @@ if(isset($_GET['chat_id'])){
             window.location.href = `../../detailsUser.php?data-id=${this.getAttribute('data-id')}`
 
         })
+        // Get the modal
+        var modal = document.getElementById("delete_chat_modal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("delete_chat");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 
 </body>

@@ -51,19 +51,18 @@ if(!empty($_POST['start_chat'])){
             $messages = $conversation->getMessages();
             $chat_partner = $conversation->getPartner($user->getId());
             $bought = '';
-            foreach ($bought_items as $bought_item) {$bought = $bought . ($bought_item->title . ', ');}
+            foreach ($bought_items as $bought_item) {
+                $standard_message = 'Hallo ' . $chat_partner->fullname . ', ik heb voor '. $bought_item->quantity . ' '. $bought_item->unit. ' aan ' . $bought_item->title  . ' van jou gekocht. Wanneer past het voor jou om deze op te halen?';
+                $time = date('Y-m-d H:i:s');
+                $message = new classes\Message();
+                $message->setConversation_id($active_conversation);
+                $message->setSender_id($user->getId());
+                $message->setReceiver_id($chat_partner->id);
+                $message->setContent($standard_message);
+                $message->setTimestamp($time);
+                $message->saveMessage();
 
-                $standard_message = 'Hallo ' . $chat_partner->fullname . ', ik heb ' . $bought . ' van jou gekocht. Wanneer past het voor jou om deze op te halen?';
-
-
-            $time = date('Y-m-d H:i:s');
-            $message = new classes\Message();
-            $message->setConversation_id($active_conversation);
-            $message->setSender_id($user->getId());
-            $message->setReceiver_id($chat_partner->id);
-            $message->setContent($standard_message);
-            $message->setTimestamp($time);
-            $message->saveMessage();
+            }
 
 
         }
@@ -112,7 +111,7 @@ if(!empty($_POST['start_chat'])){
                 ?>
         <div id="list-decoration" class="col-md-4">
             <div class="container">
-                <div class="card h-100 breed">
+                <div class="card h-100 breed-no-hover">
                     <form action="" method="post">
                         <img class="card-img-top" src="/uploads/<?= htmlspecialchars($item->item_image); ?>"
                             class="img-thumbnail border-0" />

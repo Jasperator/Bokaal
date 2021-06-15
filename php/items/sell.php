@@ -25,7 +25,7 @@ if (!empty($_POST['upload'])) {
     $quantity = $_POST['quantity'];
     $unit = $_POST['unit'];
     $price = $_POST['price'];
-    $currency = $_POST['currency'];
+    $currency = 'Euro';
 
 
     $item->setSeller_id($seller_id);

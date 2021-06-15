@@ -158,6 +158,11 @@
         margin: auto;
     }
 
+    .breed-no-hover{
+        width: 75%;
+        margin: auto;
+    }
+
     .breed:hover {
 
         cursor: pointer;
@@ -2087,7 +2092,7 @@
         color: white;
         font-family: "Josefin Sans";
         font-size: 1.2em;
-        width: 10%;
+        width: 12%;
         padding: 15px;
         border: none;
 
