@@ -77,14 +77,14 @@ function message() {
         ?>
 
 
-                <div id="chats list-decoration-search" class="col-md-4">
+                <div id="list-decoration-search" class="chats col-md-4">
                         <div id="container-search" class="container">
                             <div class="card h-100 breed">
 
                 <?php if($partner->unreadMes> 0){  ?> <div class="notification"> <?php print_r($partner->unreadMes); ?>  </div> <?php } ?>
 
 
-                <img src="/uploads/<?= htmlspecialchars($partner->profile_img); ?>" alt="Chat placeholder" class="card-img-top img-thumbnail border-0">
+                <img src="/uploads/<?= htmlspecialchars($partner->profile_img); ?>" alt="Chat placeholder" class="card-img-top">
 
                 <form action="" method="POST" class="chat">
                         <input type="hidden" name="chat_id" class="convoId" value="<?= htmlspecialchars($getPartnerConvo);?>" placeholder="naam" />
