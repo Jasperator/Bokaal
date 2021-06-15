@@ -4214,7 +4214,7 @@
     /*----- Modal Content/Box -----*/
     .modalContentBuy {
         background-color: #fefefe;
-        width: 30%;
+        width: 80%;
         margin: 5% auto 5% auto;
         /* 15% from the top and centered */
         padding: 20px;
@@ -4583,33 +4583,70 @@ display: none;
     
     }
 
+    .locationRadio{
+
+        width: 80%;
+        margin-left: 10%;
+
+        padding-top:15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
+    .switchButtons{
+        width: 80%;
+        margin-left: 10%;
+
+        padding-top:15px;
+
+        -webkit-box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+        box-shadow: 1px 0px 25px 0px rgba(145, 145, 145, 0.5);
+    }
+
     #locationAccept {
         font-family: "Josefin Sans";
         font-size: 1.2em;
         margin-left: 5%;
     }
 
-    .radioButton, .switchButtons{
+    .switchLabel{
+        margin-bottom: 15px;
+
+        font-size: 0.8em;
+        padding-left: 15px;
+    }
+
+    .radioButton{
         margin-left: 5%;
+
+        font-size: 0.8em;
+
+        margin-bottom: 15px;
+
+        width: 80%;        
+    }
+
+    .switchButtons{
+        margin-left: 10%;
 
         margin-bottom: 25px;
 
-        width: 90%;
-
-        
+        width: 80%; 
     }
 
+
     .checkbox-macht{
-        margin-left: 15px;
+        float: left;
+        margin-right: 15px;
     }
 
     .checkbox-macht-onder{
-        margin-left:80px;
+        float: left;
+        margin-right: 15px;
     }
 
-    .label2{
-        margin-bottom: 300px;
-        padding-bottom: 15px;
-    }
+
+    
 
 }
