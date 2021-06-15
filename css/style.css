@@ -4264,6 +4264,8 @@
         width: 90%;
         margin-left: 5%;
         margin-top: 15%;
+        object-fit: cover;
+        height: 30vh;
     }
 
     #expiry-date {
