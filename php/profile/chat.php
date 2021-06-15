@@ -76,12 +76,15 @@ function message() {
 
         ?>
 
-            <div class="chatPreview col-md-2" id="chat">
+
+                <div id="chats list-decoration-search" class="col-md-4">
+                        <div id="container-search" class="container">
+                            <div class="card h-100 breed">
 
                 <?php if($partner->unreadMes> 0){  ?> <div class="notification"> <?php print_r($partner->unreadMes); ?>  </div> <?php } ?>
 
 
-                <img src="/uploads/<?= htmlspecialchars($partner->profile_img); ?>" alt="Chat placeholder" class="chatImg">
+                <img src="/uploads/<?= htmlspecialchars($partner->profile_img); ?>" alt="Chat placeholder" class="card-img-top img-thumbnail border-0">
 
                 <form action="" method="POST" class="chat">
                         <input type="hidden" name="chat_id" class="convoId" value="<?= htmlspecialchars($getPartnerConvo);?>" placeholder="naam" />
@@ -91,6 +94,7 @@ function message() {
 
                 <div id="space-chat"></div>
             </div>
+                        </div></div>
         <?php endforeach ?>
         </ul>
         <?php } ?>
@@ -103,7 +107,7 @@ function message() {
     <script src="../../js/bootstrap.js"></script>
 
         <script>
-            document.querySelectorAll('.chatPreview').forEach(item => {
+            document.querySelectorAll('.chats').forEach(item => {
                 item.addEventListener('click', function () {
 
                     // this.getElementsByClassName('convoId').item(0)
