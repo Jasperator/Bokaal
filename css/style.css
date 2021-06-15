@@ -864,6 +864,15 @@
         margin-left: 6%;
     }
 
+    .verkoper-detail-item {
+        color: orangered;
+
+        font-size: 2.5em;
+        font-family: "Josefin Sans";
+
+        margin-top: 50px;
+    }
+
 
     .verkoper {
         color: orangered;
