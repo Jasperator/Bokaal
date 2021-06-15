@@ -181,8 +181,8 @@ if(!empty($_POST['start_chat'])){
 
     <!-- buy thingy-->
 
-    <div id="buy-all-items-modal" class="modal">
-        <div class="modalContent" id="total-box">
+    <div id="buy-all-items-modal" class="modalBuy">
+        <div class="modalContentBuy" id="total-box">
             <span class="close">&times;</span>
 
             
