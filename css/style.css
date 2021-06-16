@@ -126,6 +126,12 @@
 
     /*-----bootstrap instel -----*/
 
+    .card-title{
+
+        font-family: "Josefin Sans";
+        font-size: 1.2em;
+
+    }
 
     .col-md-4 {
         margin-bottom: 5%;
