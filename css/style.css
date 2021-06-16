@@ -74,7 +74,8 @@
     }
 
     .listItem a {
-
+        font-family: "Josefin Sans";
+        font-weight: 400;
         color: #fff;
         font-size: 1em;
         margin-top: -4%;
@@ -2503,6 +2504,7 @@
         top: 88%;
         margin: auto;
         margin-left: 5%;
+        font-family: "Josefin Sans";
 
 
 
