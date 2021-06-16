@@ -29,7 +29,7 @@ if(isset($_GET['priceRange'])) {
 
     $user = new classes\User($_SESSION['user']);
 
-    if(isset($_GET['category'])) {
+    if(isset($_GET['category']) and $_GET['category'] != 'Alles' ) {
         $category =  "'". $_GET['category'] . "'";
         $categoryJs = $_GET['category'];
     } else {
@@ -84,6 +84,7 @@ if(isset($_GET['searchName'])) {
             <div id="categorie-item">
                 <select type="text" name="category" id="category" class="form-control-search" placeholder="Geef de categorie in">
                     <option value="" selected disabled hidden>Categorie</option>
+                    <option value="Alles">Alles</option>
                     <optgroup label="Groenten">
 
                         <option value="Bladgroenten">Bladgroenten</option>
