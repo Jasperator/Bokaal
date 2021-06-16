@@ -28,7 +28,7 @@ $page = basename($_SERVER['PHP_SELF']);
 
 
 
-            <h2 id="hoofdtitel" class="hoofdtitel">Settings</h2>
+            <h2 id="hoofdtitel" class="hoofdtitel">Instellingen</h2>
 
 
         <?php include_once("../includes/subNav.php");?>
