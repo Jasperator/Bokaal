@@ -52,6 +52,10 @@ if (!empty($_POST['delete-favorite-person'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/svg" href=images/logo/favicon.png> <title>Bokaal | Home</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/home.js"></script>
+
 </head>
 
 <body id="index-body">
@@ -176,9 +180,7 @@ if (!empty($_POST['delete-favorite-person'])) {
 
 <?php include_once("php/includes/footer.php");?>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/home.js"></script>
+
 
 </body>
 
